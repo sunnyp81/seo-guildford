@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: object[];
+  ogType?: string;
+}
+
+const { title, description, canonical, schema = [], ogType = 'website' } = Astro.props;
+const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).href;
+const year = new Date().getFullYear();
+---
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:site_name" content="SEO Guildford" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="geo.region" content="GB-SRY" />
+  <meta name="geo.placename" content="Guildford" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  {schema.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded focus:z-50">Skip to content</a>
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-border">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold text-brand hover:text-brand-light transition-colors">
+        SEO Guildford
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="/services/" class="text-text-muted hover:text-brand transition-colors">Services</a>
+        <a href="/areas/" class="text-text-muted hover:text-brand transition-colors">Areas</a>
+        <a href="/industries/" class="text-text-muted hover:text-brand transition-colors">Industries</a>
+        <a href="/ai-search-optimisation-guildford/" class="text-text-muted hover:text-brand transition-colors">AI Search</a>
+        <a href="/case-studies/" class="text-text-muted hover:text-brand transition-colors">Case Studies</a>
+        <a href="/about/" class="text-text-muted hover:text-brand transition-colors">About</a>
+        <a href="/contact/" class="cta-button !py-2 !px-4 text-sm">Get Audit</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-brand" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden border-t border-border bg-white px-4 pb-4">
+      <a href="/services/" class="block py-2 text-text-muted hover:text-brand">Services</a>
+      <a href="/areas/" class="block py-2 text-text-muted hover:text-brand">Areas</a>
+      <a href="/industries/" class="block py-2 text-text-muted hover:text-brand">Industries</a>
+      <a href="/ai-search-optimisation-guildford/" class="block py-2 text-text-muted hover:text-brand">AI Search</a>
+      <a href="/case-studies/" class="block py-2 text-text-muted hover:text-brand">Case Studies</a>
+      <a href="/about/" class="block py-2 text-text-muted hover:text-brand">About</a>
+      <a href="/contact/" class="block py-3 text-center cta-button mt-2">Get Audit</a>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="bg-brand text-white mt-16">
+    <div class="max-w-5xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-bold text-lg mb-3">SEO Guildford</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Local search marketing for Surrey businesses. Technical SEO, content strategy, and AI search optimisation from a Guildford-based consultant.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+          <ul class="space-y-1.5 text-sm">
+            <li><a href="/services/" class="text-white/70 hover:text-white transition-colors">Services</a></li>
+            <li><a href="/seo-pricing-guildford/" class="text-white/70 hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="/free-seo-audit-guildford/" class="text-white/70 hover:text-white transition-colors">Free SEO Audit</a></li>
+            <li><a href="/case-studies/" class="text-white/70 hover:text-white transition-colors">Case Studies</a></li>
+            <li><a href="/about/" class="text-white/70 hover:text-white transition-colors">About</a></li>
+            <li><a href="/contact/" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="/sitemap-index.xml" class="text-white/70 hover:text-white transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-3">Coverage</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Guildford, Woking, Godalming, Farnham, Camberley, Cobham, Esher, Weybridge, and across Surrey &amp; Hampshire.</p>
+          <p class="text-white/70 text-sm mt-3">
+            <a href="mailto:hello@seo-guildford.uk" class="text-white/80 hover:text-white transition-colors">hello@seo-guildford.uk</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-white/20 mt-8 pt-6 text-sm text-white/50 flex flex-col sm:flex-row justify-between gap-2">
+        <p>&copy; {year} SEO Guildford. All rights reserved.</p>
+        <p>Last updated: May 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const open = menu?.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  </script>
+</body>
+</html>

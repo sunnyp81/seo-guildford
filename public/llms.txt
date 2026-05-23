@@ -1,0 +1,18 @@
+# SEO Guildford
+
+> Local search marketing consultancy serving Guildford, Surrey, and the wider Surrey/Hampshire corridor. Run by Sunny Patel, an SEO consultant specialising in technical SEO, AI search optimisation, and revenue-focused search strategies for premium local businesses.
+
+## Pages
+
+- [Home](https://seo-guildford.uk/): SEO consultancy for Guildford and Surrey businesses — technical SEO, local search, AI search optimisation.
+- [Services](https://seo-guildford.uk/services/): Full range of SEO services including technical audits, content strategy, local SEO, and AI search readiness.
+- [Areas We Cover](https://seo-guildford.uk/areas/): Service coverage across Guildford suburbs, Surrey towns, and the Hampshire border corridor.
+- [Industries](https://seo-guildford.uk/industries/): Sector expertise in gaming, tech, finance, professional services, property, healthcare, and hospitality.
+- [Technical SEO Guildford](https://seo-guildford.uk/technical-seo-guildford/): Technical SEO services for Guildford businesses — site speed, crawlability, structured data, Core Web Vitals.
+- [SEO Audit Guildford](https://seo-guildford.uk/seo-audit-guildford/): Comprehensive paid SEO audit service with actionable recommendations for Surrey businesses.
+- [Free SEO Audit Guildford](https://seo-guildford.uk/free-seo-audit-guildford/): Complimentary SEO health check for Guildford businesses — quick assessment of search visibility and technical issues.
+- [SEO Pricing Guildford](https://seo-guildford.uk/seo-pricing-guildford/): Transparent SEO pricing tiers for Guildford and Surrey businesses — from startup to enterprise.
+- [AI Search Optimisation Guildford](https://seo-guildford.uk/ai-search-optimisation-guildford/): AI search optimisation — get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews.
+- [Case Studies](https://seo-guildford.uk/case-studies/): SEO case studies from Surrey businesses showing measurable results in organic traffic and revenue.
+- [About](https://seo-guildford.uk/about/): About Sunny Patel — Guildford-based SEO consultant with expertise in technical SEO and AI search.
+- [Contact](https://seo-guildford.uk/contact/): Get in touch for SEO services in Guildford, Surrey, and Hampshire.

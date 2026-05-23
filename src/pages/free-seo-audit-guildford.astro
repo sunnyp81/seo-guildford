@@ -1,0 +1,236 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://seo-guildford.uk/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Free SEO Audit", "item": "https://seo-guildford.uk/free-seo-audit-guildford/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Free SEO Audit Guildford",
+    "description": "Request a free SEO audit for your Guildford business. Get a quick site health check covering technical issues, local visibility, and search performance.",
+    "url": "https://seo-guildford.uk/free-seo-audit-guildford/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" },
+    "author": { "@type": "Person", "name": "Sunny Patel" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Free SEO Audit",
+    "description": "A complimentary SEO health check for Guildford and Surrey businesses covering technical errors, local search visibility, and Google Business Profile status.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "SEO Guildford",
+      "email": "hello@seo-guildford.uk",
+      "areaServed": { "@type": "City", "name": "Guildford" }
+    },
+    "areaServed": { "@type": "City", "name": "Guildford", "containedInPlace": { "@type": "AdministrativeArea", "name": "Surrey" } },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://seo-guildford.uk/free-seo-audit-guildford/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does the free SEO audit take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You will receive your audit report within 2-3 working days of submitting the form. The review itself takes around 45 minutes per site." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the free audit really free with no obligation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no contract, no payment details required, and no obligation to purchase any services. The audit is a genuine site health check you can act on yourself." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between the free audit and the paid SEO audit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The free audit covers surface-level technical health, local visibility, and Google Business Profile status. The paid audit (from £750) includes deep crawl analysis, backlink profiling, competitor benchmarking, content gap analysis, and a prioritised action plan with estimated ROI." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you audit websites outside Guildford?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The free audit is available to any business in Guildford, Woking, Godalming, Farnham, or the wider Surrey area. For businesses outside Surrey, contact us to discuss availability." }
+      }
+    ]
+  }
+];
+---
+<Base
+  title="Free SEO Audit Guildford — Quick Site Check"
+  description="Request a free SEO audit for your Guildford business. Quick site health check covering technical issues, local visibility, and search rankings. No obligation."
+  canonical="https://seo-guildford.uk/free-seo-audit-guildford/"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-brand">Home</a>
+      <span class="mx-1">/</span>
+      <a href="/services/" class="hover:text-brand">Services</a>
+      <span class="mx-1">/</span>
+      <span class="text-brand font-medium">Free SEO Audit</span>
+    </nav>
+
+    <div class="prose">
+      <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">Free SEO Audit for Guildford Businesses</h1>
+
+      <p>A free SEO audit gives Guildford business owners a clear snapshot of how their website performs in Google search, what technical issues are holding them back, and whether their local visibility matches their potential in the Surrey market.</p>
+
+      <div class="quick-answer">
+        <strong>Quick Answer:</strong> Submit the form below to receive a complimentary SEO health check within 2-3 working days. The audit covers technical errors, local search visibility, and Google Business Profile status. No payment details, no obligation, no sales call unless you want one.
+      </div>
+
+      <p>Most businesses along Guildford High Street, around Tunsgate Quarter, or operating near Surrey Research Park have never had a professional review of their search presence. That means fixable issues like broken links, missing meta data, unclaimed local listings, or slow page speeds go unnoticed while competitors claim the top positions.</p>
+
+      <p>This free audit is designed to change that. Whether you run a gaming studio near the University of Surrey, a property agency listing homes in the GU postcode, or a healthcare practice close to Royal Surrey Hospital, the audit gives you a factual starting point.</p>
+
+      <h2>What the Free Audit Includes</h2>
+
+      <p>The complimentary audit is a focused review rather than a full-depth analysis. It covers the areas that matter most for quick wins:</p>
+
+      <ul>
+        <li><strong>Technical health scan</strong> -- crawl errors, broken links, page speed issues, and mobile usability problems that directly affect rankings</li>
+        <li><strong>Local visibility check</strong> -- how your business appears in Google Maps and local pack results for your target area in Guildford and surrounding towns</li>
+        <li><strong>Google Business Profile review</strong> -- whether your GBP listing is claimed, complete, and optimised for local search queries</li>
+        <li><strong>On-page SEO snapshot</strong> -- title tags, meta descriptions, heading structure, and basic content issues on your top pages</li>
+        <li><strong>Competitor comparison</strong> -- a brief look at how your search visibility compares to two direct competitors in your sector</li>
+      </ul>
+
+      <p>You receive a short PDF report with findings and a plain-language explanation of what each issue means for your business.</p>
+
+      <h2>Request Your Free Audit</h2>
+
+      <p>Fill in the form below and Sunny Patel will review your site personally. No automated tool dumps. Every audit is done by hand.</p>
+    </div>
+
+    <!-- Audit request form -->
+    <form action="#" method="POST" class="bg-surface rounded-xl border border-border p-6 md:p-8 my-8 space-y-5">
+      <p class="text-sm text-text-muted mb-2">All fields marked with * are required.</p>
+
+      <div>
+        <label for="name" class="block text-sm font-medium text-text mb-1">Name *</label>
+        <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-2.5 rounded-md border border-border bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors" placeholder="Your full name" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-text mb-1">Email *</label>
+        <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-2.5 rounded-md border border-border bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors" placeholder="you@example.co.uk" />
+      </div>
+
+      <div>
+        <label for="website" class="block text-sm font-medium text-text mb-1">Website URL *</label>
+        <input type="url" id="website" name="website" required autocomplete="url" class="w-full px-4 py-2.5 rounded-md border border-border bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors" placeholder="https://www.yourbusiness.co.uk" />
+      </div>
+
+      <div>
+        <label for="business-type" class="block text-sm font-medium text-text mb-1">Business Type *</label>
+        <select id="business-type" name="business_type" required class="w-full px-4 py-2.5 rounded-md border border-border bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors">
+          <option value="" disabled selected>Select your sector</option>
+          <option value="gaming-tech">Gaming / Tech</option>
+          <option value="professional-services">Professional Services</option>
+          <option value="property">Property / Estate Agency</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="retail">Retail</option>
+          <option value="hospitality">Hospitality</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-text mb-1">Message (optional)</label>
+        <textarea id="message" name="message" rows="3" class="w-full px-4 py-2.5 rounded-md border border-border bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors resize-y" placeholder="Tell us about your main SEO goals or concerns"></textarea>
+      </div>
+
+      <button type="submit" class="cta-button w-full text-center">Request Free Audit</button>
+
+      <p class="text-xs text-text-muted text-center">Your data is used only to deliver the audit. No spam, no mailing lists.</p>
+    </form>
+    <!-- End form -->
+
+    <div class="prose">
+      <h2>What Happens After You Submit</h2>
+
+      <p>Once you submit the form, here is exactly what to expect:</p>
+
+      <ol>
+        <li><strong>Confirmation email</strong> -- you receive an acknowledgement within a few hours confirming your audit is in the queue</li>
+        <li><strong>Manual review</strong> -- Sunny Patel reviews your website by hand, checking technical health, local visibility, and on-page fundamentals</li>
+        <li><strong>Report delivery</strong> -- within 2-3 working days, you receive a short PDF report to your email with findings and recommended next steps</li>
+        <li><strong>Optional follow-up call</strong> -- if you want to discuss the findings, you can book a 15-minute call at no cost. No pressure, no hard sell</li>
+      </ol>
+
+      <p>The entire process is designed around respect for your time. Guildford business owners are busy people. The report is written in plain English, not jargon, so you can act on it yourself or pass it to your developer.</p>
+
+      <h2>How the Free Audit Differs from a Paid SEO Audit</h2>
+
+      <p>The free audit is a surface-level health check. It catches the obvious problems and gives you a factual starting point. For businesses that need deeper insight, the <a href="/seo-audit-guildford/">full SEO audit</a> (from £750) goes significantly further.</p>
+
+      <p>A paid audit includes a complete technical crawl of every page, a backlink profile analysis, detailed competitor benchmarking against 3-5 rivals, a content gap analysis showing missed keyword opportunities, and a prioritised 90-day action plan with estimated traffic and revenue impact. It also covers AI search readiness, which is increasingly relevant for Guildford businesses competing in sectors like technology, property, and professional services.</p>
+
+      <p>Think of the free audit as a GP check-up. The paid audit is the specialist referral with full diagnostics. Both are valuable, but they serve different needs. Many clients start with the free version and upgrade once they see the scale of opportunity.</p>
+
+      <p>View the <a href="/seo-pricing-guildford/">full pricing breakdown</a> for all audit and retainer options.</p>
+
+      <h2>Why Guildford Businesses Need an SEO Audit</h2>
+
+      <p>Guildford is one of the most competitive local markets in the South East. With average property prices above £600,000, the customer lifetime value for businesses here is substantially higher than the national average. That makes search rankings disproportionately valuable.</p>
+
+      <p>A single first-page ranking for a term like "solicitors Guildford" or "estate agents Guildford" can generate tens of thousands of pounds in annual revenue. An audit tells you exactly how far you are from those positions and what it will cost to get there.</p>
+
+      <p>Businesses around Guildford Cathedral, the Friary Centre, and the University of Surrey campus serve affluent, digitally savvy customers who research online before buying. If your site is not visible, those customers go to your competitors. The audit quantifies that gap.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <details class="faq-item">
+        <summary>How long does the free SEO audit take?</summary>
+        <div class="faq-answer">
+          <p>You will receive your audit report within 2-3 working days of submitting the form. The review itself takes around 45 minutes per site, which is why each audit is done personally rather than through an automated tool.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is the free audit really free with no obligation?</summary>
+        <div class="faq-answer">
+          <p>Yes. There is no contract, no payment details required, and no obligation to purchase any services. The audit is a genuine site health check you can act on yourself. If you want to discuss next steps, that is entirely your choice.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the difference between the free audit and the paid SEO audit?</summary>
+        <div class="faq-answer">
+          <p>The free audit covers surface-level technical health, local visibility, and Google Business Profile status. The <a href="/seo-audit-guildford/">paid audit</a> (from £750) includes deep crawl analysis, backlink profiling, competitor benchmarking, content gap analysis, and a prioritised action plan with estimated ROI. The paid version typically runs to 30-40 pages.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you audit websites outside Guildford?</summary>
+        <div class="faq-answer">
+          <p>The free audit is available to any business in Guildford, Woking, Godalming, Farnham, or the wider Surrey area. For businesses outside Surrey, <a href="/contact/">contact us</a> to discuss availability.</p>
+        </div>
+      </details>
+
+      <h2>Next Steps</h2>
+
+      <p>If you are ready to understand where your website stands, submit the form above. For businesses that already know they need ongoing SEO support, explore the <a href="/seo-pricing-guildford/">monthly retainer plans</a> or read about the full range of <a href="/services/">SEO services</a> available.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-8 not-prose">
+        <a href="/seo-audit-guildford/" class="cta-button text-center">Full SEO Audit (£750)</a>
+        <a href="/seo-pricing-guildford/" class="cta-button-outline text-center">View Pricing</a>
+      </div>
+
+      <p class="mt-8 text-sm text-text-muted">SEO Guildford is run by <strong>Sunny Patel</strong>, an SEO consultant based in the Guildford area. Questions? Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> or visit the <a href="/">homepage</a> to learn more.</p>
+    </div>
+  </article>
+</Base>

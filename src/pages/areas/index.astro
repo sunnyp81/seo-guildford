@@ -1,0 +1,202 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'SEO Services Across Guildford and Surrey Areas';
+const description = 'Local SEO services covering Guildford town centre, suburbs, wider Surrey, and Hampshire border towns. Area-specific strategies from a Guildford-based consultant.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://seo-guildford.uk/areas/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": "https://seo-guildford.uk/areas/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" },
+    "about": {
+      "@type": "Place",
+      "name": "Guildford",
+      "address": { "@type": "PostalAddress", "addressLocality": "Guildford", "addressRegion": "Surrey", "addressCountry": "GB" }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you only work with businesses based in Guildford?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. I work with businesses across Surrey, Hampshire, and nationally. However, my deepest local knowledge covers Guildford and surrounding areas within a 20-mile radius, including Woking, Godalming, Farnham, Camberley, and Aldershot." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does local SEO differ between Guildford suburbs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each suburb has distinct search patterns. Burpham residents search differently from Onslow Village residents due to demographics, proximity to the University of Surrey, and local amenities. A locksmith in Merrow faces different competition than one in Stoughton. I tailor keyword targeting, Google Business Profile categories, and content to match each area's search behaviour." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help businesses that serve multiple areas across Surrey?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Multi-location SEO is one of my core specialisms. I build location-specific landing pages, manage multiple Google Business Profiles, and create content strategies that capture search demand across every area you serve without triggering duplicate content issues." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the typical search volume for Guildford-specific queries?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Guildford-specific service queries typically range from 50 to 500 monthly searches per keyword. The key advantage is conversion rate: local intent queries convert at 3-5x the rate of generic terms. A plumber ranking for 'plumber Guildford' will generate more revenue per click than one ranking for 'plumber near me' nationally." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does local SEO take to show results in the Guildford area?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most Guildford businesses see measurable ranking improvements within 8-12 weeks. The local pack (map results) often responds faster, sometimes within 4-6 weeks. Competitive sectors like property, legal services, and healthcare in the Cathedral district may take 4-6 months for significant movement." }
+      }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">SEO Services Across Guildford, Surrey, and Hampshire</h1>
+
+    <p class="text-lg text-text-muted mb-6">I provide local SEO services covering Guildford town centre, every major suburb, the wider Surrey commuter belt, and Hampshire border towns including Aldershot and Farnham.</p>
+
+    <div class="quick-answer">
+      <p><strong>Quick Answer:</strong> Local SEO in the Guildford area requires area-specific keyword targeting because search patterns vary significantly between suburbs, business districts, and surrounding towns. A business in the <a href="/areas/">Friary Centre</a> faces different competition than one on <a href="/areas/">Slyfield Industrial Estate</a>. I cover all of them.</p>
+    </div>
+
+    <div class="prose">
+
+      <h2>Guildford Town Centre</h2>
+
+      <p>Guildford's town centre concentrates the highest commercial search volume in the borough. The High Street, one of the steepest and most recognisable in England, hosts a mix of independent retailers, professional service firms, and hospitality businesses competing for visibility in both organic search and the local map pack.</p>
+
+      <p>The <strong>Friary Centre</strong> anchors retail search demand with national chains and local shops drawing footfall from across Surrey. Businesses here compete on branded and category terms, and Google Business Profile optimisation is essential for capturing "near me" searches from shoppers already in the centre.</p>
+
+      <p>The <strong>Tunsgate Quarter</strong>, redeveloped in 2018, attracts a more affluent demographic and independent retailers. SEO for Tunsgate businesses tends to focus on lifestyle and premium service queries rather than generic category terms.</p>
+
+      <p>The <strong>Cathedral business district</strong> surrounding Guildford Cathedral is home to legal firms, accountancy practices, and financial advisers. These businesses need authority-driven SEO strategies: thought leadership content, professional directory citations, and schema markup for professional services. Search competition here is fierce because the Cathedral area concentrates some of Surrey's most established firms.</p>
+
+      <h2>Guildford Suburbs</h2>
+
+      <p>Each Guildford suburb has a distinct demographic profile that shapes local search behaviour. Understanding these differences is fundamental to effective local SEO.</p>
+
+      <h3>Onslow Village and the University Corridor</h3>
+
+      <p><strong>Onslow Village</strong> sits adjacent to the University of Surrey campus, creating a dual search audience: long-term residents and a rotating student population. Businesses here benefit from term-time seasonal content and student-oriented service pages. The proximity to <strong>Surrey Research Park</strong> also generates B2B search demand from tech companies and startups.</p>
+
+      <h3>Merrow and Burpham</h3>
+
+      <p><strong>Merrow</strong> is a residential suburb on the eastern edge of Guildford with a village-centre feel. Local service providers here compete in a smaller pool, making it easier to dominate with consistent Google Business Profile management and locally-relevant content. <strong>Burpham</strong>, slightly further north, has seen significant development and its search landscape is evolving as new residents establish local search habits. Both areas feed into the A3 corridor, which shapes commuter-related search patterns.</p>
+
+      <h3>Stoughton, Park Barn, and Bellfields</h3>
+
+      <p><strong>Stoughton</strong> borders the Royal Surrey County Hospital, generating healthcare-adjacent search demand. <strong>Park Barn</strong> and <strong>Bellfields</strong> are residential areas where local tradespeople and home services dominate search queries. These suburbs have lower average property values than Merrow or Pewley Hill, which affects the types of services searched and the price sensitivity of searchers.</p>
+
+      <h3>Westborough, Pewley Hill, and Charlotteville</h3>
+
+      <p><strong>Westborough</strong> connects the town centre to the western suburbs and has a growing independent business scene. <strong>Pewley Hill</strong> and <strong>Charlotteville</strong> are among Guildford's most affluent areas, with property values regularly exceeding the borough average of over 600,000 pounds. SEO for businesses serving these areas should target premium service queries and emphasise quality signals.</p>
+
+      <h3>Shalford and Southern Villages</h3>
+
+      <p><strong>Shalford</strong>, just south of the town centre, has a distinct village identity. Residents here often search with the village name rather than "Guildford", making hyper-local keyword targeting essential. The same applies to <strong>Compton</strong>, <strong>Bramley</strong>, <strong>Wonersh</strong>, and <strong>Chilworth</strong>, each with its own micro-search ecosystem.</p>
+
+      <h2>Wider Surrey</h2>
+
+      <p>Beyond Guildford borough, my SEO services extend across the Surrey commuter belt. Each town presents different competitive dynamics.</p>
+
+      <h3>Woking</h3>
+
+      <p><strong>Woking</strong> is Surrey's second-largest commercial centre and has its own competitive search landscape. Businesses serving both Guildford and Woking need careful geo-targeting to avoid cannibalising their own rankings across the two towns, which are only 8 miles apart.</p>
+
+      <h3>Godalming and Cranleigh</h3>
+
+      <p><strong>Godalming</strong>, four miles south of Guildford, is a market town with strong local search identity. Its High Street businesses compete primarily with each other rather than Guildford-based competitors. <strong>Cranleigh</strong>, further south, positions itself as the largest village in England, and its businesses benefit from content that reinforces this rural-affluent identity.</p>
+
+      <h3>Farnham, Camberley, and Western Surrey</h3>
+
+      <p><strong>Farnham</strong> straddles the Surrey-Hampshire border, creating dual-county search opportunities. <strong>Camberley</strong> serves the M3 corridor and has a different commercial profile, with more military-adjacent and logistics businesses. <strong>Cobham</strong>, <strong>Esher</strong>, and <strong>Weybridge</strong> in the north-east of the county are among the wealthiest towns in the UK, and SEO strategies here must reflect the premium positioning that local consumers expect.</p>
+
+      <h2>Hampshire Border</h2>
+
+      <p>The Hampshire border towns of <strong>Aldershot</strong>, <strong>Farnham</strong>, and <strong>Alton</strong> fall within my coverage area. Aldershot has undergone significant regeneration and its search landscape is shifting as new businesses establish themselves. Farnham appears in both Surrey and Hampshire search results depending on the query, which creates opportunities for businesses that optimise for both counties.</p>
+
+      <p>Alton, while further afield, shares search overlap with Guildford for service-area businesses in trades, healthcare, and professional services. Businesses based in Guildford that serve the Hampshire border need dedicated location pages with genuine local content to rank in these areas.</p>
+
+      <h2>Business Hubs</h2>
+
+      <p>Guildford has two major business hubs with distinct SEO requirements.</p>
+
+      <h3>Surrey Research Park</h3>
+
+      <p><strong>Surrey Research Park</strong>, owned by the University of Surrey, houses over 170 companies employing more than 3,500 people. Tenants include tech firms, AI companies, satellite engineering outfits like <strong>Surrey Satellite Technology Ltd</strong>, and biotech startups. SEO for Research Park businesses is predominantly B2B, targeting technical decision-makers rather than local consumers. Content strategies here focus on thought leadership, technical documentation ranking, and LinkedIn-integrated search visibility.</p>
+
+      <h3>Slyfield Industrial Estate</h3>
+
+      <p><strong>Slyfield Industrial Estate</strong> is Guildford's largest industrial zone, home to trade suppliers, logistics companies, and light manufacturing. SEO for Slyfield businesses focuses on commercial intent queries, product searches, and trade-specific terms. Google Business Profile optimisation is critical here because many customers navigate via maps rather than organic search.</p>
+
+      <h2>Why Local Knowledge Matters for SEO</h2>
+
+      <p>A national SEO agency will treat Guildford as a single location. That misses the reality. A dentist in Merrow competes with different practices than a dentist in Stoughton. A solicitor in the Cathedral district targets different keywords than one in Woking. An estate agent covering Pewley Hill needs different content than one focused on Park Barn.</p>
+
+      <p>Local knowledge directly affects keyword selection. I know that Guildford residents search for "the Mount" not "Pewley Down". I know that "Guildford" and "GU1" produce different search results. I know which suburbs Google clusters together and which it treats as distinct locations. This granular understanding translates into more precise targeting and faster ranking improvements.</p>
+
+      <p>Every area page I build for clients contains genuine local references, not templated copy with the town name swapped in. Google's helpful content system specifically penalises that approach. My local pages rank because they contain information that only someone who knows the area could write.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <details>
+          <summary>Do you only work with businesses based in Guildford?</summary>
+          <p>No. I work with businesses across Surrey, Hampshire, and nationally. However, my deepest local knowledge covers Guildford and surrounding areas within a 20-mile radius, including Woking, Godalming, Farnham, Camberley, and Aldershot.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>How does local SEO differ between Guildford suburbs?</summary>
+          <p>Each suburb has distinct search patterns. Burpham residents search differently from Onslow Village residents due to demographics, proximity to the University of Surrey, and local amenities. A locksmith in Merrow faces different competition than one in Stoughton. I tailor keyword targeting, Google Business Profile categories, and content to match each area's search behaviour.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Can you help businesses that serve multiple areas across Surrey?</summary>
+          <p>Yes. Multi-location SEO is one of my core specialisms. I build location-specific landing pages, manage multiple Google Business Profiles, and create content strategies that capture search demand across every area you serve without triggering duplicate content issues.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>What is the typical search volume for Guildford-specific queries?</summary>
+          <p>Guildford-specific service queries typically range from 50 to 500 monthly searches per keyword. The key advantage is conversion rate: local intent queries convert at 3-5x the rate of generic terms. A plumber ranking for "plumber Guildford" will generate more revenue per click than one ranking for "plumber near me" nationally.</p>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>How long does local SEO take to show results in the Guildford area?</summary>
+          <p>Most Guildford businesses see measurable ranking improvements within 8-12 weeks. The local pack (map results) often responds faster, sometimes within 4-6 weeks. Competitive sectors like property, legal services, and healthcare in the Cathedral district may take 4-6 months for significant movement.</p>
+        </details>
+      </div>
+
+    </div>
+
+    <div class="mt-12 bg-surface-alt rounded-lg p-8 text-center">
+      <h2 class="text-2xl font-bold text-brand mb-3">Get Found in Your Area</h2>
+      <p class="text-text-muted mb-6">Whether your customers are in Guildford town centre, the Surrey commuter belt, or Hampshire border towns, I will build an SEO strategy that targets the areas where your revenue comes from.</p>
+      <a href="/contact/" class="cta-button">Discuss Your Areas</a>
+    </div>
+
+    <nav class="mt-10 pt-6 border-t border-border text-sm text-text-muted" aria-label="Related pages">
+      <p>Explore more: <a href="/" class="text-brand hover:underline">Home</a> | <a href="/services/" class="text-brand hover:underline">Services</a> | <a href="/industries/" class="text-brand hover:underline">Industries</a></p>
+    </nav>
+
+  </article>
+</Base>

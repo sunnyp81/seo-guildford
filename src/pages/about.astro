@@ -1,0 +1,264 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = "About SEO Guildford — Sunny Patel, Consultant";
+const description = "Sunny Patel is the SEO consultant behind SEO Guildford. Technical SEO, AI search optimisation, and local search for Surrey and Hampshire businesses.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://seo-guildford.uk/about/" }
+  ]
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "description": description,
+  "url": "https://seo-guildford.uk/about/",
+  "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk" }
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://seo-guildford.uk/#sunny-patel",
+  "name": "Sunny Patel",
+  "jobTitle": "SEO Consultant",
+  "url": "https://sunnypatel.co.uk",
+  "sameAs": ["https://sunnypatel.co.uk"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "SEO Guildford",
+    "url": "https://seo-guildford.uk"
+  },
+  "knowsAbout": [
+    "Search Engine Optimisation",
+    "Technical SEO",
+    "AI Search Optimisation",
+    "Local SEO",
+    "Content Strategy"
+  ]
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SEO Guildford",
+  "url": "https://seo-guildford.uk",
+  "email": "hello@seo-guildford.uk",
+  "founder": { "@id": "https://seo-guildford.uk/#sunny-patel" },
+  "areaServed": [
+    { "@type": "City", "name": "Guildford" },
+    { "@type": "AdministrativeArea", "name": "Surrey" },
+    { "@type": "AdministrativeArea", "name": "Hampshire" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What qualifications does Sunny Patel have in SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sunny Patel has extensive hands-on experience managing a portfolio of SEO properties across multiple industries. His technical background covers site architecture, Core Web Vitals, structured data implementation, AI search optimisation, and programmatic SEO at scale. He works with Google Search Console, Bing Webmaster Tools, and industry-standard platforms daily."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is SEO Guildford based in Guildford specifically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guildford sits at the centre of Surrey's commercial corridor, home to Surrey Research Park, the University of Surrey, and a thriving tech and gaming industry. The town's affluent demographics and competitive business environment create strong demand for specialist SEO services that generic agencies cannot adequately serve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SEO Guildford work with clients outside Surrey?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While the primary service area covers Guildford, Surrey, and Hampshire — including Woking, Godalming, Farnham, Camberley, and Cobham — remote delivery means national and international clients receive the same level of service. Most communication happens via video calls and shared dashboards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes SEO Guildford different from large agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO Guildford is a solo consultancy. You work directly with Sunny Patel — there is no account manager layer, no junior staff learning on your account, and no templated deliverables. Every recommendation is based on your specific data, competitors, and commercial objectives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Sunny Patel stay current with algorithm changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Active portfolio management across dozens of sites provides real-time signal data during every Google and Bing update. This is supplemented by daily monitoring of Google Search Console, Bing Webmaster Tools, and industry research. AI search platforms like ChatGPT, Perplexity, and Google AI Overviews are tracked for citation patterns and ranking factors."
+      }
+    }
+  ]
+};
+
+const schema = [breadcrumbSchema, webPageSchema, personSchema, orgSchema, faqSchema];
+---
+
+<Base title={title} description={description} canonical="https://seo-guildford.uk/about/" schema={schema} ogType="profile">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-brand">Home</a>
+      <span class="mx-1">/</span>
+      <span class="text-text">About</span>
+    </nav>
+
+    <h1 class="text-4xl font-bold text-brand mb-6">About SEO Guildford</h1>
+
+    <div class="prose">
+      <p>SEO Guildford is a specialist search engine optimisation consultancy run by Sunny Patel, serving businesses across Guildford, Surrey, and Hampshire with technical SEO, AI search optimisation, and local search marketing.</p>
+
+      <div class="quick-answer">
+        <strong>Quick Answer:</strong> SEO Guildford is a solo SEO consultancy led by Sunny Patel. The practice focuses on technical SEO, AI search readiness, and local visibility for businesses in and around Guildford. Every engagement is direct — no account managers, no outsourced work, no wasted spend.
+      </div>
+
+      <h2>Meet Sunny Patel</h2>
+
+      <p>Sunny Patel is the SEO consultant behind SEO Guildford. He operates a remote-first practice with deep coverage across Surrey and Hampshire, working directly with business owners who need measurable improvements in organic search performance.</p>
+
+      <p>His expertise spans three core disciplines: technical SEO (site architecture, crawl optimisation, Core Web Vitals, structured data), AI search optimisation (positioning brands for visibility in ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot), and local search marketing for businesses that depend on geographic intent queries.</p>
+
+      <p>Sunny manages a portfolio of SEO properties across multiple verticals, giving him continuous, real-time exposure to how Google and Bing algorithms behave. This is not theoretical knowledge drawn from conference slides. It is pattern recognition built from watching rankings shift across dozens of sites during every core update, spam update, and local algorithm change.</p>
+
+      <p>The focus is always revenue. Rankings and traffic are intermediate signals. The metric that matters is whether SEO is generating leads, sales, or bookings that justify the investment. Vanity metrics — impressions without clicks, rankings for terms nobody converts on — are identified and deprioritised early.</p>
+
+      <p>You can find more about Sunny's broader work at <a href="https://sunnypatel.co.uk" rel="noopener" target="_blank">sunnypatel.co.uk</a>.</p>
+
+      <h2>Why I Focus on Guildford</h2>
+
+      <p>Guildford is not a typical market. It combines an affluent consumer base with a tech-savvy business community that understands digital marketing but often lacks in-house SEO capability. This creates a specific kind of client: informed enough to ask good questions, commercially motivated enough to act on recommendations.</p>
+
+      <p>Surrey Research Park, adjacent to the University of Surrey campus, houses over 110 companies in sectors from satellite technology to pharmaceutical research. These are businesses with complex technical products, long sales cycles, and search intent patterns that demand specialist SEO rather than generic agency playbooks. The same applies to the professional services firms clustered along Guildford High Street and the solicitors, accountants, and consultancies serving the wider Surrey corridor.</p>
+
+      <p>Guildford's gaming industry adds another dimension. Studios like Media Molecule and Hello Games have made the town a recognised hub for interactive entertainment. The creative and technology talent pool this attracts means Guildford businesses are more likely to invest in digital channels — and more likely to hold their SEO provider to a technical standard.</p>
+
+      <p>The surrounding towns of Woking, Godalming, Farnham, Camberley, and Cobham extend this catchment. Each has its own commercial character, but they share proximity to the A3 and M25 corridors and a customer base that searches online before making purchasing decisions. Local SEO in this region is not optional. It is the primary acquisition channel for most service businesses.</p>
+
+      <p>Guildford Cathedral, visible from much of the town, sits on Stag Hill overlooking a market that rewards businesses who invest properly in their online presence. The competition is real — and that is precisely why specialist SEO matters here.</p>
+
+      <h2>My Approach to SEO</h2>
+
+      <p>Every engagement starts with data. Before any strategy is proposed, the site is audited technically, its search console data is analysed, and its competitive landscape is mapped. Recommendations are drawn from evidence, not assumptions.</p>
+
+      <h3>Technical-First</h3>
+
+      <p>Most SEO problems are technical problems. A site that Google cannot crawl efficiently, that loads slowly on mobile, or that sends conflicting signals through duplicate content and broken canonical chains will underperform regardless of how good the content is. Technical SEO is addressed first because it removes the ceiling on everything else.</p>
+
+      <p>This means examining crawl budgets, indexation patterns, internal linking architecture, structured data validity, Core Web Vitals scores, and server response behaviour. These are not optional extras. They are the foundation.</p>
+
+      <h3>AI-Search Aware</h3>
+
+      <p>Search is changing. Google AI Overviews, ChatGPT with browsing, Perplexity, and Microsoft Copilot are reshaping how users find and consume information. Businesses that optimise only for traditional blue-link rankings are already losing visibility to competitors who understand how AI systems select and cite sources.</p>
+
+      <p>SEO Guildford builds AI search readiness into every engagement. This includes entity optimisation, structured data that AI systems can parse, content architecture designed for extraction, and citation strategies that position your brand as a trusted source across AI platforms. Learn more about this on the <a href="/ai-search-optimisation-guildford/">AI search optimisation</a> page.</p>
+
+      <h3>Transparent Reporting</h3>
+
+      <p>You will never receive a report full of jargon designed to obscure a lack of results. Reporting covers what was done, what changed, and what happens next. Google Search Console and Bing Webmaster Tools data is shared directly. Questions are answered promptly. If something is not working, you will hear about it before you ask.</p>
+
+      <h2>What I Specialise In</h2>
+
+      <div class="grid md:grid-cols-2 gap-4 not-prose my-8">
+        <div class="service-card">
+          <h3 class="font-semibold text-brand text-lg mb-2">Technical SEO</h3>
+          <p class="text-text-muted text-sm">Site architecture, crawl optimisation, Core Web Vitals, structured data, indexation management, and migration support. The foundation that makes everything else work.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="font-semibold text-brand text-lg mb-2">AI Search Optimisation</h3>
+          <p class="text-text-muted text-sm">AEO and GEO strategies that position your brand for citations in ChatGPT, Perplexity, Google AI Overviews, and Copilot. Entity-first, data-structured, citation-driven.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="font-semibold text-brand text-lg mb-2">Local SEO</h3>
+          <p class="text-text-muted text-sm">Google Business Profile optimisation, local pack rankings, location-page strategy, review management, and citation building for Guildford and Surrey businesses.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="font-semibold text-brand text-lg mb-2">Content Strategy</h3>
+          <p class="text-text-muted text-sm">Topical authority mapping, keyword clustering, content briefs, and editorial calendars built around search demand and competitive gaps. Every page earns its place.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="font-semibold text-brand text-lg mb-2">E-Commerce SEO</h3>
+          <p class="text-text-muted text-sm">Product page optimisation, faceted navigation handling, category architecture, and structured data for rich results. Built for platforms from Shopify to custom builds.</p>
+        </div>
+      </div>
+
+      <p>Full details of all available services are on the <a href="/services/">services page</a>.</p>
+
+      <h2>Working With Me</h2>
+
+      <p>The process is straightforward. Initial contact leads to a discovery call where your goals, current performance, and competitive position are discussed. If there is a fit, a proposal is sent within 48 hours outlining scope, deliverables, timeline, and pricing.</p>
+
+      <h3>Communication</h3>
+
+      <p>Communication is direct and efficient. You will have a direct line to Sunny — not a support queue. Updates are regular but not excessive. When something needs your attention, you will hear about it. When the work is progressing as planned, you will not be interrupted with unnecessary status emails.</p>
+
+      <h3>What Clients Can Expect</h3>
+
+      <p>A clear plan of action within the first two weeks. Technical issues identified and prioritised by impact. Content recommendations backed by search demand data. Monthly reporting that shows progress in terms you care about — rankings, traffic, conversions, and revenue. No lock-in contracts. The work either delivers results or it does not, and you are free to decide accordingly.</p>
+
+      <p>Most engagements begin with a <a href="/free-seo-audit-guildford/">free SEO audit</a> that identifies the highest-impact opportunities before any commitment is made.</p>
+
+      <h2>Credentials and Experience</h2>
+
+      <p>Sunny Patel has spent years working in SEO across agency, in-house, and consultancy settings. His current portfolio spans dozens of active sites across industries including professional services, e-commerce, health and wellness, property, education, and technology. This is not a side project. It is a full-time practice built on continuous execution and measurement.</p>
+
+      <p>Technical credentials include hands-on proficiency with Google Search Console, Bing Webmaster Tools, Ahrefs, Screaming Frog, and programmatic SEO tooling. Sites under management range from 10-page service businesses to platforms with over 25,000 indexed pages. Structured data implementation, site migrations, penalty recovery, and core update response are all within regular scope.</p>
+
+      <p>The shift toward AI search is not something Sunny is watching from the sidelines. Active monitoring of how AI platforms cite sources, ongoing testing of entity optimisation strategies, and real-world tracking of AI Overview appearances across client queries inform every recommendation. Businesses near the University of Surrey and Surrey Research Park are already asking how AI search will affect their visibility. The answer is: it already has.</p>
+
+      <p>Guildford businesses deserve an SEO consultant who understands both the local market and the technical landscape. That is what SEO Guildford delivers.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <details class="faq-item">
+        <summary>What qualifications does Sunny Patel have in SEO?</summary>
+        <p>Sunny Patel has extensive hands-on experience managing a portfolio of SEO properties across multiple industries. His technical background covers site architecture, Core Web Vitals, structured data implementation, AI search optimisation, and programmatic SEO at scale. He works with Google Search Console, Bing Webmaster Tools, and industry-standard platforms daily.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why is SEO Guildford based in Guildford specifically?</summary>
+        <p>Guildford sits at the centre of Surrey's commercial corridor, home to Surrey Research Park, the University of Surrey, and a thriving tech and gaming industry. The town's affluent demographics and competitive business environment create strong demand for specialist SEO services that generic agencies cannot adequately serve.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does SEO Guildford work with clients outside Surrey?</summary>
+        <p>Yes. While the primary service area covers Guildford, Surrey, and Hampshire — including Woking, Godalming, Farnham, Camberley, and Cobham — remote delivery means national and international clients receive the same level of service. Most communication happens via video calls and shared dashboards.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What makes SEO Guildford different from large agencies?</summary>
+        <p>SEO Guildford is a solo consultancy. You work directly with Sunny Patel — there is no account manager layer, no junior staff learning on your account, and no templated deliverables. Every recommendation is based on your specific data, competitors, and commercial objectives.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How does Sunny Patel stay current with algorithm changes?</summary>
+        <p>Active portfolio management across dozens of sites provides real-time signal data during every Google and Bing update. This is supplemented by daily monitoring of Google Search Console, Bing Webmaster Tools, and industry research. AI search platforms like ChatGPT, Perplexity, and Google AI Overviews are tracked for citation patterns and ranking factors.</p>
+      </details>
+
+      <div class="not-prose mt-12 bg-surface-alt rounded-xl p-8 text-center">
+        <h2 class="text-2xl font-bold text-brand mb-3">Ready to Improve Your Search Visibility?</h2>
+        <p class="text-text-muted mb-6 max-w-lg mx-auto">Get in touch for a direct conversation about your SEO goals. No sales pitch, no obligations — just a clear assessment of where you stand and what is possible.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/contact/" class="cta-button">Get in Touch</a>
+          <a href="/free-seo-audit-guildford/" class="cta-button-outline">Free SEO Audit</a>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-border text-sm text-text-muted">
+        <p>Explore more: <a href="/">Home</a> · <a href="/services/">Services</a> · <a href="/ai-search-optimisation-guildford/">AI Search Optimisation</a> · <a href="/case-studies/">Case Studies</a> · <a href="/areas/">Areas We Cover</a></p>
+      </div>
+    </div>
+  </section>
+</Base>

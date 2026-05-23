@@ -1,0 +1,201 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = "Contact SEO Guildford — Get in Touch";
+const description = "Contact Sunny Patel at SEO Guildford for a free SEO consultation. Serving businesses across Guildford, Surrey, and Hampshire. Email hello@seo-guildford.uk.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://seo-guildford.uk/contact/" }
+  ]
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "description": description,
+  "url": "https://seo-guildford.uk/contact/",
+  "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk" }
+};
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact SEO Guildford",
+  "url": "https://seo-guildford.uk/contact/",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "SEO Guildford",
+    "url": "https://seo-guildford.uk",
+    "email": "hello@seo-guildford.uk",
+    "areaServed": [
+      { "@type": "City", "name": "Guildford" },
+      { "@type": "AdministrativeArea", "name": "Surrey" },
+      { "@type": "AdministrativeArea", "name": "Hampshire" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guildford",
+      "addressRegion": "Surrey",
+      "addressCountry": "GB"
+    }
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you work remotely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SEO Guildford operates remote-first. Meetings happen via video call, reporting is shared through live dashboards, and communication is handled via email or your preferred channel. In-person meetings in Guildford, Woking, or elsewhere in Surrey can be arranged when needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The primary service area includes Guildford, Woking, Godalming, Farnham, Camberley, Cobham, and the wider Surrey and Hampshire corridor. Remote delivery means clients anywhere in the UK or internationally receive the same standard of work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can we start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most engagements begin within one week of agreement. The initial technical audit is typically delivered within the first 5 to 7 working days, with strategic recommendations and implementation following immediately after."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free consultations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. An initial discovery call is always free and comes with no obligation. For a more detailed assessment, request a free SEO audit at seo-guildford.uk/free-seo-audit-guildford/ — this provides a technical and strategic overview of your site before any commitment."
+      }
+    }
+  ]
+};
+
+const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
+---
+
+<Base title={title} description={description} canonical="https://seo-guildford.uk/contact/" schema={schema}>
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-brand">Home</a>
+      <span class="mx-1">/</span>
+      <span class="text-text">Contact</span>
+    </nav>
+
+    <h1 class="text-4xl font-bold text-brand mb-6">Contact SEO Guildford</h1>
+
+    <div class="prose">
+      <p>Reach Sunny Patel at SEO Guildford by email or through the contact form below to discuss your search marketing requirements.</p>
+
+      <div class="quick-answer">
+        <strong>Quick Answer:</strong> Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> or complete the form below. Most enquiries receive a response within 24 hours. Initial consultations are free.
+      </div>
+
+      <h2>Get in Touch</h2>
+
+      <p>The fastest way to start a conversation is by email. Send your enquiry to <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> with a brief description of your business, your website URL, and what you are looking to achieve with SEO. You will receive a direct reply from Sunny Patel — not an automated response or a junior team member.</p>
+
+      <p>SEO Guildford serves businesses across the Guildford, Surrey, and Hampshire corridor. Whether your office is near Guildford High Street, based at Surrey Research Park, or operating remotely from anywhere in the UK, the service delivery model is the same: direct access to a specialist consultant who does the work.</p>
+    </div>
+
+    <form action="#" method="POST" class="mt-8 space-y-5 bg-surface-alt rounded-xl p-6 md:p-8">
+      <div>
+        <label for="name" class="block text-sm font-medium text-text mb-1.5">Name <span class="text-red-500">*</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="Your name" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-text mb-1.5">Email <span class="text-red-500">*</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="you@company.co.uk" />
+      </div>
+
+      <div>
+        <label for="phone" class="block text-sm font-medium text-text mb-1.5">Phone <span class="text-text-muted font-normal">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="07xxx xxx xxx" />
+      </div>
+
+      <div>
+        <label for="website" class="block text-sm font-medium text-text mb-1.5">Website URL</label>
+        <input type="url" id="website" name="website" autocomplete="url" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="https://yoursite.co.uk" />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-text mb-1.5">Message <span class="text-red-500">*</span></label>
+        <textarea id="message" name="message" required rows="5" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition resize-y" placeholder="Tell me about your business and what you are looking to achieve with SEO."></textarea>
+      </div>
+
+      <button type="submit" class="cta-button w-full sm:w-auto">Send Enquiry</button>
+    </form>
+
+    <div class="prose mt-12">
+      <h2>Where We Are</h2>
+
+      <p>SEO Guildford is based in Guildford, Surrey. The map below shows the town centre — meetings can be arranged at a location convenient to you, or conducted remotely via video call.</p>
+    </div>
+
+    <div class="mt-6 rounded-xl overflow-hidden border border-border">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.9!2d-0.5735!3d51.2362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875d0a9463bda73%3A0x38a33d4d72580e8!2sGuildford!5e0!3m2!1sen!2suk!4v1"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map showing Guildford town centre, Surrey"
+      ></iframe>
+    </div>
+
+    <div class="prose mt-12">
+      <h2>Areas We Cover</h2>
+
+      <p>SEO Guildford provides search marketing services across the Surrey and Hampshire corridor, including Guildford, Woking, Godalming, Farnham, Camberley, Cobham, Esher, and Weybridge. For a full breakdown of service areas with local information, visit the <a href="/areas/">areas page</a>.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <details class="faq-item">
+        <summary>Do you work remotely?</summary>
+        <p>Yes. SEO Guildford operates remote-first. Meetings happen via video call, reporting is shared through live dashboards, and communication is handled via email or your preferred channel. In-person meetings in Guildford, Woking, or elsewhere in Surrey can be arranged when needed.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What areas do you cover?</summary>
+        <p>The primary service area includes Guildford, Woking, Godalming, Farnham, Camberley, Cobham, and the wider Surrey and Hampshire corridor. Remote delivery means clients anywhere in the UK or internationally receive the same standard of work.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How quickly can we start?</summary>
+        <p>Most engagements begin within one week of agreement. The initial technical audit is typically delivered within the first 5 to 7 working days, with strategic recommendations and implementation following immediately after.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you offer free consultations?</summary>
+        <p>Yes. An initial discovery call is always free and comes with no obligation. For a more detailed assessment, request a <a href="/free-seo-audit-guildford/">free SEO audit</a> — this provides a technical and strategic overview of your site before any commitment.</p>
+      </details>
+
+      <div class="not-prose mt-12 bg-surface-alt rounded-xl p-8 text-center">
+        <h2 class="text-2xl font-bold text-brand mb-3">Prefer Email?</h2>
+        <p class="text-text-muted mb-6 max-w-lg mx-auto">Send your enquiry directly and receive a personal response from Sunny Patel within 24 hours.</p>
+        <a href="mailto:hello@seo-guildford.uk" class="cta-button">Email hello@seo-guildford.uk</a>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-border text-sm text-text-muted">
+        <p>Explore more: <a href="/">Home</a> · <a href="/services/">Services</a> · <a href="/free-seo-audit-guildford/">Free SEO Audit</a> · <a href="/areas/">Areas We Cover</a></p>
+      </div>
+    </div>
+  </section>
+</Base>
