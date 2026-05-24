@@ -219,6 +219,7 @@ const oneOffs = [
         <strong>The short version:</strong> Monthly retainers range from £500 per month (Starter) to £3,500 or more per month (Enterprise). One-off audits start at £400. There are no setup fees. The minimum commitment is three months, after which plans roll month-to-month. Every plan includes a technical audit, reporting, and strategy calls. <a href="/free-seo-audit-guildford/">Request a free audit first</a> to understand where you stand.
       </div>
 
+      <div class="reveal">
       <h2>Transparent SEO Pricing for Surrey Businesses</h2>
 
       <p>Most SEO agencies hide their pricing behind a "request a quote" form -- a tactic that wastes your time and obscures the market. The rates below reflect what businesses along Guildford High Street, near Tunsgate Quarter, and across the Surrey Research Park corridor actually pay for rigorous, analytically grounded search marketing. Transparency is not a marketing gimmick here; it is a principle.</p>
@@ -226,14 +227,17 @@ const oneOffs = [
       <p>These prices reflect the Guildford market specifically, where the competitive landscape differs materially from a smaller town. Businesses near the University of Surrey, around Guildford Cathedral, and throughout the GU postcode serve affluent, high-intent customers. The return-on-investment potential justifies the investment, and the pricing is structured accordingly.</p>
 
       <p>Every plan is transparent: no hidden fees, no vague equivocation. You know precisely what you are paying and what you receive in return.</p>
+      </div>
     </div>
 
     <!-- Pricing tiers -->
+    <div class="reveal">
     <h2 class="text-2xl font-bold text-brand mt-10 mb-6">Monthly Retainer Plans</h2>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-6 my-8">
-      {tiers.map(tier => (
-        <div class={`service-card flex flex-col ${tier.highlight ? 'ring-2 ring-accent relative' : ''}`}>
+      {tiers.map((tier, i) => (
+        <div class={`service-card tilt-card flex flex-col reveal ${tier.highlight ? 'ring-2 ring-accent relative' : ''}`} style={`--reveal-delay: ${0.1 + i * 0.1}s`}>
           {tier.highlight && (
             <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
           )}
@@ -265,8 +269,8 @@ const oneOffs = [
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 my-8">
-      {oneOffs.map(service => (
-        <div class="service-card">
+      {oneOffs.map((service, i) => (
+        <div class="service-card tilt-card reveal" style={`--reveal-delay: ${0.1 + i * 0.08}s`}>
           <h3 class="text-lg font-bold text-brand mb-1">{service.name}</h3>
           <p class="text-2xl font-bold text-text mb-3">{service.price}</p>
           <p class="text-text-muted text-sm">{service.description}</p>
@@ -275,6 +279,7 @@ const oneOffs = [
     </div>
 
     <div class="prose">
+      <div class="reveal">
       <h2>ROI Examples for Guildford Businesses</h2>
 
       <p>SEO pricing only makes sense when weighed against return -- much like evaluating any investment, you need to see both sides of the ledger. Here are three scenarios drawn from typical Guildford market conditions:</p>
@@ -290,7 +295,9 @@ const oneOffs = [
       <h3>Healthcare Practice Near Royal Surrey Hospital</h3>
 
       <p>A private physiotherapy clinic on the Starter plan at £500 per month targets "physiotherapy Guildford" and related local terms. Within four months, the Google Business Profile optimisation alone increases inbound calls by 25%. Combined with on-page improvements, the practice adds 20 new patient bookings per month at an average of £65 per session, with most patients booking six-session courses — that amounts to £7,800 per month from a £500 investment.</p>
+      </div>
 
+      <div class="reveal">
       <h2>Why Surrey SEO Commands a Premium Over the National Average</h2>
 
       <p>The national average for SEO services in the UK sits around £300 to £500 per month. Guildford pricing begins at the upper end of that range and scales higher -- not because of arbitrary markups, but because the economics of this market are fundamentally different. The logic is worth examining.</p>
@@ -310,7 +317,9 @@ const oneOffs = [
       <h3>AI Search Is Now Table Stakes</h3>
 
       <p>Guildford's technology-aware demographic adopts AI search tools faster than average, and businesses here need to be visible not merely in Google's traditional results but also in AI Overviews, ChatGPT, Perplexity, and Copilot. This additional layer of optimisation is included in the Premium and Enterprise plans because ignoring it means ceding visibility to competitors who have already taken action.</p>
+      </div>
 
+      <div class="reveal">
       <h2>What Every Plan Includes</h2>
 
       <p>Regardless of which tier you select, every monthly plan includes these baseline deliverables:</p>
@@ -324,7 +333,9 @@ const oneOffs = [
         <li><strong>Direct access to your strategist</strong> -- no account managers, no ticket systems; you communicate directly with our team via email</li>
         <li><strong>No setup fees</strong> -- all onboarding work is included in the first month's retainer</li>
       </ul>
+      </div>
 
+      <div class="reveal">
       <h2>How to Choose the Right Plan</h2>
 
       <p>The appropriate plan depends on your competitive environment, your current search visibility, and your revenue objectives. Here is a considered framework:</p>
@@ -344,8 +355,11 @@ const oneOffs = [
       <h3>Choose Enterprise If</h3>
 
       <p>You manage multiple locations, have complex technical requirements (large e-commerce catalogues, custom CMS platforms, international considerations), or need a dedicated strategist embedded within your marketing team. Typical clients include multi-branch businesses across Surrey and Hampshire, franchise operations, and large employers near the University of Surrey.</p>
+      </div>
 
+      <div class="reveal">
       <h2>Frequently Asked Questions</h2>
+      </div>
 
       <details class="faq-item">
         <summary>Why is SEO more expensive in Guildford?</summary>
@@ -389,9 +403,11 @@ const oneOffs = [
         </div>
       </details>
 
+      <div class="reveal">
       <h2>Begin with a Free Audit</h2>
 
       <p>If you are not yet certain which plan fits, begin with a <a href="/free-seo-audit-guildford/">free SEO audit</a>. It provides a factual baseline of your current search visibility and highlights the most significant opportunities -- the analytical starting point from which every good strategy grows. From there, we recommend the plan that best aligns with your goals and budget.</p>
+      </div>
 
       <div class="flex flex-col sm:flex-row gap-4 mt-8 not-prose">
         <a href="/free-seo-audit-guildford/" class="cta-button text-center">Start with an audit</a>

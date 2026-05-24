@@ -132,125 +132,213 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
 <Base title={title} description={description} schema={schema}>
 
   <!-- Hero -->
-  <section class="bg-brand text-white py-16 md:py-24">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">SEO Guildford — Local Search Marketing for Surrey Businesses</h1>
-      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">Good SEO is architecture, not decoration — it shapes how search engines understand your business from the ground up. We build technical foundations, craft semantic content, and optimise for AI search so that Guildford businesses earn the visibility their work deserves.</p>
+  <section class="hero-section">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <svg class="hero-chart" viewBox="0 0 1200 400" fill="none" aria-hidden="true" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path class="chart-line" d="M0 350 C80 345 160 335 240 310 S400 280 480 250 S640 200 720 160 S880 90 960 55 S1120 15 1200 5" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+      <path class="chart-area" d="M0 350 C80 345 160 335 240 310 S400 280 480 250 S640 200 720 160 S880 90 960 55 S1120 15 1200 5 L1200 400 L0 400Z" fill="url(#chartFill)"/>
+      <circle cx="240" cy="310" r="4" fill="#D4AF37" class="chart-dot" style="animation-delay:1s"/>
+      <circle cx="480" cy="250" r="4" fill="#D4AF37" class="chart-dot" style="animation-delay:1.4s"/>
+      <circle cx="720" cy="160" r="5" fill="#D4AF37" class="chart-dot" style="animation-delay:1.8s"/>
+      <circle cx="960" cy="55" r="5" fill="#D4AF37" class="chart-dot" style="animation-delay:2.2s"/>
+      <circle cx="1200" cy="5" r="6" fill="#D4AF37" class="chart-dot" style="animation-delay:2.6s"/>
+    </svg>
+    <div class="hero-text relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] mb-6 gradient-text">SEO That Grows<br/>Guildford Businesses</h1>
+      <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">Technical foundations. Strategic content. AI search readiness. We build organic visibility that compounds — month after month, query after query.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/free-seo-audit-guildford/" class="cta-button">Start with an audit</a>
-        <a href="/services/" class="cta-button-outline !border-white !text-white hover:!bg-white hover:!text-brand">Explore our approach</a>
+        <a href="/free-seo-audit-guildford/" class="cta-button cta-glow">Start with a free audit</a>
+        <a href="/services/" class="cta-button-outline !border-white/25 !text-white hover:!bg-white/10 hover:!border-white/40">Explore our services</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-bar">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-10 md:py-12">
+      <div class="stat-item reveal">
+        <span class="stat-value" data-count="3.2" data-suffix="x">0x</span>
+        <span class="stat-label">Avg Traffic Growth</span>
+      </div>
+      <div class="stat-item reveal" style="--reveal-delay: 0.1s">
+        <span class="stat-value" data-count="97" data-suffix="%">0%</span>
+        <span class="stat-label">Client Retention</span>
+      </div>
+      <div class="stat-item reveal" style="--reveal-delay: 0.2s">
+        <span class="stat-value" data-count="150" data-suffix="+">0+</span>
+        <span class="stat-label">Keywords Page 1</span>
+      </div>
+      <div class="stat-item reveal" style="--reveal-delay: 0.3s">
+        <span class="stat-value" data-count="8" data-suffix=" yrs">0</span>
+        <span class="stat-label">Search Experience</span>
       </div>
     </div>
   </section>
 
-  <article class="max-w-3xl mx-auto px-4 py-12 prose">
+  <article class="max-w-3xl mx-auto px-4 py-12 md:py-16 prose">
 
-    <p>SEO Guildford is a specialist search marketing consultancy for businesses across Guildford and Surrey. We practise SEO the way a skilled cartographer surveys terrain: methodically, with attention to contour and detail, building a map that reveals opportunity others overlook. From gaming studios at Surrey Research Park to established solicitors' practices on Guildford High Street, our work spans technical SEO, semantic content strategy, and the emerging discipline of AI search optimisation — each layer reinforcing the others, the way load-bearing walls support what sits above them.</p>
-
-    <div class="quick-answer">
-      <strong>The short version:</strong> SEO Guildford provides craft-driven local search marketing for businesses in Guildford and Surrey. We weave together technical SEO, content strategy, and AI search optimisation to build organic traffic that compounds over time. <a href="/free-seo-audit-guildford/">Start with an audit</a> to see exactly where your site stands.
+    <div class="reveal">
+      <p>SEO Guildford is a specialist search marketing consultancy for businesses across Guildford and Surrey. We practise SEO the way a skilled cartographer surveys terrain: methodically, with attention to contour and detail, building a map that reveals opportunity others overlook. From gaming studios at Surrey Research Park to established solicitors' practices on Guildford High Street, our work spans technical SEO, semantic content strategy, and the emerging discipline of AI search optimisation — each layer reinforcing the others, the way load-bearing walls support what sits above them.</p>
     </div>
 
-    <h2>Why Guildford Businesses Choose Us</h2>
+    <div class="reveal" style="--reveal-delay: 0.1s">
+      <div class="quick-answer">
+        <strong>The short version:</strong> SEO Guildford provides craft-driven local search marketing for businesses in Guildford and Surrey. We weave together technical SEO, content strategy, and AI search optimisation to build organic traffic that compounds over time. <a href="/free-seo-audit-guildford/">Start with an audit</a> to see exactly where your site stands.
+      </div>
+    </div>
 
-    <p>Guildford is not an ordinary market, and the businesses that thrive here can tell the difference between a carefully constructed strategy and one that has simply been bolted on. Average property prices exceed £600,000. The town hosts a remarkable concentration of technology, gaming, and professional services firms. And the clientele these businesses serve are themselves digitally literate, research-driven, and accustomed to quality — which means the bar for earning their attention through search is set unusually high.</p>
+    <div class="reveal">
+      <h2>Why Guildford Businesses Choose Us</h2>
 
-    <p>Consider Surrey Research Park, home to EA, BAE Systems (Detica), and dozens of AI and biotech firms. These organisations sell nationally and globally from a Guildford address, and their websites need more than rudimentary local SEO. They require technical foundations that scale gracefully — like well-laid plumbing in a building you intend to extend — along with content strategies that cultivate genuine topical authority, and visibility in AI-powered search engines that are quietly reshaping how informed buyers discover services.</p>
+      <p>Guildford is not an ordinary market, and the businesses that thrive here can tell the difference between a carefully constructed strategy and one that has simply been bolted on. Average property prices exceed £600,000. The town hosts a remarkable concentration of technology, gaming, and professional services firms. And the clientele these businesses serve are themselves digitally literate, research-driven, and accustomed to quality — which means the bar for earning their attention through search is set unusually high.</p>
+    </div>
 
-    <p>The professional services corridor running from Castle Street through the cobbled High Street to the Friary Centre tells a different story, but one that demands equal precision. Accountants, solicitors, financial advisers, and property agents all compete for the same high-value clientele. Distinguishing yourself in this environment is less about volume and more about accuracy: the right keywords, substantive content depth, and technically flawless implementation that leaves nothing to chance.</p>
+    <div class="reveal">
+      <p>Consider Surrey Research Park, home to EA, BAE Systems (Detica), and dozens of AI and biotech firms. These organisations sell nationally and globally from a Guildford address, and their websites need more than rudimentary local SEO. They require technical foundations that scale gracefully — like well-laid plumbing in a building you intend to extend — along with content strategies that cultivate genuine topical authority, and visibility in AI-powered search engines that are quietly reshaping how informed buyers discover services.</p>
+    </div>
 
-    <p>The University of Surrey brings a steady flow of startups, research spinouts, and student-founded ventures into the local economy. Healthcare providers near Royal Surrey County Hospital serve patients who research online before booking — often extensively. Hospitality venues around the Yvonne Arnaud Theatre and G Live depend on local discovery at the exact moment of intent. Each sector presents distinct search patterns, and a well-crafted strategy must reflect those nuances rather than flatten them.</p>
+    <div class="reveal">
+      <p>The professional services corridor running from Castle Street through the cobbled High Street to the Friary Centre tells a different story, but one that demands equal precision. Accountants, solicitors, financial advisers, and property agents all compete for the same high-value clientele. Distinguishing yourself in this environment is less about volume and more about accuracy: the right keywords, substantive content depth, and technically flawless implementation that leaves nothing to chance.</p>
+    </div>
 
-    <h2>Our SEO Services</h2>
+    <div class="reveal">
+      <p>The University of Surrey brings a steady flow of startups, research spinouts, and student-founded ventures into the local economy. Healthcare providers near Royal Surrey County Hospital serve patients who research online before booking — often extensively. Hospitality venues around the Yvonne Arnaud Theatre and G Live depend on local discovery at the exact moment of intent. Each sector presents distinct search patterns, and a well-crafted strategy must reflect those nuances rather than flatten them.</p>
+    </div>
 
-    <p>Every engagement begins with an honest assessment of where you are and where you need to be — a surveyor's first reading before any construction begins. Our <a href="/services/">services</a> span the full spectrum of search marketing, each calibrated to the competitive realities of the Guildford market.</p>
+    <h2 class="reveal">Our SEO Services</h2>
 
-    <div class="grid md:grid-cols-2 gap-6 not-prose my-8">
-      <a href="/technical-seo-guildford/" class="service-card block">
-        <h3 class="font-bold text-brand text-lg mb-2">Technical SEO</h3>
+    <p class="reveal">Every engagement begins with an honest assessment of where you are and where you need to be — a surveyor's first reading before any construction begins. Our <a href="/services/">services</a> span the full spectrum of search marketing, each calibrated to the competitive realities of the Guildford market.</p>
+
+    <div class="grid md:grid-cols-2 gap-6 not-prose my-10">
+      <a href="/technical-seo-guildford/" class="service-card tilt-card block reveal">
+        <h3 class="font-bold text-brand text-lg mb-2 font-heading">Technical SEO</h3>
         <p class="text-text-muted text-sm">Site speed, crawlability, Core Web Vitals, indexation, and structured data — the load-bearing foundation upon which everything else depends.</p>
       </a>
-      <a href="/seo-audit-guildford/" class="service-card block">
-        <h3 class="font-bold text-brand text-lg mb-2">SEO Audit</h3>
+      <a href="/seo-audit-guildford/" class="service-card tilt-card block reveal" style="--reveal-delay: 0.08s">
+        <h3 class="font-bold text-brand text-lg mb-2 font-heading">SEO Audit</h3>
         <p class="text-text-muted text-sm">A thorough analysis of technical health, content gaps, backlink profile, and competitive positioning within the Guildford market.</p>
       </a>
-      <a href="/ai-search-optimisation-guildford/" class="service-card block">
-        <h3 class="font-bold text-brand text-lg mb-2">AI Search Optimisation</h3>
+      <a href="/ai-search-optimisation-guildford/" class="service-card tilt-card block reveal" style="--reveal-delay: 0.16s">
+        <h3 class="font-bold text-brand text-lg mb-2 font-heading">AI Search Optimisation</h3>
         <p class="text-text-muted text-sm">Ensure your business is cited by ChatGPT, Google AI Overviews, and Perplexity — the emerging frontier where search meets machine intelligence.</p>
       </a>
-      <a href="/services/" class="service-card block">
-        <h3 class="font-bold text-brand text-lg mb-2">Content Strategy</h3>
+      <a href="/services/" class="service-card tilt-card block reveal" style="--reveal-delay: 0.24s">
+        <h3 class="font-bold text-brand text-lg mb-2 font-heading">Content Strategy</h3>
         <p class="text-text-muted text-sm">Topical authority mapping, semantic content, and editorial calendars that build compounding organic traffic — like a well-tended garden that yields more each season.</p>
       </a>
-      <a href="/free-seo-audit-guildford/" class="service-card block">
-        <h3 class="font-bold text-brand text-lg mb-2">Free SEO Audit</h3>
+      <a href="/free-seo-audit-guildford/" class="service-card tilt-card block reveal" style="--reveal-delay: 0.32s">
+        <h3 class="font-bold text-brand text-lg mb-2 font-heading">Free SEO Audit</h3>
         <p class="text-text-muted text-sm">A considered review of your site's technical health, keyword opportunities, and competitive landscape, provided without obligation.</p>
       </a>
-      <a href="/seo-pricing-guildford/" class="service-card block">
-        <h3 class="font-bold text-brand text-lg mb-2">SEO Pricing</h3>
+      <a href="/seo-pricing-guildford/" class="service-card tilt-card block reveal" style="--reveal-delay: 0.4s">
+        <h3 class="font-bold text-brand text-lg mb-2 font-heading">SEO Pricing</h3>
         <p class="text-text-muted text-sm">Transparent pricing for Guildford businesses, with both fixed-fee and retainer arrangements to suit different requirements and objectives.</p>
       </a>
     </div>
 
-    <h2>Areas We Cover</h2>
+    <div class="reveal">
+      <h2>Areas We Cover</h2>
 
-    <p>Our home base is Guildford, though we work with businesses across Surrey and the surrounding area. Whether you operate from a converted barn in Shalford or a glass-fronted office in Onslow Village, we understand the local search landscape with the kind of granularity that only comes from working within it.</p>
+      <p>Our home base is Guildford, though we work with businesses across Surrey and the surrounding area. Whether you operate from a converted barn in Shalford or a glass-fronted office in Onslow Village, we understand the local search landscape with the kind of granularity that only comes from working within it.</p>
 
-    <p>We serve clients in Burpham, Merrow, Stoughton, Park Barn, Bellfields, Westborough, Pewley Hill, Charlotteville, and beyond, with coverage extending to neighbouring towns including Woking, Godalming, Farnham, Camberley, Cobham, Esher, and Weybridge. Many of our clients at Slyfield Industrial Estate serve customers across the South East while maintaining their Guildford roots.</p>
+      <p>We serve clients in Burpham, Merrow, Stoughton, Park Barn, Bellfields, Westborough, Pewley Hill, Charlotteville, and beyond, with coverage extending to neighbouring towns including Woking, Godalming, Farnham, Camberley, Cobham, Esher, and Weybridge. Many of our clients at Slyfield Industrial Estate serve customers across the South East while maintaining their Guildford roots.</p>
 
-    <p>See our full <a href="/areas/">areas we cover</a> for detailed local SEO information by location.</p>
+      <p>See our full <a href="/areas/">areas we cover</a> for detailed local SEO information by location.</p>
+    </div>
 
-    <h2>Industries We Serve</h2>
+    <div class="reveal">
+      <h2>Industries We Serve</h2>
 
-    <p>Guildford's economy is unusually diverse for a town of its size, and that diversity demands an approach to SEO that treats each sector as its own discipline rather than applying a single template across all of them.</p>
+      <p>Guildford's economy is unusually diverse for a town of its size, and that diversity demands an approach to SEO that treats each sector as its own discipline rather than applying a single template across all of them.</p>
+    </div>
 
-    <h3>Gaming and Technology</h3>
-    <p>Studios like Media Molecule and Hello Games established Guildford as a gaming capital, and Surrey Research Park continues to attract AI, biotech, and software companies of considerable ambition. These firms compete nationally and internationally, requiring technical SEO that supports complex site architectures, multilingual content, and the kind of deep topical authority that search engines reward — something closer to cultivating an orchard than planting a window box.</p>
+    <div class="reveal">
+      <h3>Gaming and Technology</h3>
+      <p>Studios like Media Molecule and Hello Games established Guildford as a gaming capital, and Surrey Research Park continues to attract AI, biotech, and software companies of considerable ambition. These firms compete nationally and internationally, requiring technical SEO that supports complex site architectures, multilingual content, and the kind of deep topical authority that search engines reward — something closer to cultivating an orchard than planting a window box.</p>
+    </div>
 
-    <h3>Professional Services</h3>
-    <p>Solicitors, accountants, and financial advisers clustered around Guildford High Street and the Tunsgate Quarter compete with particular intensity for local search visibility. We build local SEO strategies that combine Google Business Profile optimisation with targeted content for high-intent, commercially valuable searches — each piece of the puzzle reinforcing the others.</p>
+    <div class="reveal">
+      <h3>Professional Services</h3>
+      <p>Solicitors, accountants, and financial advisers clustered around Guildford High Street and the Tunsgate Quarter compete with particular intensity for local search visibility. We build local SEO strategies that combine Google Business Profile optimisation with targeted content for high-intent, commercially valuable searches — each piece of the puzzle reinforcing the others.</p>
+    </div>
 
-    <h3>Property and Construction</h3>
-    <p>With average property prices above £600,000, Guildford's property market attracts serious, well-informed buyers who do their homework. Estate agents, developers, and construction firms benefit from SEO strategies targeting location-specific searches and property-related informational queries that capture intent at every stage of the buying journey.</p>
+    <div class="reveal">
+      <h3>Property and Construction</h3>
+      <p>With average property prices above £600,000, Guildford's property market attracts serious, well-informed buyers who do their homework. Estate agents, developers, and construction firms benefit from SEO strategies targeting location-specific searches and property-related informational queries that capture intent at every stage of the buying journey.</p>
+    </div>
 
-    <h3>Healthcare</h3>
-    <p>From dental practices in Merrow to specialists near Royal Surrey County Hospital, healthcare providers in Guildford depend on local search visibility to reach patients who research thoroughly before booking. YMYL (Your Money, Your Life) content demands elevated E-E-A-T standards — there is no shortcut here, only the patient work of building genuine expertise signals that Google trusts.</p>
+    <div class="reveal">
+      <h3>Healthcare</h3>
+      <p>From dental practices in Merrow to specialists near Royal Surrey County Hospital, healthcare providers in Guildford depend on local search visibility to reach patients who research thoroughly before booking. YMYL (Your Money, Your Life) content demands elevated E-E-A-T standards — there is no shortcut here, only the patient work of building genuine expertise signals that Google trusts.</p>
 
-    <p>Explore our full <a href="/industries/">industry specialisms</a> for sector-specific approaches.</p>
+      <p>Explore our full <a href="/industries/">industry specialisms</a> for sector-specific approaches.</p>
+    </div>
 
-    <h2>How We Work</h2>
+    <h2 class="reveal">How We Work</h2>
 
-    <p>Every engagement follows a structured process designed to produce measurable results without misallocating time or budget. Think of it as building a house: you survey the site, draw the plans, lay the foundations, then build upward — never the reverse.</p>
+    <p class="reveal">Every engagement follows a structured process designed to produce measurable results without misallocating time or budget. Think of it as building a house: you survey the site, draw the plans, lay the foundations, then build upward — never the reverse.</p>
 
-    <h3>1. Discovery and Audit</h3>
-    <p>We analyse your current search performance, technical health, content inventory, and competitive landscape with care. For Guildford businesses, this includes mapping your visibility against local competitors and identifying gaps in both the local pack and organic results that represent genuine commercial opportunity.</p>
+    <div class="process-timeline not-prose my-10">
+      <div class="process-step reveal">
+        <span class="step-number">01</span>
+        <div>
+          <h3 class="font-bold text-brand text-lg mb-2 font-heading">Discovery & Audit</h3>
+          <p class="text-text-muted text-sm leading-relaxed">We analyse your current search performance, technical health, content inventory, and competitive landscape. For Guildford businesses, this includes mapping your visibility against local competitors and identifying gaps in both the local pack and organic results that represent genuine commercial opportunity.</p>
+        </div>
+      </div>
+      <div class="process-step reveal" style="--reveal-delay: 0.1s">
+        <span class="step-number">02</span>
+        <div>
+          <h3 class="font-bold text-brand text-lg mb-2 font-heading">Strategy</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Based on the audit findings, we build a prioritised roadmap reflecting both impact and effort. Technical remediation comes first — there is little value in publishing content on a site that search engines cannot properly crawl or index. Content strategy, local SEO, and link building are then layered according to the returns each is likely to deliver.</p>
+        </div>
+      </div>
+      <div class="process-step reveal" style="--reveal-delay: 0.2s">
+        <span class="step-number">03</span>
+        <div>
+          <h3 class="font-bold text-brand text-lg mb-2 font-heading">Execution</h3>
+          <p class="text-text-muted text-sm leading-relaxed">We implement changes directly or work in close coordination with your development team. Monthly reporting tracks keyword rankings, organic traffic, conversions, and revenue attribution, ensuring that every action ties back to commercial outcomes rather than vanity metrics.</p>
+        </div>
+      </div>
+      <div class="process-step reveal" style="--reveal-delay: 0.3s">
+        <span class="step-number">04</span>
+        <div>
+          <h3 class="font-bold text-brand text-lg mb-2 font-heading">Optimisation</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Search is not static, and a well-crafted strategy must evolve alongside it. Algorithm updates, competitor activity, and shifting user behaviour all require ongoing, measured adjustment — the way a gardener prunes and feeds through the seasons. We monitor Google Search Console, analytics, and AI search citations to keep your strategy current.</p>
+        </div>
+      </div>
+    </div>
 
-    <h3>2. Strategy</h3>
-    <p>Based on the audit findings, we build a prioritised roadmap that reflects both impact and effort. Technical remediation comes first — there is little value in publishing content on a site that search engines cannot properly crawl or index, much as there is little point in furnishing a building before the roof is watertight. Content strategy, local SEO, and link building are then layered according to the returns each is likely to deliver.</p>
+    <div class="reveal">
+      <h2>Results That Matter</h2>
 
-    <h3>3. Execution</h3>
-    <p>We implement changes directly or work in close coordination with your development team. Monthly reporting tracks keyword rankings, organic traffic, conversions, and revenue attribution, ensuring that every action ties back to commercial outcomes rather than vanity metrics.</p>
+      <p>We measure success in revenue impact, not in metrics that merely flatter. Rankings matter only when they drive qualified traffic that converts into genuine business. Our <a href="/case-studies/">case studies</a> illustrate how Guildford businesses have grown organic revenue through targeted SEO — from local service firms achieving map pack prominence to technology companies capturing national search demand from their Surrey base.</p>
 
-    <h3>4. Optimisation</h3>
-    <p>Search is not static, and a well-crafted strategy must evolve alongside it. Algorithm updates, competitor activity, and shifting user behaviour all require ongoing, measured adjustment — the way a gardener prunes and feeds through the seasons rather than planting once and walking away. We monitor Google Search Console, analytics, and AI search citations to keep your strategy current and responsive.</p>
+      <p>Every client receives monthly reporting with clear, substantive metrics: organic sessions, keyword movements, conversion rates, and projected revenue impact. We set expectations candidly and hold ourselves accountable to them.</p>
+    </div>
 
-    <h2>Results That Matter</h2>
+    <div class="reveal">
+      <h2>The Guildford SEO Landscape</h2>
 
-    <p>We measure success in revenue impact, not in metrics that merely flatter. Rankings matter only when they drive qualified traffic that converts into genuine business. Our <a href="/case-studies/">case studies</a> illustrate how Guildford businesses have grown organic revenue through targeted SEO — from local service firms achieving map pack prominence to technology companies capturing national search demand from their Surrey base.</p>
+      <p>Guildford sits at a strategic intersection that shapes its commercial character in distinctive ways. Close enough to London to attract commuter wealth, yet far enough to sustain a self-sufficient local economy, it occupies a position not unlike a river confluence — where different currents of commerce meet and create something richer than any single stream. The town's blend of heritage — Guildford Castle, the Cathedral on Stag Hill, the River Wey navigation — and modernity — the Spectrum leisure complex, Stoke Park redevelopment, the technology corridor — creates a market where both traditional and digital-first businesses compete for the attention of an unusually discerning audience.</p>
 
-    <p>Every client receives monthly reporting with clear, substantive metrics: organic sessions, keyword movements, conversion rates, and projected revenue impact. We set expectations candidly and hold ourselves accountable to them.</p>
+      <p>Search behaviour in Guildford reflects this duality with considerable nuance. A solicitor on Castle Street needs to rank for "solicitor guildford" in the local pack. A SaaS company at Surrey Research Park needs to rank for industry terms nationally. A restaurant near the Yvonne Arnaud Theatre needs to appear in "near me" searches from theatregoers making last-minute decisions. A single, undifferentiated approach to SEO simply does not serve this market — which is precisely why a craft-driven approach matters here more than most places.</p>
 
-    <h2>The Guildford SEO Landscape</h2>
+      <p>AI search is introducing yet another layer of complexity that rewards those who prepare for it. Google AI Overviews now appear for many local queries, while ChatGPT and Perplexity are becoming meaningful discovery tools for high-consideration purchases — precisely the kind of purchases that Guildford's affluent population tends to make. Businesses that overlook AI search optimisation risk ceding ground to competitors who adapt with greater purpose and foresight.</p>
+    </div>
 
-    <p>Guildford sits at a strategic intersection that shapes its commercial character in distinctive ways. Close enough to London to attract commuter wealth, yet far enough to sustain a self-sufficient local economy, it occupies a position not unlike a river confluence — where different currents of commerce meet and create something richer than any single stream. The town's blend of heritage — Guildford Castle, the Cathedral on Stag Hill, the River Wey navigation — and modernity — the Spectrum leisure complex, Stoke Park redevelopment, the technology corridor — creates a market where both traditional and digital-first businesses compete for the attention of an unusually discerning audience.</p>
+    <h2 class="reveal">Frequently Asked Questions</h2>
 
-    <p>Search behaviour in Guildford reflects this duality with considerable nuance. A solicitor on Castle Street needs to rank for "solicitor guildford" in the local pack. A SaaS company at Surrey Research Park needs to rank for industry terms nationally. A restaurant near the Yvonne Arnaud Theatre needs to appear in "near me" searches from theatregoers making last-minute decisions. A single, undifferentiated approach to SEO simply does not serve this market — which is precisely why a craft-driven approach matters here more than most places.</p>
-
-    <p>AI search is introducing yet another layer of complexity that rewards those who prepare for it. Google AI Overviews now appear for many local queries, while ChatGPT and Perplexity are becoming meaningful discovery tools for high-consideration purchases — precisely the kind of purchases that Guildford's affluent population tends to make. Businesses that overlook AI search optimisation risk ceding ground to competitors who adapt with greater purpose and foresight.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="not-prose">
+    <div class="not-prose reveal">
       <details class="faq-item">
         <summary>How much does SEO cost in Guildford?</summary>
         <div class="faq-answer">
@@ -311,12 +399,12 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
   </article>
 
   <!-- CTA -->
-  <section class="bg-surface py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand mb-4">See Where You Stand</h2>
-      <p class="text-text-muted text-lg mb-8">Every strong strategy begins with an honest assessment. Get your free audit and gain a clear picture of your Guildford market position, technical health, and growth opportunities. No obligation, no pressure — just data and informed guidance.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/free-seo-audit-guildford/" class="cta-button">Start with an audit</a>
+  <section class="cta-section">
+    <div class="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center relative z-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand mb-5 reveal">See Where You Stand</h2>
+      <p class="text-text-muted text-lg mb-10 max-w-xl mx-auto reveal" style="--reveal-delay: 0.1s">Every strong strategy begins with an honest assessment. Get your free audit and gain a clear picture of your Guildford market position, technical health, and growth opportunities.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal" style="--reveal-delay: 0.2s">
+        <a href="/free-seo-audit-guildford/" class="cta-button cta-glow">Start with a free audit</a>
         <a href="/contact/" class="cta-button-outline">Get in touch</a>
       </div>
     </div>
