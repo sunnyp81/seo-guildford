@@ -17,8 +17,7 @@ const schema = [
     "name": "SEO Pricing Guildford",
     "description": "Transparent SEO pricing for Guildford and Surrey businesses. Monthly retainers from £500. One-off audits from £400. No hidden fees.",
     "url": "https://seo-guildford.uk/seo-pricing-guildford/",
-    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" },
-    "author": { "@type": "Person", "name": "Sunny Patel" }
+    "isPartOf": { "@type": "WebSite", "name": "Wey Valley SEO", "url": "https://seo-guildford.uk/" }
   },
   {
     "@context": "https://schema.org",
@@ -26,8 +25,9 @@ const schema = [
     "name": "SEO Services Guildford",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "SEO Guildford",
+      "name": "Wey Valley SEO",
       "email": "hello@seo-guildford.uk",
+      "sameAs": [],
       "areaServed": { "@type": "City", "name": "Guildford" }
     },
     "areaServed": { "@type": "City", "name": "Guildford", "containedInPlace": { "@type": "AdministrativeArea", "name": "Surrey" } },
@@ -61,7 +61,7 @@ const schema = [
         },
         {
           "@type": "Offer",
-          "name": "Full SEO Audit",
+          "name": "Comprehensive SEO Audit",
           "description": "Comprehensive technical and strategic SEO audit with prioritised action plan.",
           "priceSpecification": { "@type": "UnitPriceSpecification", "price": "750", "priceCurrency": "GBP" }
         },
@@ -87,32 +87,32 @@ const schema = [
       {
         "@type": "Question",
         "name": "Why is SEO more expensive in Guildford?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Guildford has higher competition and higher customer lifetime values than most UK towns. Average property prices exceed £600,000, meaning each lead is worth significantly more. SEO pricing reflects the ROI potential — a £1,000/month campaign that generates 30 qualified leads per month for a Guildford estate agent can produce millions in property listings." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Guildford has higher competition and higher customer lifetime values than most UK towns. Average property prices exceed £600,000, meaning each lead is worth significantly more. SEO pricing reflects the ROI potential — a £1,000 per month campaign that generates 30 qualified leads for a Guildford estate agent can produce millions in property listings." }
       },
       {
         "@type": "Question",
         "name": "What is the minimum contract length?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The minimum commitment is 3 months. SEO results take time to compound, and anything shorter does not give Google enough crawl cycles to reflect changes. After the initial term, plans roll month-to-month with 30 days notice." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The minimum commitment is three months. SEO results take time to compound, and anything shorter does not give Google enough crawl cycles to reflect changes meaningfully. After the initial term, plans roll month-to-month with 30 days notice." }
       },
       {
         "@type": "Question",
         "name": "Can I upgrade or downgrade mid-contract?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can upgrade at any point and the new rate starts from the next billing cycle. Downgrades take effect after the current commitment period ends." }
+        "acceptedAnswer": { "@type": "Answer", "text": "You may upgrade at any point, with the new rate commencing from the next billing cycle. Downgrades take effect after the current commitment period concludes." }
       },
       {
         "@type": "Question",
-        "name": "What results can I expect in the first 3 months?",
-        "acceptedAnswer": { "@type": "Answer", "text": "In the first 3 months you will typically see technical issues resolved, improved crawl rates, initial ranking movements for long-tail keywords, and a fully documented content strategy. Significant traffic increases usually begin from month 4 onwards, compounding through months 6-12." }
+        "name": "What results can I expect in the first three months?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In the first three months you will typically see technical issues resolved, improved crawl rates, initial ranking movements for long-tail keywords, and a fully documented content strategy. Significant traffic increases usually begin from month four onwards, compounding through months six to twelve." }
       },
       {
         "@type": "Question",
         "name": "Do you offer one-off projects instead of monthly retainers?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. One-off audits (from £400) and standalone projects like site migrations, schema implementation, or AI search readiness assessments are available. These are scoped and quoted individually." }
+        "acceptedAnswer": { "@type": "Answer", "text": "We do. One-off audits (from £400) and standalone projects like site migrations, schema implementation, or AI search readiness assessments are available, each scoped and quoted individually." }
       },
       {
         "@type": "Question",
         "name": "Is there a setup fee?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. All onboarding work — technical audit, keyword research, strategy document, analytics setup — is included in the first month of any retainer plan. You pay the monthly rate from day one with no additional setup charges." }
+        "acceptedAnswer": { "@type": "Answer", "text": "There is not. All onboarding work — technical audit, keyword research, strategy document, analytics setup — is included in the first month of any retainer plan. You pay the monthly rate from day one with no additional setup charges." }
       }
     ]
   }
@@ -123,7 +123,7 @@ const tiers = [
     name: "Starter",
     price: "£500",
     period: "/mo",
-    description: "For small local businesses establishing their search presence in Guildford.",
+    description: "For discerning local businesses establishing their search presence in Guildford.",
     features: [
       "Technical SEO audit and fixes",
       "Monthly performance reporting",
@@ -133,14 +133,14 @@ const tiers = [
       "Basic on-page optimisation",
       "Quarterly strategy review"
     ],
-    cta: "Get Started",
+    cta: "Arrange a Private Review",
     highlight: false
   },
   {
     name: "Growth",
     price: "£1,000",
     period: "/mo",
-    description: "For established businesses ready to dominate their sector in Surrey.",
+    description: "For established businesses ready to command their sector across Surrey.",
     features: [
       "Everything in Starter",
       "Content strategy and creation",
@@ -184,13 +184,13 @@ const tiers = [
       "Weekly strategy calls",
       "International SEO if required"
     ],
-    cta: "Contact Us",
+    cta: "Speak With Us",
     highlight: false
   }
 ];
 
 const oneOffs = [
-  { name: "Full SEO Audit", price: "£750", description: "Complete technical and strategic audit with prioritised 90-day action plan, competitor benchmarking, and content gap analysis." },
+  { name: "Comprehensive SEO Audit", price: "£750", description: "Complete technical and strategic audit with prioritised 90-day action plan, competitor benchmarking, and content gap analysis." },
   { name: "Technical SEO Audit", price: "£500", description: "Focused crawl analysis covering indexation, Core Web Vitals, site architecture, internal linking, and structured data." },
   { name: "AI Search Audit", price: "£400", description: "Visibility assessment across ChatGPT, Perplexity, Google AI Overviews, and Copilot. Includes citation analysis and optimisation roadmap." }
 ];
@@ -213,19 +213,19 @@ const oneOffs = [
     <div class="prose">
       <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">SEO Pricing for Guildford and Surrey Businesses</h1>
 
-      <p>SEO pricing in Guildford starts at £500 per month for a focused local campaign and scales to £3,500 or more for multi-location enterprise work, with one-off audits available from £400.</p>
+      <p>SEO pricing in Guildford begins at £500 per month for a focused local campaign and scales to £3,500 or more for multi-location enterprise work, with one-off audits available from £400.</p>
 
       <div class="quick-answer">
-        <strong>Quick Answer:</strong> Monthly retainers range from £500/mo (Starter) to £3,500+/mo (Enterprise). One-off audits start at £400. No setup fees. Minimum commitment is 3 months, then rolling month-to-month. Every plan includes a technical audit, reporting, and strategy calls. <a href="/free-seo-audit-guildford/">Get a free audit first</a> to understand where you stand.
+        <strong>In brief:</strong> Monthly retainers range from £500 per month (Starter) to £3,500 or more per month (Enterprise). One-off audits start at £400. There are no setup fees. The minimum commitment is three months, after which plans roll month-to-month. Every plan includes a technical audit, reporting, and strategy calls. <a href="/free-seo-audit-guildford/">Request a complimentary audit first</a> to understand where you stand.
       </div>
 
       <h2>Transparent SEO Pricing for Surrey Businesses</h2>
 
-      <p>Most SEO agencies hide their pricing behind a "request a quote" form. That wastes your time. The rates below are what businesses along Guildford High Street, near Tunsgate Quarter, and across the Surrey Research Park corridor actually pay for professional search marketing.</p>
+      <p>Most SEO agencies obscure their pricing behind a "request a quote" form, which wastes your time. The rates below reflect what businesses along Guildford High Street, near Tunsgate Quarter, and across the Surrey Research Park corridor actually pay for considered, professional search marketing.</p>
 
-      <p>These prices reflect the Guildford market specifically. The competitive landscape here is different from a small town. Businesses near the University of Surrey, around Guildford Cathedral, and throughout the GU postcode serve affluent, high-intent customers. The ROI potential justifies the investment, and the pricing is structured to match.</p>
+      <p>These prices reflect the Guildford market specifically, where the competitive landscape differs materially from a smaller town. Businesses near the University of Surrey, around Guildford Cathedral, and throughout the GU postcode serve affluent, high-intent customers. The return-on-investment potential justifies the investment, and the pricing is structured accordingly.</p>
 
-      <p>Every plan is transparent. No hidden fees, no vague "it depends" answers. You know exactly what you are paying and what you receive.</p>
+      <p>Every plan is transparent: no hidden fees, no vague equivocation. You know precisely what you are paying and what you receive in return.</p>
     </div>
 
     <!-- Pricing tiers -->
@@ -261,7 +261,7 @@ const oneOffs = [
     <div class="prose">
       <h2>One-Off Services</h2>
 
-      <p>Not every business needs an ongoing retainer. These standalone services are scoped, quoted, and delivered as one-off projects with a clear deliverable and timeline.</p>
+      <p>Not every business requires an ongoing retainer. These standalone services are scoped, quoted, and delivered as one-off projects, each with a clear deliverable and defined timeline.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 my-8">
@@ -277,125 +277,125 @@ const oneOffs = [
     <div class="prose">
       <h2>ROI Examples for Guildford Businesses</h2>
 
-      <p>SEO pricing only makes sense in the context of return. Here are three real-world scenarios based on typical Guildford market conditions:</p>
+      <p>SEO pricing only makes sense when considered in the context of return. Here are three scenarios based on typical Guildford market conditions:</p>
 
       <h3>Property Agency Near Guildford High Street</h3>
 
-      <p>A Guildford estate agent investing £1,000/mo in the Growth plan targets keywords like "houses for sale Guildford" and "estate agents Guildford." Within 6 months, ranking improvements across 4 keyword clusters generate 40 additional organic leads per month. With average Guildford property prices above £600,000 and a typical 1.5% commission, converting just 2 of those leads per month represents £18,000 in commission revenue against a £1,000 marketing spend. That is an 18:1 return.</p>
+      <p>A Guildford estate agent investing £1,000 per month in the Growth plan targets keywords like "houses for sale Guildford" and "estate agents Guildford." Within six months, ranking improvements across four keyword clusters generate 40 additional organic leads per month. With average Guildford property prices above £600,000 and a typical 1.5% commission, converting just two of those leads per month represents £18,000 in commission revenue against a £1,000 marketing spend — an 18:1 return.</p>
 
       <h3>Technology Company at Surrey Research Park</h3>
 
-      <p>A B2B software firm near the University of Surrey invests in the Premium plan at £2,000/mo to target decision-makers searching for specialist solutions. The content strategy and AI search optimisation position the company in Google results and AI overviews for 5 high-intent keyword clusters. By month 8, organic search delivers 15 qualified demo requests per month. With an average contract value of £25,000, even a 10% close rate adds £37,500/mo in new revenue.</p>
+      <p>A B2B software firm near the University of Surrey invests in the Premium plan at £2,000 per month to reach decision-makers searching for specialist solutions. The content strategy and AI search optimisation position the company within Google results and AI overviews for five high-intent keyword clusters. By month eight, organic search delivers 15 qualified demonstration requests per month, and with an average contract value of £25,000, even a 10% close rate adds £37,500 per month in new revenue.</p>
 
       <h3>Healthcare Practice Near Royal Surrey Hospital</h3>
 
-      <p>A private physiotherapy clinic on the Starter plan at £500/mo targets "physiotherapy Guildford" and related local terms. Within 4 months, the Google Business Profile optimisation alone increases calls by 25%. Combined with on-page improvements, the practice adds 20 new patient bookings per month at an average of £65 per session, with most patients booking 6-session courses. That is £7,800/mo from a £500 investment.</p>
+      <p>A private physiotherapy clinic on the Starter plan at £500 per month targets "physiotherapy Guildford" and related local terms. Within four months, the Google Business Profile optimisation alone increases inbound calls by 25%. Combined with on-page improvements, the practice adds 20 new patient bookings per month at an average of £65 per session, with most patients booking six-session courses — that amounts to £7,800 per month from a £500 investment.</p>
 
-      <h2>Why Surrey SEO Costs More Than the National Average</h2>
+      <h2>Why Surrey SEO Commands a Premium Over the National Average</h2>
 
-      <p>The national average for SEO services in the UK sits around £300-500/mo. Guildford pricing starts at the upper end of that range and scales higher. There are concrete reasons for this, none of which involve arbitrary markups.</p>
+      <p>The national average for SEO services in the UK sits around £300 to £500 per month. Guildford pricing begins at the upper end of that range and scales higher, for concrete reasons that have nothing to do with arbitrary markups.</p>
 
       <h3>Higher Customer Lifetime Values</h3>
 
-      <p>Surrey is one of the most affluent counties in England. Average household income in Guildford exceeds the national average by a significant margin. When your customers have higher spending power, each lead is worth more. SEO campaigns are priced relative to the revenue they generate, not to an arbitrary national benchmark.</p>
+      <p>Surrey is one of the most affluent counties in England, and average household income in Guildford exceeds the national average by a considerable margin. When your customers have higher spending power, each lead is worth proportionally more. SEO campaigns are priced relative to the revenue they generate, not to an arbitrary national benchmark.</p>
 
       <h3>Competitive Search Landscape</h3>
 
-      <p>Guildford has a dense concentration of established businesses, many of which already invest in SEO. Competing for top positions against firms that have been building domain authority for years requires more strategic depth, more content, and more technical expertise than a less competitive market. The Friary Centre, Tunsgate Quarter, and the surrounding business districts are served by businesses that understand digital marketing. Outranking them requires a meaningful investment.</p>
+      <p>Guildford has a dense concentration of established businesses, many of which already invest in SEO. Competing for top positions against firms that have been building domain authority for years requires greater strategic depth, more content, and more technical expertise than a less competitive market. The Friary Centre, Tunsgate Quarter, and the surrounding business districts are served by organisations that understand digital marketing, and outranking them requires a meaningful, considered investment.</p>
 
       <h3>Specialist Knowledge Required</h3>
 
-      <p>The Guildford market includes gaming studios, university-linked technology companies, premium property agencies, and specialist healthcare providers. Each sector demands specific keyword research, content expertise, and competitive analysis. A generic SEO package designed for a small town does not work in a market this sophisticated.</p>
+      <p>The Guildford market includes gaming studios, university-linked technology companies, premium property agencies, and specialist healthcare providers. Each sector demands specific keyword research, content expertise, and competitive analysis that a generic SEO package designed for a smaller town simply cannot provide.</p>
 
       <h3>AI Search Is Now Table Stakes</h3>
 
-      <p>Guildford's tech-savvy demographic adopts AI search tools faster than average. Businesses here need to be visible not just in Google's traditional results but also in AI Overviews, ChatGPT, Perplexity, and Copilot. This additional layer of optimisation is included in the Premium and Enterprise plans because ignoring it means losing visibility to competitors who act first.</p>
+      <p>Guildford's technology-aware demographic adopts AI search tools faster than average, and businesses here need to be visible not merely in Google's traditional results but also in AI Overviews, ChatGPT, Perplexity, and Copilot. This additional layer of optimisation is included in the Premium and Enterprise plans because ignoring it means ceding visibility to competitors who have already taken action.</p>
 
       <h2>What Every Plan Includes</h2>
 
-      <p>Regardless of which tier you choose, every monthly plan includes these baseline deliverables:</p>
+      <p>Regardless of which tier you select, every monthly plan includes these baseline deliverables:</p>
 
       <ul>
-        <li><strong>Initial technical audit</strong> -- a complete crawl and analysis of your site's technical health, delivered in the first month</li>
+        <li><strong>Initial technical audit</strong> -- a complete crawl and analysis of your site's technical health, delivered within the first month</li>
         <li><strong>Monthly reporting</strong> -- clear, jargon-free reports showing ranking changes, traffic growth, and conversion data</li>
-        <li><strong>Google Analytics and Search Console setup</strong> -- if not already configured, we set up and verify both during onboarding</li>
+        <li><strong>Google Analytics and Search Console setup</strong> -- if not already configured, we establish and verify both during onboarding</li>
         <li><strong>On-page optimisation</strong> -- title tags, meta descriptions, heading structure, and content improvements across targeted pages</li>
         <li><strong>Local SEO fundamentals</strong> -- Google Business Profile management, local citation audit, and NAP consistency checks</li>
-        <li><strong>Direct access to your strategist</strong> -- no account managers, no ticket systems. You communicate directly with Sunny Patel via email</li>
+        <li><strong>Direct access to your strategist</strong> -- no account managers, no ticket systems; you communicate directly with our team via email</li>
         <li><strong>No setup fees</strong> -- all onboarding work is included in the first month's retainer</li>
       </ul>
 
       <h2>How to Choose the Right Plan</h2>
 
-      <p>The right plan depends on your competitive environment, your current search visibility, and your revenue targets. Here is a simple framework:</p>
+      <p>The appropriate plan depends on your competitive environment, your current search visibility, and your revenue objectives. Here is a considered framework:</p>
 
       <h3>Choose Starter If</h3>
 
-      <p>You are a small local business with a single location, limited current search visibility, and a modest budget. You want to get the fundamentals right: technical health, local listings, and a small number of keyword targets. Typical clients: independent retailers on Guildford High Street, sole-practitioner consultancies, local tradespeople serving the GU postcode.</p>
+      <p>You are a small local business with a single location, limited current search visibility, and a modest budget. You wish to establish the fundamentals: technical health, local listings, and a small number of keyword targets. Typical clients include independent retailers on Guildford High Street, sole-practitioner consultancies, and local tradespeople serving the GU postcode.</p>
 
       <h3>Choose Growth If</h3>
 
-      <p>You have an established business and recognise that SEO is a growth channel, not just a maintenance task. You are ready to invest in content creation, target multiple keyword clusters, and build authority through links. Typical clients: professional services firms, growing hospitality businesses, mid-size retailers with regional ambitions.</p>
+      <p>You have an established business and recognise that SEO is a growth channel rather than merely a maintenance task. You are prepared to invest in content creation, target multiple keyword clusters, and build authority through considered link acquisition. Typical clients include professional services firms, growing hospitality businesses, and mid-size retailers with regional ambitions.</p>
 
       <h3>Choose Premium If</h3>
 
-      <p>You operate in a competitive sector where search visibility directly correlates with revenue. You want to be visible in both traditional search and AI-powered search engines. You need conversion rate optimisation alongside traffic growth. Typical clients: property agencies, legal firms, technology companies near Surrey Research Park, private healthcare providers.</p>
+      <p>You operate in a competitive sector where search visibility directly correlates with revenue, and you wish to be visible in both traditional search and AI-powered search engines. You need conversion rate optimisation alongside traffic growth. Typical clients include property agencies, legal firms, technology companies near Surrey Research Park, and private healthcare providers.</p>
 
       <h3>Choose Enterprise If</h3>
 
-      <p>You manage multiple locations, have complex technical requirements (large e-commerce catalogues, custom CMS platforms, international considerations), or need a dedicated strategist embedded in your marketing team. Typical clients: multi-branch businesses across Surrey and Hampshire, franchise operations, large employers near the University of Surrey.</p>
+      <p>You manage multiple locations, have complex technical requirements (large e-commerce catalogues, custom CMS platforms, international considerations), or need a dedicated strategist embedded within your marketing team. Typical clients include multi-branch businesses across Surrey and Hampshire, franchise operations, and large employers near the University of Surrey.</p>
 
       <h2>Frequently Asked Questions</h2>
 
       <details class="faq-item">
         <summary>Why is SEO more expensive in Guildford?</summary>
         <div class="faq-answer">
-          <p>Guildford has higher competition and higher customer lifetime values than most UK towns. Average property prices exceed £600,000, meaning each lead is worth significantly more. SEO pricing reflects the ROI potential. A £1,000/month campaign that generates 30 qualified leads per month for a Guildford estate agent can produce millions in property listings annually. The investment is proportional to the return.</p>
+          <p>Guildford has higher competition and higher customer lifetime values than most UK towns. Average property prices exceed £600,000, meaning each lead is worth significantly more. SEO pricing reflects the ROI potential: a £1,000 per month campaign that generates 30 qualified leads for a Guildford estate agent can produce millions in property listings annually. The investment is proportional to the return.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>What is the minimum contract length?</summary>
         <div class="faq-answer">
-          <p>The minimum commitment is 3 months. SEO results take time to compound, and anything shorter does not give Google enough crawl cycles to reflect changes meaningfully. After the initial 3-month term, all plans roll month-to-month with 30 days written notice to cancel.</p>
+          <p>The minimum commitment is three months. SEO results take time to compound, and anything shorter does not give Google enough crawl cycles to reflect changes meaningfully. After the initial three-month term, all plans roll month-to-month with 30 days written notice to cancel.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Can I upgrade or downgrade mid-contract?</summary>
         <div class="faq-answer">
-          <p>Yes. You can upgrade at any point and the new rate starts from the next billing cycle. Downgrades take effect after your current commitment period ends. Most clients upgrade within the first 6 months once they see results compounding.</p>
+          <p>You may upgrade at any point, with the new rate commencing from the next billing cycle. Downgrades take effect after your current commitment period concludes. Most clients upgrade within the first six months once they see results compounding.</p>
         </div>
       </details>
 
       <details class="faq-item">
-        <summary>What results can I expect in the first 3 months?</summary>
+        <summary>What results can I expect in the first three months?</summary>
         <div class="faq-answer">
-          <p>In the first 3 months you will typically see technical issues resolved, improved crawl rates, initial ranking movements for long-tail keywords, and a fully documented content strategy. Significant traffic increases usually begin from month 4 onwards, compounding through months 6-12. The timeline depends on your starting position and competitive landscape.</p>
+          <p>In the first three months you will typically see technical issues resolved, improved crawl rates, initial ranking movements for long-tail keywords, and a fully documented content strategy. Significant traffic increases usually begin from month four onwards, compounding through months six to twelve. The timeline depends on your starting position and competitive landscape.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Do you offer one-off projects instead of monthly retainers?</summary>
         <div class="faq-answer">
-          <p>Yes. One-off audits start at £400 (AI Search Audit), with full SEO audits at £750 and technical audits at £500. Standalone projects like site migrations, schema implementation, or content strategy documents are scoped and quoted individually. <a href="/contact/">Contact us</a> with your requirements.</p>
+          <p>We do. One-off audits start at £400 (AI Search Audit), with comprehensive SEO audits at £750 and technical audits at £500. Standalone projects like site migrations, schema implementation, or content strategy documents are scoped and quoted individually. <a href="/contact/">Speak with us</a> about your requirements.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Is there a setup fee?</summary>
         <div class="faq-answer">
-          <p>No. All onboarding work including the initial technical audit, keyword research, strategy document, and analytics setup is included in the first month of any retainer plan. You pay the monthly rate from day one with no additional setup charges.</p>
+          <p>There is not. All onboarding work including the initial technical audit, keyword research, strategy document, and analytics setup is included in the first month of any retainer plan. You pay the monthly rate from day one with no additional setup charges.</p>
         </div>
       </details>
 
-      <h2>Start with a Free Audit</h2>
+      <h2>Begin with a Complimentary Audit</h2>
 
-      <p>If you are not sure which plan is right, start with a <a href="/free-seo-audit-guildford/">free SEO audit</a>. It gives you a factual baseline of your current search visibility and highlights the biggest opportunities. From there, we can recommend the plan that matches your goals and budget.</p>
+      <p>If you are not yet certain which plan is right, begin with a <a href="/free-seo-audit-guildford/">complimentary SEO audit</a>. It provides a factual baseline of your current search visibility and highlights the most significant opportunities. From there, we can recommend the plan that best matches your goals and budget.</p>
 
       <div class="flex flex-col sm:flex-row gap-4 mt-8 not-prose">
-        <a href="/free-seo-audit-guildford/" class="cta-button text-center">Get Free Audit</a>
-        <a href="/contact/" class="cta-button-outline text-center">Book a Call</a>
+        <a href="/free-seo-audit-guildford/" class="cta-button text-center">Request a Complimentary Audit</a>
+        <a href="/contact/" class="cta-button-outline text-center">Speak With Us</a>
       </div>
 
       <p class="mt-8 text-sm text-text-muted">Questions about pricing? Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a>. View all <a href="/services/">SEO services</a>, read <a href="/case-studies/">case studies</a>, or return to the <a href="/">homepage</a>.</p>
