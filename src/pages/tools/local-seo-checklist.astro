@@ -1,0 +1,559 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://seo-guildford.uk/tools/" },
+      { "@type": "ListItem", "position": 3, "name": "Local SEO Checklist", "item": "https://seo-guildford.uk/tools/local-seo-checklist/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Local SEO Audit Checklist for Guildford Businesses",
+    "description": "Interactive 20-point local SEO checklist for Guildford and Surrey businesses. Track your progress across Google Business Profile, on-page SEO, technical health, reviews, and citations.",
+    "url": "https://seo-guildford.uk/tools/local-seo-checklist/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" },
+    "breadcrumb": { "@id": "https://seo-guildford.uk/tools/local-seo-checklist/#breadcrumb" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I use this local SEO checklist?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Work through each category in order, starting with Google Business Profile. Tick each item as you complete it. Your progress saves automatically in your browser, so you can return and pick up where you left off. Expand any item to see a practical tip specific to Guildford businesses." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many checklist items should I complete?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All twenty items contribute to local search visibility. However, the first ten items covering Google Business Profile and on-page SEO deliver the highest impact. Most Guildford businesses that complete these ten items see measurable ranking improvements within four to eight weeks." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need professional help to complete this checklist?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Items like claiming your GBP, uploading photos, and responding to reviews are straightforward. Technical items such as schema markup, PageSpeed optimisation, and XML sitemaps often require a developer or SEO professional. If you need help, request a free SEO audit and we will assess your current position." }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Audit Your Local SEO in Guildford",
+    "description": "A 20-point local SEO audit covering five categories essential for Guildford businesses to rank in local search results.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Optimise Google Business Profile",
+        "text": "Claim and verify your GBP listing, set correct categories, write a keyword-rich description, publish regular Google Posts, and upload current photos of your Guildford premises.",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Strengthen On-Page SEO",
+        "text": "Add location keywords to title tags and H1s, ensure NAP consistency across all pages, implement LocalBusiness schema markup, and create location-specific content referencing Guildford landmarks.",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Fix Technical Foundations",
+        "text": "Ensure mobile-friendliness with 90+ PageSpeed score, verify SSL is active, submit an XML sitemap to Google Search Console, and confirm sub-3-second load times.",
+        "position": 3
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Build Reviews and Reputation",
+        "text": "Implement a review generation strategy, respond to all reviews within 48 hours, and add AggregateRating schema markup to display star ratings in search results.",
+        "position": 4
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Establish Citations and Links",
+        "text": "List your business in major UK directories and Guildford-specific directories, earn backlinks from local Surrey sources, and set up Google Search Console and Bing Webmaster Tools.",
+        "position": 5
+      }
+    ]
+  }
+];
+---
+
+<Base
+  title="Local SEO Audit Checklist — Guildford & Surrey | SEO Guildford"
+  description="Free interactive 20-point local SEO checklist for Guildford businesses. Track progress across GBP, on-page, technical, reviews, and citations. Saves automatically."
+  canonical="https://seo-guildford.uk/tools/local-seo-checklist/"
+  schema={schema}
+>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="max-w-4xl mx-auto px-4 py-20 text-center">
+      <nav class="text-sm text-white/50 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-accent transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/tools/" class="hover:text-accent transition-colors">Tools</a>
+        <span class="mx-2">/</span>
+        <span class="text-white/80">Local SEO Checklist</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-5 gradient-text">Local SEO Audit Checklist</h1>
+      <p class="text-lg text-white/70 max-w-2xl mx-auto">A 20-point checklist built for Guildford and Surrey businesses. Work through each item, track your progress, and strengthen your local search presence.</p>
+    </div>
+  </section>
+
+  <!-- Quick Answer -->
+  <section class="max-w-4xl mx-auto px-4 -mt-8 mb-12 reveal">
+    <div class="quick-answer">
+      <p><strong>What is a local SEO audit checklist?</strong> It is a structured list of optimisation tasks that improve how your business appears in Google Maps, the local pack, and location-based searches. This checklist covers the five pillars that determine local ranking: Google Business Profile, on-page signals, technical health, reviews, and citations. Complete all 20 items to maximise your visibility for searches like <em>"[service] Guildford"</em>.</p>
+    </div>
+  </section>
+
+  <!-- Progress Bar (sticky) -->
+  <div id="progress-wrapper" class="sticky top-[60px] z-30 bg-surface/95 backdrop-blur-sm border-b border-border py-3 reveal">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm font-semibold text-brand">Overall Progress</span>
+        <div class="flex items-center gap-3">
+          <span id="progress-label" class="text-sm font-bold text-accent">0 / 20</span>
+          <button id="reset-btn" class="text-xs text-text-muted hover:text-red-600 transition-colors font-medium underline underline-offset-2">Reset</button>
+        </div>
+      </div>
+      <div class="w-full bg-surface-alt rounded-full h-3 overflow-hidden border border-border">
+        <div id="progress-bar" class="h-full bg-gradient-to-r from-accent/80 to-accent rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checklist -->
+  <section class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+
+    <!-- Google Business Profile -->
+    <div class="reveal" data-category="gbp">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-brand">Google Business Profile</h2>
+        <span class="category-progress text-sm font-semibold text-text-muted" data-category-count="gbp">0 / 5</span>
+      </div>
+      <div class="space-y-3">
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="1" data-category="gbp">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">GBP claimed and verified</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Verify via postcard or phone. Guildford businesses near the High Street see 40%+ of leads from GBP.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="2" data-category="gbp">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Correct primary and secondary categories</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Choose the most specific category. 'Solicitor' outperforms 'Legal Services' for Guildford searches.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="3" data-category="gbp">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Complete description with target keywords</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">750 characters max. Mention Guildford, your services, and your differentiator.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="4" data-category="gbp">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Regular Google Posts published</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Weekly posts signal activity. Highlight offers, events, or news relevant to Surrey customers.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="5" data-category="gbp">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Photos uploaded and kept current</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Businesses with 100+ photos get 520% more calls. Show your Guildford premises.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- On-Page SEO -->
+    <div class="reveal" data-category="onpage">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-brand">On-Page SEO</h2>
+        <span class="category-progress text-sm font-semibold text-text-muted" data-category-count="onpage">0 / 4</span>
+      </div>
+      <div class="space-y-3">
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="6" data-category="onpage">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Location keywords in title tags and H1</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Format: 'Service + Guildford' e.g. 'Accountant Guildford &mdash; [Business Name]'</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="7" data-category="onpage">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">NAP consistent across all pages</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Name, Address, Phone must match GBP exactly on every page.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="8" data-category="onpage">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">LocalBusiness schema markup on key pages</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Include @type, name, address, geo coordinates, openingHours, and areaServed.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="9" data-category="onpage">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Location-specific content on service pages</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Reference local landmarks: Surrey Research Park, Guildford Cathedral, the Friary Centre.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical -->
+    <div class="reveal" data-category="technical">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-brand">Technical</h2>
+        <span class="category-progress text-sm font-semibold text-text-muted" data-category-count="technical">0 / 4</span>
+      </div>
+      <div class="space-y-3">
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="10" data-category="technical">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Mobile-friendly and scores 90+ on PageSpeed</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">55% of local searches happen on mobile. Test at pagespeed.web.dev.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="11" data-category="technical">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">SSL certificate active (HTTPS)</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Non-HTTPS sites are flagged as 'Not Secure' and rank lower.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="12" data-category="technical">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">XML sitemap submitted to Google Search Console</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Submit at search.google.com/search-console. Include all indexable pages.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="13" data-category="technical">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Site loads in under 3 seconds</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Each second of delay costs ~7% conversions. Compress images, enable caching.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews & Reputation -->
+    <div class="reveal" data-category="reviews">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-brand">Reviews & Reputation</h2>
+        <span class="category-progress text-sm font-semibold text-text-muted" data-category-count="reviews">0 / 3</span>
+      </div>
+      <div class="space-y-3">
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="14" data-category="reviews">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Active review generation strategy</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Ask after every positive interaction. QR code on receipts works well for Guildford retail.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="15" data-category="reviews">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">All reviews responded to within 48 hours</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Respond to negative reviews professionally. Prospective clients read your responses.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="16" data-category="reviews">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Review schema markup displaying star ratings</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">AggregateRating schema can show stars in search results, boosting CTR.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Citations & Links -->
+    <div class="reveal" data-category="citations">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-brand">Citations & Links</h2>
+        <span class="category-progress text-sm font-semibold text-text-muted" data-category-count="citations">0 / 4</span>
+      </div>
+      <div class="space-y-3">
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="17" data-category="citations">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Listed in major UK directories (Yell, Thomson, FreeIndex)</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Consistency matters more than quantity. Ensure NAP matches GBP.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="18" data-category="citations">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Listed in Guildford-specific directories</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Surrey Chamber of Commerce, Visit Guildford, Experience Guildford, local business associations.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="19" data-category="citations">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Backlinks from local Guildford/Surrey sources</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Sponsor local events, partner with University of Surrey, contribute to Surrey Advertiser.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+        <div class="checklist-item service-card !p-0 overflow-hidden" data-id="20" data-category="citations">
+          <label class="flex items-start gap-3 p-4 cursor-pointer select-none">
+            <input type="checkbox" class="checklist-checkbox mt-1 w-5 h-5 rounded border-border accent-accent shrink-0" />
+            <div class="flex-1">
+              <span class="checklist-label font-semibold text-brand">Google Search Console and Bing Webmaster Tools set up</span>
+              <details class="mt-2">
+                <summary class="text-sm text-accent font-medium cursor-pointer hover:underline">View tip</summary>
+                <p class="text-sm text-text-muted mt-1.5 leading-relaxed">Essential for monitoring indexation, clicks, and identifying technical issues.</p>
+              </details>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Local SEO Matters in Guildford -->
+  <section class="max-w-4xl mx-auto px-4 py-12 reveal">
+    <h2 class="text-2xl font-bold text-brand mb-5">Why Local SEO Matters in Guildford</h2>
+    <div class="prose prose-brand max-w-none text-text-muted leading-relaxed space-y-4">
+      <p>Guildford is one of the most commercially competitive towns in the South East. Average commercial rents on the High Street sit among the highest outside London, and property prices across the GU1-GU4 postcodes mean that every business carries significant fixed costs. Winning organic local traffic is not a luxury &mdash; it is the difference between thriving and subsidising rent with paid ads indefinitely.</p>
+      <p>The local search landscape breaks into three battlegrounds. First, the Google local pack: the three-listing map result that captures over 40% of clicks for service queries. Second, organic results beneath the pack, where location-specific content and technical health determine who appears. Third, the emerging AI search layer &mdash; Copilot, Gemini, and ChatGPT &mdash; where structured data and entity authority decide which businesses get cited.</p>
+      <p>Surrey Research Park alone houses over 170 companies, many of which compete for the same professional service keywords: accountants, solicitors, IT support, recruiters. The Friary Centre and surrounding retail core add another layer of competition for consumer-facing businesses. Without a methodical local SEO strategy, your business is invisible to the 72% of consumers who search online before visiting a local premises. This checklist gives you the framework to compete.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 py-12 reveal">
+    <h2 class="text-2xl font-bold text-brand mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <details class="faq-item">
+        <summary class="font-semibold text-brand cursor-pointer">How do I use this checklist?</summary>
+        <p class="mt-3 text-text-muted leading-relaxed">Work through each category in order, starting with Google Business Profile. Tick each item as you complete it. Your progress saves automatically in your browser, so you can return and pick up where you left off. Expand any item to see a practical tip specific to Guildford businesses. The progress bar at the top tracks your overall completion.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="font-semibold text-brand cursor-pointer">How many items should I complete?</summary>
+        <p class="mt-3 text-text-muted leading-relaxed">All twenty items contribute to local search visibility. However, the first ten items covering Google Business Profile and on-page SEO deliver the highest impact. Most Guildford businesses that complete these ten items see measurable ranking improvements within four to eight weeks. Technical and citation items compound the gains over the following months.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="font-semibold text-brand cursor-pointer">Do I need professional help?</summary>
+        <p class="mt-3 text-text-muted leading-relaxed">Items like claiming your GBP, uploading photos, and responding to reviews are straightforward. Technical items such as schema markup, PageSpeed optimisation, and XML sitemaps often require a developer or SEO professional. If you get stuck or want an expert assessment of your current position, request a free SEO audit below.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section reveal">
+    <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+      <h2 class="text-3xl font-extrabold mb-4 gradient-text">Need Help Completing the Checklist?</h2>
+      <p class="text-white/70 mb-8 max-w-xl mx-auto">Get a free, no-obligation SEO audit of your Guildford business. We will identify your biggest opportunities and the quickest wins to improve your local rankings.</p>
+      <a href="/free-seo-audit-guildford/" class="cta-button cta-glow text-lg px-8 py-3.5">Get Your Free SEO Audit</a>
+    </div>
+  </section>
+
+  <!-- Inline JS -->
+  <script>
+    (function() {
+      const STORAGE_KEY = 'seo-guildford-checklist';
+      const TOTAL = 20;
+      const categoryCounts = { gbp: 5, onpage: 4, technical: 4, reviews: 3, citations: 4 };
+
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          return raw ? JSON.parse(raw) : {};
+        } catch { return {}; }
+      }
+
+      function saveState(state) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
+      }
+
+      function updateProgress(state) {
+        const checked = Object.values(state).filter(Boolean).length;
+        const pct = Math.round((checked / TOTAL) * 100);
+        const bar = document.getElementById('progress-bar');
+        const label = document.getElementById('progress-label');
+        if (bar) bar.style.width = pct + '%';
+        if (label) label.textContent = checked + ' / ' + TOTAL;
+
+        // Category sub-progress
+        Object.keys(categoryCounts).forEach(function(cat) {
+          const total = categoryCounts[cat];
+          const items = document.querySelectorAll('.checklist-item[data-category="' + cat + '"]');
+          let done = 0;
+          items.forEach(function(item) {
+            const id = item.getAttribute('data-id');
+            if (state[id]) done++;
+          });
+          const el = document.querySelector('[data-category-count="' + cat + '"]');
+          if (el) el.textContent = done + ' / ' + total;
+        });
+
+        // Visual feedback on checked items
+        document.querySelectorAll('.checklist-item').forEach(function(item) {
+          const id = item.getAttribute('data-id');
+          const label = item.querySelector('.checklist-label');
+          if (state[id]) {
+            item.classList.add('border-accent/30');
+            if (label) label.classList.add('line-through', 'opacity-60');
+          } else {
+            item.classList.remove('border-accent/30');
+            if (label) label.classList.remove('line-through', 'opacity-60');
+          }
+        });
+      }
+
+      function init() {
+        var state = loadState();
+
+        // Restore checkbox states
+        document.querySelectorAll('.checklist-item').forEach(function(item) {
+          var id = item.getAttribute('data-id');
+          var cb = item.querySelector('.checklist-checkbox');
+          if (cb && state[id]) cb.checked = true;
+        });
+
+        updateProgress(state);
+
+        // Listen for changes
+        document.querySelectorAll('.checklist-checkbox').forEach(function(cb) {
+          cb.addEventListener('change', function() {
+            var item = cb.closest('.checklist-item');
+            var id = item.getAttribute('data-id');
+            var state = loadState();
+            state[id] = cb.checked;
+            saveState(state);
+            updateProgress(state);
+          });
+        });
+
+        // Reset button
+        var resetBtn = document.getElementById('reset-btn');
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function() {
+            if (!confirm('Reset all checklist progress?')) return;
+            localStorage.removeItem(STORAGE_KEY);
+            document.querySelectorAll('.checklist-checkbox').forEach(function(cb) { cb.checked = false; });
+            updateProgress({});
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+
+</Base>

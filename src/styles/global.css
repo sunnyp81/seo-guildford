@@ -615,6 +615,22 @@ body {
   .process-timeline::before { left: 1.25rem; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .chart-line, .chart-area, .chart-dot { animation: none; opacity: 1; stroke-dashoffset: 0; }
+  .hero-text > * { opacity: 1; animation: none; }
+  .service-card { transition: none; }
+  * { animation-duration: 0.01ms !important; }
+}
+
+@media (max-width: 768px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 @media (max-width: 640px) {
   .prose h2 { font-size: 1.35rem; }
   .prose h3 { font-size: 1.15rem; }

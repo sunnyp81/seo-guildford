@@ -1,0 +1,294 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://seo-guildford.uk/tools/" },
+      { "@type": "ListItem", "position": 3, "name": "AI Search Readiness Checker", "item": "https://seo-guildford.uk/tools/ai-search-readiness-checker/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AI Search Readiness Checker",
+    "description": "Free self-assessment tool to score how ready your website is for AI search engines like ChatGPT, Perplexity, Google AI Overviews, and Copilot.",
+    "url": "https://seo-guildford.uk/tools/ai-search-readiness-checker/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is AI search readiness?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI search readiness measures how well your website is structured, marked up, and written so that AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot — can find, understand, and cite your content in their responses. It covers structured data, crawl access, content format, and entity consistency." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my Guildford business need to be ready for AI search?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI search engines are increasingly how people discover local businesses. If your site is not structured for AI extraction, competitors who are optimised will be cited instead. For Guildford businesses competing in Surrey, early adoption of AI search optimisation creates a measurable advantage in visibility and lead generation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What score should I aim for on the AI Search Readiness Checker?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A score of 71 or above indicates strong AI search readiness. Most businesses score between 30 and 50 on their first assessment. The checker provides specific recommendations for each area where you can improve, so even a low score gives you a clear action plan." }
+      }
+    ]
+  }
+];
+---
+<Base
+  title="AI Search Readiness Checker — Free Assessment Tool | SEO Guildford"
+  description="Score how ready your website is for AI search engines like ChatGPT, Perplexity, and Google AI Overviews. Free 10-question self-assessment with actionable recommendations."
+  canonical="https://seo-guildford.uk/tools/ai-search-readiness-checker/"
+  schema={schema}
+>
+
+  <section class="page-hero">
+    <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+      <nav class="text-sm text-white/50 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white">Home</a>
+        <span class="mx-1">/</span>
+        <span>Tools</span>
+        <span class="mx-1">/</span>
+        <span class="text-white/80">AI Search Readiness Checker</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+        <span class="gradient-text">AI Search Readiness Checker</span>
+      </h1>
+      <p class="text-lg text-white/70 max-w-xl mx-auto">Find out if your website is ready for ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot — in under two minutes.</p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 -mt-8 relative z-10">
+    <div class="quick-answer reveal">
+      <p><strong>Why this matters:</strong> AI search engines now generate answers from the web. If your site is not structured for extraction, your competitors get cited instead. This free checker scores your readiness across 10 factors and tells you exactly what to fix.</p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <div class="service-card p-6 md:p-10" id="checker-container">
+
+      <!-- Progress bar -->
+      <div id="progress-wrap" class="mb-8">
+        <div class="flex justify-between text-sm text-text-muted mb-2">
+          <span id="progress-label">Question <span id="q-current">1</span> of 10</span>
+          <span id="progress-pct">0%</span>
+        </div>
+        <div class="w-full h-2 rounded-full bg-surface-alt overflow-hidden">
+          <div id="progress-bar" class="h-full rounded-full transition-all duration-500 ease-out" style="width:0%;background:var(--color-accent,#D4AF37)"></div>
+        </div>
+      </div>
+
+      <!-- Questions -->
+      <div id="questions-area">
+        <h2 id="q-text" class="text-xl md:text-2xl font-bold text-brand mb-8 min-h-[3.5rem]"></h2>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="button" data-value="10" class="answer-btn flex-1 py-4 px-6 rounded-xl text-base font-semibold border-2 border-emerald-400/40 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:border-emerald-400 transition-all cursor-pointer">Yes</button>
+          <button type="button" data-value="5" class="answer-btn flex-1 py-4 px-6 rounded-xl text-base font-semibold border-2 border-amber-400/40 bg-amber-50 text-amber-700 hover:bg-amber-100 hover:border-amber-400 transition-all cursor-pointer">Partially</button>
+          <button type="button" data-value="0" class="answer-btn flex-1 py-4 px-6 rounded-xl text-base font-semibold border-2 border-gray-300/60 bg-gray-50 text-gray-500 hover:bg-gray-100 hover:border-gray-400 transition-all cursor-pointer">No</button>
+        </div>
+      </div>
+
+      <!-- Results (hidden until complete) -->
+      <div id="results-area" class="hidden">
+        <div class="flex flex-col items-center mb-10">
+          <div class="relative w-48 h-48 mb-4">
+            <svg viewBox="0 0 160 160" class="w-full h-full -rotate-90">
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#e5e7eb" stroke-width="10" />
+              <circle id="score-circle" cx="80" cy="80" r="70" fill="none" stroke-width="10" stroke-linecap="round"
+                stroke-dasharray="439.82" stroke-dashoffset="439.82" class="transition-all duration-[1500ms] ease-out" />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span id="score-value" class="text-5xl font-extrabold text-brand">0</span>
+              <span class="text-sm text-text-muted">/100</span>
+            </div>
+          </div>
+          <span id="score-label" class="text-xl font-bold"></span>
+        </div>
+
+        <div id="breakdown" class="space-y-4 mb-10"></div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button type="button" id="retake-btn" class="cta-button-outline cta-glow">Retake Assessment</button>
+          <a href="/ai-search-optimisation-guildford/" class="cta-button cta-glow text-center">Get AI Search Optimisation</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 pb-12 reveal">
+    <h2 class="text-2xl font-bold text-brand mb-4">Why AI Search Readiness Matters for Guildford Businesses</h2>
+    <div class="prose prose-brand max-w-none text-text-muted leading-relaxed space-y-4">
+      <p>Search is changing. ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot now synthesise answers from across the web and present them directly to users. When someone asks "best accountant in Guildford" or "how to fix a boiler leak," these AI engines decide which websites to cite — and which to ignore.</p>
+      <p>The difference between being cited and being invisible comes down to structure. AI search engines favour websites with clean schema markup, clear answer formatting, consistent entity data, and explicit crawl permissions. Most small business websites in Surrey lack these signals entirely, which means the opportunity for early adopters is substantial.</p>
+      <p>This checker evaluates the ten factors that matter most for AI search visibility. Each question maps to a concrete technical or content optimisation. Whether you score 20 or 80, the breakdown gives you a prioritised list of improvements — many of which can be implemented in a single afternoon. For Guildford businesses competing locally, getting these foundations right now means securing citations before competitors catch up.</p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 pb-12">
+    <h2 class="text-2xl font-bold text-brand mb-6 reveal">Frequently Asked Questions</h2>
+
+    <details class="faq-item reveal">
+      <summary class="font-semibold text-brand cursor-pointer py-4">What is AI search readiness?</summary>
+      <div class="pb-4 text-text-muted leading-relaxed">
+        <p>AI search readiness measures how well your website is structured, marked up, and written so that AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot — can find, understand, and cite your content in their responses. It covers structured data, crawl access, content format, and entity consistency.</p>
+      </div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary class="font-semibold text-brand cursor-pointer py-4">Why does my Guildford business need to be ready for AI search?</summary>
+      <div class="pb-4 text-text-muted leading-relaxed">
+        <p>AI search engines are increasingly how people discover local businesses. If your site is not structured for AI extraction, competitors who are optimised will be cited instead. For Guildford businesses competing in Surrey, early adoption of AI search optimisation creates a measurable advantage in visibility and lead generation.</p>
+      </div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary class="font-semibold text-brand cursor-pointer py-4">What score should I aim for?</summary>
+      <div class="pb-4 text-text-muted leading-relaxed">
+        <p>A score of 71 or above indicates strong AI search readiness. Most businesses score between 30 and 50 on their first assessment. The checker provides specific recommendations for each area where you can improve, so even a low score gives you a clear action plan.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="cta-section py-16 reveal">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold text-white mb-4">Need Help Improving Your Score?</h2>
+      <p class="text-white/70 mb-8">We implement every optimisation this checker measures — structured data, llms.txt, AI crawler configuration, entity alignment, and content restructuring for AI extraction.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/ai-search-optimisation-guildford/" class="cta-button cta-glow">AI Search Optimisation</a>
+        <a href="/free-seo-audit-guildford/" class="cta-button-outline cta-glow">Free SEO Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      const questions = [
+        { text: "Does your website use structured data (schema.org markup)?", rec: "Add JSON-LD structured data to every key page — at minimum LocalBusiness, WebPage, and BreadcrumbList schemas." },
+        { text: "Do you have an llms.txt file for AI crawlers?", rec: "Create an /llms.txt file that describes your site, services, and key pages in plain text so AI models can quickly understand your business." },
+        { text: "Is your robots.txt configured to allow AI crawlers (GPTBot, ClaudeBot, PerplexityBot)?", rec: "Review your robots.txt and ensure you are not blocking GPTBot, ClaudeBot, PerplexityBot, or other AI user agents." },
+        { text: "Does your content use clear, direct answer formats in the first paragraph of each page?", rec: "Restructure page intros to lead with a direct answer to the page's primary question within the first 50 words." },
+        { text: "Is your business entity information consistent across your site and external profiles (NAP, sameAs)?", rec: "Audit your name, address, phone, and sameAs links across your site, Google Business Profile, and directory listings for exact consistency." },
+        { text: "Is your website content updated at least monthly?", rec: "Establish a monthly content refresh schedule — update statistics, add new sections, and refresh dates on your most important pages." },
+        { text: "Do your pages include FAQ sections with structured FAQ schema?", rec: "Add FAQ sections with FAQPage schema markup to your key service and landing pages to increase AI extraction opportunities." },
+        { text: "Does your content demonstrate genuine topical authority (depth, not just breadth)?", rec: "Develop in-depth content clusters around your core topics with supporting articles, data, and original insights rather than surface-level coverage." },
+        { text: "Do you monitor whether AI search engines cite your business?", rec: "Regularly search for your brand and services in ChatGPT, Perplexity, and Copilot to track whether you are being cited and by which queries." },
+        { text: "Is your content structured for easy extraction — clear headings, lists, tables, and definitions?", rec: "Use descriptive H2/H3 headings, bulleted lists, comparison tables, and definition formats so AI engines can extract structured answers." }
+      ];
+
+      let current = 0;
+      const answers = new Array(10).fill(null);
+
+      const qText = document.getElementById('q-text');
+      const qCurrent = document.getElementById('q-current');
+      const progressPct = document.getElementById('progress-pct');
+      const progressBar = document.getElementById('progress-bar');
+      const progressWrap = document.getElementById('progress-wrap');
+      const questionsArea = document.getElementById('questions-area');
+      const resultsArea = document.getElementById('results-area');
+      const btns = document.querySelectorAll('.answer-btn');
+
+      function showQuestion(idx) {
+        qText.textContent = questions[idx].text;
+        qCurrent.textContent = idx + 1;
+        const pct = Math.round((idx / 10) * 100);
+        progressPct.textContent = pct + '%';
+        progressBar.style.width = pct + '%';
+      }
+
+      btns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          answers[current] = parseInt(this.dataset.value);
+          current++;
+          if (current < 10) {
+            showQuestion(current);
+          } else {
+            showResults();
+          }
+        });
+      });
+
+      function showResults() {
+        questionsArea.classList.add('hidden');
+        progressWrap.classList.add('hidden');
+        resultsArea.classList.remove('hidden');
+
+        const total = answers.reduce((a, b) => a + b, 0);
+        const pct = total;
+
+        // Animate score number
+        const scoreEl = document.getElementById('score-value');
+        const dur = 1500;
+        const t0 = performance.now();
+        (function tick(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const v = Math.round((1 - Math.pow(1 - p, 3)) * pct);
+          scoreEl.textContent = v;
+          if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+
+        // Circle animation
+        const circle = document.getElementById('score-circle');
+        const circumference = 439.82;
+        const offset = circumference - (pct / 100) * circumference;
+        let color;
+        if (pct <= 30) color = '#ef4444';
+        else if (pct <= 50) color = '#f97316';
+        else if (pct <= 70) color = '#eab308';
+        else if (pct <= 90) color = '#22c55e';
+        else color = '#D4AF37';
+        circle.style.stroke = color;
+        requestAnimationFrame(() => {
+          circle.style.strokeDashoffset = offset;
+        });
+
+        // Label
+        const labelEl = document.getElementById('score-label');
+        let label;
+        if (pct <= 30) { label = 'Critical'; labelEl.style.color = '#ef4444'; }
+        else if (pct <= 50) { label = 'Needs Work'; labelEl.style.color = '#f97316'; }
+        else if (pct <= 70) { label = 'Good Foundation'; labelEl.style.color = '#eab308'; }
+        else if (pct <= 90) { label = 'Strong'; labelEl.style.color = '#22c55e'; }
+        else { label = 'AI-Ready'; labelEl.style.color = '#D4AF37'; }
+        labelEl.textContent = label;
+
+        // Breakdown
+        const breakdown = document.getElementById('breakdown');
+        breakdown.innerHTML = '<h3 class="text-lg font-bold text-brand mb-2">Your Breakdown</h3>';
+        questions.forEach((q, i) => {
+          const val = answers[i];
+          const ansLabel = val === 10 ? 'Yes' : val === 5 ? 'Partially' : 'No';
+          const ansColor = val === 10 ? 'text-emerald-600' : val === 5 ? 'text-amber-600' : 'text-red-500';
+          const div = document.createElement('div');
+          div.className = 'border border-border rounded-lg p-4';
+          let html = '<div class="flex justify-between items-start gap-4 mb-1"><span class="text-sm text-brand font-medium">' + q.text + '</span><span class="text-sm font-bold whitespace-nowrap ' + ansColor + '">' + ansLabel + '</span></div>';
+          if (val < 10) {
+            html += '<p class="text-sm text-text-muted mt-1">' + q.rec + '</p>';
+          }
+          div.innerHTML = html;
+          breakdown.appendChild(div);
+        });
+      }
+
+      document.getElementById('retake-btn').addEventListener('click', function() {
+        current = 0;
+        answers.fill(null);
+        questionsArea.classList.remove('hidden');
+        progressWrap.classList.remove('hidden');
+        resultsArea.classList.add('hidden');
+        document.getElementById('score-circle').style.strokeDashoffset = '439.82';
+        showQuestion(0);
+      });
+
+      showQuestion(0);
+    })();
+  </script>
+
+</Base>

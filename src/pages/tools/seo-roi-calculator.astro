@@ -1,0 +1,267 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://seo-guildford.uk/tools/" },
+      { "@type": "ListItem", "position": 3, "name": "SEO ROI Calculator", "item": "https://seo-guildford.uk/tools/seo-roi-calculator/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SEO ROI Calculator — Estimate Your Return on SEO Investment",
+    "description": "Free interactive SEO ROI calculator for Guildford and Surrey businesses. Enter your metrics to see projected revenue uplift, annual returns, and ROI percentage from organic search.",
+    "url": "https://seo-guildford.uk/tools/seo-roi-calculator/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is this SEO ROI calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator provides a directional estimate based on the inputs you supply. Real-world SEO performance depends on competition, content quality, technical health, and search algorithm updates. Use the figures as a planning baseline rather than a guarantee — then validate with actual Google Search Console data once your campaign is running."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good ROI from SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most businesses should target a minimum 5:1 return — £5 of revenue for every £1 spent on SEO. High-performing campaigns in competitive sectors like professional services, legal, and property regularly achieve 10:1 or higher within 12-18 months. The compounding nature of organic traffic means ROI typically improves over time as rankings strengthen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long until I see ROI from SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting 'near me' and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority, and the competitiveness of your target keywords."
+        }
+      }
+    ]
+  }
+];
+---
+
+<Base
+  title="SEO ROI Calculator — Estimate Your Return | SEO Guildford"
+  description="Free interactive SEO ROI calculator for Guildford and Surrey businesses. Enter your metrics to see projected revenue uplift, annual returns, and ROI percentage."
+  canonical="https://seo-guildford.uk/tools/seo-roi-calculator/"
+  schema={schema}
+>
+
+  <!-- Hero -->
+  <section class="page-hero reveal">
+    <div class="max-w-5xl mx-auto px-4 py-20 text-center">
+      <nav class="text-sm text-white/60 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white">Home</a>
+        <span class="mx-2">/</span>
+        <span>Tools</span>
+        <span class="mx-2">/</span>
+        <span class="text-white">SEO ROI Calculator</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-heading font-extrabold gradient-text mb-4">SEO ROI Calculator</h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto">Estimate the revenue impact of organic search investment for your Guildford or Surrey business.</p>
+    </div>
+  </section>
+
+  <!-- Quick Answer -->
+  <section class="max-w-5xl mx-auto px-4 -mt-8 relative z-10 reveal">
+    <div class="quick-answer">
+      <p><strong>What does this tool do?</strong> Enter your average deal value, current organic traffic, conversion rate, and monthly SEO budget. The calculator projects your revenue uplift and ROI based on realistic traffic growth scenarios — giving you a clear business case for SEO investment before you spend a penny.</p>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="max-w-5xl mx-auto px-4 py-16 reveal">
+    <div class="service-card not-prose p-6 md:p-10">
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Inputs -->
+        <div>
+          <h2 class="text-2xl font-heading font-bold text-brand mb-6">Your Business Metrics</h2>
+
+          <div class="space-y-6">
+            <div>
+              <label for="dealValue" class="block text-sm font-semibold text-brand mb-1">Average Deal / Order Value (£)</label>
+              <input type="number" id="dealValue" value="5000" placeholder="e.g. 5000" min="1" class="w-full rounded-lg border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:ring-2 focus:ring-accent/50" />
+            </div>
+
+            <div>
+              <label for="monthlyVisitors" class="block text-sm font-semibold text-brand mb-1">Monthly Organic Visitors</label>
+              <input type="number" id="monthlyVisitors" value="500" placeholder="e.g. 500" min="0" class="w-full rounded-lg border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:ring-2 focus:ring-accent/50" />
+            </div>
+
+            <div>
+              <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current Conversion Rate: <span id="conversionDisplay" class="text-accent font-bold">2.0%</span></label>
+              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="2" class="w-full accent-[#D4AF37]" />
+              <div class="flex justify-between text-xs text-text-muted mt-1">
+                <span>0.5%</span>
+                <span>10%</span>
+              </div>
+            </div>
+
+            <div>
+              <label for="seoInvestment" class="block text-sm font-semibold text-brand mb-1">Monthly SEO Investment (£)</label>
+              <input type="number" id="seoInvestment" value="1000" placeholder="e.g. 1000" min="1" class="w-full rounded-lg border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:ring-2 focus:ring-accent/50" />
+            </div>
+
+            <fieldset>
+              <legend class="block text-sm font-semibold text-brand mb-2">Expected Traffic Growth</legend>
+              <div class="flex flex-wrap gap-3">
+                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded-lg px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
+                  <input type="radio" name="growth" value="50" class="accent-[#D4AF37]" />
+                  <span class="text-sm font-medium text-brand">Conservative (50%)</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded-lg px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
+                  <input type="radio" name="growth" value="100" checked class="accent-[#D4AF37]" />
+                  <span class="text-sm font-medium text-brand">Moderate (100%)</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded-lg px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
+                  <input type="radio" name="growth" value="200" class="accent-[#D4AF37]" />
+                  <span class="text-sm font-medium text-brand">Aggressive (200%)</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <!-- Outputs -->
+        <div class="flex flex-col justify-center">
+          <h2 class="text-2xl font-heading font-bold text-brand mb-6">Projected Returns</h2>
+
+          <div class="space-y-5">
+            <div class="bg-surface-alt rounded-lg p-4 border border-border">
+              <p class="text-sm text-text-muted mb-1">Current monthly revenue from organic</p>
+              <p id="currentRevenue" class="text-3xl font-heading font-bold text-brand transition-all duration-300">£50,000</p>
+            </div>
+
+            <div class="bg-surface-alt rounded-lg p-4 border border-border">
+              <p class="text-sm text-text-muted mb-1">Projected monthly revenue</p>
+              <p id="projectedRevenue" class="text-3xl font-heading font-bold text-brand transition-all duration-300">£100,000</p>
+            </div>
+
+            <div class="bg-accent/10 rounded-lg p-4 border border-accent/30">
+              <p class="text-sm text-text-muted mb-1">Monthly revenue uplift</p>
+              <p id="monthlyUplift" class="text-3xl font-heading font-bold text-accent transition-all duration-300">+£50,000</p>
+            </div>
+
+            <div class="bg-accent/10 rounded-lg p-4 border border-accent/30">
+              <p class="text-sm text-text-muted mb-1">Annual revenue uplift</p>
+              <p id="annualUplift" class="text-3xl font-heading font-bold text-accent transition-all duration-300">+£600,000</p>
+            </div>
+
+            <div class="bg-brand rounded-lg p-5 border border-brand/30">
+              <p class="text-sm text-white/70 mb-1">Return on Investment</p>
+              <p id="roiPercent" class="text-4xl font-heading font-extrabold text-accent transition-all duration-300">4,900%</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Prose -->
+  <section class="max-w-3xl mx-auto px-4 pb-16 reveal">
+    <div class="prose prose-lg max-w-none">
+      <h2 class="font-heading text-brand">Why SEO ROI Matters for Guildford Businesses</h2>
+      <p>Guildford sits at the intersection of affluence and commercial density. Average property prices exceed £600,000, the Surrey Research Park houses over 140 companies generating more than £1 billion in annual revenue, and the professional services corridor along the A3 serves clients who expect — and can afford — premium solutions. In this environment, ranking on the first page of Google is not a vanity metric; it is a direct revenue channel.</p>
+      <p>The businesses that thrive here — solicitors, architects, financial advisers, SaaS companies spinning out of the University of Surrey — share one characteristic: their customers research extensively before making high-value decisions. A single first-page ranking for a commercial keyword can funnel thousands of pounds in monthly revenue. The calculator above translates that principle into concrete numbers using your own business data.</p>
+      <p>Unlike paid search, where traffic stops the moment you pause the budget, organic rankings compound. Content you publish today continues to attract visitors for years, which means the true ROI of SEO increases with every month of sustained effort. For Guildford businesses competing against London agencies for Surrey-based clients, local SEO offers a particularly efficient path: lower keyword difficulty, higher purchase intent, and conversion rates that frequently outperform national averages. The question is not whether SEO generates returns — the data is unambiguous on that — but how quickly you want those returns to start.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-4 pb-16 reveal">
+    <h2 class="text-2xl font-heading font-bold text-brand mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <details class="faq-item">
+        <summary class="font-heading font-semibold text-brand">How accurate is this SEO ROI calculator?</summary>
+        <div class="pt-3 text-text-muted">
+          <p>This calculator provides a directional estimate based on the inputs you supply. Real-world SEO performance depends on competition, content quality, technical health, and search algorithm updates. Use the figures as a planning baseline rather than a guarantee — then validate with actual Google Search Console data once your campaign is running.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="font-heading font-semibold text-brand">What is a good ROI from SEO?</summary>
+        <div class="pt-3 text-text-muted">
+          <p>Most businesses should target a minimum 5:1 return — £5 of revenue for every £1 spent on SEO. High-performing campaigns in competitive sectors like professional services, legal, and property regularly achieve 10:1 or higher within 12-18 months. The compounding nature of organic traffic means ROI typically improves over time as rankings strengthen.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="font-heading font-semibold text-brand">How long until I see ROI from SEO?</summary>
+        <div class="pt-3 text-text-muted">
+          <p>Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting "near me" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority, and the competitiveness of your target keywords.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <div class="max-w-3xl mx-auto px-4 py-20 text-center">
+      <h2 class="text-3xl font-heading font-extrabold gradient-text mb-4">Ready to Turn These Numbers into Reality?</h2>
+      <p class="text-white/80 mb-8 text-lg">Get a free, no-obligation SEO audit for your Guildford business. We will show you exactly where the growth opportunities are.</p>
+      <a href="/free-seo-audit-guildford/" class="cta-button cta-glow">Get Your Free SEO Audit</a>
+    </div>
+  </section>
+
+  <!-- Calculator JS -->
+  <script>
+    function formatCurrency(n) {
+      return '£' + Math.round(n).toLocaleString('en-GB');
+    }
+
+    function calculate() {
+      const dealValue = parseFloat((document.getElementById('dealValue') as HTMLInputElement).value) || 0;
+      const visitors = parseFloat((document.getElementById('monthlyVisitors') as HTMLInputElement).value) || 0;
+      const conversion = parseFloat((document.getElementById('conversionRate') as HTMLInputElement).value) || 0;
+      const investment = parseFloat((document.getElementById('seoInvestment') as HTMLInputElement).value) || 0;
+      const growthRadio = document.querySelector('input[name="growth"]:checked') as HTMLInputElement;
+      const growth = growthRadio ? parseFloat(growthRadio.value) : 100;
+
+      const currentRevenue = visitors * (conversion / 100) * dealValue;
+      const projectedRevenue = (visitors * (1 + growth / 100)) * (conversion / 100) * dealValue;
+      const monthlyUplift = projectedRevenue - currentRevenue;
+      const annualUplift = monthlyUplift * 12;
+      const roi = investment > 0 ? ((monthlyUplift - investment) / investment) * 100 : 0;
+
+      const els = {
+        currentRevenue: document.getElementById('currentRevenue'),
+        projectedRevenue: document.getElementById('projectedRevenue'),
+        monthlyUplift: document.getElementById('monthlyUplift'),
+        annualUplift: document.getElementById('annualUplift'),
+        roiPercent: document.getElementById('roiPercent'),
+        conversionDisplay: document.getElementById('conversionDisplay'),
+      };
+
+      if (els.currentRevenue) els.currentRevenue.textContent = formatCurrency(currentRevenue);
+      if (els.projectedRevenue) els.projectedRevenue.textContent = formatCurrency(projectedRevenue);
+      if (els.monthlyUplift) els.monthlyUplift.textContent = '+' + formatCurrency(monthlyUplift);
+      if (els.annualUplift) els.annualUplift.textContent = '+' + formatCurrency(annualUplift);
+      if (els.roiPercent) els.roiPercent.textContent = Math.round(roi).toLocaleString('en-GB') + '%';
+      if (els.conversionDisplay) els.conversionDisplay.textContent = conversion.toFixed(1) + '%';
+    }
+
+    // Bind all inputs
+    document.querySelectorAll('#dealValue, #monthlyVisitors, #conversionRate, #seoInvestment').forEach(el => {
+      el.addEventListener('input', calculate);
+    });
+    document.querySelectorAll('input[name="growth"]').forEach(el => {
+      el.addEventListener('change', calculate);
+    });
+
+    // Initial calc
+    calculate();
+  </script>
+
+</Base>

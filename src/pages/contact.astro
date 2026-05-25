@@ -117,7 +117,11 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       </div>
     </div>
 
-    <form action="#" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-xl p-6 md:p-8">
+    <form action="https://api.staticforms.xyz/submit" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-xl p-6 md:p-8">
+      <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+      <input type="hidden" name="subject" value="SEO Guildford — New Enquiry" />
+      <input type="hidden" name="redirectTo" value="https://seo-guildford.uk/contact/?sent=1" />
+      <input type="text" name="honeypot" style="display:none" />
       <div>
         <label for="name" class="block text-sm font-medium text-text mb-1.5">Name <span class="text-red-500">*</span></label>
         <input type="text" id="name" name="name" required autocomplete="name" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="Your name" />
