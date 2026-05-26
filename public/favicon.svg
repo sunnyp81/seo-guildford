@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0B2545"/>
+  <text x="4" y="14" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#D4AF37" letter-spacing="0.5">SEO</text>
+  <text x="3" y="25" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#FFFFFF" letter-spacing="-0.3">Gfd</text>
+  <rect x="24" y="12" width="4" height="2" rx="1" fill="#D4AF37" opacity="0.6"/>
+</svg>
