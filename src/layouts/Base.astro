@@ -41,7 +41,15 @@ const year = new Date().getFullYear();
   {schema.map(s => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
-</head>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F447K4HVWQ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F447K4HVWQ');
+    </script>
+  </head>
 <body class="bg-surface min-h-screen flex flex-col">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-accent focus:text-brand-dark focus:px-4 focus:py-2 focus:rounded-lg focus:z-[70] focus:font-bold">Skip to content</a>
 
