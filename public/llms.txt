@@ -1,18 +1,24 @@
 # SEO Guildford
 
-> SEO Guildford is a search marketing consultancy rooted in Guildford, Surrey. We bring together technical SEO, editorial content strategy, and AI search optimisation for businesses across the Surrey and Hampshire corridor.
+> SEO Guildford is a search marketing consultancy rooted in Guildford, Surrey. I bring together technical SEO, editorial content strategy, and AI search optimisation for businesses across the Surrey and Hampshire corridor.
 
 ## Pages
 
-- [Home](https://seo-guildford.uk/): SEO consultancy for Guildford and Surrey businesses — technical SEO, local search, AI search optimisation.
+- [Home](https://seo-guildford.uk/): SEO consultancy for Guildford and Surrey businesses, technical SEO, local search, AI search optimisation.
 - [Services](https://seo-guildford.uk/services/): Full range of SEO services including technical audits, content strategy, local SEO, and AI search readiness.
 - [Areas We Cover](https://seo-guildford.uk/areas/): Service coverage across Guildford suburbs, Surrey towns, and the Hampshire border corridor.
 - [Industries](https://seo-guildford.uk/industries/): Sector expertise in gaming, tech, finance, professional services, property, healthcare, and hospitality.
-- [Technical SEO Guildford](https://seo-guildford.uk/technical-seo-guildford/): Technical SEO services for Guildford businesses — site speed, crawlability, structured data, Core Web Vitals.
+- [Technical SEO Guildford](https://seo-guildford.uk/technical-seo-guildford/): Technical SEO services for Guildford businesses, site speed, crawlability, structured data, Core Web Vitals.
 - [SEO Audit Guildford](https://seo-guildford.uk/seo-audit-guildford/): Comprehensive paid SEO audit with actionable recommendations for Surrey businesses.
-- [Free SEO Audit Guildford](https://seo-guildford.uk/free-seo-audit-guildford/): Free SEO health check for Guildford businesses — a quick assessment of search visibility and technical issues.
-- [SEO Pricing Guildford](https://seo-guildford.uk/seo-pricing-guildford/): Transparent SEO pricing tiers for Guildford and Surrey businesses — from startup to enterprise.
-- [AI Search Optimisation Guildford](https://seo-guildford.uk/ai-search-optimisation-guildford/): AI search optimisation — get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews.
+- [Free SEO Audit Guildford](https://seo-guildford.uk/free-seo-audit-guildford/): Free SEO health check for Guildford businesses, a quick assessment of search visibility and technical issues.
+- [SEO Pricing Guildford](https://seo-guildford.uk/seo-pricing-guildford/): Transparent SEO pricing tiers for Guildford and Surrey businesses, from startup to enterprise.
+- [AI Search Optimisation Guildford](https://seo-guildford.uk/ai-search-optimisation-guildford/): AI search optimisation, get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews.
 - [Case Studies](https://seo-guildford.uk/case-studies/): SEO case studies from Surrey businesses showing measurable results in organic traffic and revenue.
-- [About](https://seo-guildford.uk/about/): About SEO Guildford — a Guildford-based search consultancy with deep expertise in technical SEO and AI search.
-- [Contact](https://seo-guildford.uk/contact/): Get in touch with SEO Guildford — serving Guildford, Surrey, and Hampshire.
+- [Guildford Property Firm Local SEO Case Study](https://seo-guildford.uk/case-studies/guildford-property-firm-local-seo/): Local SEO case study for a Guildford High Street estate agency, covering local pack rankings and area content.
+- [Surrey Research Park Tech Startup Case Study](https://seo-guildford.uk/case-studies/surrey-research-park-tech-startup/): Technical SEO and content case study for a B2B SaaS startup at Surrey Research Park.
+- [Tools](https://seo-guildford.uk/tools/): Free interactive SEO tools for Guildford and Surrey businesses, an AI search readiness checker, a local SEO checklist, and an SEO ROI calculator.
+- [AI Search Readiness Checker](https://seo-guildford.uk/tools/ai-search-readiness-checker/): Free 10-question self-assessment tool scoring website readiness for ChatGPT, Perplexity, Google AI Overviews, and Copilot.
+- [Local SEO Checklist](https://seo-guildford.uk/tools/local-seo-checklist/): Free interactive 20-point local SEO checklist covering Google Business Profile, on-page SEO, technical health, reviews, and citations.
+- [SEO ROI Calculator](https://seo-guildford.uk/tools/seo-roi-calculator/): Free calculator estimating revenue uplift and return on investment from an SEO campaign.
+- [About](https://seo-guildford.uk/about/): About SEO Guildford, a Guildford-based search consultancy with deep expertise in technical SEO and AI search.
+- [Contact](https://seo-guildford.uk/contact/): Get in touch with SEO Guildford, serving Guildford, Surrey, and Hampshire.

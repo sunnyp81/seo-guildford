@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = "Free SEO Tools: Guildford & Surrey Businesses";
+const description = "Three free interactive SEO tools for Guildford and Surrey businesses: an AI search readiness checker, a local SEO checklist, and an SEO ROI calculator.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://seo-guildford.uk/tools/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": "https://seo-guildford.uk/tools/",
+    "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" }
+  }
+];
+---
+<Base title={`${title} | SEO Guildford`} description={description} canonical="https://seo-guildford.uk/tools/" schema={schema}>
+  <article class="max-w-3xl mx-auto px-4 py-12 prose">
+    <nav class="text-sm text-text-muted mb-6 not-prose">
+      <a href="/" class="hover:text-brand">Home</a> &rsaquo;
+      <span class="text-brand font-medium">Tools</span>
+    </nav>
+
+    <h1>Free SEO Tools for Guildford and Surrey Businesses</h1>
+
+    <p>These three tools give Guildford and Surrey businesses a fast, practical way to assess search visibility before committing to a full SEO engagement. Score your AI search readiness, work through a 20-point local SEO checklist, or estimate the return on an SEO investment. All three are free, interactive, and built around the way search actually works in Surrey right now.</p>
+
+    <div class="quick-answer">
+      <strong>The short version:</strong> Three free interactive tools for Guildford and Surrey businesses: an AI Search Readiness Checker, a Local SEO Checklist, and an SEO ROI Calculator. Each takes a few minutes and gives you a concrete, actionable result.
+    </div>
+
+    <div class="reveal">
+    <h2>The Tools</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 not-prose my-8">
+      <a href="/tools/ai-search-readiness-checker/" class="service-card tilt-card block" style="--reveal-delay: 0.1s">
+        <span class="text-xs font-medium text-accent uppercase tracking-wide">AI Search</span>
+        <h3 class="text-lg font-bold text-brand mt-2 mb-2">AI Search Readiness Checker</h3>
+        <p class="text-text-muted text-sm mb-3">Score how ready your website is for ChatGPT, Perplexity, Google AI Overviews, and Copilot in a free 10-question self-assessment.</p>
+        <span class="text-sm font-semibold text-accent">Take the assessment &rarr;</span>
+      </a>
+      <a href="/tools/local-seo-checklist/" class="service-card tilt-card block" style="--reveal-delay: 0.18s">
+        <span class="text-xs font-medium text-accent uppercase tracking-wide">Local SEO</span>
+        <h3 class="text-lg font-bold text-brand mt-2 mb-2">Local SEO Checklist</h3>
+        <p class="text-text-muted text-sm mb-3">A free interactive 20-point checklist covering Google Business Profile, on-page SEO, technical health, reviews, and citations.</p>
+        <span class="text-sm font-semibold text-accent">Start the checklist &rarr;</span>
+      </a>
+      <a href="/tools/seo-roi-calculator/" class="service-card tilt-card block" style="--reveal-delay: 0.26s">
+        <span class="text-xs font-medium text-accent uppercase tracking-wide">ROI</span>
+        <h3 class="text-lg font-bold text-brand mt-2 mb-2">SEO ROI Calculator</h3>
+        <p class="text-text-muted text-sm mb-3">Enter your business metrics to estimate the revenue uplift and return on investment from an SEO campaign.</p>
+        <span class="text-sm font-semibold text-accent">Calculate your ROI &rarr;</span>
+      </a>
+    </div>
+    </div>
+
+    <div class="reveal">
+    <h2>Why Use These Tools First</h2>
+
+    <p>Every tool here maps to a real decision a Guildford or Surrey business needs to make: whether the site is structured for AI extraction, whether the local SEO fundamentals are actually in place, and whether an SEO budget makes commercial sense. None of them require a call or an email address to use. Work through one, all three, or come back once you have made changes to re-check your score.</p>
+    </div>
+
+    <div class="cta-section not-prose mt-12 text-center">
+      <h2 class="text-2xl font-bold text-brand mb-4">Want a Deeper Look at Your Site?</h2>
+      <p class="text-text-muted mb-6">These tools give you a starting point. A free audit goes further, with a full review of your technical health, content, and local search presence.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/free-seo-audit-guildford/" class="cta-button">Start with an audit</a>
+        <a href="/contact/" class="cta-button-outline">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-border text-sm text-text-muted">
+      <p>Related: <a href="/">SEO Guildford Home</a> | <a href="/services/">All SEO Services</a> | <a href="/case-studies/">Case Studies</a> | <a href="/free-seo-audit-guildford/">Free SEO Audit</a></p>
+    </div>
+  </article>
+</Base>
