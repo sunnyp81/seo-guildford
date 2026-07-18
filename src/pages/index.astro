@@ -132,54 +132,55 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
 <Base title={title} description={description} schema={schema}>
 
   <!-- Hero -->
-  <section class="hero-section">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <svg class="hero-chart" viewBox="0 0 1200 400" fill="none" aria-hidden="true" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2"/>
-          <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <path class="chart-line" d="M0 350 C80 345 160 335 240 310 S400 280 480 250 S640 200 720 160 S880 90 960 55 S1120 15 1200 5" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
-      <path class="chart-area" d="M0 350 C80 345 160 335 240 310 S400 280 480 250 S640 200 720 160 S880 90 960 55 S1120 15 1200 5 L1200 400 L0 400Z" fill="url(#chartFill)"/>
-      <circle cx="240" cy="310" r="4" fill="#D4AF37" class="chart-dot" style="animation-delay:1s"/>
-      <circle cx="480" cy="250" r="4" fill="#D4AF37" class="chart-dot" style="animation-delay:1.4s"/>
-      <circle cx="720" cy="160" r="5" fill="#D4AF37" class="chart-dot" style="animation-delay:1.8s"/>
-      <circle cx="960" cy="55" r="5" fill="#D4AF37" class="chart-dot" style="animation-delay:2.2s"/>
-      <circle cx="1200" cy="5" r="6" fill="#D4AF37" class="chart-dot" style="animation-delay:2.6s"/>
-    </svg>
-    <div class="hero-text relative z-10 max-w-4xl mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] mb-6 gradient-text">SEO That Grows<br/>Guildford Businesses</h1>
-      <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">Technical foundations. Strategic content. AI search readiness. I build organic visibility that compounds, month after month, query after query.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow hero-eyebrow">Technical SEO &middot; Guildford, Surrey</p>
+      <h1 class="hero-title">Search visibility, <span class="mark">engineered</span> for Guildford businesses.</h1>
+      <p class="hero-lead">Technical foundations, semantic content, and AI search readiness, built by one specialist into organic growth that compounds month after month.</p>
+      <div class="hero-actions">
         <a href="/free-seo-audit-guildford/" class="cta-button cta-glow">Start with a free audit</a>
-        <a href="/services/" class="cta-button-outline !border-white/25 !text-white hover:!bg-white/10 hover:!border-white/40">Explore my services</a>
+        <a href="/services/" class="cta-link">Explore services &rarr;</a>
       </div>
     </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    <div class="hero-spec">
+      <div class="hero-spec-grid">
+        <div class="spec reveal">
+          <span class="spec-k">01</span>
+          <span class="spec-v">Technical SEO</span>
+          <span class="spec-d">Crawlability, speed, schema, indexation</span>
+        </div>
+        <div class="spec reveal" style="--reveal-delay: 0.08s">
+          <span class="spec-k">02</span>
+          <span class="spec-v">Semantic content</span>
+          <span class="spec-d">Topical authority and entity depth</span>
+        </div>
+        <div class="spec reveal" style="--reveal-delay: 0.16s">
+          <span class="spec-k">03</span>
+          <span class="spec-v">AI search</span>
+          <span class="spec-d">AI Overviews, ChatGPT, Perplexity</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- What I do -->
+  <!-- Capability strip -->
   <section class="stats-bar">
-    <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-10 md:py-12">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 py-8 md:py-9">
       <div class="stat-item reveal">
         <span class="stat-value">Technical</span>
-        <span class="stat-label">Crawlability, speed, schema</span>
+        <span class="stat-label">Crawl, speed, schema</span>
       </div>
       <div class="stat-item reveal" style="--reveal-delay: 0.1s">
         <span class="stat-value">Local</span>
-        <span class="stat-label">Guildford and Surrey focused</span>
+        <span class="stat-label">Guildford and Surrey</span>
       </div>
       <div class="stat-item reveal" style="--reveal-delay: 0.2s">
         <span class="stat-value">AI Search</span>
-        <span class="stat-label">Built for AI Overviews, ChatGPT</span>
+        <span class="stat-label">AI Overviews, ChatGPT</span>
       </div>
       <div class="stat-item reveal" style="--reveal-delay: 0.3s">
         <span class="stat-value">Free Audit</span>
-        <span class="stat-label">Start with no obligation</span>
+        <span class="stat-label">No obligation</span>
       </div>
     </div>
   </section>
