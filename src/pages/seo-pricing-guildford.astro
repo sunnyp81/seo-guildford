@@ -211,7 +211,8 @@ const oneOffs = [
     </nav>
 
     <div class="prose">
-      <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">SEO Pricing for Guildford and Surrey Businesses</h1>
+      <p class="eyebrow mb-3">Pricing</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">SEO <span class="mark">Pricing</span> for Guildford and Surrey Businesses</h1>
 
       <p>SEO pricing in Guildford begins at £500 per month for a focused local campaign and scales to £3,500 or more for multi-location enterprise work, with one-off audits available from £400.</p>
 
@@ -237,14 +238,14 @@ const oneOffs = [
 
     <div class="grid md:grid-cols-2 gap-6 my-8">
       {tiers.map((tier, i) => (
-        <div class={`service-card tilt-card flex flex-col reveal ${tier.highlight ? 'ring-2 ring-accent relative' : ''}`} style={`--reveal-delay: ${0.1 + i * 0.1}s`}>
+        <div class={`service-card flex flex-col reveal ${tier.highlight ? 'border border-[#0E6B4F]' : ''}`} style={`--reveal-delay: ${0.1 + i * 0.1}s`}>
           {tier.highlight && (
-            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-brand-dark text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
+            <p class="eyebrow mb-3">Most Popular</p>
           )}
           <div class="mb-4">
             <h3 class="text-xl font-bold text-brand mb-1">{tier.name}</h3>
             <div class="flex items-baseline gap-1">
-              <span class="text-3xl font-bold text-text">{tier.price}</span>
+              <span class="text-3xl font-bold text-text font-mono">{tier.price}</span>
               <span class="text-text-muted text-sm">{tier.period}</span>
             </div>
             <p class="text-text-muted text-sm mt-2">{tier.description}</p>
@@ -270,9 +271,9 @@ const oneOffs = [
 
     <div class="grid md:grid-cols-3 gap-5 my-8">
       {oneOffs.map((service, i) => (
-        <div class="service-card tilt-card reveal" style={`--reveal-delay: ${0.1 + i * 0.08}s`}>
+        <div class="service-card reveal" style={`--reveal-delay: ${0.1 + i * 0.08}s`}>
           <h3 class="text-lg font-bold text-brand mb-1">{service.name}</h3>
-          <p class="text-2xl font-bold text-text mb-3">{service.price}</p>
+          <p class="text-2xl font-bold text-text font-mono mb-3">{service.price}</p>
           <p class="text-text-muted text-sm">{service.description}</p>
         </div>
       ))}
@@ -282,7 +283,7 @@ const oneOffs = [
       <div class="reveal">
       <h2>ROI Examples for Guildford Businesses</h2>
 
-      <div class="bg-surface-alt border border-border rounded-lg p-4 text-sm text-text-muted my-4 not-prose">
+      <div class="bg-surface-alt border border-border rounded p-4 text-sm text-text-muted my-4 not-prose">
         <strong>Note:</strong> These are illustrative scenarios based on typical Guildford market conditions, not results from a specific named client.
       </div>
 

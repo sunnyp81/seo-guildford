@@ -97,7 +97,8 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       <span class="text-text">Contact</span>
     </nav>
 
-    <h1 class="text-4xl font-bold text-brand mb-6">Get in Touch</h1>
+    <p class="eyebrow mb-3">Contact</p>
+    <h1 class="text-4xl font-bold text-brand mb-6">Get in <span class="mark">touch</span></h1>
 
     <div class="prose">
       <div class="reveal">
@@ -117,30 +118,30 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       </div>
     </div>
 
-    <form action="https://api.staticforms.xyz/submit" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-xl p-6 md:p-8">
+    <form action="https://api.staticforms.xyz/submit" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-[0.35rem] p-6 md:p-8">
       <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
       <input type="hidden" name="_site" value="seo-guildford.uk" />
       <input type="hidden" name="subject" value="SEO Guildford: New Enquiry (seo-guildford.uk)" />
       <input type="hidden" name="redirectTo" value="https://seo-guildford.uk/contact/?sent=1" />
       <input type="text" name="honeypot" style="display:none" />
       <div>
-        <label for="name" class="block text-sm font-medium text-text mb-1.5">Name <span class="text-red-500">*</span></label>
-        <input type="text" id="name" name="name" required autocomplete="name" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="Your name" />
+        <label for="name" class="block text-sm font-medium text-text mb-1.5">Name <span class="text-accent">*</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name" class="w-full rounded border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="Your name" />
       </div>
 
       <div>
-        <label for="email" class="block text-sm font-medium text-text mb-1.5">Email <span class="text-red-500">*</span></label>
-        <input type="email" id="email" name="email" required autocomplete="email" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="you@company.co.uk" />
+        <label for="email" class="block text-sm font-medium text-text mb-1.5">Email <span class="text-accent">*</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email" class="w-full rounded border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="you@company.co.uk" />
       </div>
 
       <div>
         <label for="website" class="block text-sm font-medium text-text mb-1.5">Website URL</label>
-        <input type="url" id="website" name="website" autocomplete="url" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="https://yoursite.co.uk" />
+        <input type="url" id="website" name="website" autocomplete="url" class="w-full rounded border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="https://yoursite.co.uk" />
       </div>
 
       <div>
-        <label for="message" class="block text-sm font-medium text-text mb-1.5">Message <span class="text-red-500">*</span></label>
-        <textarea id="message" name="message" required rows="5" class="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition resize-y" placeholder="Tell us about your business and what you are looking to achieve with search."></textarea>
+        <label for="message" class="block text-sm font-medium text-text mb-1.5">Message <span class="text-accent">*</span></label>
+        <textarea id="message" name="message" required rows="5" class="w-full rounded border border-border bg-white px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition resize-y" placeholder="Tell us about your business and what you are looking to achieve with search."></textarea>
       </div>
 
       <button type="submit" class="cta-button w-full sm:w-auto">Start with an audit</button>
@@ -152,7 +153,7 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       <p>SEO Guildford is based in Guildford, Surrey. The map below shows the town centre. Meetings can be arranged at a location convenient to you, or conducted remotely via video call.</p>
     </div>
 
-    <div class="reveal mt-6 rounded-xl overflow-hidden border border-border">
+    <div class="reveal mt-6 rounded-[0.35rem] overflow-hidden border border-border">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.9!2d-0.5735!3d51.2362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875d0a9463bda73%3A0x38a33d4d72580e8!2sGuildford!5e0!3m2!1sen!2suk!4v1"
         width="100%"
@@ -196,9 +197,10 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       </details>
       </div>
 
-      <div class="not-prose mt-12 bg-surface-alt rounded-xl p-8 text-center reveal">
+      <div class="not-prose mt-12 bg-surface-alt p-8 reveal">
+        <p class="eyebrow mb-2">Get in Touch</p>
         <h2 class="text-2xl font-bold text-brand mb-3">Prefer Email?</h2>
-        <p class="text-text-muted mb-6 max-w-lg mx-auto">Send your enquiry directly and receive a personal response from me within 24 hours.</p>
+        <p class="text-text-muted mb-6 max-w-lg">Send your enquiry directly and receive a personal response from me within 24 hours.</p>
         <a href="mailto:hello@seo-guildford.uk" class="cta-button">Email hello@seo-guildford.uk</a>
       </div>
 

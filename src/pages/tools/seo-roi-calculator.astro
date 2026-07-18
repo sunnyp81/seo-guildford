@@ -93,17 +93,17 @@ const schema = [
           <div class="space-y-6">
             <div>
               <label for="dealValue" class="block text-sm font-semibold text-brand mb-1">Average Deal / Order Value (£)</label>
-              <input type="number" id="dealValue" value="5000" placeholder="e.g. 5000" min="1" class="w-full rounded-lg border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:ring-2 focus:ring-accent/50" />
+              <input type="number" id="dealValue" value="5000" placeholder="e.g. 5000" min="1" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <div>
               <label for="monthlyVisitors" class="block text-sm font-semibold text-brand mb-1">Monthly Organic Visitors</label>
-              <input type="number" id="monthlyVisitors" value="500" placeholder="e.g. 500" min="0" class="w-full rounded-lg border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:ring-2 focus:ring-accent/50" />
+              <input type="number" id="monthlyVisitors" value="500" placeholder="e.g. 500" min="0" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <div>
               <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current Conversion Rate: <span id="conversionDisplay" class="text-accent font-bold">2.0%</span></label>
-              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="2" class="w-full accent-[#D4AF37]" />
+              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="2" class="w-full accent-[#0E6B4F]" />
               <div class="flex justify-between text-xs text-text-muted mt-1">
                 <span>0.5%</span>
                 <span>10%</span>
@@ -112,22 +112,22 @@ const schema = [
 
             <div>
               <label for="seoInvestment" class="block text-sm font-semibold text-brand mb-1">Monthly SEO Investment (£)</label>
-              <input type="number" id="seoInvestment" value="1000" placeholder="e.g. 1000" min="1" class="w-full rounded-lg border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:ring-2 focus:ring-accent/50" />
+              <input type="number" id="seoInvestment" value="1000" placeholder="e.g. 1000" min="1" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <fieldset>
               <legend class="block text-sm font-semibold text-brand mb-2">Expected Traffic Growth</legend>
               <div class="flex flex-wrap gap-3">
-                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded-lg px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="50" class="accent-[#D4AF37]" />
+                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
+                  <input type="radio" name="growth" value="50" class="accent-[#0E6B4F]" />
                   <span class="text-sm font-medium text-brand">Conservative (50%)</span>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded-lg px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="100" checked class="accent-[#D4AF37]" />
+                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
+                  <input type="radio" name="growth" value="100" checked class="accent-[#0E6B4F]" />
                   <span class="text-sm font-medium text-brand">Moderate (100%)</span>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded-lg px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="200" class="accent-[#D4AF37]" />
+                <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
+                  <input type="radio" name="growth" value="200" class="accent-[#0E6B4F]" />
                   <span class="text-sm font-medium text-brand">Aggressive (200%)</span>
                 </label>
               </div>
@@ -140,29 +140,29 @@ const schema = [
           <h2 class="text-2xl font-heading font-bold text-brand mb-6">Projected Returns</h2>
 
           <div class="space-y-5">
-            <div class="bg-surface-alt rounded-lg p-4 border border-border">
-              <p class="text-sm text-text-muted mb-1">Current monthly revenue from organic</p>
-              <p id="currentRevenue" class="text-3xl font-heading font-bold text-brand transition-all duration-300">£50,000</p>
+            <div class="bg-surface-alt rounded p-4 border border-border">
+              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Current monthly revenue from organic</p>
+              <p id="currentRevenue" class="font-mono text-3xl font-bold text-brand transition-all duration-300">£50,000</p>
             </div>
 
-            <div class="bg-surface-alt rounded-lg p-4 border border-border">
-              <p class="text-sm text-text-muted mb-1">Projected monthly revenue</p>
-              <p id="projectedRevenue" class="text-3xl font-heading font-bold text-brand transition-all duration-300">£100,000</p>
+            <div class="bg-surface-alt rounded p-4 border border-border">
+              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Projected monthly revenue</p>
+              <p id="projectedRevenue" class="font-mono text-3xl font-bold text-brand transition-all duration-300">£100,000</p>
             </div>
 
-            <div class="bg-accent/10 rounded-lg p-4 border border-accent/30">
-              <p class="text-sm text-text-muted mb-1">Monthly revenue uplift</p>
-              <p id="monthlyUplift" class="text-3xl font-heading font-bold text-accent transition-all duration-300">+£50,000</p>
+            <div class="bg-surface-alt rounded p-4 border border-border">
+              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Monthly revenue uplift</p>
+              <p id="monthlyUplift" class="font-mono text-3xl font-bold text-accent transition-all duration-300">+£50,000</p>
             </div>
 
-            <div class="bg-accent/10 rounded-lg p-4 border border-accent/30">
-              <p class="text-sm text-text-muted mb-1">Annual revenue uplift</p>
-              <p id="annualUplift" class="text-3xl font-heading font-bold text-accent transition-all duration-300">+£600,000</p>
+            <div class="bg-surface-alt rounded p-4 border border-border">
+              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Annual revenue uplift</p>
+              <p id="annualUplift" class="font-mono text-3xl font-bold text-accent transition-all duration-300">+£600,000</p>
             </div>
 
-            <div class="bg-brand rounded-lg p-5 border border-brand/30">
-              <p class="text-sm text-white/70 mb-1">Return on Investment</p>
-              <p id="roiPercent" class="text-4xl font-heading font-extrabold text-accent transition-all duration-300">4,900%</p>
+            <div class="bg-brand rounded p-5 border border-brand">
+              <p class="font-mono text-xs uppercase tracking-wide text-white/70 mb-1.5">Return on Investment</p>
+              <p id="roiPercent" class="font-mono text-4xl font-extrabold text-accent-light transition-all duration-300">4,900%</p>
             </div>
           </div>
         </div>
@@ -209,9 +209,9 @@ const schema = [
   <!-- CTA -->
   <section class="cta-section reveal">
     <div class="max-w-3xl mx-auto px-4 py-20 text-center">
-      <h2 class="text-3xl font-heading font-extrabold gradient-text mb-4">Ready to Turn These Numbers into Reality?</h2>
-      <p class="text-white/80 mb-8 text-lg">Get a free, no-obligation SEO audit for your Guildford business. We will show you exactly where the growth opportunities are.</p>
-      <a href="/free-seo-audit-guildford/" class="cta-button cta-glow">Get Your Free SEO Audit</a>
+      <h2 class="text-3xl font-heading font-extrabold text-brand mb-4">Ready to Turn These Numbers into Reality?</h2>
+      <p class="text-text-muted mb-8 text-lg">Get a free, no-obligation SEO audit for your Guildford business. We will show you exactly where the growth opportunities are.</p>
+      <a href="/free-seo-audit-guildford/" class="cta-button">Get Your Free SEO Audit</a>
     </div>
   </section>
 

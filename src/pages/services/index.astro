@@ -73,13 +73,14 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
 ---
 <Base title={title} description={description} schema={schema}>
 
-  <section class="page-hero">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <nav class="text-sm text-white/60 mb-4">
-        <a href="/" class="hover:text-white">Home</a> <span class="mx-1">/</span> <span class="text-white/80">Services</span>
+  <section class="hero">
+    <div class="hero-inner">
+      <nav class="text-sm text-text-muted mb-4">
+        <a href="/" class="hover:text-brand">Home</a> <span class="mx-1">/</span> <span class="text-text">Services</span>
       </nav>
-      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">SEO Services for Guildford and Surrey Businesses</h1>
-      <p class="text-lg text-white/80 max-w-2xl mx-auto">Every service is shaped by Guildford's particular market, its industries, its search patterns, and the competitive intensity that sets it apart from other Surrey towns.</p>
+      <p class="eyebrow hero-eyebrow">Guildford &amp; Surrey</p>
+      <h1 class="hero-title">SEO Services for <span class="mark">Guildford</span> and Surrey Businesses</h1>
+      <p class="hero-lead">Every service is shaped by Guildford's particular market, its industries, its search patterns, and the competitive intensity that sets it apart from other Surrey towns.</p>
     </div>
   </section>
 
@@ -94,30 +95,30 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
     <h2>Core SEO Services</h2>
 
     <div class="grid md:grid-cols-2 gap-6 not-prose my-8 reveal">
-      <a href="/technical-seo-guildford/" class="service-card tilt-card block" style="--reveal-delay: 0.1s">
+      <a href="/technical-seo-guildford/" class="service-card block" style="--reveal-delay: 0.1s">
         <h3 class="font-bold font-heading text-brand text-lg mb-2">Technical SEO</h3>
         <p class="text-text-muted text-sm mb-3">Site architecture, crawlability, Core Web Vitals, structured data, and indexation, the load-bearing foundation that determines whether search engines can find, understand, and properly rank your content.</p>
-        <span class="text-accent font-semibold text-sm">Learn more &rarr;</span>
+        <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
-      <a href="/seo-audit-guildford/" class="service-card tilt-card block" style="--reveal-delay: 0.18s">
+      <a href="/seo-audit-guildford/" class="service-card block" style="--reveal-delay: 0.18s">
         <h3 class="font-bold font-heading text-brand text-lg mb-2">SEO Audit</h3>
         <p class="text-text-muted text-sm mb-3">A thorough analysis of your site's technical health, content quality, backlink profile, and competitive positioning within the Guildford market. The essential starting point for every engagement.</p>
-        <span class="text-accent font-semibold text-sm">Learn more &rarr;</span>
+        <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
-      <a href="/free-seo-audit-guildford/" class="service-card tilt-card block" style="--reveal-delay: 0.26s">
+      <a href="/free-seo-audit-guildford/" class="service-card block" style="--reveal-delay: 0.26s">
         <h3 class="font-bold font-heading text-brand text-lg mb-2">Free SEO Audit</h3>
         <p class="text-text-muted text-sm mb-3">A substantive review covering technical health, keyword opportunities, and competitor gaps, provided without obligation. Understand precisely where your Guildford business stands before committing to anything.</p>
-        <span class="text-accent font-semibold text-sm">Learn more &rarr;</span>
+        <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
-      <a href="/seo-pricing-guildford/" class="service-card tilt-card block" style="--reveal-delay: 0.34s">
+      <a href="/seo-pricing-guildford/" class="service-card block" style="--reveal-delay: 0.34s">
         <h3 class="font-bold font-heading text-brand text-lg mb-2">SEO Pricing</h3>
         <p class="text-text-muted text-sm mb-3">Transparent pricing for fixed-fee projects and monthly retainers, structured to deliver measurable return for Guildford businesses at every level of investment.</p>
-        <span class="text-accent font-semibold text-sm">Learn more &rarr;</span>
+        <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
-      <a href="/ai-search-optimisation-guildford/" class="service-card tilt-card block md:col-span-2" style="--reveal-delay: 0.42s">
+      <a href="/ai-search-optimisation-guildford/" class="service-card block md:col-span-2" style="--reveal-delay: 0.42s">
         <h3 class="font-bold font-heading text-brand text-lg mb-2">AI Search Optimisation</h3>
         <p class="text-text-muted text-sm mb-3">Ensure your business is cited by Google AI Overviews, ChatGPT, Perplexity, and Copilot. AI search is quietly reshaping discovery for high-consideration services, precisely the kind that Guildford's affluent market purchases.</p>
-        <span class="text-accent font-semibold text-sm">Learn more &rarr;</span>
+        <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
     </div>
 
@@ -213,8 +214,8 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
   </article>
 
   <!-- CTA -->
-  <section class="bg-surface py-16 reveal">
-    <div class="max-w-3xl mx-auto px-4 text-center">
+  <section class="cta-section">
+    <div class="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center relative z-10 reveal">
       <h2 class="text-2xl md:text-3xl font-bold text-brand mb-4">See Where You Stand</h2>
       <p class="text-text-muted text-lg mb-8">Get your free audit and receive a clear assessment of your Guildford market position, technical health, and growth opportunities.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">

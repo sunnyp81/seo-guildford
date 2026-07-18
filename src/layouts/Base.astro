@@ -181,18 +181,6 @@ const year = new Date().getFullYear();
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
-
-    if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-      document.querySelectorAll('.tilt-card').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-          const r = card.getBoundingClientRect();
-          const nx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
-          const ny = (e.clientY - r.top - r.height / 2) / (r.height / 2);
-          card.style.transform = `perspective(800px) rotateX(${ny * -4}deg) rotateY(${nx * 4}deg) translateY(-6px)`;
-        });
-        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-      });
-    }
   </script>
 </body>
 </html>

@@ -80,8 +80,8 @@ const schema = [
           <span id="progress-label">Question <span id="q-current">1</span> of 10</span>
           <span id="progress-pct">0%</span>
         </div>
-        <div class="w-full h-2 rounded-full bg-surface-alt overflow-hidden">
-          <div id="progress-bar" class="h-full rounded-full transition-all duration-500 ease-out" style="width:0%;background:var(--color-accent,#D4AF37)"></div>
+        <div class="w-full h-2 rounded bg-surface-alt overflow-hidden">
+          <div id="progress-bar" class="h-full rounded transition-all duration-500 ease-out" style="width:0%;background:var(--color-accent)"></div>
         </div>
       </div>
 
@@ -89,9 +89,9 @@ const schema = [
       <div id="questions-area">
         <h2 id="q-text" class="text-xl md:text-2xl font-bold text-brand mb-8 min-h-[3.5rem]"></h2>
         <div class="flex flex-col sm:flex-row gap-3">
-          <button type="button" data-value="10" class="answer-btn flex-1 py-4 px-6 rounded-xl text-base font-semibold border-2 border-emerald-400/40 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:border-emerald-400 transition-all cursor-pointer">Yes</button>
-          <button type="button" data-value="5" class="answer-btn flex-1 py-4 px-6 rounded-xl text-base font-semibold border-2 border-amber-400/40 bg-amber-50 text-amber-700 hover:bg-amber-100 hover:border-amber-400 transition-all cursor-pointer">Partially</button>
-          <button type="button" data-value="0" class="answer-btn flex-1 py-4 px-6 rounded-xl text-base font-semibold border-2 border-gray-300/60 bg-gray-50 text-gray-500 hover:bg-gray-100 hover:border-gray-400 transition-all cursor-pointer">No</button>
+          <button type="button" data-value="10" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-accent bg-accent/10 text-accent hover:bg-accent/20 transition-all cursor-pointer">Yes</button>
+          <button type="button" data-value="5" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-border bg-surface-alt text-text-muted hover:border-brand-light hover:text-brand transition-all cursor-pointer">Partially</button>
+          <button type="button" data-value="0" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-border bg-surface-alt text-text-muted hover:border-brand-light hover:text-brand transition-all cursor-pointer">No</button>
         </div>
       </div>
 
@@ -115,8 +115,8 @@ const schema = [
         <div id="breakdown" class="space-y-4 mb-10"></div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button type="button" id="retake-btn" class="cta-button-outline cta-glow">Retake Assessment</button>
-          <a href="/ai-search-optimisation-guildford/" class="cta-button cta-glow text-center">Get AI Search Optimisation</a>
+          <button type="button" id="retake-btn" class="cta-button-outline">Retake Assessment</button>
+          <a href="/ai-search-optimisation-guildford/" class="cta-button text-center">Get AI Search Optimisation</a>
         </div>
       </div>
 
@@ -162,8 +162,8 @@ const schema = [
       <h2 class="text-3xl font-extrabold text-white mb-4">Need Help Improving Your Score?</h2>
       <p class="text-white/70 mb-8">We implement every optimisation this checker measures, structured data, llms.txt, AI crawler configuration, entity alignment, and content restructuring for AI extraction.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/ai-search-optimisation-guildford/" class="cta-button cta-glow">AI Search Optimisation</a>
-        <a href="/free-seo-audit-guildford/" class="cta-button-outline cta-glow">Free SEO Audit</a>
+        <a href="/ai-search-optimisation-guildford/" class="cta-button">AI Search Optimisation</a>
+        <a href="/free-seo-audit-guildford/" class="cta-button-outline">Free SEO Audit</a>
       </div>
     </div>
   </section>
@@ -242,25 +242,20 @@ const schema = [
         const circle = document.getElementById('score-circle');
         const circumference = 439.82;
         const offset = circumference - (pct / 100) * circumference;
-        let color;
-        if (pct <= 30) color = '#ef4444';
-        else if (pct <= 50) color = '#f97316';
-        else if (pct <= 70) color = '#eab308';
-        else if (pct <= 90) color = '#22c55e';
-        else color = '#D4AF37';
-        circle.style.stroke = color;
+        circle.style.stroke = 'var(--color-accent)';
         requestAnimationFrame(() => {
           circle.style.strokeDashoffset = offset;
         });
 
-        // Label
+        // Label (tiers differentiated by text, not colour)
         const labelEl = document.getElementById('score-label');
         let label;
-        if (pct <= 30) { label = 'Critical'; labelEl.style.color = '#ef4444'; }
-        else if (pct <= 50) { label = 'Needs Work'; labelEl.style.color = '#f97316'; }
-        else if (pct <= 70) { label = 'Good Foundation'; labelEl.style.color = '#eab308'; }
-        else if (pct <= 90) { label = 'Strong'; labelEl.style.color = '#22c55e'; }
-        else { label = 'AI-Ready'; labelEl.style.color = '#D4AF37'; }
+        if (pct <= 30) { label = 'Critical'; }
+        else if (pct <= 50) { label = 'Needs Work'; }
+        else if (pct <= 70) { label = 'Good Foundation'; }
+        else if (pct <= 90) { label = 'Strong'; }
+        else { label = 'AI-Ready'; }
+        labelEl.style.color = 'var(--color-accent)';
         labelEl.textContent = label;
 
         // Breakdown
@@ -269,7 +264,7 @@ const schema = [
         questions.forEach((q, i) => {
           const val = answers[i];
           const ansLabel = val === 10 ? 'Yes' : val === 5 ? 'Partially' : 'No';
-          const ansColor = val === 10 ? 'text-emerald-600' : val === 5 ? 'text-amber-600' : 'text-red-500';
+          const ansColor = val === 10 ? 'text-accent' : 'text-text-muted';
           const div = document.createElement('div');
           div.className = 'border border-border rounded-lg p-4';
           let html = '<div class="flex justify-between items-start gap-4 mb-1"><span class="text-sm text-brand font-medium">' + q.text + '</span><span class="text-sm font-bold whitespace-nowrap ' + ansColor + '">' + ansLabel + '</span></div>';
