@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 const schema = [
   {
@@ -421,5 +422,7 @@ const oneOffs = [
 
       <p class="mt-8 text-sm text-text-muted">Questions about pricing? Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a>. View all <a href="/services/">SEO services</a>, read <a href="/case-studies/">case studies</a>, or return to the <a href="/">homepage</a>.</p>
     </div>
+
+    <ContactForm eyebrow="Pricing" heading="Find the right plan" subject="SEO Guildford: Pricing enquiry" />
   </article>
 </Base>

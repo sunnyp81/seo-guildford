@@ -163,6 +163,18 @@ body {
 }
 .site-header.scrolled { background: var(--color-surface); }
 
+.masthead-word {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.masthead-word:hover { color: var(--color-brand-light); }
+.masthead-dot { color: var(--color-accent); }
+
 .nav-link {
   position: relative;
   color: var(--color-brand);

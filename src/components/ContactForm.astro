@@ -1,0 +1,75 @@
+---
+// Reusable enquiry form -> StaticForms (hello@seo-guildford.uk).
+// Drop <ContactForm /> near the foot of any landing page.
+// Confirmation is handled client-side because the site is statically built
+// (Astro.url query params are not available at runtime on a static page).
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  subject?: string;
+}
+const {
+  eyebrow = "Enquire",
+  heading = "Start a conversation",
+  intro = "Tell me about your business and what you want from search. I read every enquiry myself and reply within one working day. No sales sequence, no obligation.",
+  subject = "SEO Guildford: New Enquiry",
+} = Astro.props;
+
+const redirectTo = `https://seo-guildford.uk${Astro.url.pathname}?sent=1#enquire`;
+const inputClass = "w-full bg-white border border-border px-4 py-2.5 text-text focus:outline-none focus:border-accent transition-colors";
+---
+<section class="cta-section" id="enquire">
+  <div class="max-w-2xl mx-auto px-4">
+    <p class="eyebrow mb-3">{eyebrow}</p>
+    <h2 class="font-heading text-brand text-3xl md:text-4xl mb-4">{heading}</h2>
+
+    <div id="enquire-done" hidden class="border-t border-b border-brand py-6 my-2">
+      <p class="font-heading italic text-xl text-brand">Thank you, your enquiry is in. I reply personally, usually within one working day.</p>
+    </div>
+
+    <div id="enquire-form">
+      <p class="text-text-muted mb-8 max-w-prose">{intro}</p>
+      <form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-5">
+        <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+        <input type="hidden" name="_site" value="seo-guildford.uk" />
+        <input type="hidden" name="subject" value={subject} />
+        <input type="hidden" name="redirectTo" value={redirectTo} />
+        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="cf-name" class="block text-sm font-semibold text-brand mb-1.5">Name <span class="text-accent">*</span></label>
+            <input id="cf-name" type="text" name="name" required autocomplete="name" class={inputClass} placeholder="Your name" />
+          </div>
+          <div>
+            <label for="cf-email" class="block text-sm font-semibold text-brand mb-1.5">Email <span class="text-accent">*</span></label>
+            <input id="cf-email" type="email" name="email" required autocomplete="email" class={inputClass} placeholder="you@company.co.uk" />
+          </div>
+        </div>
+
+        <div>
+          <label for="cf-website" class="block text-sm font-semibold text-brand mb-1.5">Website</label>
+          <input id="cf-website" type="url" name="website" autocomplete="url" class={inputClass} placeholder="https://yourbusiness.co.uk" />
+        </div>
+
+        <div>
+          <label for="cf-message" class="block text-sm font-semibold text-brand mb-1.5">What do you need? <span class="text-accent">*</span></label>
+          <textarea id="cf-message" name="message" required rows="4" class={`${inputClass} resize-y`} placeholder="A sentence or two about your business and your search goals."></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Send enquiry</button>
+        <p class="text-xs text-text-muted">Your details are used only to reply to this enquiry. No mailing lists, no sharing.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  if (new URLSearchParams(window.location.search).get('sent') === '1') {
+    const form = document.getElementById('enquire-form');
+    const done = document.getElementById('enquire-done');
+    if (form) form.hidden = true;
+    if (done) done.hidden = false;
+  }
+</script>
