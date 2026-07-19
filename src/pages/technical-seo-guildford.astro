@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
+import ProofStats from '../components/ProofStats.astro';
+import QuickForm from '../components/QuickForm.astro';
 
 const schema = [
   {
@@ -247,9 +249,10 @@ const schema = [
     <p>I establish ongoing monitoring through Google Search Console's Index Coverage report, cross-referenced with server log analysis, to identify pages that Google discovers but chooses not to index, the "Crawled - currently not indexed" problem that affects many sites following Core Updates.</p>
     </div>
 
-    <div class="not-prose my-12 border-y border-border py-6 flex flex-wrap items-center justify-between gap-4">
-      <p class="text-brand font-heading text-lg m-0">Not sure which of these issues apply to your site?</p>
-      <a href="/free-seo-audit-guildford/" class="cta-button">Get your free audit</a>
+    <div class="not-prose my-12 py-8 border-y border-border">
+      <p class="eyebrow mb-3">Quick enquiry</p>
+      <p class="font-heading text-brand text-xl mb-4">Not sure which of these issues apply to your site?</p>
+      <QuickForm heading="" subject="SEO Guildford: Technical SEO mid-page enquiry" />
     </div>
 
     <div class="reveal">
@@ -418,6 +421,8 @@ const schema = [
     </ul>
   </div>
 </article>
+
+<ProofStats variant="google" />
 
 <ContactForm eyebrow="Technical SEO" heading="Book a technical review" subject="SEO Guildford: Technical SEO enquiry" />
 

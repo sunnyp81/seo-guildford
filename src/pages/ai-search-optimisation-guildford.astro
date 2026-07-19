@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
+import ProofStats from '../components/ProofStats.astro';
+import QuickForm from '../components/QuickForm.astro';
 
 const schema = [
   {
@@ -458,9 +460,10 @@ const schema = [
 
     <p>Google Business Profile data feeds into Google AI Overviews for local queries. A fully optimised GBP with complete business information, regular posts, photos, and reviews strengthens your presence in AI-generated local answers. Other AI platforms also access GBP data indirectly through web search results that surface GBP information.</p>
 
-    <div class="not-prose my-12 border-y border-border py-6 flex flex-wrap items-center justify-between gap-4">
-      <p class="text-brand font-heading text-lg m-0">Find out if AI platforms are citing you yet.</p>
-      <a href="/free-seo-audit-guildford/" class="cta-button">Get your free audit</a>
+    <div class="not-prose my-12 py-8 border-y border-border">
+      <p class="eyebrow mb-3">Quick enquiry</p>
+      <p class="font-heading text-brand text-xl mb-4">Find out if AI platforms are citing you yet.</p>
+      <QuickForm heading="" subject="SEO Guildford: AI Search mid-page enquiry" />
     </div>
 
     <!-- SVG: AI Citation Pipeline -->
@@ -732,6 +735,8 @@ const schema = [
     <div class="mt-10 pt-6 border-t border-border text-sm text-text-muted">
       <p>Related: <a href="/">SEO Guildford Home</a> | <a href="/services/">All SEO Services</a> | <a href="/technical-seo-guildford/">Technical SEO Guildford</a> | <a href="/seo-pricing-guildford/">SEO Pricing</a> | <a href="/case-studies/">Case Studies</a></p>
     </div>
+
+    <ProofStats variant="ai" />
 
     <ContactForm eyebrow="AI Search" heading="Get cited by AI search" subject="SEO Guildford: AI Search enquiry" />
 

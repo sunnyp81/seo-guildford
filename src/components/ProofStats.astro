@@ -33,15 +33,26 @@ const aiTotal = 1453;
 
 const fmt = (n: number) => n.toLocaleString("en-GB");
 const pct = (v: number, max: number) => Math.max(3, Math.round((v / max) * 100));
+
+interface Props { variant?: "full" | "google" | "ai"; }
+const { variant = "full" } = Astro.props;
+const showEv = variant !== "ai";
+const showImp = variant !== "ai";
+const showAi = variant !== "google";
+const intro = variant === "ai"
+  ? "Real GA4 data from a site in my own portfolio, shown by sector, not by name. This is the AI-assistant traffic most SEO work still ignores."
+  : variant === "google"
+  ? "Real Google Search Console data from sites in my own portfolio, shown by sector, not by name. Two niches, the same trajectory."
+  : "These are real figures from sites in my own portfolio, pulled straight from Google Search Console and GA4 and shown by sector, not by name. Two different niches, the same trajectory: the kind of growth the work is built to produce.";
 ---
 <section class="cta-section" aria-label="Real results">
   <div class="max-w-5xl mx-auto px-4">
     <p class="eyebrow mb-3">Real results</p>
     <h2 class="font-heading text-brand text-3xl md:text-4xl mb-3">Actual numbers, not promises</h2>
-    <p class="text-text-muted max-w-2xl mb-10">These are real figures from sites in my own portfolio, pulled straight from Google Search Console and GA4 and shown by sector, not by name. Two different niches, the same trajectory: the kind of growth the work is built to produce.</p>
+    <p class="text-text-muted max-w-2xl mb-10">{intro}</p>
 
     <div class="grid md:grid-cols-2 gap-6">
-      <!-- EV Charging: Google clicks -->
+      {showEv && (
       <div class="service-card">
         <div class="flex items-baseline justify-between mb-1">
           <span class="eyebrow">Google Search Console</span>
@@ -59,8 +70,9 @@ const pct = (v: number, max: number) => Math.max(3, Math.round((v / max) * 100))
         </div>
         <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">From near zero at launch to <span class="text-accent font-semibold">622</span> clicks in June. July passed <span class="text-brand font-semibold">626</span> by the 15th, on pace to roughly double again.</p>
       </div>
+      )}
 
-      <!-- Health & Wellness: Google impressions -->
+      {showImp && (
       <div class="service-card">
         <div class="flex items-baseline justify-between mb-1">
           <span class="eyebrow">Google Search Console</span>
@@ -78,8 +90,9 @@ const pct = (v: number, max: number) => Math.max(3, Math.round((v / max) * 100))
         </div>
         <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">Google clicks over the same window grew from <span class="text-brand font-semibold">174</span> in April to <span class="text-accent font-semibold">476</span> in June.</p>
       </div>
+      )}
 
-      <!-- Health & Wellness: AI referrals (full width) -->
+      {showAi && (
       <div class="service-card md:col-span-2">
         <div class="flex items-baseline justify-between mb-1">
           <span class="eyebrow">GA4 &middot; last 90 days</span>
@@ -99,6 +112,7 @@ const pct = (v: number, max: number) => Math.max(3, Math.round((v / max) * 100))
         </div>
         <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0"><span class="text-accent font-semibold">{fmt(aiTotal)}</span> sessions from AI assistants in 90 days, most from ChatGPT, the traffic most SEO work still ignores.</p>
       </div>
+      )}
     </div>
 
     <div class="mt-8">

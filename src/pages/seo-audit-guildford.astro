@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
+import ProofStats from '../components/ProofStats.astro';
+import QuickForm from '../components/QuickForm.astro';
 
 const schema = [
   {
@@ -235,9 +237,10 @@ const schema = [
     <p>I audit every title tag for length (under 60 characters to avoid truncation), keyword placement, click-through rate potential, and uniqueness. Duplicate or generic titles suppress CTR and waste ranking positions. Meta descriptions are reviewed for compelling, measured copy that encourages clicks from search results.</p>
     </div>
 
-    <div class="not-prose my-12 border-y border-border py-6 flex flex-wrap items-center justify-between gap-4">
-      <p class="text-brand font-heading text-lg m-0">See exactly where your site stands.</p>
-      <a href="/free-seo-audit-guildford/" class="cta-button">Get your free audit</a>
+    <div class="not-prose my-12 py-8 border-y border-border">
+      <p class="eyebrow mb-3">Quick enquiry</p>
+      <p class="font-heading text-brand text-xl mb-4">See exactly where your site stands.</p>
+      <QuickForm heading="" subject="SEO Guildford: Audit mid-page enquiry" />
     </div>
 
     <div class="reveal">
@@ -416,6 +419,8 @@ const schema = [
     </ul>
   </div>
 </article>
+
+<ProofStats variant="google" />
 
 <ContactForm eyebrow="Audit" heading="Commission an audit" subject="SEO Guildford: Audit enquiry" />
 

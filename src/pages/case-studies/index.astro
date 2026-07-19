@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Icon from '../../components/Icon.astro';
+import ProofStats from '../../components/ProofStats.astro';
 
 const schema = [
   {
@@ -128,6 +129,8 @@ const schema = [
     <div class="mt-10 pt-6 border-t border-border text-sm text-text-muted">
       <p>Related: <a href="/">SEO Guildford Home</a> | <a href="/services/">All SEO Services</a> | <a href="/free-seo-audit-guildford/">Free SEO Audit</a></p>
     </div>
+
+    <ProofStats variant="full" />
 
     <ContactForm eyebrow="Enquire" heading="Want results like these?" subject="SEO Guildford: Case studies enquiry" />
   </article>

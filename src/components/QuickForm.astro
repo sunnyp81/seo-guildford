@@ -1,0 +1,35 @@
+---
+// Compact quick-contact form -> StaticForms. Drop <QuickForm /> anywhere.
+// Uses the shared class-based confirmation handled once in Base.astro,
+// so any number of forms on a page all confirm on ?sent=1.
+interface Props {
+  heading?: string;
+  subject?: string;
+  compact?: boolean;
+}
+const {
+  heading = "See where you rank, free",
+  subject = "SEO Guildford: Quick enquiry",
+  compact = false,
+} = Astro.props;
+const redirectTo = `https://seo-guildford.uk${Astro.url.pathname}?sent=1`;
+---
+<div class="quickform">
+  <div class="js-enquire-form">
+    {heading && <p class="font-heading text-brand text-base mb-3">{heading}</p>}
+    <form action="https://api.staticforms.xyz/submit" method="POST" class="flex flex-col sm:flex-row gap-3">
+      <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+      <input type="hidden" name="_site" value="seo-guildford.uk" />
+      <input type="hidden" name="subject" value={subject} />
+      <input type="hidden" name="redirectTo" value={redirectTo} />
+      <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="email" name="email" required autocomplete="email" placeholder="you@company.co.uk"
+             class="flex-1 bg-[#14171E] border border-border rounded-md px-4 py-2.5 text-text placeholder:text-text-muted/60 focus:outline-none focus:border-accent transition-colors" />
+      <button type="submit" class="cta-button shrink-0">Get my free audit</button>
+    </form>
+    {!compact && <p class="cta-note mt-3">Free, no obligation. A reply within one working day.</p>}
+  </div>
+  <div class="js-enquire-done" hidden>
+    <p class="font-heading text-accent text-base m-0">Thank you, your enquiry is in. I reply personally, usually within one working day.</p>
+  </div>
+</div>

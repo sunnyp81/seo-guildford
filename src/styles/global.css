@@ -92,6 +92,12 @@ body {
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 .prose a:hover { color: var(--color-accent-light); border-bottom-color: var(--color-accent); }
+/* Buttons/links placed inside prose must keep their own styling, not the prose link color/underline */
+.prose a.cta-button { color: #06181C; border-bottom: 0; }
+.prose a.cta-button:hover { color: #06181C; }
+.prose a.cta-button-outline { color: var(--color-brand); border-bottom: 0; }
+.prose a.cta-button-outline:hover { color: var(--color-surface); }
+.prose a.cta-link { border-bottom: 0; }
 .prose strong { font-weight: 600; color: var(--color-brand); }
 
 /* Mono kicker */

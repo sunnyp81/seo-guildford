@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import QuickForm from '../components/QuickForm.astro';
 
 interface Props {
   title: string;
@@ -104,6 +105,11 @@ const year = new Date().getFullYear();
   <footer class="site-footer mt-16">
     <div class="footer-accent" aria-hidden="true"></div>
     <div class="max-w-5xl mx-auto px-4 py-14">
+      <div class="max-w-2xl mb-12 pb-12 border-b border-white/10">
+        <p class="eyebrow mb-3">Start here</p>
+        <h2 class="font-heading text-white text-2xl md:text-3xl mb-5">Find out where you stand</h2>
+        <QuickForm heading="" subject="SEO Guildford: Footer enquiry" />
+      </div>
       <div class="grid md:grid-cols-3 gap-10">
         <div>
           <div class="flex items-center gap-1.5 mb-4">
@@ -189,6 +195,12 @@ const year = new Date().getFullYear();
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+    // Shared enquiry confirmation: on ?sent=1 hide every form and show every thank-you.
+    if (new URLSearchParams(window.location.search).get('sent') === '1') {
+      document.querySelectorAll('.js-enquire-form').forEach(el => { el.hidden = true; });
+      document.querySelectorAll('.js-enquire-done').forEach(el => { el.hidden = false; });
+    }
   </script>
 </body>
 </html>
