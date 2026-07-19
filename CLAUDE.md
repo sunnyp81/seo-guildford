@@ -18,6 +18,18 @@ Static Astro 5 + Tailwind 4 brochure site, ~18 pages, no pSEO (areas/services/in
 - Deliberately NOT done in F1: the "we/our team" language (about.astro, contact.astro, free-seo-audit-guildford.astro, seo-pricing-guildford.astro) and the "25,000 indexed pages" portfolio claim — both gated on F3's identity decision (named practitioner vs. solo-anonymous), which Sunny hasn't made yet. Fable's review agreed deferring this was correct rather than guessing at public-facing identity/brand-voice.
 - Next action: F2 (indexation recovery — `/tools/` 404 fix, nav links, llms.txt/sitemap completeness, resubmit to GSC/Bing) is next in sequence, or make the F3 identity call first since it also unblocks the deferred F1 copy. Full detail in `REBUILD-PLAN.md`.
 
+## 2026-07-19 Full-site audit (5 dimensions) + fixes
+Sunny: "Now audit all." Ran 5 parallel Sonnet auditors (technical-SEO/schema/links, accessibility, design-consistency/regressions, conversion/forms, content-voice/claims) + Opus objective checks. (The accessibility agent died on an API error mid-run - dimension only partially covered.) Fixed, built, pushed:
+- **2 invisible-text bugs from redesign churn:** ROI calculator result box (`bg-brand` near-white -> `bg-surface-alt`+cyan border) and AI-search SVG diagram (white text on light boxes -> theme-consistent). Both were live broken-on-screen.
+- **Broken form confirmation** on contact.astro + free-seo-audit.astro: relied on server-side `?sent` check (never runs on static build) -> added client-side confirmation script + banner. Primary lead forms now confirm.
+- **Voice:** swept remaining "we/our/us" -> solo "I/my/me" across case studies, tool pages, seo-audit (schema + visible synced). Remaining "we" are legit (illustrative example quote + "how quickly can we start").
+- **Dashes:** removed all `&mdash;` entities + spaced ` -- ` from visible copy (0 now).
+- **FAQ schema<->visible drift:** synced schema `text` to visible `<details>` sitewide (~10 pages were drifted; Google FAQ policy). 
+- **Pricing contradiction** fixed (home FAQ said £3,000, real top tier £3,500).
+- **LocalBusiness address:** removed the Guildford locality PostalAddress (contradicted the disclosed Reading registered office); kept areaServed.
+- Added `:focus-visible` a11y styling; redrew favicon dark/cyan (was navy/gold/serif leftover); trimmed 4 over-length meta descs (home/technical-seo/ai-search/services to ~150-155); contact message optional + honeypot hardened + "24 hours"->"one working day"; **added ContactForm to About** (the one landing page missing it).
+- **STILL OPEN (medium/low, flag):** case-study Article schema missing `image`+`publisher.logo`; 3 service pages have `Offer` blocks with no numeric price (reconcile with pricing page £500/£750/£400); 3 tool titles slightly >60 chars; areaServed Hampshire inconsistent across schema blocks; tool-page breadcrumb `text-white/*` cosmetic (readable, not tokenised); dead CSS (`.pull-quote`/`.stats-bar`/`.rule`), unused `@fontsource/fraunces` dep, no-op `prose-brand`/`prose-lg`; a FULL accessibility pass (the auditor died) - contrast on all muted text, drawer aria, alt text.
+
 ## 2026-07-19 CRO: every landing page optimised for conversion
 Sunny: "make each landing page, including home page optimised for conversion." Shipped a shared conversion layer + per-page CTAs (honest signals only, no fabricated testimonials/logos/counts on a young solo site):
 - **Sticky mobile CTA bar** (Base.astro, fixed bottom, mobile-only, `md:hidden`): "Get your free SEO audit". Body gets bottom padding on mobile so it doesn't cover content.
