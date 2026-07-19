@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import Icon from '../../components/Icon.astro';
 
 const schema = [
   {
@@ -43,7 +44,10 @@ const schema = [
     </nav>
 
     <p class="eyebrow mb-3">Case Study</p>
-    <h1>Case Study: Local SEO for a <span class="mark">Guildford</span> Property Firm</h1>
+    <div class="flex items-center gap-3">
+      <Icon name="home" class="w-8 h-8 text-accent shrink-0" />
+      <h1 class="m-0">Case Study: Local SEO for a <span class="mark">Guildford</span> Property Firm</h1>
+    </div>
 
     <div class="bg-surface-alt border border-border rounded p-4 text-sm text-text-muted my-6 not-prose">
       <strong>Note:</strong> This case study is illustrative, based on typical results achieved for Surrey property businesses. Specific details have been anonymised to protect client confidentiality.
@@ -151,14 +155,14 @@ const schema = [
 
     <p>After 8 months:</p>
 
-    <ul>
-      <li><strong>Local pack position 1</strong> for "estate agents guildford", up from position 5</li>
-      <li><strong>280% increase in Google Business Profile calls</strong>, from 45/month to 171/month</li>
-      <li><strong>15 area guides ranking in the top 5</strong> for their target terms</li>
-      <li><strong>£2.4M in property sales</strong> attributed to organic search leads through CRM tracking</li>
-      <li><strong>Reviews grew from 23 to 89</strong> with average rating improving from 4.1 to 4.7 stars</li>
-      <li><strong>Organic traffic up 195%</strong> with area guides driving 40% of new sessions</li>
-      <li><strong>Valuation requests from organic: 35/month</strong>, up from approximately 8</li>
+    <ul class="list-none pl-0 not-prose space-y-2">
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Local pack position 1</strong> for "estate agents guildford", up from position 5</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>280% increase in Google Business Profile calls</strong>, from 45/month to 171/month</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>15 area guides ranking in the top 5</strong> for their target terms</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>£2.4M in property sales</strong> attributed to organic search leads through CRM tracking</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Reviews grew from 23 to 89</strong> with average rating improving from 4.1 to 4.7 stars</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Organic traffic up 195%</strong> with area guides driving 40% of new sessions</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Valuation requests from organic: 35/month</strong>, up from approximately 8</span></li>
     </ul>
 
     </div>

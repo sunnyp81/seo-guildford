@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
 
 const schema = [
   {
@@ -142,18 +143,30 @@ const schema = [
 
     <p>A comprehensive SEO audit is not a tool-generated PDF. It is an expert-led investigation that examines your site through three distinct lenses: the search engine's, the user's, and your competitors'. I assess over 200 ranking factors across four categories, each weighted and prioritised by its impact on your specific business objectives. The difference between this and an automated report is the difference between a blood test and a consultation with a specialist.</p>
 
-    <p>Every audit includes:</p>
+    <div class="grid sm:grid-cols-2 gap-5 not-prose my-8">
+      <div class="service-card reveal">
+        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Technical</h3>
+        <p class="text-text-muted text-sm m-0">Full technical crawl, Google Search Console data analysis, and Core Web Vitals assessment across mobile and desktop.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.06s">
+        <Icon name="file" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Content</h3>
+        <p class="text-text-muted text-sm m-0">Content quality evaluation against competitor benchmarks, plus a keyword gap analysis for your target terms.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.12s">
+        <Icon name="pin" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Local</h3>
+        <p class="text-text-muted text-sm m-0">Local SEO profile review: Google Business Profile, citations, and local pack eligibility.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.18s">
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">AI Search</h3>
+        <p class="text-text-muted text-sm m-0">AI search readiness check covering ChatGPT, Perplexity, and Google AI Overview visibility.</p>
+      </div>
+    </div>
 
-    <ul>
-      <li>Full technical crawl of every page on your site</li>
-      <li>Google Search Console data analysis (impressions, clicks, indexation status)</li>
-      <li>Core Web Vitals assessment across mobile and desktop</li>
-      <li>Content quality evaluation against competitor benchmarks</li>
-      <li>Local SEO profile review (Google Business Profile, citations, local pack eligibility)</li>
-      <li>AI search readiness check (ChatGPT, Perplexity, Google AI Overview visibility)</li>
-      <li>Competitor gap analysis for your target keywords</li>
-      <li>Prioritised action plan with estimated impact and effort for each recommendation</li>
-    </ul>
+    <p>Every audit closes with a prioritised action plan, each recommendation ranked by estimated impact and implementation effort.</p>
     </div>
 
     <div class="reveal">

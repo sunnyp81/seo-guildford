@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import Icon from '../../components/Icon.astro';
 
 const schema = [
   {
@@ -60,12 +61,14 @@ const schema = [
 
     <div class="grid md:grid-cols-2 gap-6 not-prose my-8">
       <a href="/case-studies/surrey-research-park-tech-startup/" class="service-card block" style="--reveal-delay: 0.1s">
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
         <span class="eyebrow">Technology</span>
         <h3 class="text-lg font-bold text-brand mt-2 mb-2">Surrey Research Park Tech Startup</h3>
         <p class="text-text-muted text-sm mb-3">A B2B SaaS startup with zero organic visibility grew to 180 ranking keywords and 45 qualified leads per month through technical SEO and content strategy.</p>
         <span class="cta-link text-sm">340% organic traffic growth &rarr;</span>
       </a>
       <a href="/case-studies/guildford-property-firm-local-seo/" class="service-card block" style="--reveal-delay: 0.18s">
+        <Icon name="home" class="w-6 h-6 text-accent mb-3" />
         <span class="eyebrow">Property</span>
         <h3 class="text-lg font-bold text-brand mt-2 mb-2">Guildford Property Firm Local SEO</h3>
         <p class="text-text-muted text-sm mb-3">An estate agency on Guildford High Street achieved local pack position 1 and attributed £2.4M in property sales to organic leads through local SEO and area content.</p>

@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import ProofStats from '../components/ProofStats.astro';
+import Icon from '../components/Icon.astro';
 
 const title = "SEO Guildford: Local Search Marketing for Surrey";
 const description = "SEO Guildford delivers technical SEO, content strategy, and AI search optimisation for Guildford and Surrey businesses. Start with a free audit today.";
@@ -191,33 +192,33 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
     <h2 class="reveal">Why work with me</h2>
     <div class="grid sm:grid-cols-2 gap-5 not-prose my-8">
       <div class="service-card reveal">
-        <span class="eyebrow">01</span>
-        <h3 class="font-heading text-brand text-lg mt-2 mb-1.5">Technical foundations first</h3>
+        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Technical foundations first</h3>
         <p class="text-text-muted text-sm m-0">Crawlability, speed, indexation, and schema fixed before content, because rankings sit on infrastructure.</p>
       </div>
       <div class="service-card reveal" style="--reveal-delay: 0.06s">
-        <span class="eyebrow">02</span>
-        <h3 class="font-heading text-brand text-lg mt-2 mb-1.5">One specialist, direct</h3>
+        <Icon name="user" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">One specialist, direct</h3>
         <p class="text-text-muted text-sm m-0">No account managers or junior hand-offs. The person who diagnoses the problem is the person who fixes it.</p>
       </div>
       <div class="service-card reveal" style="--reveal-delay: 0.12s">
-        <span class="eyebrow">03</span>
-        <h3 class="font-heading text-brand text-lg mt-2 mb-1.5">Built for AI search</h3>
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Built for AI search</h3>
         <p class="text-text-muted text-sm m-0">AEO and GEO work so you are cited by Google AI Overviews, ChatGPT, and Perplexity, not just ranked in blue links.</p>
       </div>
       <div class="service-card reveal" style="--reveal-delay: 0.18s">
-        <span class="eyebrow">04</span>
-        <h3 class="font-heading text-brand text-lg mt-2 mb-1.5">Local Surrey knowledge</h3>
+        <Icon name="pin" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Local Surrey knowledge</h3>
         <p class="text-text-muted text-sm m-0">From Surrey Research Park to the High Street, strategy built on the real Guildford market, not a generic template.</p>
       </div>
       <div class="service-card reveal" style="--reveal-delay: 0.24s">
-        <span class="eyebrow">05</span>
-        <h3 class="font-heading text-brand text-lg mt-2 mb-1.5">Transparent pricing</h3>
+        <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Transparent pricing</h3>
         <p class="text-text-muted text-sm m-0">Fixed-fee and retainer options, no hidden costs and no lock-in contracts.</p>
       </div>
       <div class="service-card reveal" style="--reveal-delay: 0.3s">
-        <span class="eyebrow">06</span>
-        <h3 class="font-heading text-brand text-lg mt-2 mb-1.5">Free audit first</h3>
+        <Icon name="search" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Free audit first</h3>
         <p class="text-text-muted text-sm m-0">See exactly where you stand before committing anything, at no cost and no obligation.</p>
       </div>
     </div>
@@ -228,26 +229,32 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
 
     <div class="grid md:grid-cols-2 gap-6 not-prose my-10">
       <a href="/technical-seo-guildford/" class="service-card block reveal">
+        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold text-brand text-lg mb-2 font-heading">Technical SEO</h3>
         <p class="text-text-muted text-sm">Site speed, crawlability, Core Web Vitals, indexation, and structured data, the load-bearing foundation upon which everything else depends.</p>
       </a>
       <a href="/seo-audit-guildford/" class="service-card block reveal" style="--reveal-delay: 0.08s">
+        <Icon name="search" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold text-brand text-lg mb-2 font-heading">SEO Audit</h3>
         <p class="text-text-muted text-sm">A thorough analysis of technical health, content gaps, backlink profile, and competitive positioning within the Guildford market.</p>
       </a>
       <a href="/ai-search-optimisation-guildford/" class="service-card block reveal" style="--reveal-delay: 0.16s">
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold text-brand text-lg mb-2 font-heading">AI Search Optimisation</h3>
         <p class="text-text-muted text-sm">Ensure your business is cited by ChatGPT, Google AI Overviews, and Perplexity, the emerging frontier where search meets machine intelligence.</p>
       </a>
       <a href="/services/" class="service-card block reveal" style="--reveal-delay: 0.24s">
+        <Icon name="file" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold text-brand text-lg mb-2 font-heading">Content Strategy</h3>
         <p class="text-text-muted text-sm">Topical authority mapping, semantic content, and editorial calendars that build compounding organic traffic, like a well-tended garden that yields more each season.</p>
       </a>
       <a href="/free-seo-audit-guildford/" class="service-card block reveal" style="--reveal-delay: 0.32s">
+        <Icon name="check" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold text-brand text-lg mb-2 font-heading">Free SEO Audit</h3>
         <p class="text-text-muted text-sm">A considered review of your site's technical health, keyword opportunities, and competitive landscape, provided without obligation.</p>
       </a>
       <a href="/seo-pricing-guildford/" class="service-card block reveal" style="--reveal-delay: 0.4s">
+        <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold text-brand text-lg mb-2 font-heading">SEO Pricing</h3>
         <p class="text-text-muted text-sm">Transparent pricing for Guildford businesses, with both fixed-fee and retainer arrangements to suit different requirements and objectives.</p>
       </a>
@@ -257,18 +264,22 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
     <p class="reveal text-text-muted mb-6">Guildford's economy is unusually diverse, so each sector gets its own approach rather than a single template.</p>
     <div class="grid sm:grid-cols-2 gap-5 not-prose my-8">
       <a href="/industries/" class="service-card block reveal">
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
         <span class="eyebrow">Gaming &amp; Technology</span>
         <p class="text-text-muted text-sm mt-2 m-0">Studios like Media Molecule plus Surrey Research Park's AI, biotech, and software firms, competing nationally on complex site architectures.</p>
       </a>
       <a href="/industries/" class="service-card block reveal" style="--reveal-delay: 0.06s">
+        <Icon name="building" class="w-6 h-6 text-accent mb-3" />
         <span class="eyebrow">Professional Services</span>
         <p class="text-text-muted text-sm mt-2 m-0">Solicitors, accountants, and advisers around the High Street and Tunsgate Quarter competing for high-intent local searches.</p>
       </a>
       <a href="/industries/" class="service-card block reveal" style="--reveal-delay: 0.12s">
+        <Icon name="home" class="w-6 h-6 text-accent mb-3" />
         <span class="eyebrow">Property &amp; Construction</span>
         <p class="text-text-muted text-sm mt-2 m-0">Estate agents and developers in a market averaging over £600,000, targeting location and buying-intent queries.</p>
       </a>
       <a href="/industries/" class="service-card block reveal" style="--reveal-delay: 0.18s">
+        <Icon name="heart" class="w-6 h-6 text-accent mb-3" />
         <span class="eyebrow">Healthcare</span>
         <p class="text-text-muted text-sm mt-2 m-0">Practices near Royal Surrey County Hospital where YMYL content demands real E-E-A-T and patient trust signals.</p>
       </a>

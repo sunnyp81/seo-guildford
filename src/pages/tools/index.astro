@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import Icon from '../../components/Icon.astro';
 
 const title = "Free SEO Tools: Guildford & Surrey Businesses";
 const description = "Three free interactive SEO tools for Guildford and Surrey businesses: an AI search readiness checker, a local SEO checklist, and an SEO ROI calculator.";
@@ -50,18 +51,21 @@ const schema = [
 
     <div class="grid md:grid-cols-3 gap-6 not-prose my-8">
       <a href="/tools/ai-search-readiness-checker/" class="service-card block" style="--reveal-delay: 0.1s">
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
         <span class="text-xs font-medium text-accent uppercase tracking-wide">AI Search</span>
         <h3 class="text-lg font-bold text-brand mt-2 mb-2">AI Search Readiness Checker</h3>
         <p class="text-text-muted text-sm mb-3">Score how ready your website is for ChatGPT, Perplexity, Google AI Overviews, and Copilot in a free 10-question self-assessment.</p>
         <span class="text-sm font-semibold text-accent">Take the assessment &rarr;</span>
       </a>
       <a href="/tools/local-seo-checklist/" class="service-card block" style="--reveal-delay: 0.18s">
+        <Icon name="pin" class="w-6 h-6 text-accent mb-3" />
         <span class="text-xs font-medium text-accent uppercase tracking-wide">Local SEO</span>
         <h3 class="text-lg font-bold text-brand mt-2 mb-2">Local SEO Checklist</h3>
         <p class="text-text-muted text-sm mb-3">A free interactive 20-point checklist covering Google Business Profile, on-page SEO, technical health, reviews, and citations.</p>
         <span class="text-sm font-semibold text-accent">Start the checklist &rarr;</span>
       </a>
       <a href="/tools/seo-roi-calculator/" class="service-card block" style="--reveal-delay: 0.26s">
+        <Icon name="chart" class="w-6 h-6 text-accent mb-3" />
         <span class="text-xs font-medium text-accent uppercase tracking-wide">ROI</span>
         <h3 class="text-lg font-bold text-brand mt-2 mb-2">SEO ROI Calculator</h3>
         <p class="text-text-muted text-sm mb-3">Enter your business metrics to estimate the revenue uplift and return on investment from an SEO campaign.</p>

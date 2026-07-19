@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
 
 const schema = [
   {
@@ -267,10 +268,10 @@ const oneOffs = [
             </div>
             <p class="text-text-muted text-sm mt-2">{tier.description}</p>
           </div>
-          <ul class="space-y-2 mb-6 flex-1">
+          <ul class="list-none space-y-2 mb-6 flex-1">
             {tier.features.map(f => (
               <li class="flex items-start gap-2 text-sm">
-                <svg class="w-4 h-4 text-accent mt-0.5 shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <Icon name="check" class="w-4 h-4 text-accent inline-block shrink-0" />
                 <span>{f}</span>
               </li>
             ))}
@@ -289,6 +290,7 @@ const oneOffs = [
     <div class="grid md:grid-cols-3 gap-5 my-8">
       {oneOffs.map((service, i) => (
         <div class="service-card reveal" style={`--reveal-delay: ${0.1 + i * 0.08}s`}>
+          <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
           <h3 class="text-lg font-bold text-brand mb-1">{service.name}</h3>
           <p class="text-2xl font-bold text-text font-mono mb-3">{service.price}</p>
           <p class="text-text-muted text-sm">{service.description}</p>

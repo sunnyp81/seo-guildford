@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
 
 const schema = [
   {
@@ -140,7 +141,40 @@ const schema = [
     <div class="reveal">
     <h2>What Is Technical SEO</h2>
 
-    <p>Technical SEO encompasses every aspect of your website that influences how search engines interact with it, from server response times and page load speed to crawlability, indexation controls, structured data markup, URL architecture, internal linking, rendering behaviour, and mobile performance.</p>
+    <p>Technical SEO encompasses every aspect of your website that influences how search engines crawl, render, index, and rank your pages. It breaks down into six core components:</p>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 not-prose my-8">
+      <div class="service-card reveal">
+        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Site Speed</h3>
+        <p class="text-text-muted text-sm m-0">Server response times and page load speed, measured against Core Web Vitals thresholds.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.06s">
+        <Icon name="search" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Crawlability</h3>
+        <p class="text-text-muted text-sm m-0">Crawl directives and rendering behaviour, so Googlebot can find and access every page that matters.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.12s">
+        <Icon name="layers" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Indexation</h3>
+        <p class="text-text-muted text-sm m-0">Indexation controls that decide which pages Google actually adds to its index.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.18s">
+        <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Structured Data</h3>
+        <p class="text-text-muted text-sm m-0">Structured data markup that helps search engines understand exactly what each page offers.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.24s">
+        <Icon name="link" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Site Architecture</h3>
+        <p class="text-text-muted text-sm m-0">URL architecture and internal linking that guide crawlers and visitors to the right pages.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.3s">
+        <Icon name="compass" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">Mobile Performance</h3>
+        <p class="text-text-muted text-sm m-0">Mobile performance, since Google indexes the mobile version of your site rather than desktop.</p>
+      </div>
+    </div>
 
     <p>It is distinct from content SEO and link building, though deeply intertwined with both. You can write brilliant copy and earn formidable backlinks, but if Googlebot cannot crawl a site efficiently or pages take five seconds to render, those efforts yield diminished returns, like pouring water into a bucket riddled with holes. Technical SEO is the foundation layer upon which every other form of optimisation rests.</p>
 

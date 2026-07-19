@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import Icon from '../../components/Icon.astro';
 
 const schema = [
   {
@@ -43,7 +44,10 @@ const schema = [
     </nav>
 
     <p class="eyebrow mb-3">Case Study</p>
-    <h1>Case Study: <span class="mark">Surrey</span> Research Park Tech Startup SEO</h1>
+    <div class="flex items-center gap-3">
+      <Icon name="cpu" class="w-8 h-8 text-accent shrink-0" />
+      <h1 class="m-0">Case Study: <span class="mark">Surrey</span> Research Park Tech Startup SEO</h1>
+    </div>
 
     <div class="bg-surface-alt border border-border rounded p-4 text-sm text-text-muted my-6 not-prose">
       <strong>Note:</strong> This case study is illustrative, based on typical results achieved for Surrey technology businesses. Specific details have been anonymised to protect client confidentiality.
@@ -144,13 +148,13 @@ const schema = [
 
     <p>After 6 months:</p>
 
-    <ul>
-      <li><strong>Organic traffic</strong> increased 340% from baseline (effectively from near-zero to a meaningful traffic source)</li>
-      <li><strong>180 keywords</strong> ranking in the top 100, with 34 in the top 10</li>
-      <li><strong>45 qualified leads per month</strong> from organic search</li>
-      <li><strong>Cost per organic lead dropped to £18</strong> (vs £85 on LinkedIn)</li>
-      <li><strong>3 featured snippets</strong> captured for high-value compliance queries</li>
-      <li><strong>Core Web Vitals</strong> all green: LCP 1.4s, INP 78ms, CLS 0.02</li>
+    <ul class="list-none pl-0 not-prose space-y-2">
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Organic traffic</strong> increased 340% from baseline (effectively from near-zero to a meaningful traffic source)</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>180 keywords</strong> ranking in the top 100, with 34 in the top 10</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>45 qualified leads per month</strong> from organic search</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Cost per organic lead dropped to £18</strong> (vs £85 on LinkedIn)</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>3 featured snippets</strong> captured for high-value compliance queries</span></li>
+      <li class="flex items-start gap-2"><Icon name="check" class="w-4 h-4 text-accent mt-1 shrink-0" /><span><strong>Core Web Vitals</strong> all green: LCP 1.4s, INP 78ms, CLS 0.02</span></li>
     </ul>
 
     </div>

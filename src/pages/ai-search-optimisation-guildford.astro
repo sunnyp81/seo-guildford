@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
 
 const schema = [
   {
@@ -152,11 +153,24 @@ const schema = [
     <h3>The Three Pillars</h3>
 
     <p>AI search optimisation rests on three overlapping disciplines, each with its own logic but sharing a common foundation:</p>
-    <ul>
-      <li><strong>AEO (Answer Engine Optimisation)</strong> targets direct-answer formats in Google AI Overviews, featured snippets, and voice assistants.</li>
-      <li><strong>GEO (Generative Engine Optimisation)</strong> focuses on how generative AI platforms select and cite sources.</li>
-      <li><strong>LLM SEO</strong> addresses how large language models index, retrieve, and surface information from your site.</li>
-    </ul>
+
+    <div class="grid sm:grid-cols-3 gap-5 not-prose my-8">
+      <div class="service-card reveal">
+        <Icon name="zap" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">AEO</h3>
+        <p class="text-text-muted text-sm m-0">Answer Engine Optimisation targets direct-answer formats in Google AI Overviews, featured snippets, and voice assistants.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.06s">
+        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">GEO</h3>
+        <p class="text-text-muted text-sm m-0">Generative Engine Optimisation focuses on how generative AI platforms select and cite sources.</p>
+      </div>
+      <div class="service-card reveal" style="--reveal-delay: 0.12s">
+        <Icon name="layers" class="w-6 h-6 text-accent mb-3" />
+        <h3 class="font-heading text-brand text-lg mb-1.5">LLM SEO</h3>
+        <p class="text-text-muted text-sm m-0">Addresses how large language models index, retrieve, and surface information from your site.</p>
+      </div>
+    </div>
 
     <p>Each pillar demands its own tactics, yet they converge on the same bedrock: structured content, unambiguous entity identity, and technical accessibility for AI crawlers.</p>
     </div>
