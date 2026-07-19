@@ -18,6 +18,15 @@ Static Astro 5 + Tailwind 4 brochure site, ~18 pages, no pSEO (areas/services/in
 - Deliberately NOT done in F1: the "we/our team" language (about.astro, contact.astro, free-seo-audit-guildford.astro, seo-pricing-guildford.astro) and the "25,000 indexed pages" portfolio claim — both gated on F3's identity decision (named practitioner vs. solo-anonymous), which Sunny hasn't made yet. Fable's review agreed deferring this was correct rather than guessing at public-facing identity/brand-voice.
 - Next action: F2 (indexation recovery — `/tools/` 404 fix, nav links, llms.txt/sitemap completeness, resubmit to GSC/Bing) is next in sequence, or make the F3 identity call first since it also unblocks the deferred F1 copy. Full detail in `REBUILD-PLAN.md`.
 
+## 2026-07-19 CRO: every landing page optimised for conversion
+Sunny: "make each landing page, including home page optimised for conversion." Shipped a shared conversion layer + per-page CTAs (honest signals only, no fabricated testimonials/logos/counts on a young solo site):
+- **Sticky mobile CTA bar** (Base.astro, fixed bottom, mobile-only, `md:hidden`): "Get your free SEO audit". Body gets bottom padding on mobile so it doesn't cover content.
+- **Reassurance strip** (`.cf-reassure`) inside the shared ContactForm above the fields: reply within 1 working day / free, no obligation / direct specialist access / ND Media Ltd. So every landing page's form gets it.
+- **Lower form friction:** message field now OPTIONAL (was required); added "or email hello@..." fallback + a free/no-obligation line.
+- **Above-the-fold CTA on every landing page** (Sonnet workers): after the opening answer block, a `.cta-button` "Request a free audit" + `#enquire` "Ask a question" link + `.cta-note` microcopy. **Mid-page CTA band** on the long pages (technical-seo, seo-audit, ai-search-optimisation, industries). **Post-results CTA** on both case studies (highest-intent moment). Homepage hero got `.cta-note`.
+- Conversion funnel is now: hero CTA -> top CTA -> mid CTA (long pages) -> bottom ContactForm (#enquire) -> sticky mobile bar always visible. All dark-product styled, content/schema/JS preserved, build clean.
+- Known pre-existing (out of scope, flag): case-studies/index still uses "we/our" voice + FAQ schema ("what we guarantee") inconsistent with the solo-anonymous "I" voice used elsewhere (the F3 pass skipped case-studies). Worth a voice cleanup pass later.
+
 ## 2026-07-19 Redesign v3: DARK PRODUCT ("Linear at night") - complete overhaul
 Sunny: "overhaul the design completely" -> picked "Dark product / Linear at night" from distinct options (print-editorial was "better but" not final). Full break, committed:
 - Palette: near-black charcoal `#0A0B0E` canvas + elevated surface `#101218` + single electric-cyan accent `#22D3EE`. Restrained cyan glow on CTA/focus/card-hover only (NOT the dot-grid/gradient-hero AI cliche - hero uses a faint masked line-grid + one cyan radial).
