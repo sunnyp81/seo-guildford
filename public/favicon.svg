@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0B2545"/>
-  <text x="4" y="14" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#D4AF37" letter-spacing="0.5">SEO</text>
-  <text x="3" y="25" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#FFFFFF" letter-spacing="-0.3">Gfd</text>
-  <rect x="24" y="12" width="4" height="2" rx="1" fill="#D4AF37" opacity="0.6"/>
+  <rect width="32" height="32" rx="7" fill="#0A0B0E"/>
+  <rect x="5" y="6" width="10" height="2" rx="1" fill="#22D3EE"/>
+  <text x="4.5" y="22" font-family="'Space Grotesk', Arial, sans-serif" font-size="14" font-weight="700" fill="#E7E9ED" letter-spacing="-1">SG</text>
+  <circle cx="25" cy="20" r="2.5" fill="#22D3EE"/>
 </svg>

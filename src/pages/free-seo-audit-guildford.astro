@@ -93,7 +93,7 @@ const schema = [
         <strong>The short version:</strong> Submit the form below to receive a free SEO health check within two to three working days. The audit covers technical errors, local search visibility, and Google Business Profile status. No payment details are required, there is no obligation, and no sales call unless you expressly request one.
       </div>
 
-      <p>Most businesses along Guildford High Street, around Tunsgate Quarter, or operating near Surrey Research Park have never subjected their search presence to professional scrutiny -- which means fixable issues quietly accumulate, much like a slow leak in a roof. Broken links, missing metadata, unclaimed local listings, sluggish page speeds: each one bleeds a little visibility, and collectively they hand positions to competitors who have already done the work.</p>
+      <p>Most businesses along Guildford High Street, around Tunsgate Quarter, or operating near Surrey Research Park have never subjected their search presence to professional scrutiny, which means fixable issues quietly accumulate, much like a slow leak in a roof. Broken links, missing metadata, unclaimed local listings, sluggish page speeds: each one bleeds a little visibility, and collectively they hand positions to competitors who have already done the work.</p>
 
       <p>This free audit is designed to change that. Whether you operate a gaming studio near the University of Surrey, a property agency listing homes across the GU postcode, or a healthcare practice close to Royal Surrey Hospital, the audit provides you with a factual, considered starting point.</p>
 
@@ -103,11 +103,11 @@ const schema = [
       <p>The free audit is a focused review rather than a full-depth analysis, covering the areas that matter most for identifying immediate opportunities:</p>
 
       <ul>
-        <li><strong>Technical health scan</strong> -- crawl errors, broken links, page speed issues, and mobile usability problems that directly affect rankings</li>
-        <li><strong>Local visibility check</strong> -- how your business appears in Google Maps and local pack results for your target area in Guildford and surrounding towns</li>
-        <li><strong>Google Business Profile review</strong> -- whether your GBP listing is claimed, complete, and properly optimised for local search queries</li>
-        <li><strong>On-page SEO snapshot</strong> -- title tags, meta descriptions, heading structure, and basic content issues on your most important pages</li>
-        <li><strong>Competitor comparison</strong> -- a brief, considered look at how your search visibility compares to two direct competitors in your sector</li>
+        <li><strong>Technical health scan</strong>: crawl errors, broken links, page speed issues, and mobile usability problems that directly affect rankings</li>
+        <li><strong>Local visibility check</strong>: how your business appears in Google Maps and local pack results for your target area in Guildford and surrounding towns</li>
+        <li><strong>Google Business Profile review</strong>: whether your GBP listing is claimed, complete, and properly optimised for local search queries</li>
+        <li><strong>On-page SEO snapshot</strong>: title tags, meta descriptions, heading structure, and basic content issues on your most important pages</li>
+        <li><strong>Competitor comparison</strong>: a brief, considered look at how your search visibility compares to two direct competitors in your sector</li>
       </ul>
 
       <p>You receive a concise PDF report with findings and a clear explanation of what each issue means for your business.</p>
@@ -121,52 +121,57 @@ const schema = [
     </div>
 
     <!-- Audit request form -->
-    <form action="https://api.staticforms.xyz/submit" method="POST" class="bg-[#14171E] rounded-[0.35rem] border border-border p-6 md:p-8 my-8 space-y-5 reveal">
-      <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
-      <input type="hidden" name="_site" value="seo-guildford.uk" />
-      <input type="hidden" name="subject" value="SEO Guildford: Free Audit Request (seo-guildford.uk)" />
-      <input type="hidden" name="redirectTo" value="https://seo-guildford.uk/free-seo-audit-guildford/?sent=1" />
-      <input type="text" name="honeypot" style="display:none" />
-      <p class="text-sm text-text-muted mb-2">All fields marked with * are required.</p>
+    <section id="enquire">
+      <div id="enquire-done" hidden class="border border-accent bg-surface-alt rounded-md px-5 py-6 mb-6"><p class="font-heading text-xl text-brand m-0">Thank you, your enquiry is in. I reply personally, usually within one working day.</p></div>
+      <div id="enquire-form">
+        <form action="https://api.staticforms.xyz/submit" method="POST" class="bg-[#14171E] rounded-[0.35rem] border border-border p-6 md:p-8 my-8 space-y-5 reveal">
+          <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+          <input type="hidden" name="_site" value="seo-guildford.uk" />
+          <input type="hidden" name="subject" value="SEO Guildford: Free Audit Request (seo-guildford.uk)" />
+          <input type="hidden" name="redirectTo" value="https://seo-guildford.uk/free-seo-audit-guildford/?sent=1" />
+          <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+          <p class="text-sm text-text-muted mb-2">All fields marked with * are required.</p>
 
-      <div>
-        <label for="name" class="block text-sm font-medium text-text mb-1">Name *</label>
-        <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors" placeholder="Your full name" />
+          <div>
+            <label for="name" class="block text-sm font-medium text-text mb-1">Name *</label>
+            <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors" placeholder="Your full name" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-text mb-1">Email *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors" placeholder="you@example.co.uk" />
+          </div>
+
+          <div>
+            <label for="website" class="block text-sm font-medium text-text mb-1">Website URL *</label>
+            <input type="url" id="website" name="website" required autocomplete="url" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors" placeholder="https://www.yourbusiness.co.uk" />
+          </div>
+
+          <div>
+            <label for="business-type" class="block text-sm font-medium text-text mb-1">Business Type *</label>
+            <select id="business-type" name="business_type" required class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors">
+              <option value="" disabled selected>Select your sector</option>
+              <option value="gaming-tech">Gaming / Technology</option>
+              <option value="professional-services">Professional Services</option>
+              <option value="property">Property / Estate Agency</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="retail">Retail</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-text mb-1">Message (optional)</label>
+            <textarea id="message" name="message" rows="3" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors resize-y" placeholder="Tell me about your principal SEO goals or concerns"></textarea>
+          </div>
+
+          <button type="submit" class="cta-button w-full text-center">Request your audit</button>
+
+          <p class="text-xs text-text-muted text-center">Your data is used solely to deliver the audit. No unsolicited correspondence, no mailing lists.</p>
+        </form>
       </div>
-
-      <div>
-        <label for="email" class="block text-sm font-medium text-text mb-1">Email *</label>
-        <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors" placeholder="you@example.co.uk" />
-      </div>
-
-      <div>
-        <label for="website" class="block text-sm font-medium text-text mb-1">Website URL *</label>
-        <input type="url" id="website" name="website" required autocomplete="url" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors" placeholder="https://www.yourbusiness.co.uk" />
-      </div>
-
-      <div>
-        <label for="business-type" class="block text-sm font-medium text-text mb-1">Business Type *</label>
-        <select id="business-type" name="business_type" required class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors">
-          <option value="" disabled selected>Select your sector</option>
-          <option value="gaming-tech">Gaming / Technology</option>
-          <option value="professional-services">Professional Services</option>
-          <option value="property">Property / Estate Agency</option>
-          <option value="healthcare">Healthcare</option>
-          <option value="retail">Retail</option>
-          <option value="hospitality">Hospitality</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-
-      <div>
-        <label for="message" class="block text-sm font-medium text-text mb-1">Message (optional)</label>
-        <textarea id="message" name="message" rows="3" class="w-full px-4 py-2.5 rounded border border-border bg-[#14171E] text-text focus:outline-none focus:border-accent transition-colors resize-y" placeholder="Tell us about your principal SEO goals or concerns"></textarea>
-      </div>
-
-      <button type="submit" class="cta-button w-full text-center">Request your audit</button>
-
-      <p class="text-xs text-text-muted text-center">Your data is used solely to deliver the audit. No unsolicited correspondence, no mailing lists.</p>
-    </form>
+    </section>
     <!-- End form -->
 
     <div class="prose">
@@ -176,13 +181,13 @@ const schema = [
       <p>Once you submit the form, here is precisely what to expect:</p>
 
       <ol>
-        <li><strong>Confirmation email</strong> -- you receive an acknowledgement within a few hours confirming your audit is in my queue</li>
-        <li><strong>Manual review</strong> -- I review your website by hand, checking technical health, local visibility, and on-page fundamentals with the thoroughness your business deserves</li>
-        <li><strong>Report delivery</strong> -- within two to three working days, you receive a concise PDF report to your email with findings and recommended next steps</li>
-        <li><strong>Optional follow-up call</strong> -- if you would like to discuss the findings, you may book a 15-minute call at no cost and with no obligation whatsoever</li>
+        <li><strong>Confirmation email</strong>: you receive an acknowledgement within a few hours confirming your audit is in my queue</li>
+        <li><strong>Manual review</strong>: I review your website by hand, checking technical health, local visibility, and on-page fundamentals with the thoroughness your business deserves</li>
+        <li><strong>Report delivery</strong>: within two to three working days, you receive a concise PDF report to your email with findings and recommended next steps</li>
+        <li><strong>Optional follow-up call</strong>: if you would like to discuss the findings, you may book a 15-minute call at no cost and with no obligation whatsoever</li>
       </ol>
 
-      <p>The entire process is built around respect for your time. Guildford business owners are busy, analytical people with no patience for fluff -- so the report is written in clear, direct English that you can act on independently or hand to your developer with confidence.</p>
+      <p>The entire process is built around respect for your time. Guildford business owners are busy, analytical people with no patience for fluff, so the report is written in clear, direct English that you can act on independently or hand to your developer with confidence.</p>
       </div>
 
       <div class="reveal">
@@ -192,7 +197,7 @@ const schema = [
 
       <p>A comprehensive audit includes a complete technical crawl of every page, a backlink profile analysis, detailed competitor benchmarking against three to five rivals, a content gap analysis showing missed keyword opportunities, and a prioritised 90-day action plan with estimated traffic and revenue impact. It also covers AI search readiness, which is increasingly relevant for Guildford businesses competing in sectors like technology, property, and professional services.</p>
 
-      <p>Think of the free audit as a preliminary consultation -- like a GP appointment that identifies whether you need a specialist. The comprehensive audit is that specialist investigation. Both are valuable, but they serve different purposes. Many clients start with the free version and commission the full audit once they see the scale of opportunity that data reveals.</p>
+      <p>Think of the free audit as a preliminary consultation, like a GP appointment that identifies whether you need a specialist. The comprehensive audit is that specialist investigation. Both are valuable, but they serve different purposes. Many clients start with the free version and commission the full audit once they see the scale of opportunity that data reveals.</p>
 
       <p>View the <a href="/seo-pricing-guildford/">full pricing breakdown</a> for all audit and retainer options.</p>
       </div>
@@ -254,3 +259,5 @@ const schema = [
     </div>
   </article>
 </Base>
+
+<script>if(new URLSearchParams(window.location.search).get('sent')==='1'){const f=document.getElementById('enquire-form'),d=document.getElementById('enquire-done');if(f)f.hidden=true;if(d)d.hidden=false;}</script>

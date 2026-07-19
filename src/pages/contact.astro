@@ -105,7 +105,7 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       <p>Every meaningful search engagement begins the same way: a conversation. Not a sales pitch, not a templated questionnaire, but a genuine exchange about where your site stands, what the data reveals, and whether there is a clear path to better performance. I would welcome the opportunity to have that conversation with you.</p>
 
       <div class="quick-answer">
-        <strong>The short version:</strong> Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> or complete the form below. Most enquiries receive a response within 24 hours. Initial consultations are free.
+        <strong>The short version:</strong> Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> or complete the form below. Most enquiries receive a response within one working day. Initial consultations are free.
       </div>
       </div>
 
@@ -118,34 +118,39 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       </div>
     </div>
 
-    <form action="https://api.staticforms.xyz/submit" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-[0.35rem] p-6 md:p-8">
-      <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
-      <input type="hidden" name="_site" value="seo-guildford.uk" />
-      <input type="hidden" name="subject" value="SEO Guildford: New Enquiry (seo-guildford.uk)" />
-      <input type="hidden" name="redirectTo" value="https://seo-guildford.uk/contact/?sent=1" />
-      <input type="text" name="honeypot" style="display:none" />
-      <div>
-        <label for="name" class="block text-sm font-medium text-text mb-1.5">Name <span class="text-accent">*</span></label>
-        <input type="text" id="name" name="name" required autocomplete="name" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="Your name" />
-      </div>
+    <section id="enquire">
+      <div id="enquire-done" hidden class="border border-accent bg-surface-alt rounded-md px-5 py-6 mb-6"><p class="font-heading text-xl text-brand m-0">Thank you, your enquiry is in. I reply personally, usually within one working day.</p></div>
+      <div id="enquire-form">
+        <form action="https://api.staticforms.xyz/submit" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-[0.35rem] p-6 md:p-8">
+          <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+          <input type="hidden" name="_site" value="seo-guildford.uk" />
+          <input type="hidden" name="subject" value="SEO Guildford: New Enquiry (seo-guildford.uk)" />
+          <input type="hidden" name="redirectTo" value="https://seo-guildford.uk/contact/?sent=1" />
+          <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+          <div>
+            <label for="name" class="block text-sm font-medium text-text mb-1.5">Name <span class="text-accent">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="Your name" />
+          </div>
 
-      <div>
-        <label for="email" class="block text-sm font-medium text-text mb-1.5">Email <span class="text-accent">*</span></label>
-        <input type="email" id="email" name="email" required autocomplete="email" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="you@company.co.uk" />
-      </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-text mb-1.5">Email <span class="text-accent">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="you@company.co.uk" />
+          </div>
 
-      <div>
-        <label for="website" class="block text-sm font-medium text-text mb-1.5">Website URL</label>
-        <input type="url" id="website" name="website" autocomplete="url" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="https://yoursite.co.uk" />
-      </div>
+          <div>
+            <label for="website" class="block text-sm font-medium text-text mb-1.5">Website URL</label>
+            <input type="url" id="website" name="website" autocomplete="url" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition" placeholder="https://yoursite.co.uk" />
+          </div>
 
-      <div>
-        <label for="message" class="block text-sm font-medium text-text mb-1.5">Message <span class="text-accent">*</span></label>
-        <textarea id="message" name="message" required rows="5" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition resize-y" placeholder="Tell us about your business and what you are looking to achieve with search."></textarea>
-      </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-text mb-1.5">Message <span class="text-text-muted font-normal">(optional)</span></label>
+            <textarea id="message" name="message" rows="5" class="w-full rounded border border-border bg-[#14171E] px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition resize-y" placeholder="Tell me about your business and what you are looking to achieve with search."></textarea>
+          </div>
 
-      <button type="submit" class="cta-button w-full sm:w-auto">Start with an audit</button>
-    </form>
+          <button type="submit" class="cta-button w-full sm:w-auto">Start with an audit</button>
+        </form>
+      </div>
+    </section>
 
     <div class="prose mt-12 reveal">
       <h2>Where I Am</h2>
@@ -200,7 +205,7 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       <div class="not-prose mt-12 bg-surface-alt p-8 reveal">
         <p class="eyebrow mb-2">Get in Touch</p>
         <h2 class="text-2xl font-bold text-brand mb-3">Prefer Email?</h2>
-        <p class="text-text-muted mb-6 max-w-lg">Send your enquiry directly and receive a personal response from me within 24 hours.</p>
+        <p class="text-text-muted mb-6 max-w-lg">Send your enquiry directly and receive a personal response from me within one working day.</p>
         <a href="mailto:hello@seo-guildford.uk" class="cta-button">Email hello@seo-guildford.uk</a>
       </div>
 
@@ -210,3 +215,5 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
     </div>
   </section>
 </Base>
+
+<script>if(new URLSearchParams(window.location.search).get('sent')==='1'){const f=document.getElementById('enquire-form'),d=document.getElementById('enquire-done');if(f)f.hidden=true;if(d)d.hidden=false;}</script>
