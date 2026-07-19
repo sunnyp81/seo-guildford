@@ -29,7 +29,13 @@ const inputClass = "w-full bg-[#14171E] border border-border rounded-md px-4 py-
     </div>
 
     <div id="enquire-form">
-      <p class="text-text-muted mb-8 max-w-prose">{intro}</p>
+      <p class="text-text-muted mb-6 max-w-prose">{intro}</p>
+      <ul class="cf-reassure">
+        <li>Reply within one working day</li>
+        <li>Free audit, no obligation</li>
+        <li>Direct access to the specialist</li>
+        <li>ND Media Ltd, Guildford &amp; Surrey</li>
+      </ul>
       <form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-5">
         <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
         <input type="hidden" name="_site" value="seo-guildford.uk" />
@@ -54,12 +60,15 @@ const inputClass = "w-full bg-[#14171E] border border-border rounded-md px-4 py-
         </div>
 
         <div>
-          <label for="cf-message" class="block text-sm font-semibold text-brand mb-1.5">What do you need? <span class="text-accent">*</span></label>
-          <textarea id="cf-message" name="message" required rows="4" class={`${inputClass} resize-y`} placeholder="A sentence or two about your business and your search goals."></textarea>
+          <label for="cf-message" class="block text-sm font-semibold text-brand mb-1.5">What do you need? <span class="text-text-muted font-normal">(optional)</span></label>
+          <textarea id="cf-message" name="message" rows="4" class={`${inputClass} resize-y`} placeholder="A sentence or two about your business and your search goals."></textarea>
         </div>
 
-        <button type="submit" class="cta-button">Send enquiry</button>
-        <p class="text-xs text-text-muted">Your details are used only to reply to this enquiry. No mailing lists, no sharing.</p>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+          <button type="submit" class="cta-button">Send enquiry</button>
+          <span class="text-sm text-text-muted">or email <a href="mailto:hello@seo-guildford.uk" class="text-accent">hello@seo-guildford.uk</a></span>
+        </div>
+        <p class="text-xs text-text-muted">Free and without obligation. Your details are used only to reply to this enquiry, no mailing lists, no sharing.</p>
       </form>
     </div>
   </div>
