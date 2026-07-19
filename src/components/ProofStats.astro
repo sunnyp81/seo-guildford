@@ -1,0 +1,83 @@
+---
+// Real, anonymised portfolio results. Every number below is actual data
+// pulled from Google Search Console (SEO Gets) and GA4 for a site in the
+// portfolio, shown by sector only. Do not fabricate or round misleadingly.
+const impressions = [
+  { m: "Mar", v: 3645, note: "launch" },
+  { m: "Apr", v: 26547 },
+  { m: "May", v: 32153 },
+  { m: "Jun", v: 44193 },
+];
+const impMax = 44193;
+
+const ai = [
+  { s: "ChatGPT", v: 1302 },
+  { s: "Perplexity", v: 44 },
+  { s: "Claude", v: 53 },
+  { s: "Copilot", v: 44 },
+  { s: "OpenAI", v: 10 },
+];
+const aiMax = 1302;
+const aiTotal = 1453;
+
+const fmt = (n: number) => n.toLocaleString("en-GB");
+const pct = (v: number, max: number) => Math.max(3, Math.round((v / max) * 100));
+---
+<section class="cta-section" aria-label="Real results">
+  <div class="max-w-5xl mx-auto px-4">
+    <p class="eyebrow mb-3">Real results</p>
+    <h2 class="font-heading text-brand text-3xl md:text-4xl mb-3">Actual numbers, not promises</h2>
+    <p class="text-text-muted max-w-2xl mb-10">These are real figures from a site in my own portfolio, pulled straight from Google Search Console and GA4 and shown by sector, not by name. Results vary by niche and starting point, but this is the kind of trajectory the work is built to produce.</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- GSC: Google Search growth -->
+      <div class="service-card">
+        <div class="flex items-baseline justify-between mb-1">
+          <span class="eyebrow">Google Search Console</span>
+          <span class="text-xs font-mono text-text-muted">Health &amp; Wellness</span>
+        </div>
+        <h3 class="font-heading text-brand text-lg mb-6">Search impressions per month</h3>
+
+        <div class="flex items-end justify-between gap-3 h-44" role="img" aria-label="Monthly Google impressions growing from 3,645 in March to 44,193 in June">
+          {impressions.map((d) => (
+            <div class="flex-1 flex flex-col items-center justify-end h-full">
+              <span class="text-xs font-mono text-brand mb-1.5">{(d.v / 1000).toFixed(1)}k</span>
+              <div class="w-full rounded-t bg-gradient-to-t from-accent/40 to-accent" style={`height:${pct(d.v, impMax)}%`}></div>
+              <span class="text-xs font-mono text-text-muted mt-2">{d.m}</span>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">Google clicks over the same window grew from <span class="text-brand font-semibold">174</span> in April to <span class="text-accent font-semibold">476</span> in June, a young site scaling from launch.</p>
+      </div>
+
+      <!-- GA4: AI assistant referrals -->
+      <div class="service-card">
+        <div class="flex items-baseline justify-between mb-1">
+          <span class="eyebrow">GA4 &middot; last 90 days</span>
+          <span class="text-xs font-mono text-text-muted">Health &amp; Wellness</span>
+        </div>
+        <h3 class="font-heading text-brand text-lg mb-6">Referrals from AI assistants</h3>
+
+        <div class="space-y-3" role="img" aria-label="AI assistant referral sessions over 90 days: ChatGPT 1,302, Claude 53, Copilot 44, Perplexity 44, OpenAI 10">
+          {ai.map((d) => (
+            <div class="flex items-center gap-3">
+              <span class="w-20 shrink-0 text-xs font-mono text-text-muted">{d.s}</span>
+              <div class="flex-1 h-6 bg-surface rounded-sm overflow-hidden border border-border">
+                <div class="h-full bg-gradient-to-r from-accent/50 to-accent rounded-sm" style={`width:${pct(d.v, aiMax)}%`}></div>
+              </div>
+              <span class="w-12 shrink-0 text-right text-xs font-mono text-brand">{fmt(d.v)}</span>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0"><span class="text-accent font-semibold">{fmt(aiTotal)}</span> sessions from AI assistants in 90 days, most from ChatGPT, the traffic most SEO work still ignores.</p>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a href="/free-seo-audit-guildford/" class="cta-button">Get results like these</a>
+      <p class="cta-note mt-3">Free audit, no obligation. A reply within one working day.</p>
+    </div>
+  </div>
+</section>
