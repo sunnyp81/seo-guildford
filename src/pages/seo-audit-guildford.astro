@@ -43,7 +43,7 @@ const schema = [
       }
     },
     "serviceType": "SEO Audit",
-    "areaServed": "Guildford, Surrey"
+    "areaServed": { "@type": "City", "name": "Guildford", "containedInPlace": { "@type": "AdministrativeArea", "name": "Surrey" } }
   },
   {
     "@context": "https://schema.org",
@@ -52,8 +52,10 @@ const schema = [
     "url": "https://seo-guildford.uk/seo-audit-guildford/",
     "availability": "https://schema.org/InStock",
     "priceCurrency": "GBP",
+    "price": "750",
     "priceSpecification": {
       "@type": "PriceSpecification",
+      "price": "750",
       "priceCurrency": "GBP",
       "description": "Fixed-fee comprehensive SEO audit with prioritised action plan"
     }

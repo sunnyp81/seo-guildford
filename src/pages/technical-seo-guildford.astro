@@ -43,7 +43,7 @@ const schema = [
       }
     },
     "serviceType": "Technical SEO",
-    "areaServed": "Guildford, Surrey"
+    "areaServed": { "@type": "City", "name": "Guildford", "containedInPlace": { "@type": "AdministrativeArea", "name": "Surrey" } }
   },
   {
     "@context": "https://schema.org",
@@ -54,8 +54,9 @@ const schema = [
     "priceCurrency": "GBP",
     "priceSpecification": {
       "@type": "PriceSpecification",
+      "minPrice": "500",
       "priceCurrency": "GBP",
-      "description": "Custom pricing based on site complexity and scope"
+      "description": "Standalone technical SEO audit at a fixed £500; ongoing technical SEO scoped by site complexity, with monthly plans from £500"
     }
   },
   {
@@ -80,7 +81,7 @@ const schema = [
       {
         "@type": "Question",
         "name": "How much does technical SEO cost in Guildford?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO pricing depends on your site's complexity and current state. A standalone technical audit begins at a fixed fee, and ongoing technical SEO retainers for Guildford businesses are structured on a monthly basis. I would be pleased to discuss a specific quote based on your requirements." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO pricing depends on your site's complexity and current state. A standalone technical SEO audit is a fixed £500, and ongoing technical SEO retainers for Guildford businesses are structured on a monthly basis, with plans starting at £500 per month. I would be pleased to discuss a specific quote based on your requirements." }
       },
       {
         "@type": "Question",
@@ -374,7 +375,7 @@ const schema = [
 
       <details class="faq-item">
         <summary>How much does technical SEO cost in Guildford?</summary>
-        <p>Technical SEO pricing depends on your site's complexity and current state. A standalone technical audit begins at a fixed fee, and ongoing technical SEO retainers for Guildford businesses are structured on a monthly basis. I would be pleased to discuss a specific quote based on your requirements.</p>
+        <p>Technical SEO pricing depends on your site's complexity and current state. A standalone technical SEO audit is a fixed £500, and ongoing technical SEO retainers for Guildford businesses are structured on a monthly basis, with plans starting at £500 per month. I would be pleased to discuss a specific quote based on your requirements.</p>
       </details>
 
       <details class="faq-item">
