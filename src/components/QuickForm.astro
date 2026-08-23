@@ -17,7 +17,7 @@ const redirectTo = `https://seo-guildford.uk${Astro.url.pathname}?sent=1`;
 <div class="quickform">
   <div class="js-enquire-form">
     {heading && <p class="font-heading text-brand text-base mb-3">{heading}</p>}
-    <form action="https://api.staticforms.xyz/submit" method="POST" class="flex flex-col sm:flex-row gap-3">
+    <form action="https://emailit-worker.sunnypat81.workers.dev/" method="POST" class="flex flex-col sm:flex-row gap-3">
       <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
       <input type="hidden" name="_site" value="seo-guildford.uk" />
       <input type="hidden" name="subject" value={subject} />
