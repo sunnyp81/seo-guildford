@@ -3,6 +3,13 @@ dist/
 .astro/
 .env
 .env.*
+!.env.example
+*.pem
+*.key
+wordpress-config.md
+master-builds.md
+.wrangler/
+.vercel/
 *.log
 .DS_Store
 Thumbs.db

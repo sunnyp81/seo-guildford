@@ -16,7 +16,7 @@ const {
   subject = "SEO Guildford: New Enquiry",
 } = Astro.props;
 
-const redirectTo = `https://seo-guildford.uk${Astro.url.pathname}?sent=1#enquire`;
+const redirectTo = `https://seo-guildford.uk${Astro.url.pathname}?sent=1&form=contact#enquire`;
 const inputClass = "w-full bg-[#14171E] border border-border rounded-md px-4 py-2.5 text-text placeholder:text-text-muted/60 focus:outline-none focus:border-accent transition-colors";
 ---
 <section class="cta-section" id="enquire">
@@ -41,7 +41,7 @@ const inputClass = "w-full bg-[#14171E] border border-border rounded-md px-4 py-
         <input type="hidden" name="_site" value="seo-guildford.uk" />
         <input type="hidden" name="subject" value={subject} />
         <input type="hidden" name="redirectTo" value={redirectTo} />
-        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field blank" />
 
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
