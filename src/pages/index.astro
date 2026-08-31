@@ -11,30 +11,24 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "SEO Guildford",
+  "legalName": "ND Media Ltd",
+  "identifier": "10784524",
   "url": "https://seo-guildford.uk",
   "email": "hello@seo-guildford.uk",
   "sameAs": ["https://find-and-update.company-information.service.gov.uk/company/10784524"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17 Gainsborough Road",
+    "addressLocality": "Reading",
+    "postalCode": "RG30 3DB",
+    "addressCountry": "GB"
+  },
   "areaServed": [
     { "@type": "City", "name": "Guildford" },
     { "@type": "AdministrativeArea", "name": "Surrey" },
     { "@type": "AdministrativeArea", "name": "Hampshire" },
     "Onslow Village", "Burpham", "Merrow", "Stoughton", "Park Barn",
     "Bellfields", "Westborough", "Pewley Hill", "Charlotteville", "Shalford"
-  ]
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "SEO Guildford",
-  "url": "https://seo-guildford.uk",
-  "email": "hello@seo-guildford.uk",
-  "priceRange": "£££",
-  "sameAs": ["https://find-and-update.company-information.service.gov.uk/company/10784524"],
-  "areaServed": [
-    { "@type": "City", "name": "Guildford" },
-    { "@type": "AdministrativeArea", "name": "Surrey" },
-    { "@type": "AdministrativeArea", "name": "Hampshire" }
   ]
 };
 
@@ -80,7 +74,7 @@ const faqSchema = {
       "name": "Do you work with businesses outside Guildford?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "I do. While Guildford is my home base, I serve clients across Surrey including Woking, Godalming, Farnham, Camberley, Cobham, and the wider South East. Many clients at Surrey Research Park and Slyfield Industrial Estate also serve national markets, and I build SEO strategies that address both local and broader search visibility with equal care."
+        "text": "I do. SEO Guildford operates remote-first and serves clients across Surrey including Woking, Godalming, Farnham, Camberley, Cobham, and the wider South East. The registered office is in Reading, while Guildford is the primary service market. I build SEO strategies that address both local and broader search visibility with equal care."
       }
     },
     {
@@ -142,16 +136,16 @@ const faqSchema = {
   ]
 };
 
-const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema, faqSchema];
+const schema = [orgSchema, breadcrumbSchema, webPageSchema, faqSchema];
 ---
 <Base title={title} description={description} schema={schema}>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
-      <p class="eyebrow hero-eyebrow">Technical SEO &middot; Guildford, Surrey</p>
-      <h1 class="hero-title">Rank, convert, and <span class="mark">dominate</span> Guildford search.</h1>
-      <p class="hero-lead">Technical SEO, semantic content, and AI search readiness, engineered into organic growth that compounds month after month.</p>
+      <p class="eyebrow hero-eyebrow">SEO consultancy &middot; Guildford &amp; Surrey</p>
+      <h1 class="hero-title">SEO for <span class="mark">Guildford</span> businesses that need qualified enquiries.</h1>
+      <p class="hero-lead">Technical foundations, useful content, and local search strategy built into a measurable route from visibility to enquiry.</p>
       <div class="hero-actions">
         <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
         <a href="/services/" class="cta-button-outline">Explore services</a>
@@ -288,7 +282,7 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
     </div>
 
     <h2 class="reveal">Areas I cover</h2>
-    <p class="reveal text-text-muted mb-4">Based in Guildford, working across Surrey and the surrounding towns.</p>
+    <p class="reveal text-text-muted mb-4">Remote-first delivery for Guildford, Surrey, and the surrounding towns.</p>
     <div class="not-prose flex flex-wrap gap-2 mb-5 reveal">
       <span class="border border-border rounded px-3 py-1 text-sm text-text-muted">Guildford</span>
       <span class="border border-border rounded px-3 py-1 text-sm text-text-muted">Onslow Village</span>
@@ -345,7 +339,7 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
     <div class="reveal">
       <h2>Results That Matter</h2>
 
-      <p>I measure success in revenue impact, not in metrics that merely flatter. Rankings matter only when they drive qualified traffic that converts into genuine business. My <a href="/case-studies/">case studies</a> illustrate how Guildford businesses have grown organic revenue through targeted SEO, from local service firms achieving map pack prominence to technology companies capturing national search demand from their Surrey base.</p>
+      <p>I separate search visibility from commercial outcomes instead of treating every ranking gain as revenue. The <a href="/case-studies/">results page</a> shows dated, anonymised portfolio data from Google Search Console and GA4, with the limits of that evidence stated alongside the charts.</p>
 
       <p>Every client receives monthly reporting with clear, substantive metrics: organic sessions, keyword movements, conversion rates, and projected revenue impact. I set expectations candidly and hold myself accountable to them.</p>
     </div>
@@ -380,7 +374,7 @@ const schema = [orgSchema, localBusinessSchema, breadcrumbSchema, webPageSchema,
       <details class="faq-item">
         <summary>Do you work with businesses outside Guildford?</summary>
         <div class="faq-answer">
-          <p>I do. While Guildford is my home base, I serve clients across Surrey including Woking, Godalming, Farnham, Camberley, Cobham, and the wider South East. Many clients at Surrey Research Park and Slyfield Industrial Estate also serve national markets, and I build SEO strategies that address both local and broader search visibility with equal care.</p>
+          <p>I do. SEO Guildford operates remote-first and serves clients across Surrey including Woking, Godalming, Farnham, Camberley, Cobham, and the wider South East. The registered office is in Reading, while Guildford is the primary service market. I build SEO strategies that address both local and broader search visibility with equal care.</p>
         </div>
       </details>
 

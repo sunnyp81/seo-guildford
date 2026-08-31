@@ -1,137 +1,81 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
-import Icon from '../../components/Icon.astro';
 import ProofStats from '../../components/ProofStats.astro';
+
+const title = 'SEO Results: Anonymised Portfolio Data';
+const description = 'Dated Google Search Console and GA4 results from anonymised portfolio sites, with clear limits on what the figures prove and how SEO performance is measured.';
 
 const schema = [
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://seo-guildford.uk/case-studies/" }
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://seo-guildford.uk/' },
+      { '@type': 'ListItem', position: 2, name: 'Results', item: 'https://seo-guildford.uk/case-studies/' }
     ]
   },
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "SEO Case Studies, Guildford & Surrey",
-    "url": "https://seo-guildford.uk/case-studies/"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Are these real case studies?", "acceptedAnswer": { "@type": "Answer", "text": "These case studies are illustrative, based on typical results achieved for Surrey businesses. Specific details, including the figures shown, have been anonymised and are not attributed to a specific named client." }},
-      { "@type": "Question", "name": "How long does it take to see SEO results?", "acceptedAnswer": { "@type": "Answer", "text": "Most Guildford businesses see measurable improvements within 3-6 months. Technical fixes can show impact within weeks. Content and link building strategies build momentum over 6-12 months." }},
-      { "@type": "Question", "name": "Do you guarantee SEO results?", "acceptedAnswer": { "@type": "Answer", "text": "No ethical SEO consultancy guarantees specific rankings. What I guarantee is a data-driven process, transparent reporting, and strategies proven to work in the Surrey market." }},
-      { "@type": "Question", "name": "Can you share results from my specific industry?", "acceptedAnswer": { "@type": "Answer", "text": "I work across Guildford's key sectors including tech, property, professional services, healthcare, and gaming. Get in touch to discuss results relevant to your industry." }}
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description,
+    url: 'https://seo-guildford.uk/case-studies/',
+    isPartOf: { '@type': 'WebSite', name: 'SEO Guildford', url: 'https://seo-guildford.uk/' }
   }
 ];
 ---
-<Base title="SEO Case Studies: Guildford & Surrey Results" description="SEO case studies from Guildford and Surrey businesses. Substantive strategies and measurable results in organic traffic, local rankings, and revenue growth." schema={schema}>
+<Base title={title} description={description} schema={schema}>
   <article class="max-w-3xl mx-auto px-4 py-12 prose">
-    <nav class="text-sm text-text-muted mb-6 not-prose">
+    <nav class="text-sm text-text-muted mb-6 not-prose" aria-label="Breadcrumb">
       <a href="/" class="hover:text-brand">Home</a> &rsaquo;
-      <span class="text-brand font-medium">Case Studies</span>
+      <span class="text-brand font-medium" aria-current="page">Results</span>
     </nav>
 
-    <p class="eyebrow mb-3">Case Studies</p>
-    <h1>SEO Case Studies from <span class="mark">Guildford</span> and Surrey</h1>
+    <p class="eyebrow mb-3">Measured evidence</p>
+    <h1>SEO Results from <span class="mark">Anonymised</span> Portfolio Data</h1>
 
-    <p>SEO Guildford delivers measurable search marketing results for businesses across Guildford, Surrey, and the wider Hampshire corridor. These case studies illustrate the strategies, timelines, and outcomes achieved in competitive local markets, from tech startups at Surrey Research Park to established property firms on Guildford High Street. Each engagement is different in its particulars, but the underlying craft remains the same: diagnose precisely, execute methodically, measure honestly. If you want to see where your own site stands before committing to anything, start with a <a href="/free-seo-audit-guildford/">free SEO audit</a>.</p>
+    <p>This page shows dated first-party search data from sites in my own portfolio. The domains remain anonymous, so the evidence is grouped by sector rather than presented as named client work. The figures come from Google Search Console and Google Analytics 4. They demonstrate what happened on those properties, not what every future project will achieve.</p>
 
     <div class="quick-answer">
-      <strong>The short version:</strong> SEO Guildford case studies show organic traffic growth of 195% to 340%, local pack position 1 rankings, and measurable revenue attribution for Guildford and Surrey businesses. Results typically begin within 3-6 months, with technical fixes showing impact in weeks and compounding returns building over 12+ months.
+      <strong>The short version:</strong> The evidence below records Google clicks, search impressions, and AI-assistant referral sessions from two portfolio sectors. Each chart names its source, metric, period, and extraction date. Results vary by market, starting position, implementation scope, and time.
     </div>
+
+    <h2>What the Data Shows</h2>
+
+    <p>Search Console measures how often a site appears in Google Search and how many clicks those appearances produce. GA4 records visits after the click, including referrals from AI assistants when the platform passes a detectable source. The charts preserve the observed values instead of projecting partial months or turning isolated gains into a universal promise.</p>
+
+    <p>The useful signal is the direction and the measurement discipline. Technical fixes, content architecture, internal links, and crawl management can be tied to changes in impressions and clicks. AI-search work can be checked against referral sessions. Commercial outcomes still require lead and revenue tracking inside the business, so traffic growth alone is never described as revenue.</p>
+  </article>
+
+  <ProofStats variant="full" />
+
+  <article class="max-w-3xl mx-auto px-4 py-12 prose">
+    <h2>What the Data Does Not Prove</h2>
+
+    <p>An anonymous chart cannot prove that the same growth will occur in another sector. It does not replace a named testimonial, a client reference, or access to the underlying account. It also cannot isolate every cause because search performance changes with competition, seasonality, search demand, algorithm updates, and the site's own publishing history.</p>
+
+    <p>That limitation is stated plainly. SEO Guildford does not publish invented clients, composite testimonials, or hypothetical revenue as completed work. A proposal should instead begin with your current evidence: Search Console queries, landing pages, index coverage, technical constraints, lead events, and commercial priorities.</p>
+
+    <h2>How Your Performance Would Be Measured</h2>
+
+    <p>Measurement starts with a baseline before implementation. The baseline records clicks, impressions, average position, indexed pages, qualified leads, and any revenue data the business can reliably attribute. Each recommended change receives an owner, a deployment date, and a target metric.</p>
+
+    <p>Reporting then separates leading indicators from business outcomes. Crawl recovery and improved impressions can show that Google is processing the work. Clicks and landing-page engagement show whether visibility is attracting the right audience. Enquiries, calls, booked meetings, and revenue determine whether the work is commercially worthwhile.</p>
+
+    <h2>Start With Your Own Evidence</h2>
+
+    <p>A free audit provides a focused first look at technical health, query ownership, indexation, and obvious conversion gaps. The paid comprehensive review goes further with manual analysis, prioritisation, and implementation guidance. Both begin with the data available for your site rather than a generic forecast.</p>
 
     <div class="not-prose my-8 flex flex-wrap items-center gap-4">
       <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-      <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-    </div>
-    <p class="cta-note">Free and without obligation. A reply within one working day.</p>
-
-    <div class="bg-surface-alt border border-border rounded p-4 text-sm text-text-muted my-6 not-prose">
-      <strong>Note:</strong> The case studies below, including the figures shown on each card, are illustrative and anonymised, not results attributed to a specific named client.
-    </div>
-
-    <div class="reveal">
-    <h2>Featured Case Studies</h2>
-
-    <div class="grid md:grid-cols-2 gap-6 not-prose my-8">
-      <a href="/case-studies/surrey-research-park-tech-startup/" class="service-card block" style="--reveal-delay: 0.1s">
-        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
-        <span class="eyebrow">Technology</span>
-        <h3 class="text-lg font-bold text-brand mt-2 mb-2">Surrey Research Park Tech Startup</h3>
-        <p class="text-text-muted text-sm mb-3">A B2B SaaS startup with zero organic visibility grew to 180 ranking keywords and 45 qualified leads per month through technical SEO and content strategy.</p>
-        <span class="cta-link text-sm">340% organic traffic growth &rarr;</span>
-      </a>
-      <a href="/case-studies/guildford-property-firm-local-seo/" class="service-card block" style="--reveal-delay: 0.18s">
-        <Icon name="home" class="w-6 h-6 text-accent mb-3" />
-        <span class="eyebrow">Property</span>
-        <h3 class="text-lg font-bold text-brand mt-2 mb-2">Guildford Property Firm Local SEO</h3>
-        <p class="text-text-muted text-sm mb-3">An estate agency on Guildford High Street achieved local pack position 1 and attributed £2.4M in property sales to organic leads through local SEO and area content.</p>
-        <span class="cta-link text-sm">280% increase in GBP calls &rarr;</span>
-      </a>
-    </div>
-    </div>
-
-    <div class="reveal">
-    <h2>My Approach to Every Client</h2>
-
-    <p>Every engagement follows the same proven methodology, adapted, naturally, to the client's industry, competitive landscape, and commercial objectives within the Surrey market. The framework stays constant; the calibration is always bespoke.</p>
-
-    <ol>
-      <li><strong>Audit and Discovery</strong>, comprehensive <a href="/seo-audit-guildford/">SEO audit</a> to establish baseline metrics, identify quick wins, and map the competitive landscape in your Guildford niche.</li>
-      <li><strong>Strategy and Prioritisation</strong>, data-driven roadmap ranked by expected impact. Technical fixes first, then content and authority building.</li>
-      <li><strong>Implementation</strong>, hands-on execution of <a href="/technical-seo-guildford/">technical optimisations</a>, content creation, local SEO improvements, and <a href="/ai-search-optimisation-guildford/">AI search readiness</a>.</li>
-      <li><strong>Measurement and Iteration</strong>, monthly reporting with clear KPIs. Strategy adjusts based on data, not assumptions.</li>
-    </ol>
-
-    <p>This process works because Guildford's market rewards patience married to precision. The affluent demographic and high customer lifetime values mean that even modest ranking improvements translate directly into revenue, often at multiples of the SEO investment, which is why the craft pays for itself faster here than in most UK markets.</p>
-    </div>
-
-    <div class="reveal">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="not-prose">
-      <details class="faq-item">
-        <summary>Are these real case studies?</summary>
-        <div class="faq-answer">These case studies are illustrative, based on typical results achieved for Surrey businesses. Specific details, including the figures shown, have been anonymised and are not attributed to a specific named client.</div>
-      </details>
-      <details class="faq-item">
-        <summary>How long does it take to see SEO results?</summary>
-        <div class="faq-answer">Most Guildford businesses see measurable improvements within 3-6 months. Technical fixes can show impact within weeks. Content and link building strategies build momentum over 6-12 months.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Do you guarantee SEO results?</summary>
-        <div class="faq-answer">No ethical SEO consultancy guarantees specific rankings. What I guarantee is a data-driven process, transparent reporting, and strategies proven to work in the Surrey market.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Can you share results from my specific industry?</summary>
-        <div class="faq-answer">I work across Guildford's key sectors including tech, property, professional services, healthcare, and gaming. <a href="/contact/">Get in touch</a> to discuss results relevant to your <a href="/industries/">industry</a>.</div>
-      </details>
-    </div>
-    </div>
-
-    <div class="cta-section not-prose mt-12">
-      <p class="eyebrow mb-3">Case Studies</p>
-      <h2 class="text-2xl font-bold text-brand mb-4">Curious What Considered SEO Could Achieve for You?</h2>
-      <p class="text-text-muted mb-6">Start with a free audit and discover what is possible for your business in the Guildford market.</p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/free-seo-audit-guildford/" class="cta-button">Start with an audit</a>
-        <a href="/contact/" class="cta-button-outline">Get in touch</a>
-      </div>
+      <a href="/technical-seo-guildford/" class="cta-button-outline">Review technical SEO</a>
     </div>
 
     <div class="mt-10 pt-6 border-t border-border text-sm text-text-muted">
-      <p>Related: <a href="/">SEO Guildford Home</a> | <a href="/services/">All SEO Services</a> | <a href="/free-seo-audit-guildford/">Free SEO Audit</a></p>
+      <p>Related: <a href="/services/">SEO services for Guildford</a> | <a href="/seo-pricing-guildford/">Pricing</a> | <a href="/about/">How the consultancy works</a></p>
     </div>
-
-    <ProofStats variant="full" />
-
-    <ContactForm eyebrow="Enquire" heading="Want results like these?" subject="SEO Guildford: Case studies enquiry" />
   </article>
+
+  <ContactForm eyebrow="Your baseline" heading="Measure what your site can improve" subject="SEO Guildford: Results page enquiry" />
 </Base>

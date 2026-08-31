@@ -82,7 +82,7 @@ const schema = [
           <span id="progress-pct">0%</span>
         </div>
         <div class="w-full h-2 rounded bg-surface-alt overflow-hidden">
-          <div id="progress-bar" class="h-full rounded transition-all duration-500 ease-out" style="width:0%;background:var(--color-accent)"></div>
+          <div id="progress-bar" class="h-full rounded transition-[width] duration-500 ease-out" style="width:0%;background:var(--color-accent)"></div>
         </div>
       </div>
 
@@ -90,9 +90,9 @@ const schema = [
       <div id="questions-area">
         <h2 id="q-text" class="text-xl md:text-2xl font-bold text-brand mb-8 min-h-[3.5rem]"></h2>
         <div class="flex flex-col sm:flex-row gap-3">
-          <button type="button" data-value="10" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-accent bg-accent/10 text-accent hover:bg-accent/20 transition-all cursor-pointer">Yes</button>
-          <button type="button" data-value="5" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-border bg-surface-alt text-text-muted hover:border-brand-light hover:text-brand transition-all cursor-pointer">Partially</button>
-          <button type="button" data-value="0" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-border bg-surface-alt text-text-muted hover:border-brand-light hover:text-brand transition-all cursor-pointer">No</button>
+          <button type="button" data-value="10" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-accent bg-accent/10 text-accent hover:bg-accent/20 transition-colors cursor-pointer">Yes</button>
+          <button type="button" data-value="5" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-border bg-surface-alt text-text-muted hover:border-brand-light hover:text-brand transition-colors cursor-pointer">Partially</button>
+          <button type="button" data-value="0" class="answer-btn flex-1 py-4 px-6 rounded-[0.35rem] text-base font-semibold border border-border bg-surface-alt text-text-muted hover:border-brand-light hover:text-brand transition-colors cursor-pointer">No</button>
         </div>
       </div>
 
@@ -103,7 +103,7 @@ const schema = [
             <svg viewBox="0 0 160 160" class="w-full h-full -rotate-90">
               <circle cx="80" cy="80" r="70" fill="none" stroke="#23262E" stroke-width="10" />
               <circle id="score-circle" cx="80" cy="80" r="70" fill="none" stroke-width="10" stroke-linecap="round"
-                stroke-dasharray="439.82" stroke-dashoffset="439.82" class="transition-all duration-[1500ms] ease-out" />
+                stroke-dasharray="439.82" stroke-dashoffset="439.82" class="transition-[stroke-dashoffset] duration-[1500ms] ease-out" />
             </svg>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
               <span id="score-value" class="text-5xl font-extrabold text-brand">0</span>
