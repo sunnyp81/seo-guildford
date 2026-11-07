@@ -1,0 +1,29 @@
+---
+// Native Astro version of the "avatar row + logo slider" hero pattern, built with real proof only:
+// no people photos, no client logos, no invented clients. Figures: Google Search Console,
+// one portfolio site (EV charging directory), calendar months May and Oct 2026, pulled 7 Nov 2026.
+const stats = [
+  { v: "3,510", l: "Google clicks in October 2026 on my own EV charging site, up from 188 in May", href: "/case-studies/" },
+  { v: "Free first audit", l: "a short PDF report by email, with no payment details and no obligation", href: "/free-seo-audit-guildford/" },
+  { v: "1 working day", l: "to reply to every enquiry, from me, not an account manager", href: "/contact/" },
+];
+const tools = ["Google Search Console", "Google Analytics 4", "Ahrefs", "Bing Webmaster Tools"];
+---
+<section class="proof-strip" aria-label="Proof at a glance">
+  <div class="proof-strip-inner">
+    <ul class="proof-strip-stats">
+      {stats.map((s) => (
+        <li>
+          <a href={s.href}>
+            <strong>{s.v}</strong>
+            <span>{s.l}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="proof-strip-tools">
+      <span>Data I work from:</span>
+      {tools.map((t) => <span class="proof-chip">{t}</span>)}
+    </p>
+  </div>
+</section>

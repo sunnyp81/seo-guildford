@@ -612,3 +612,22 @@ body {
 .site-footer .eyebrow { color: #F6B9A4; }
 .site-footer .cta-note { color: #C9D8D9; }
 .site-footer .text-accent { color: #F6B9A4; }
+
+/* ── Proof strip (native Astro take on the avatar row + logo slider hero pattern) ── */
+.proof-strip { background: var(--color-surface-alt); border-bottom: 1px solid var(--color-border); }
+.proof-strip-inner { max-width: 72rem; margin: 0 auto; padding: 1.75rem 1.5rem; }
+.proof-strip-stats { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+@media (min-width: 800px) { .proof-strip-stats { grid-template-columns: repeat(3, 1fr); gap: 0; } .proof-strip-stats li + li { border-left: 1px solid var(--color-border); padding-left: 1.75rem; } }
+.proof-strip-stats a { display: flex; flex-direction: column; gap: 0.25rem; text-decoration: none; color: var(--color-text); }
+.proof-strip-stats strong { font-family: var(--font-heading); font-size: 1.7rem; line-height: 1.1; color: var(--color-brand); }
+.proof-strip-stats a:hover strong { color: var(--color-signal); }
+.proof-strip-stats span { font-size: 0.92rem; line-height: 1.45; color: var(--color-text-muted); max-width: 30ch; }
+.proof-strip-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 1.5rem 0 0; padding-top: 1.1rem; border-top: 1px solid var(--color-border); font-size: 0.88rem; color: var(--color-text-muted); }
+.proof-chip { border: 1px solid var(--color-border); border-radius: 0.2rem; padding: 0.15rem 0.6rem; background: var(--color-surface); color: var(--color-text); font-weight: 600; }
+
+/* ── Spotlight cards (native version of the GlowCard pointer glow): teal only, hover devices only ── */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .service-card[data-spot] { --mx: -999px; --my: -999px; background-image: radial-gradient(220px circle at var(--mx) var(--my), rgba(15, 82, 87, 0.09), transparent 70%); }
+  .service-card[data-spot]::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 2px solid transparent; pointer-events: none; background: radial-gradient(160px circle at var(--mx) var(--my), rgba(15, 82, 87, 0.75), transparent 70%) border-box; -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) padding-box exclude, linear-gradient(#000 0 0); opacity: 0; transition: opacity 0.25s ease; }
+  .service-card[data-spot]:hover::after { opacity: 1; }
+}
