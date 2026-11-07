@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import AtAGlance from '../components/AtAGlance.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
@@ -133,10 +134,11 @@ const schema = [
 
     <p>An SEO audit is, at its core, an act of diagnosis, a systematic analysis of every factor that shapes your website's search engine performance, from server infrastructure and content quality through to local search presence and emerging AI visibility. For Guildford businesses competing within Surrey's high-value commercial landscape, an audit strips away assumptions and reveals, with forensic clarity, precisely why your site ranks where it does and what must change to shift those positions upward.</p>
 
+    <AtAGlance heading="At a glance" points={["The audit covers four things: technical set-up, content quality, local search presence and AI search readiness.", "You get a prioritised 90-day action plan, with competitor benchmarking and a content gap analysis.", "It takes five to ten working days, depending on the size of your site.", "A free, shorter audit is available first if you want a look before paying."]} facts={[{"k": "Price", "v": "£750 fixed fee"}, {"k": "Turnaround", "v": "5 to 10 working days"}, {"k": "You receive", "v": "Report and 90-day action plan"}, {"k": "Free option", "v": "Free SEO audit, 2 to 3 working days"}]} />
+
     <div class="quick-answer">
       <p><strong>The short version:</strong> This comprehensive website audit examines four dimensions: technical infrastructure, content quality, local search presence, and AI search readiness. The fixed-fee review produces a prioritised report with specific actions ranked by impact and implementation effort.</p>
     </div>
-
     <div class="not-prose my-8 flex flex-wrap items-center gap-4">
       <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
       <a href="#enquire" class="cta-link">Ask a question &rarr;</a>

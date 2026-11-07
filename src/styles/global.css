@@ -7,8 +7,8 @@
   --color-brand-dark: #0B3438;
   --color-accent: #0F5257;
   --color-accent-light: #0A3B3F;
-  --color-signal: #C4401B;
-  --color-signal-dark: #A33415;
+  --color-signal: #B83817;
+  --color-signal-dark: #962E12;
   --color-surface: #EDF1F5;
   --color-surface-alt: #FFFFFF;
   --color-text: #26323E;
@@ -305,7 +305,7 @@ body {
 .cta-button:hover {
   background: var(--color-signal-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(196, 64, 27, 0.28);
+  box-shadow: 0 6px 18px rgba(184, 56, 23, 0.28);
 }
 
 .cta-button-outline {
@@ -606,3 +606,9 @@ body {
 .glance-facts div:last-child { border-bottom: 0; }
 .glance-facts dt { font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); }
 .glance-facts dd { margin: 0.1rem 0 0; font-weight: 700; color: var(--color-brand); }
+
+/* ── Footer on deep teal: restore light text over global heading colours ── */
+.site-footer h2, .site-footer h3 { color: #fff; }
+.site-footer .eyebrow { color: #F6B9A4; }
+.site-footer .cta-note { color: #C9D8D9; }
+.site-footer .text-accent { color: #F6B9A4; }

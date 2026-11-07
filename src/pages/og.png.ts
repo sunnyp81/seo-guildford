@@ -27,8 +27,8 @@ export const GET: APIRoute = async () => {
     },
     [
       el({ display: 'flex', flexDirection: 'column' }, [
-        el({ display: 'flex', width: '80px', height: '3px', backgroundColor: '#C4401B', marginBottom: '30px' }, []),
-        el({ display: 'flex', fontSize: '26px', letterSpacing: '4px', color: '#C4401B', fontWeight: 700 }, 'SEO GUILDFORD'),
+        el({ display: 'flex', width: '80px', height: '3px', backgroundColor: '#B83817', marginBottom: '30px' }, []),
+        el({ display: 'flex', fontSize: '26px', letterSpacing: '4px', color: '#B83817', fontWeight: 700 }, 'SEO GUILDFORD'),
       ]),
       el(
         { display: 'flex', fontSize: '70px', lineHeight: 1.02, color: '#17212B', fontWeight: 700, maxWidth: '1010px', letterSpacing: '-1px' },

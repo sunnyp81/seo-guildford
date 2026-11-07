@@ -6,7 +6,7 @@ interface Props {
   heading?: string;
   points: string[];
   facts: Fact[];
-  ctaHref?: string;
+  ctaHref?: string | null;
   ctaLabel?: string;
 }
 const { heading = "At a glance", points, facts, ctaHref = "/free-seo-audit-guildford/", ctaLabel = "Get my free audit" } = Astro.props;
@@ -26,5 +26,5 @@ const { heading = "At a glance", points, facts, ctaHref = "/free-seo-audit-guild
       ))}
     </dl>
   </div>
-  <a href={ctaHref} class="cta-button">{ctaLabel}</a>
+  {ctaHref && <a href={ctaHref} class="cta-button">{ctaLabel}</a>}
 </aside>
