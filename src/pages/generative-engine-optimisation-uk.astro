@@ -1,0 +1,175 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import AtAGlance from '../components/AtAGlance.astro';
+
+const url = "https://seo-guildford.uk/generative-engine-optimisation-uk/";
+const title = "Generative Engine Optimisation (GEO): UK Small Business Guide";
+const description = "What generative engine optimisation is, what Google says you need, what studies show gets cited, and a practical checklist for UK small businesses.";
+const published = "2026-11-07";
+
+// Ahrefs, 2 March 2026: 863K keyword SERPs, 4M AI Overview URLs. Share of cited URLs by Google rank.
+const cite = [
+  { label: "Top 10 results", v: 37.9 },
+  { label: "Ranks 11 to 100", v: 31.2 },
+  { label: "Beyond rank 100", v: 31.0 },
+];
+
+const faqs = [
+  {
+    q: "What is generative engine optimisation?",
+    a: "Generative engine optimisation, or GEO, is the work of making a business easy for AI answer tools such as Google AI Overviews, ChatGPT, Perplexity and Copilot to find, understand and cite. It is built on ordinary search work: pages that are crawlable, indexed, clear and trustworthy."
+  },
+  {
+    q: "Do I need a special file or markup to appear in AI Overviews?",
+    a: "No. Google's documentation says there are no additional requirements to appear in AI Overviews or AI Mode, and that you do not need new machine readable files, AI text files or markup, or any special schema.org structured data."
+  },
+  {
+    q: "Does llms.txt help me get cited?",
+    a: "Google says it does not use llms.txt in Search and that the file neither helps nor hurts rankings. Other services may read it, so keeping one is harmless, but I do not sell it as a way to get cited."
+  },
+  {
+    q: "Should I block GPTBot?",
+    a: "That is your choice, and it only affects training use. OpenAI says GPTBot is for content that may be used to train its models, while OAI-SearchBot controls whether your site appears in ChatGPT search. They are set separately in robots.txt, so blocking one does not block the other."
+  },
+  {
+    q: "Can anyone guarantee a citation in ChatGPT or AI Overviews?",
+    a: "No. AI answers vary from one run to the next, and the studies I read show citations come from many places outside the top Google results. I report what I can measure: AI referral visits, a fixed set of test prompts repeated monthly, and enquiries."
+  },
+  {
+    q: "How much does AI search work cost?",
+    a: "My AI search audit is £400 as a one-off. Ongoing AI search work is included from the £2,000 a month Premium plan. See the pricing page for the full list."
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Generative Engine Optimisation (GEO): A Guide for UK Small Businesses",
+    "description": description,
+    "datePublished": published,
+    "dateModified": published,
+    "mainEntityOfPage": url,
+    "image": "https://seo-guildford.uk/og.png",
+    "author": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk" },
+    "publisher": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk", "logo": { "@type": "ImageObject", "url": "https://seo-guildford.uk/og.png" } }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Generative engine optimisation", "item": url }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+  }
+];
+---
+<Base title={title} description={description} canonical={url} ogType="article" schema={schema}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-brand">Home</a>
+      <span class="mx-1">/</span>
+      <span class="text-brand font-medium">Generative engine optimisation</span>
+    </nav>
+
+    <div class="prose">
+      <p class="eyebrow mb-3">Guide, evidence checked 7 November 2026</p>
+      <h1>Generative engine optimisation (<span class="mark">GEO</span>): a guide for UK small businesses</h1>
+
+      <p>GEO is the work of making your business easy for AI answers to find and cite. This guide separates what Google documents, what studies have measured, and what is still opinion.</p>
+
+      <AtAGlance
+        points={[
+          "GEO means being easy for Google AI Overviews, ChatGPT, Perplexity and Copilot to find, understand and cite.",
+          "Google says no extra requirements, special markup or AI text files are needed to appear in AI Overviews or AI Mode.",
+          "Normal search work still matters: 37.9% of AI Overview citations in one study came from the top 10 results, and the rest from lower ranks.",
+          "ChatGPT search and training are separate switches in robots.txt: OAI-SearchBot and GPTBot.",
+          "Measure AI referral visits, a fixed prompt panel and enquiries, each with its own count."
+        ]}
+        facts={[
+          { k: "Documented by Google", v: "No special markup or files required" },
+          { k: "llms.txt", v: "Google: neither helps nor hurts Search" },
+          { k: "AI search audit", v: "£400 one-off" },
+          { k: "Evidence checked", v: "7 November 2026" }
+        ]}
+        ctaLabel="Get a free audit first"
+      />
+
+      <h2>What GEO is, and what it is not</h2>
+      <p>People now ask AI tools questions that used to go to a search box. The tool writes an answer and names a few sources. GEO is the work of being one of those sources: your pages are crawlable, indexed, say clearly what you do, and are backed by facts others can check.</p>
+      <p>It is not a separate trick. The evidence below shows that ordinary search visibility and AI citation overlap but are not the same thing, so the sensible approach is to do the search basics well and then measure AI results directly.</p>
+
+      <h2>What Google documents</h2>
+      <p>Google's guidance for site owners on AI features is short. It says "there are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary." It adds that you do not need new machine readable files, AI text files or markup, and that there is no special schema.org structured data to add. A page still has to be indexed and eligible to appear in Google Search.</p>
+      <p>On llms.txt, Google's AI optimisation guide says Search does not use such files and that they neither help nor hurt rankings. Google staff made the same point on social media in 2025 and early 2026. Other services may read the file, so keeping one is harmless, but nothing here supports paying for one as a citation tactic.</p>
+
+      <h2>What studies have measured</h2>
+      <p>Most of the data is from SEO software companies. It is useful, but it is not independent, and each study has limits I have listed.</p>
+
+      <figure class="not-prose my-8 bg-white border border-border rounded p-4 md:p-6">
+        <svg viewBox="0 0 720 200" role="img" aria-labelledby="cite-title cite-desc" class="w-full h-auto" style="max-width:720px">
+          <title id="cite-title">Where Google AI Overview citations rank in normal search</title>
+          <desc id="cite-desc">37.9% of cited URLs were in the top 10 results, 31.2% ranked 11 to 100, and 31.0% ranked beyond 100.</desc>
+          {cite.map((c, i) => (
+            <g>
+              <text x="150" y={44 + i * 54} text-anchor="end" font-size="14" fill="#26323E">{c.label}</text>
+              <rect x="160" y={24 + i * 54} width={(c.v / 40) * 480} height="32" rx="2" fill={i === 0 ? "#B83817" : "#0F5257"} />
+              <text x={160 + (c.v / 40) * 480 + 8} y={46 + i * 54} font-size="14" font-weight="700" fill="#17212B">{c.v}%</text>
+            </g>
+          ))}
+        </svg>
+        <figcaption class="text-sm text-text-muted mt-3">Source: Ahrefs, "Update: 38% of AI Overview Citations Pull From The Top 10", 2 March 2026. 863K keyword results and 4M AI Overview URLs. Ahrefs sells SEO software.</figcaption>
+      </figure>
+
+      <div class="not-prose overflow-x-auto my-6">
+        <table class="w-full text-sm border border-border bg-white">
+          <thead><tr class="bg-surface text-left"><th class="p-2">Study</th><th class="p-2">Sample</th><th class="p-2">What it found</th><th class="p-2">Limit</th></tr></thead>
+          <tbody>
+            <tr class="border-t border-border align-top"><td class="p-2"><a href="https://ahrefs.com/blog/ai-overview-citations-top-10/" target="_blank" rel="noopener noreferrer">Ahrefs, AI Overviews</a>, March 2026</td><td class="p-2">863K results, 4M cited URLs</td><td class="p-2">37.9% of cited URLs were in the top 10; 31.2% ranked 11 to 100; 31.0% beyond 100</td><td class="p-2">Google AI answers vary run to run; method changed from an earlier study</td></tr>
+            <tr class="border-t border-border align-top"><td class="p-2"><a href="https://ahrefs.com/blog/ai-search-overlap/" target="_blank" rel="noopener noreferrer">Ahrefs, AI assistants</a>, August 2025</td><td class="p-2">15,000 long-tail prompts</td><td class="p-2">About 12% of links cited by ChatGPT, Gemini and Copilot were in Google's top 10; Perplexity 28.6%</td><td class="p-2">ChatGPT data from July 2025; reasons are theories</td></tr>
+            <tr class="border-t border-border align-top"><td class="p-2"><a href="https://ahrefs.com/blog/why-chatgpt-cites-pages/" target="_blank" rel="noopener noreferrer">Ahrefs, ChatGPT citations</a>, April 2026</td><td class="p-2">1.4M ChatGPT prompts</td><td class="p-2">About half of retrieved URLs were cited; cited titles were closer in meaning to the prompt; descriptive URLs were cited slightly more (89.8% vs 81.1%)</td><td class="p-2">One snapshot; relevance is estimated, not observed</td></tr>
+            <tr class="border-t border-border align-top"><td class="p-2"><a href="https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-september-2025-update" target="_blank" rel="noopener noreferrer">Seer Interactive, clicks</a>, November 2025</td><td class="p-2">3,119 search terms, 42 organisations</td><td class="p-2">Where an AI Overview appeared, organic click rate fell 61%; brands cited in it had a higher click rate than those not cited</td><td class="p-2">Does not show that citation causes the clicks</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The pattern: being well placed in normal search helps, but a large share of citations come from pages that do not rank in the top 10. Pages that match the question closely were cited more often in these studies, which fits the basic advice below.</p>
+
+      <h2>A practical checklist</h2>
+      <ol>
+        <li><strong>Get indexed.</strong> Check in Google Search Console that your key pages are indexed. A page that is not indexed cannot be cited by Google.</li>
+        <li><strong>Let the right crawlers in.</strong> Decide separately about OAI-SearchBot, which controls ChatGPT search, and GPTBot, which relates to training. Check your robots.txt and any host-level bot blocking.</li>
+        <li><strong>One page per question.</strong> Put the direct answer near the top, in plain words, with the detail below.</li>
+        <li><strong>Say it the way people ask it.</strong> Titles and headings that match real questions were cited more in the ChatGPT study. Use short, descriptive URLs.</li>
+        <li><strong>Keep your facts consistent.</strong> Name, services, prices, area and contact details should match across your site, Google Business Profile and listings.</li>
+        <li><strong>Earn mentions elsewhere.</strong> Reviews, directories and other sites that describe you give AI tools more than your own pages do. This is the slow part.</li>
+        <li><strong>Measure it.</strong> Count AI referral visits in Google Analytics, run the same set of prompts monthly, and count enquiries. Report each with its own number. Counts under about 30 are too small to show a trend.</li>
+      </ol>
+
+      <h2>How many UK customers use AI to find local businesses?</h2>
+      <p>One survey says 36.7% of 600 UK consumers used AI for local search in the past month (Yext, June 2026). Yext sells local listings software and does not state its method, so treat this as an indication, not a market size.</p>
+
+      <h2>What I do</h2>
+      <p>My <a href="/ai-search-optimisation-guildford/">AI search service</a> starts with a £400 audit that checks how ChatGPT, Perplexity, Google AI Overviews and Copilot describe your business, then fixes the gaps on your own site. I do not promise citations. A <a href="/free-seo-audit-guildford/">free audit</a> is available first.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="not-prose">
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-answer"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <p class="text-sm text-text-muted mt-8">Written by SEO Guildford, a trading name of ND Media Ltd. Sources read on 7 November 2026: <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google, AI features and your website</a>; <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener noreferrer">Google, AI optimisation guide</a>; <a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener noreferrer">OpenAI, crawler documentation</a>; <a href="https://www.yext.com/blog/how-uk-consumers-navigate-local-search-in-age-of-ai" target="_blank" rel="noopener noreferrer">Yext, UK local search survey</a>. I will update this page when the evidence changes.</p>
+    </div>
+
+    <ContactForm eyebrow="AI search" heading="Ask about AI search for your business" subject="SEO Guildford: GEO guide enquiry" />
+  </article>
+</Base>

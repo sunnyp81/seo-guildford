@@ -1,0 +1,196 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import AtAGlance from '../components/AtAGlance.astro';
+
+const url = "https://seo-guildford.uk/seo-cost-uk/";
+const title = "How Much Does SEO Cost in the UK? 2026 Prices";
+const description = "Typical UK SEO prices in 2026: monthly retainers, audits, hourly rates and contract terms, taken from published prices, plus my own price list.";
+const published = "2026-11-07";
+
+// Small-business monthly band quoted by each source (GBP). Read 7 Nov 2026.
+const bands = [
+  { src: "Whito (45 prices)", lo: 350, hi: 1000 },
+  { src: "Limelight Digital", lo: 300, hi: 1200 },
+  { src: "Whitehat SEO", lo: 500, hi: 1200 },
+  { src: "Lilo", lo: 500, hi: 1200 },
+  { src: "Visionary Marketing", lo: 1000, hi: 2500 },
+  { src: "EpicEdits", lo: 1500, hi: 2500 },
+  { src: "Outrank", lo: 500, hi: 5000 },
+];
+const maxV = 5000;
+const x = (v: number) => 250 + (v / maxV) * 430;
+const fmt = (n: number) => "£" + n.toLocaleString("en-GB");
+
+const faqs = [
+  {
+    q: "How much should a small UK business pay for SEO?",
+    a: "Most of the 2026 UK price guides I read put small-business SEO between about £500 and £3,000 a month. The middle of 45 published UK prices that Whito read in June 2026 was £799 a month. Where you sit in that range depends on how competitive your search results are and how much work your site needs."
+  },
+  {
+    q: "Is £300 a month enough for SEO?",
+    a: "It can pay for a narrow job such as fixing a Google Business Profile or a few pages. Several guides list £300 or less as a budget tier, and Whito's June 2026 budget band was £99 to £300. At that price expect limited hours, so ask exactly what is included and how many hours each month."
+  },
+  {
+    q: "Is it cheaper to pay by the hour or by the month?",
+    a: "Hourly suits a one-off audit or a fix. A monthly retainer suits ongoing content, technical work and reporting. The guides I read quote freelancers at roughly £40 to £150 an hour and agencies at roughly £100 to £300, but those are sellers' price lists and the ranges overlap."
+  },
+  {
+    q: "How long before SEO pays for itself?",
+    a: "The guides agree that early movement takes three to six months and payback usually takes six to twelve. Local searches tend to move sooner than national ones. Nobody can promise a date, so judge the work on enquiries received, not on a promised ranking."
+  },
+  {
+    q: "What do you charge for SEO?",
+    a: "My monthly plans start at £500 for Starter, £1,000 for Growth, £2,000 for Premium and from £3,500 for Enterprise. One-off audits start at £400 for an AI search audit, £500 for a technical audit and £750 for a comprehensive audit. Monthly plans have a three-month initial term, then continue month to month with 30 days' notice."
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Much Does SEO Cost in the UK in 2026?",
+    "description": description,
+    "datePublished": published,
+    "dateModified": published,
+    "mainEntityOfPage": url,
+    "image": "https://seo-guildford.uk/og.png",
+    "author": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk" },
+    "publisher": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk", "logo": { "@type": "ImageObject", "url": "https://seo-guildford.uk/og.png" } }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "SEO cost in the UK", "item": url }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+  }
+];
+---
+<Base title={title} description={description} canonical={url} ogType="article" schema={schema}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-brand">Home</a>
+      <span class="mx-1">/</span>
+      <span class="text-brand font-medium">SEO cost in the UK</span>
+    </nav>
+
+    <div class="prose">
+      <p class="eyebrow mb-3">Price guide, checked 7 November 2026</p>
+      <h1>How much does SEO cost in the <span class="mark">UK</span>?</h1>
+
+      <p>Most small UK businesses pay somewhere between £500 and £3,000 a month for SEO. This page shows where that range comes from, what each source can and cannot prove, and what I charge.</p>
+
+      <AtAGlance
+        points={[
+          "Most 2026 UK price guides put small-business SEO between about £500 and £3,000 a month.",
+          "The middle of 45 published UK monthly prices, read in June 2026, was £799 (Whito).",
+          "Freelancers are usually quoted at about £40 to £150 an hour and agencies at about £100 to £300.",
+          "Early movement usually takes three to six months, and payback six to twelve.",
+          "Treat every figure as a sellers' price list: I found no UK survey of what buyers actually paid."
+        ]}
+        facts={[
+          { k: "Budget band (Whito, June 2026)", v: "£99 to £300 a month" },
+          { k: "Mainstream band (Whito)", v: "£350 to £1,000 a month" },
+          { k: "Established agencies (Whito)", v: "£1,500 to £5,000+ a month" },
+          { k: "My plans and audits", v: "From £500 a month, audits from £400" }
+        ]}
+        ctaLabel="Get a free audit first"
+      />
+
+      <h2>What small businesses are quoted each month</h2>
+      <p>I read eight UK price guides published between April and July 2026. Each gives a monthly range for a small business. They overlap more than they differ: the low end is £300 to £500, and the top of the small-business range is £1,000 to £3,000, apart from Outrank, which gives £5,000 for most SMEs.</p>
+
+      <figure class="not-prose my-8 bg-white border border-border rounded p-4 md:p-6">
+        <svg viewBox="0 0 720 330" role="img" aria-labelledby="bands-title bands-desc" class="w-full h-auto" style="max-width:720px">
+          <title id="bands-title">Monthly SEO price range for a small UK business, by source</title>
+          <desc id="bands-desc">Seven sources, each a bar from its low to its high monthly price, on a scale of £0 to £5,000.</desc>
+          {[0, 1000, 2000, 3000, 4000, 5000].map((v) => (
+            <g>
+              <line x1={x(v)} y1="14" x2={x(v)} y2="262" stroke="#CBD5DF" stroke-width="1" />
+              <text x={x(v)} y="284" text-anchor="middle" font-size="12" fill="#4F5B67">{v === 0 ? "£0" : "£" + (v / 1000) + "k"}</text>
+            </g>
+          ))}
+          {bands.map((b, i) => (
+            <g>
+              <text x="240" y={42 + i * 34} text-anchor="end" font-size="12" fill="#26323E">{b.src}</text>
+              <rect x={x(b.lo)} y={28 + i * 34} width={x(b.hi) - x(b.lo)} height="20" rx="2" fill="#0F5257" />
+              <text x={b.hi > 3000 ? x(b.hi) - 8 : x(b.hi) + 6} y={43 + i * 34} text-anchor={b.hi > 3000 ? "end" : "start"} font-size="11" font-weight={b.hi > 3000 ? "700" : "400"} fill={b.hi > 3000 ? "#FFFFFF" : "#26323E"}>{fmt(b.lo)} to {fmt(b.hi)}</text>
+            </g>
+          ))}
+          <line x1={x(500)} y1="14" x2={x(500)} y2="262" stroke="#B83817" stroke-width="2" stroke-dasharray="5 4" />
+          <text x={x(500)} y="304" text-anchor="middle" font-size="12" font-weight="700" fill="#B83817">My Starter plan: £500</text>
+        </svg>
+        <figcaption class="text-sm text-text-muted mt-3">Source: each publisher's own 2026 guide, read 7 November 2026. Sources are listed with dates and type at the bottom of this page. Each bar is the small-business range that source gives: Whito is the mainstream band of its 45 prices; Limelight, Whitehat and Lilo are their local or small tiers; Visionary is its small-agency tier; EpicEdits is its small-business tier; Outrank is its range for most SMEs.</figcaption>
+      </figure>
+
+      <p>Only one of these guides shows its sample. Whito read 45 published UK monthly prices in June 2026 and found a median of £799, in three bands: £99 to £300, £350 to £1,000, and £1,500 to £5,000 or more for established agencies. The others are agencies describing their own market, and several are inconsistent within the same page.</p>
+
+      <h2>Hourly rates and one-off audits</h2>
+      <p>The guides disagree most on hourly rates. Freelancers are quoted at £40 to £100 in some, £30 to £150 in others, and £60 to £90 outside London in one. Agency rates run from about £100 to £300 an hour, and senior London strategy work is quoted at up to £400 an hour in two guides.</p>
+      <p>Audits are the least reliable number. Only three guides give a stand-alone audit price, and they range from £500 to £7,500 or more. The wide range reflects what the audit covers: a crawl and a short report at the bottom, a full technical, content and competitor review with an action plan at the top.</p>
+
+      <h2>What the monthly fee pays for</h2>
+      <ul>
+        <li><strong>Technical fixes:</strong> crawl and indexing problems, speed, redirects, structured data.</li>
+        <li><strong>Pages and content:</strong> improving the pages that should bring enquiries, then adding new ones where search demand justifies them.</li>
+        <li><strong>Local work:</strong> Google Business Profile, local listings and review requests, where the business serves a local area.</li>
+        <li><strong>Links and mentions:</strong> earning references from other sites. This is the slowest and most variable part.</li>
+        <li><strong>Reporting:</strong> what changed, and how many enquiries came in. Rankings alone are not a result.</li>
+      </ul>
+
+      <h2>How long before it pays back</h2>
+      <p>The guides agree on timing even where they disagree on price. Visionary Marketing says material movement takes three to six months and payback six to twelve. Whito puts meaningful results at six to twelve months for most businesses and three to six for local work. Whitehat SEO reports early signals in months one to three. I would plan on at least three months before judging anything, and six before deciding whether to continue.</p>
+
+      <h2>What I charge</h2>
+      <p>My monthly plans are Starter at £500, Growth at £1,000, Premium at £2,000 and Enterprise from £3,500. One-off audits are £400 for AI search, £500 for technical and £750 for a comprehensive review. Monthly plans have a three-month initial term, then continue month to month with 30 days' notice. The full list is on my <a href="/seo-pricing-guildford/">pricing page</a>, and a shorter <a href="/free-seo-audit-guildford/">free audit</a> is available first.</p>
+
+      <h2>How to read a quote</h2>
+      <ul>
+        <li><strong>Named deliverables.</strong> A quote that says "SEO services" with no list of work is not comparable with anything.</li>
+        <li><strong>Who does the work.</strong> Ask whether the person quoting is the person doing it.</li>
+        <li><strong>Reporting on enquiries.</strong> Ask how enquiries or sales will be counted before work starts.</li>
+        <li><strong>Contract length and exit.</strong> Rolling terms with notice are easier to leave than a 12-month lock-in.</li>
+        <li><strong>No guaranteed rankings.</strong> No one controls Google, so a guarantee tells you about the seller, not the result.</li>
+        <li><strong>Access.</strong> Your Search Console, Analytics and Google Business Profile should stay in your own accounts.</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <div class="not-prose">
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-answer"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <h2>Where these numbers come from</h2>
+      <p>All pages were read on 7 November 2026. Every source here sells SEO or sells research about it. I treat them as the market's own description, not as an audited survey.</p>
+      <div class="not-prose overflow-x-auto my-6">
+        <table class="w-full text-sm border border-border bg-white">
+          <thead><tr class="bg-surface text-left"><th class="p-2">Source</th><th class="p-2">Date shown</th><th class="p-2">What it is</th></tr></thead>
+          <tbody>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://whito.co.uk/research/uk-seo-costs/" target="_blank" rel="noopener noreferrer">Whito, UK SEO costs</a></td><td class="p-2">Updated 2 July 2026; page also shows 3 November 2026</td><td class="p-2">45 published UK monthly prices read in June 2026</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://visionary-marketing.co.uk/blog/how-much-does-seo-cost-2026" target="_blank" rel="noopener noreferrer">Visionary Marketing</a></td><td class="p-2">Reviewed April 2026</td><td class="p-2">Agency guide; says it tracked 47 agencies</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://whitehat-seo.co.uk/blog/seo-costs" target="_blank" rel="noopener noreferrer">Whitehat SEO</a></td><td class="p-2">13 April 2026</td><td class="p-2">Agency guide, no sample stated</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://www.limelightdigital.co.uk/seo-cost-uk/" target="_blank" rel="noopener noreferrer">Limelight Digital</a></td><td class="p-2">23 April 2026</td><td class="p-2">Agency guide, no sample stated</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://www.lilo.co.uk/blog/seo-pricing-in-the-uk-what-you-actually-pay-for-2026-guide/" target="_blank" rel="noopener noreferrer">Lilo</a></td><td class="p-2">22 April 2026</td><td class="p-2">Agency guide, no sample stated</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://mpgone.com/how-much-does-seo-cost-uk/" target="_blank" rel="noopener noreferrer">MPG ONE</a></td><td class="p-2">Modified 3 July 2026</td><td class="p-2">Agency guide, no sample stated</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://epicedits.co.uk/blog/how-much-does-seo-cost-uk/" target="_blank" rel="noopener noreferrer">EpicEdits</a></td><td class="p-2">17 May 2026</td><td class="p-2">Agency guide, no sample stated</td></tr>
+            <tr class="border-t border-border"><td class="p-2"><a href="https://www.outrank.co.uk/?p=40454" target="_blank" rel="noopener noreferrer">Outrank</a></td><td class="p-2">7 July 2026</td><td class="p-2">Agency guide, no sample stated</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-text-muted">Written by SEO Guildford, a trading name of ND Media Ltd. I sell SEO, so I have listed the sources and let you check them. Prices change; I will re-check this page when the sources update.</p>
+    </div>
+
+    <ContactForm eyebrow="Pricing" heading="Get a price for your site" subject="SEO Guildford: UK SEO cost guide enquiry" />
+  </article>
+</Base>
