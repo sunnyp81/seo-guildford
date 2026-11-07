@@ -577,7 +577,7 @@ body {
 .hero-facts li { display: flex; flex-direction: column; }
 .hero-facts strong { font-family: var(--font-heading); color: var(--color-brand); font-size: 1.15rem; }
 .hero-facts span { font-size: 0.9rem; color: var(--color-text-muted); }
-.audit-sheet { background: #fff; border: 1px solid var(--color-border); border-top: 6px solid var(--color-accent); border-radius: 0.25rem; padding: 1.4rem 1.5rem 1.25rem; box-shadow: 0 18px 40px rgba(23,33,43,0.10); transform: rotate(0.8deg); margin: 0; }
+.audit-sheet { background: #fff; border: 1px solid var(--color-border); border-top: 6px solid var(--color-accent); border-radius: 0.25rem; padding: 1.4rem 1.5rem 1.25rem; box-shadow: 0 18px 40px rgba(23,33,43,0.10); margin: 0; }
 .audit-sheet-head { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border); padding-bottom: 0.6rem; }
 .audit-sheet-head span:first-child { font-family: var(--font-heading); font-size: 1rem; color: var(--color-accent); }
 .audit-sheet-sub { font-family: var(--font-heading); font-weight: 700; color: var(--color-brand); margin: 1rem 0 0.75rem; font-size: 1.05rem; line-height: 1.35; }
@@ -588,8 +588,8 @@ body {
 .audit-rows div span { display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.15rem; }
 .audit-rows em { font-style: normal; font-size: 0.78rem; font-weight: 700; color: var(--color-accent); background: #E3EEEE; padding: 0.2rem 0.5rem; border-radius: 0.2rem; white-space: nowrap; }
 .audit-sheet-foot { display: flex; gap: 0.6rem; align-items: center; font-size: 0.82rem; color: var(--color-text-muted); margin: 0.9rem 0 0; padding-top: 0.8rem; border-top: 1px solid var(--color-border); }
-.audit-redact { flex: none; width: 3.2rem; height: 0.7rem; background: var(--color-brand); border-radius: 0.1rem; }
-@media (max-width: 959px) { .audit-sheet { transform: none; } .audit-rows li { grid-template-columns: 1.9rem 1fr; } .audit-rows em { grid-column: 2; justify-self: start; } }
+.audit-redact { display: none; }
+@media (max-width: 959px) { .audit-rows li { grid-template-columns: 1.9rem 1fr; } .audit-rows em { grid-column: 2; justify-self: start; } }
 
 /* ── At a glance card ── */
 .glance { background: #fff; border: 1px solid var(--color-border); border-top: 5px solid var(--color-accent); border-radius: 0.25rem; padding: 1.5rem 1.6rem 1.6rem; margin: 2rem 0; }
@@ -601,7 +601,7 @@ body {
 .glance-points li::before { content: counter(gp); position: absolute; left: 0; top: 0.05rem; width: 1.65rem; height: 1.65rem; border-radius: 50%; background: var(--color-signal); color: #fff; font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
 .glance-points li::after { display: none; }
 .glance-facts { margin: 0; border-left: 1px solid var(--color-border); padding-left: 1.25rem; }
-@media (max-width: 719px) { .glance-facts { border-left: 0; padding-left: 0; border-top: 1px solid var(--color-border); padding-top: 1rem; } }
+@media (max-width: 719px) { .glance-facts { order: -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--color-border); padding-top: 1rem; } }
 .glance-facts div { padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); }
 .glance-facts div:last-child { border-bottom: 0; }
 .glance-facts dt { font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); }
