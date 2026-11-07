@@ -1,126 +1,80 @@
 ---
-// Real, anonymised portfolio results. Every number is actual data pulled from
-// Google Search Console (SEO Gets) and GA4 for sites in the portfolio, shown by
-// sector only (never by name, in source or output). Pulled 19 July 2026.
+// Real, anonymised portfolio results. Every number is actual Google Search Console
+// data for one site in the portfolio, shown by sector only (never by name, in
+// source or output). Pulled 7 November 2026 via SEO Gets, full calendar months May to Oct.
 // Do not fabricate, round misleadingly, or edit without a fresh dated pull.
+// Removed 7 Nov 2026: the health site charts (that site lost most impressions from 20 July)
+// and the AI-referral chart (same site, July data, not re-verified).
 
-// EV charging sector site - GSC Google clicks per month
-const evClicks = [
-  { m: "Apr", v: 9 },
-  { m: "May", v: 193 },
-  { m: "Jun", v: 622 },
+const months = [
+  { m: "May", clicks: 188, imp: 10825 },
+  { m: "Jun", clicks: 622, imp: 28401 },
+  { m: "Jul", clicks: 1495, imp: 56899 },
+  { m: "Aug", clicks: 2236, imp: 113827 },
+  { m: "Sep", clicks: 2835, imp: 122591 },
+  { m: "Oct", clicks: 3510, imp: 153708 },
 ];
-const evMax = 622;
-
-// Health & wellness sector site - GSC Google impressions per month
-const impressions = [
-  { m: "Mar", v: 3645 },
-  { m: "Apr", v: 26547 },
-  { m: "May", v: 32153 },
-  { m: "Jun", v: 44193 },
-];
-const impMax = 44193;
-
-// Health & wellness sector site - GA4 AI-assistant referrals, last 90 days
-const ai = [
-  { s: "ChatGPT", v: 1302 },
-  { s: "Claude", v: 53 },
-  { s: "Copilot", v: 44 },
-  { s: "Perplexity", v: 44 },
-  { s: "OpenAI", v: 10 },
-];
-const aiMax = 1302;
-const aiTotal = 1453;
+const clicksMax = 3510;
+const impMax = 153708;
 
 const fmt = (n: number) => n.toLocaleString("en-GB");
 const pct = (v: number, max: number) => Math.max(3, Math.round((v / max) * 100));
 
 interface Props { variant?: "full" | "google" | "ai"; }
 const { variant = "full" } = Astro.props;
-const showEv = variant !== "ai";
-const showImp = variant !== "ai";
-const showAi = variant !== "google";
-const intro = variant === "ai"
-  ? "Real GA4 data from a site in my own portfolio, shown by sector, not by name. This is the AI-assistant traffic most SEO work still ignores."
-  : variant === "google"
-  ? "Real Google Search Console data from sites in my own portfolio, shown by sector, not by name. Two niches, the same trajectory."
-  : "These are real figures from sites in my own portfolio, pulled straight from Google Search Console and GA4 and shown by sector, not by name. Two different niches, the same trajectory: the kind of growth the work is built to produce.";
+const show = variant !== "ai";
 ---
+{show && (
 <section class="cta-section" aria-label="Real results">
   <div class="max-w-5xl mx-auto px-4">
-    <p class="eyebrow mb-3">Real results</p>
-    <h2 class="font-heading text-brand text-3xl md:text-4xl mb-3">Actual numbers, not promises</h2>
-    <p class="text-text-muted max-w-2xl mb-10">{intro}</p>
+    <p class="eyebrow mb-3">Real results from my own sites</p>
+    <h2 class="font-heading text-brand text-3xl md:text-4xl mb-3">One of my own sites, month by month</h2>
+    <p class="text-text-muted max-w-2xl mb-10">Google Search Console figures for an EV charging directory I run and optimise myself. I show it by sector, not by name. It is one site, not a promise: results depend on market and starting position.</p>
 
     <div class="grid md:grid-cols-2 gap-6">
-      {showEv && (
       <div class="service-card">
         <div class="flex items-baseline justify-between mb-1">
           <span class="eyebrow">Google Search Console</span>
-          <span class="text-xs font-mono text-text-muted">EV Charging</span>
+          <span class="text-sm text-text-muted">EV charging site</span>
         </div>
         <h3 class="font-heading text-brand text-lg mb-6">Google clicks per month</h3>
-        <div class="flex items-end justify-between gap-4 h-44" role="img" aria-label="Monthly Google clicks growing from 9 in April to 622 in June">
-          {evClicks.map((d) => (
+        <div class="flex items-end justify-between gap-3 h-44" role="img" aria-label="Monthly Google clicks rising from 188 in May to 3,510 in October 2026">
+          {months.map((d) => (
             <div class="flex-1 flex flex-col items-center justify-end h-full">
-              <span class="text-sm font-mono text-brand mb-1.5">{fmt(d.v)}</span>
-              <div class="w-full rounded-t bg-gradient-to-t from-accent/40 to-accent" style={`height:${pct(d.v, evMax)}%`}></div>
-              <span class="text-xs font-mono text-text-muted mt-2">{d.m}</span>
+              <span class="text-xs font-bold text-brand mb-1.5">{fmt(d.clicks)}</span>
+              <div class="w-full rounded-t bg-accent" style={`height:${pct(d.clicks, clicksMax)}%`}></div>
+              <span class="text-xs text-text-muted mt-2">{d.m}</span>
             </div>
           ))}
         </div>
-        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">From near zero at launch to <span class="text-accent font-semibold">622</span> clicks in June. July had already passed <span class="text-brand font-semibold">626</span> by the 15th.</p>
+        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">From <span class="text-brand font-semibold">188</span> clicks in May to <span class="text-signal font-semibold">3,510</span> in October.</p>
       </div>
-      )}
 
-      {showImp && (
       <div class="service-card">
         <div class="flex items-baseline justify-between mb-1">
           <span class="eyebrow">Google Search Console</span>
-          <span class="text-xs font-mono text-text-muted">Health &amp; Wellness</span>
+          <span class="text-sm text-text-muted">EV charging site</span>
         </div>
         <h3 class="font-heading text-brand text-lg mb-6">Search impressions per month</h3>
-        <div class="flex items-end justify-between gap-3 h-44" role="img" aria-label="Monthly Google impressions growing from 3,645 in March to 44,193 in June">
-          {impressions.map((d) => (
+        <div class="flex items-end justify-between gap-3 h-44" role="img" aria-label="Monthly Google impressions rising from 10,825 in May to 153,708 in October 2026">
+          {months.map((d) => (
             <div class="flex-1 flex flex-col items-center justify-end h-full">
-              <span class="text-xs font-mono text-brand mb-1.5">{(d.v / 1000).toFixed(1)}k</span>
-              <div class="w-full rounded-t bg-gradient-to-t from-accent/40 to-accent" style={`height:${pct(d.v, impMax)}%`}></div>
-              <span class="text-xs font-mono text-text-muted mt-2">{d.m}</span>
+              <span class="text-xs font-bold text-brand mb-1.5">{d.imp >= 100000 ? Math.round(d.imp / 1000) + "k" : (d.imp / 1000).toFixed(1) + "k"}</span>
+              <div class="w-full rounded-t bg-accent" style={`height:${pct(d.imp, impMax)}%`}></div>
+              <span class="text-xs text-text-muted mt-2">{d.m}</span>
             </div>
           ))}
         </div>
-        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">Google clicks over the same window grew from <span class="text-brand font-semibold">174</span> in April to <span class="text-accent font-semibold">476</span> in June.</p>
+        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0">From <span class="text-brand font-semibold">10,825</span> impressions in May to <span class="text-signal font-semibold">153,708</span> in October.</p>
       </div>
-      )}
-
-      {showAi && (
-      <div class="service-card md:col-span-2">
-        <div class="flex items-baseline justify-between mb-1">
-          <span class="eyebrow">GA4 &middot; last 90 days</span>
-          <span class="text-xs font-mono text-text-muted">Health &amp; Wellness</span>
-        </div>
-        <h3 class="font-heading text-brand text-lg mb-6">Referrals from AI assistants</h3>
-        <div class="grid sm:grid-cols-2 gap-x-10 gap-y-3" role="img" aria-label="AI assistant referral sessions over 90 days: ChatGPT 1,302, Claude 53, Copilot 44, Perplexity 44, OpenAI 10">
-          {ai.map((d) => (
-            <div class="flex items-center gap-3">
-              <span class="w-20 shrink-0 text-xs font-mono text-text-muted">{d.s}</span>
-              <div class="flex-1 h-6 bg-surface rounded-sm overflow-hidden border border-border">
-                <div class="h-full bg-gradient-to-r from-accent/50 to-accent rounded-sm" style={`width:${pct(d.v, aiMax)}%`}></div>
-              </div>
-              <span class="w-12 shrink-0 text-right text-xs font-mono text-brand">{fmt(d.v)}</span>
-            </div>
-          ))}
-        </div>
-        <p class="text-sm text-text-muted mt-6 pt-4 border-t border-border m-0"><span class="text-accent font-semibold">{fmt(aiTotal)}</span> sessions from AI assistants in 90 days, most from ChatGPT, the traffic most SEO work still ignores.</p>
-      </div>
-      )}
     </div>
 
-    <p class="text-xs font-mono text-text-muted mt-6">Data pulled 19 July 2026 from Google Search Console and GA4. Own-portfolio sites, shown by sector. Results vary by market and starting position.</p>
+    <p class="text-sm text-text-muted mt-6">Source: Google Search Console, calendar months May to October 2026, pulled 7 November 2026. Clicks and impressions are search activity, not enquiries or revenue.</p>
 
     <div class="mt-8">
-      <a href="/free-seo-audit-guildford/" class="cta-button">Get results like these</a>
-      <p class="cta-note mt-3">Free audit, no obligation. A reply within one working day.</p>
+      <a href="/free-seo-audit-guildford/" class="cta-button">Get my free audit</a>
+      <p class="cta-note mt-3">Free, no obligation. I reply within one working day.</p>
     </div>
   </div>
 </section>
+)}

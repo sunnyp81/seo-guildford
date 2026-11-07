@@ -1,0 +1,30 @@
+---
+// "At a glance" card: numbered answer points plus one fact table, placed under the H1.
+// Only confirmed facts. Unknown facts are left out, never guessed.
+interface Fact { k: string; v: string; }
+interface Props {
+  heading?: string;
+  points: string[];
+  facts: Fact[];
+  ctaHref?: string;
+  ctaLabel?: string;
+}
+const { heading = "At a glance", points, facts, ctaHref = "/free-seo-audit-guildford/", ctaLabel = "Get my free audit" } = Astro.props;
+---
+<aside class="glance not-prose" aria-label={heading}>
+  <h2 class="glance-title">{heading}</h2>
+  <div class="glance-grid">
+    <ol class="glance-points">
+      {points.map((p) => <li>{p}</li>)}
+    </ol>
+    <dl class="glance-facts">
+      {facts.map((f) => (
+        <div>
+          <dt>{f.k}</dt>
+          <dd>{f.v}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+  <a href={ctaHref} class="cta-button">{ctaLabel}</a>
+</aside>
