@@ -1,4 +1,7 @@
 ---
+import '@fontsource-variable/nunito-sans/index.css';
+import '@fontsource/merriweather/400.css';
+import '@fontsource/merriweather/700.css';
 import '../styles/global.css';
 import QuickForm from '../components/QuickForm.astro';
 
@@ -39,9 +42,6 @@ const isCurrent = (path: string) => currentPath === path;
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -117,11 +117,11 @@ const isCurrent = (path: string) => currentPath === path;
             <span class="text-lg font-extrabold text-white">SEO</span>
             <span class="text-lg font-extrabold text-accent">Guildford</span>
           </div>
-          <p class="text-white/50 text-sm leading-relaxed mb-5">Remote-first search consultancy for Guildford and Surrey businesses. Technical rigour, editorial strategy, and AI search readiness.</p>
+          <p class="text-white/75 text-sm leading-relaxed mb-5">Remote-first search consultancy for Guildford and Surrey businesses. Technical rigour, editorial strategy, and AI search readiness.</p>
           <a href="mailto:hello@seo-guildford.uk" class="footer-email text-sm">hello@seo-guildford.uk</a>
         </div>
         <div>
-          <h3 class="text-xs font-bold text-white/60 uppercase tracking-widest mb-4">Quick Links</h3>
+          <h3 class="text-xs font-bold text-white/80 uppercase tracking-widest mb-4">Quick Links</h3>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/services/" class="footer-link">Services</a></li>
             <li><a href="/technical-seo-guildford/" class="footer-link">Technical SEO</a></li>
@@ -138,11 +138,11 @@ const isCurrent = (path: string) => currentPath === path;
           </ul>
         </div>
         <div>
-          <h3 class="text-xs font-bold text-white/60 uppercase tracking-widest mb-4">Coverage</h3>
-          <p class="text-white/50 text-sm leading-relaxed">Guildford, Woking, Godalming, Farnham, Camberley, Cobham, Esher, Weybridge, and across Surrey &amp; Hampshire.</p>
+          <h3 class="text-xs font-bold text-white/80 uppercase tracking-widest mb-4">Coverage</h3>
+          <p class="text-white/75 text-sm leading-relaxed">Guildford, Woking, Godalming, Farnham, Camberley, Cobham, Esher, Weybridge, and across Surrey &amp; Hampshire.</p>
         </div>
       </div>
-      <div class="border-t border-white/10 mt-10 pt-6 text-xs text-white/30 flex flex-col sm:flex-row justify-between gap-2">
+      <div class="border-t border-white/10 mt-10 pt-6 text-xs text-white/60 flex flex-col sm:flex-row justify-between gap-2">
         <p>&copy; {year} SEO Guildford. All rights reserved.</p>
         <p>SEO Guildford is a trading name of ND Media Ltd, registered in England and Wales, company number 10784524. Registered office: 17 Gainsborough Road, Reading RG30 3DB.</p>
       </div>

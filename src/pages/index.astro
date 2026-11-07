@@ -140,36 +140,49 @@ const schema = [orgSchema, breadcrumbSchema, webPageSchema, faqSchema];
 ---
 <Base title={title} description={description} schema={schema}>
 
-  <!-- Hero -->
+  <!-- Hero: first screen serves "choose an SEO consultant in Guildford": who, price, route to contact, and a look at the deliverable -->
   <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow hero-eyebrow">SEO consultancy &middot; Guildford &amp; Surrey</p>
-      <h1 class="hero-title">SEO for <span class="mark">Guildford</span> businesses that need qualified enquiries.</h1>
-      <p class="hero-lead">Technical foundations, useful content, and local search strategy built into a measurable route from visibility to enquiry.</p>
-      <div class="hero-actions">
-        <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-        <a href="/services/" class="cta-button-outline">Explore services</a>
+    <div class="hero-inner hero-split">
+      <div>
+        <p class="eyebrow hero-eyebrow">Solo SEO consultant &middot; Guildford &amp; Surrey</p>
+        <h1 class="hero-title">SEO for <span class="mark">Guildford</span> businesses that need qualified enquiries.</h1>
+        <p class="hero-lead">I audit your site, fix what is holding it back in Google and AI search, and report in enquiries, not rankings. You deal with me, not an account manager.</p>
+        <div class="hero-actions">
+          <a href="/free-seo-audit-guildford/" class="cta-button">Get my free audit</a>
+          <a href="/seo-pricing-guildford/" class="cta-button-outline">See pricing</a>
+        </div>
+        <p class="cta-note">Free and without obligation. I reply within one working day.</p>
+        <ul class="hero-facts" aria-label="Pricing and terms at a glance">
+          <li><strong>From &pound;400</strong><span>one-off audits</span></li>
+          <li><strong>From &pound;500</strong><span>a month, ongoing work</span></li>
+          <li><strong>No lock-in</strong><span>no setup fees</span></li>
+        </ul>
       </div>
-      <p class="cta-note">Free and without obligation. A reply within one working day.</p>
-    </div>
-    <div class="hero-spec">
-      <div class="hero-spec-grid">
-        <div class="spec reveal">
-          <span class="spec-k">I</span>
-          <span class="spec-v">Technical SEO</span>
-          <span class="spec-d">Crawlability, speed, schema, indexation</span>
+      <figure class="audit-sheet" aria-label="Example layout of the audit you receive">
+        <div class="audit-sheet-head">
+          <span>SEO audit</span>
+          <span>Page 1 of 1 &middot; example layout</span>
         </div>
-        <div class="spec reveal" style="--reveal-delay: 0.08s">
-          <span class="spec-k">II</span>
-          <span class="spec-v">Semantic content</span>
-          <span class="spec-d">Topical authority and entity depth</span>
-        </div>
-        <div class="spec reveal" style="--reveal-delay: 0.16s">
-          <span class="spec-k">III</span>
-          <span class="spec-v">AI search</span>
-          <span class="spec-d">AI Overviews, ChatGPT, Perplexity</span>
-        </div>
-      </div>
+        <p class="audit-sheet-sub">Top fixes, ranked by how soon they can bring in enquiries</p>
+        <ol class="audit-rows">
+          <li>
+            <span class="audit-n">1</span>
+            <div><strong>Service pages Google has not indexed</strong><span>Fix: sitemap, internal links, thin-page merge</span></div>
+            <em>Effort: low</em>
+          </li>
+          <li>
+            <span class="audit-n">2</span>
+            <div><strong>Google Business Profile missing categories</strong><span>Fix: primary and secondary categories, services list</span></div>
+            <em>Effort: low</em>
+          </li>
+          <li>
+            <span class="audit-n">3</span>
+            <div><strong>Enquiry form not tracked</strong><span>Fix: one GA4 event, so enquiries can be counted</span></div>
+            <em>Effort: medium</em>
+          </li>
+        </ol>
+        <p class="audit-sheet-foot"><span class="audit-redact" aria-hidden="true"></span> Your own findings replace these. This is the layout, not a client result.</p>
+      </figure>
     </div>
   </section>
 
