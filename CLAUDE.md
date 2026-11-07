@@ -1,5 +1,7 @@
 # seo-guildford.uk brain
 
+> Canonical directive, plans and status live in harness: `memory/site-directives/seo-guildford.uk.md` (design direction, audience profile, open items). Build: `npm ci && npm run build`, output `dist`; deploy = push to master (Cloudflare Pages). Safety: never fabricate stats, logos, reviews or a named person (solo-anonymous by decision); chart figures only from a dated SEO Gets pull; FAQ schema must equal visible text.
+
 Static Astro 5 + Tailwind 4 brochure site, ~18 pages, no pSEO (areas/services/industries are single hub pages, not per-suburb pages). GSC property `sc-domain:seo-guildford.uk`. Repo: gh:sunnyp81/seo-guildford, deploy via Cloudflare Pages git integration (push to master auto-builds, `npm run build`, output `dist`).
 
 ## 2026-08-01 STILL-OPEN cleanup + schema/AEO hygiene pass (branch claude/seo-location-analytics-setup-fudtpk, NOT merged to master)
