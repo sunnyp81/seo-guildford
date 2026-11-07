@@ -1,3 +1,9 @@
+# Keep Cloudflare Pages hostnames out of search: canonical is https://seo-guildford.uk
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
 /*
   X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000
