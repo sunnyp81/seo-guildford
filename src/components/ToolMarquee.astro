@@ -1,0 +1,10 @@
+---
+// Brand-slider pattern with honest content: the tools and data sources I actually work from. No client logos.
+const items = ["Google Search Console", "Google Analytics 4", "Ahrefs", "Bing Webmaster Tools", "Google Business Profile", "PageSpeed Insights"];
+---
+<div class="marquee" role="region" aria-label="Tools and data sources I work from">
+  <div class="marquee-track">
+    {items.map((t) => <span class="marquee-item">{t}</span>)}
+    {items.map((t) => <span class="marquee-item" aria-hidden="true">{t}</span>)}
+  </div>
+</div>

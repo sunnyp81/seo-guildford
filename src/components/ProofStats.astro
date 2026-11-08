@@ -42,7 +42,7 @@ const show = variant !== "ai";
           {months.map((d) => (
             <div class="flex-1 flex flex-col items-center justify-end h-full">
               <span class="text-xs font-bold text-brand mb-1.5">{fmt(d.clicks)}</span>
-              <div class="w-full rounded-t bg-accent" style={`height:${pct(d.clicks, clicksMax)}%`}></div>
+              <div class="w-full rounded-t chart-bar" style={`height:${pct(d.clicks, clicksMax)}%`}></div>
               <span class="text-xs text-text-muted mt-2">{d.m}</span>
             </div>
           ))}
@@ -60,7 +60,7 @@ const show = variant !== "ai";
           {months.map((d) => (
             <div class="flex-1 flex flex-col items-center justify-end h-full">
               <span class="text-xs font-bold text-brand mb-1.5">{d.imp >= 100000 ? Math.round(d.imp / 1000) + "k" : (d.imp / 1000).toFixed(1) + "k"}</span>
-              <div class="w-full rounded-t bg-accent" style={`height:${pct(d.imp, impMax)}%`}></div>
+              <div class="w-full rounded-t chart-bar" style={`height:${pct(d.imp, impMax)}%`}></div>
               <span class="text-xs text-text-muted mt-2">{d.m}</span>
             </div>
           ))}

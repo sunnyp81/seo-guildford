@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import ProofStats from '../components/ProofStats.astro';
 import ProofStrip from '../components/ProofStrip.astro';
+import ToolMarquee from '../components/ToolMarquee.astro';
 import Icon from '../components/Icon.astro';
 
 const title = "SEO Guildford: Solo SEO Consultant for Surrey Businesses";
@@ -153,6 +154,10 @@ const schema = [orgSchema, breadcrumbSchema, webPageSchema, faqSchema];
           <a href="/seo-pricing-guildford/" class="cta-button-outline">See pricing</a>
         </div>
         <p class="cta-note">Free and without obligation. I reply within one working day.</p>
+        <div class="badge-row">
+          <div class="badge-stack" aria-hidden="true"><span>GSC</span><span>GA4</span><span>AH</span><span>BWT</span></div>
+          <p><strong>Data I work from:</strong> Google Search Console, GA4, Ahrefs and Bing Webmaster Tools.</p>
+        </div>
         <ul class="hero-facts" aria-label="Pricing and terms at a glance">
           <li><strong>From &pound;400</strong><span>one-off audits</span></li>
           <li><strong>From &pound;500</strong><span>a month, ongoing work</span></li>
@@ -187,7 +192,9 @@ const schema = [orgSchema, breadcrumbSchema, webPageSchema, faqSchema];
     </div>
   </section>
 
-  <ProofStrip />
+  <ToolMarquee />
+
+  <ProofStrip tools={false} />
 
   <section class="band band-white">
     <div class="band-inner band-split">
