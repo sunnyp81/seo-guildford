@@ -26,15 +26,15 @@ const faqs = [
   },
   {
     q: "Does llms.txt help me get cited?",
-    a: "Google says it does not use llms.txt in Search and that the file neither helps nor hurts rankings. Other services may read it, so keeping one is harmless, but I do not sell it as a way to get cited."
+    a: "Google says it does not use llms.txt in Search and that the file neither helps nor hurts rankings. Other services may read it. Keeping one is harmless. I do not sell it as a way to get cited."
   },
   {
     q: "Should I block GPTBot?",
-    a: "That is your choice, and it only affects training use. OpenAI says GPTBot is for content that may be used to train its models, while OAI-SearchBot controls whether your site appears in ChatGPT search. They are set separately in robots.txt, so blocking one does not block the other."
+    a: "That is your choice. It only affects training use. OpenAI says GPTBot is for content that may be used to train its models. OAI-SearchBot controls whether your site appears in ChatGPT search. They are set separately in robots.txt. Blocking one does not block the other."
   },
   {
     q: "Can anyone guarantee a citation in ChatGPT or AI Overviews?",
-    a: "No. AI answers vary from one run to the next, and the studies I read show citations come from many places outside the top Google results. I report what I can measure: AI referral visits, a fixed set of test prompts repeated monthly, and enquiries."
+    a: "No. AI answers vary from one run to the next. The studies I read show citations come from many places outside the top Google results. I report what I can measure: AI referral visits, a fixed set of test prompts repeated monthly, and enquiries."
   },
   {
     q: "How much does AI search work cost?",
@@ -88,7 +88,7 @@ const schema = [
         points={[
           "GEO means being easy for Google AI Overviews, ChatGPT, Perplexity and Copilot to find, understand and cite.",
           "Google says no extra requirements, special markup or AI text files are needed to appear in AI Overviews or AI Mode.",
-          "Normal search work still matters: 37.9% of AI Overview citations in one study came from the top 10 results, and the rest from lower-ranked or unranked pages.",
+          "Normal search work still matters. In one study 37.9% of AI Overview citations came from the top 10 results. The rest came from lower-ranked or unranked pages.",
           "ChatGPT search and training are separate switches in robots.txt: OAI-SearchBot and GPTBot.",
           "Measure AI referral visits, a fixed prompt panel and enquiries, each with its own count."
         ]}
@@ -102,15 +102,15 @@ const schema = [
       />
 
       <h2>What GEO is, and what it is not</h2>
-      <p>People now ask AI tools questions that used to go to a search box. The tool writes an answer and names a few sources. GEO is the work of being one of those sources: your pages are crawlable, indexed, say clearly what you do, and are backed by facts others can check.</p>
-      <p>It is not a separate trick. The evidence below shows that ordinary search visibility and AI citation overlap but are not the same thing, so the sensible approach is to do the search basics well and then measure AI results directly.</p>
+      <p>People now ask AI tools questions that used to go to a search box. The tool writes an answer and names a few sources. GEO is the work of being one of those sources. Your pages are crawlable and indexed. They say clearly what you do. Facts that others can check back them up.</p>
+      <p>It is not a separate trick. The evidence below shows that ordinary search visibility and AI citation overlap but are not the same thing. Do the search basics well. Then measure AI results directly.</p>
 
       <h2>What Google documents</h2>
       <p>Google's guidance for site owners on AI features is short. It says "there are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary." It adds that you do not need new machine readable files, AI text files or markup, and that there is no special schema.org structured data to add. A page still has to be indexed and eligible to appear in Google Search.</p>
-      <p>On llms.txt, Google's AI optimisation guide says Search does not use such files and that they neither help nor hurt rankings. Google staff also dismissed llms.txt on social media in 2025 and early 2026. Other services may read the file, so keeping one is harmless, but nothing here supports paying for one as a citation tactic.</p>
+      <p>On llms.txt, Google's AI optimisation guide says Search does not use such files and that they neither help nor hurt rankings. Google staff also dismissed llms.txt on social media in 2025 and early 2026. Other services may read the file. Keeping one is harmless. Nothing here supports paying for one as a citation tactic.</p>
 
       <h2>What studies have measured</h2>
-      <p>Most of the data is from SEO software companies. It is useful, but it is not independent, and each study has limits I have listed.</p>
+      <p>Most of the data is from SEO software companies. It is useful. It is not independent. Each study has limits. I have listed them.</p>
 
       <figure class="not-prose my-8 bg-white border border-border rounded p-4 md:p-6">
         <svg viewBox="0 0 720 200" role="img" aria-labelledby="cite-title cite-desc" class="w-full h-auto" style="max-width:720px">
@@ -138,12 +138,12 @@ const schema = [
           </tbody>
         </table>
       </div>
-      <p>The pattern: being well placed in normal search helps, but a large share of citations come from pages that do not rank in the top 10. Pages that match the question closely were cited more often in these studies, which fits the basic advice below.</p>
+      <p>The pattern: being well placed in normal search helps. A large share of citations still come from pages outside the top 10. Pages that match the question closely were cited more often in these studies. That fits the basic advice below.</p>
 
       <h2>A practical checklist</h2>
       <ol>
         <li><strong>Get indexed.</strong> Check in Google Search Console that your key pages are indexed. A page that is not indexed cannot be cited by Google.</li>
-        <li><strong>Let the right crawlers in.</strong> Decide separately about OAI-SearchBot, which controls ChatGPT search, and GPTBot, which relates to training. Check your robots.txt and any host-level bot blocking.</li>
+        <li><strong>Let the right crawlers in.</strong> Decide separately about OAI-SearchBot and GPTBot. OAI-SearchBot controls ChatGPT search. GPTBot relates to training. Check your robots.txt and any host-level bot blocking.</li>
         <li><strong>One page per question.</strong> Put the direct answer near the top, in plain words, with the detail below.</li>
         <li><strong>Say it the way people ask it.</strong> Titles and headings that match real questions were cited more in the ChatGPT study. Use descriptive, plain-language URLs.</li>
         <li><strong>Keep your facts consistent.</strong> Name, services, prices, area and contact details should match across your site, Google Business Profile and listings.</li>
@@ -152,10 +152,11 @@ const schema = [
       </ol>
 
       <h2>How many UK customers use AI to find local businesses?</h2>
-      <p>One survey says 36.7% of 600 UK consumers used AI for local search in the past month (Yext, June 2026). Yext sells local listings software and does not state its method, so treat this as an indication, not a market size.</p>
+      <p>One survey says 36.7% of 600 UK consumers used AI for local search in the past month (Yext, June 2026). Yext sells local listings software and does not state its method. Treat this as an indication, not a market size.</p>
 
       <h2>What I do</h2>
-      <p>My <a href="/ai-search-optimisation-guildford/">AI search service</a> starts with a £400 audit that checks how ChatGPT, Perplexity, Google AI Overviews and Copilot describe your business, then gives you a prioritised plan to fix the gaps. I do not promise citations. A <a href="/free-seo-audit-guildford/">free audit</a> is available first.</p>
+      <p>My AI search work starts with a £400 audit. The audit checks how ChatGPT, Perplexity, Google AI Overviews and Copilot describe your business. You then get a prioritised plan to fix the gaps. I do not promise citations.</p>
+      <p>The service is described on my <a href="/ai-search-optimisation-guildford/">AI search page</a>. A free audit is available first.</p>
 
       <h2>Frequently asked questions</h2>
       <div class="not-prose">

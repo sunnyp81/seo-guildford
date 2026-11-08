@@ -11,3 +11,8 @@ final	src/pages/industries/index.astro	87	removed hypothetical-client proof clai
 final	src/pages/ai-search-optimisation-guildford.astro	88	removed fabricated case reference and improved comparison semantics	pass
 final	src/pages/seo-pricing-guildford.astro	87	truthful results anchor and concise metadata	pass
 final	src/pages/tools/index.astro	90	truthful results anchor and concise title	pass
+v1	src/pages/seo-cost-uk.astro	72	clause-comma compliance 78% (target 95), first-paragraph links in 2 sections, no photo in At a glance	needs revision
+v1	src/pages/generative-engine-optimisation-uk.astro	73	clause-comma compliance 80% (target 95), first-paragraph link in What I do, no photo in At a glance	needs revision
+final	src/pages/seo-cost-uk.astro	88	100 sentences, 100% start-with-answer, 100% clause-comma compliant, 0 fluff, no links in first paragraph of any section; deductions: no photo in card (own SVG chart used), sentence-type mix, 1 sentence over 30 words	pass
+final	src/pages/generative-engine-optimisation-uk.astro	88	100 sentences, 100% start-with-answer, 100% clause-comma compliant, 0 fluff, no links in first paragraph of any section; deductions: no photo in card (own SVG chart used), sentence-type mix, 3 sentences over 30 words	pass
+final	src/components/ProofStrip.astro + home hero lead	90	authored proof strip and hero copy rewritten into short sentences, 0 fluff, every figure sourced and dated	pass
