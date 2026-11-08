@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AtAGlance from '../components/AtAGlance.astro';
+import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
@@ -125,26 +125,18 @@ const schema = [
   schema={schema}
   ogType="website"
 >
-  <article class="max-w-3xl mx-auto px-4 py-12 prose">
+  <PageHero
+    eyebrow="AI Search Optimisation"
+    crumbs={[{"label": "Services", "href": "/services/"}, {"label": "AI Search Optimisation"}]}
+    lead="I help Guildford and Surrey businesses get found and cited by ChatGPT, Google AI Overviews, Perplexity and Copilot. I start by checking how they describe you today."
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    glance={{"heading": "At a glance", "points": ["AI assistants name sources instead of ranking pages, so the aim is to be a source they can use and trust.", "The AI Search Audit checks how ChatGPT, Perplexity, Google AI Overviews and Copilot treat your business.", "Fixes cover consistent business details, structured data and answers that are easy to quote.", "First changes in citations and entity recognition usually show within 4 to 8 weeks. No one can guarantee a citation."], "facts": [{"k": "AI Search Audit", "v": "£400 one-off"}, {"k": "Ongoing AI search work", "v": "Included from the £2,000 a month Premium plan"}, {"k": "Platforms checked", "v": "ChatGPT, Perplexity, Google AI Overviews, Copilot"}, {"k": "Who does the work", "v": "Me, directly"}]}}
+    proof={[{"v": "£400", "l": "one-off AI search audit across four assistants.", "href": "/seo-pricing-guildford/"}, {"v": "No guarantees", "l": "No one controls AI answers. I report what I can measure.", "href": "/generative-engine-optimisation-uk/"}, {"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}]}
+  >
+    <Fragment slot="title">AI Search Optimisation for <span class="mark">Guildford</span> Businesses</Fragment>
+  </PageHero>
 
-    <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
-      <a href="/">Home</a> &rsaquo;
-      <a href="/services/">Services</a> &rsaquo;
-      <span>AI Search Optimisation</span>
-    </nav>
-
-    <p class="eyebrow mb-3">AI Search Optimisation</p>
-    <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">AI Search Optimisation for <span class="mark">Guildford</span> Businesses</h1>
-
-    <p>I help Guildford and Surrey businesses get cited by ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot. Traditional SEO is about ranking on a results page. AI search optimisation is about being named as a source in the answer. Read on for how it works, see the <a href="/generative-engine-optimisation-uk/">UK guide to generative engine optimisation</a> for the evidence, or <a href="/contact/">get in touch</a>.</p>
-
-    <AtAGlance heading="At a glance" points={["AI assistants name sources instead of ranking pages, so the aim is to be a source they can use and trust.", "The AI Search Audit checks how ChatGPT, Perplexity, Google AI Overviews and Copilot treat your business.", "Fixes cover consistent business details, structured data and answers that are easy to quote.", "First changes in citations and entity recognition usually show within 4 to 8 weeks. No one can guarantee a citation."]} facts={[{"k": "AI Search Audit", "v": "£400 one-off"}, {"k": "Ongoing AI search work", "v": "Included from the £2,000 a month Premium plan"}, {"k": "Platforms checked", "v": "ChatGPT, Perplexity, Google AI Overviews, Copilot"}, {"k": "Who does the work", "v": "Me, directly"}]} />
-
-    <div class="not-prose my-8 flex flex-wrap items-center gap-4">
-      <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-      <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-    </div>
-    <p class="cta-note">Free and without obligation. A reply within one working day.</p>
+  <article class="doc prose">
 
     <div class="not-prose my-10 reveal">
       <p class="eyebrow mb-3">Traditional SEO vs AI search</p>
@@ -205,23 +197,11 @@ const schema = [
 
     <p>AI search optimisation rests on three overlapping disciplines, each with its own logic but sharing a common foundation:</p>
 
-    <div class="grid sm:grid-cols-3 gap-5 not-prose my-8">
-      <div class="service-card reveal">
-        <Icon name="zap" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">AEO</h3>
-        <p class="text-text-muted text-sm m-0">Answer Engine Optimisation targets direct-answer formats in Google AI Overviews, featured snippets, and voice assistants.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.06s">
-        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">GEO</h3>
-        <p class="text-text-muted text-sm m-0">Generative Engine Optimisation focuses on how generative AI platforms select and cite sources.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.12s">
-        <Icon name="layers" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">LLM SEO</h3>
-        <p class="text-text-muted text-sm m-0">Addresses how large language models index, retrieve, and surface information from your site.</p>
-      </div>
-    </div>
+    <dl class="def-grid not-prose">
+  <div><dt>AEO</dt><dd>Answer Engine Optimisation targets direct-answer formats in Google AI Overviews, featured snippets, and voice assistants.</dd></div>
+  <div><dt>GEO</dt><dd>Generative Engine Optimisation focuses on how generative AI platforms select and cite sources.</dd></div>
+  <div><dt>LLM SEO</dt><dd>Addresses how large language models index, retrieve, and surface information from your site.</dd></div>
+</dl>
 
     <p>Each pillar demands its own tactics, yet they converge on the same bedrock: structured content, unambiguous entity identity, and technical accessibility for AI crawlers.</p>
     </div>

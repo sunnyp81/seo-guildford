@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import PageHero from '../../components/PageHero.astro';
 
 const schema = [
   {
@@ -90,27 +91,14 @@ const schema = [
   schema={schema}
 >
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <div class="max-w-4xl mx-auto px-4 py-20 text-center">
-      <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-accent transition-colors">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/tools/" class="hover:text-accent transition-colors">Tools</a>
-        <span class="mx-2">/</span>
-        <span class="text-text">Local SEO Checklist</span>
-      </nav>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-5 gradient-text">Local SEO Audit Checklist</h1>
-      <p class="text-lg text-text max-w-2xl mx-auto">A 20-point checklist built for Guildford and Surrey businesses. Work through each item, track your progress, and strengthen your local search presence.</p>
-    </div>
-  </section>
-
-  <!-- Quick Answer -->
-  <section class="max-w-4xl mx-auto px-4 -mt-8 mb-12 reveal">
-    <div class="quick-answer">
-      <p><strong>What is a local SEO audit checklist?</strong> A local SEO audit checklist is a structured list of optimisation tasks for Guildford and Surrey businesses, covering Google Maps visibility, the local pack, and location-based searches. This checklist covers the five pillars that determine local ranking: Google Business Profile, on-page signals, technical health, reviews, and citations. Complete all 20 items to maximise visibility for searches like <em>"[service] Guildford"</em>.</p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Free tool"
+    crumbs={[{ label: "Tools", href: "/tools/" }, { label: "Local SEO Audit Checklist" }]}
+    lead="A 20-point local SEO checklist. Tick items as you go. It covers five areas: Google Business Profile, on-page signals, technical health, reviews and citations."
+    cta={null}
+  >
+    <Fragment slot="title">Local SEO Audit Checklist</Fragment>
+  </PageHero>
 
   <!-- Progress Bar (sticky) -->
   <div id="progress-wrapper" class="sticky top-[60px] z-30 bg-surface border-b border-border py-3 reveal">

@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Icon from '../../components/Icon.astro';
 import ProofStats from '../../components/ProofStats.astro';
@@ -92,60 +93,44 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
 ---
 <Base title={title} description={description} schema={schema}>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <nav class="text-sm text-text-muted mb-4">
-        <a href="/" class="hover:text-brand">Home</a> <span class="mx-1">/</span> <span class="text-text">Services</span>
-      </nav>
-      <p class="eyebrow hero-eyebrow">Guildford &amp; Surrey</p>
-      <h1 class="hero-title">SEO Services for <span class="mark">Guildford</span> and Surrey Businesses</h1>
-      <p class="hero-lead">Every service is shaped by Guildford's particular market, its industries, its search patterns, and the competitive intensity that sets it apart from other Surrey towns.</p>
-    </div>
-  </section>
+<PageHero
+    eyebrow="Guildford &amp; Surrey"
+    crumbs={[{"label": "Services"}]}
+    lead="I offer technical SEO, content strategy, local SEO, link building and AI search optimisation. You can hire me for one service or all of them. I do the work myself."
+    glance={{"heading": "At a glance", "points": ["Technical SEO, SEO audits and AI search optimisation.", "Local SEO and Google Business Profile management.", "Content strategy and link building.", "A free SEO audit is the recommended starting point before a retainer."], "facts": [{"k": "Audits and plans", "v": "Audits from £400. Plans from £500 a month"}, {"k": "Monthly plans", "v": "Three-month initial term. Then month to month with 30 days' notice"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire"}]}}
+    proof={[{"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}, {"v": "1 working day", "l": "to reply to every enquiry. The reply comes from me.", "href": "/contact/"}, {"v": "Free first audit", "l": "a short PDF report by email. No payment details and no obligation.", "href": "/free-seo-audit-guildford/"}]}
+    tools={false}
+  >
+    <Fragment slot="title">SEO Services for <span class="mark">Guildford</span> and Surrey Businesses</Fragment>
+  </PageHero>
 
-  <article class="max-w-3xl mx-auto px-4 py-12 prose">
-
-    <p>This is the service hub of <a href="/">SEO Guildford</a>, a specialist search consultancy for businesses across Guildford and Surrey. I offer technical SEO, content strategy, local SEO, link building, and AI search optimisation, and I can work on one or all of them. Every strategy is shaped by the competitive realities of Guildford's market, where technology firms at Surrey Research Park, professional services practices on the High Street, and healthcare providers near Royal Surrey County Hospital all compete for search visibility with varying degrees of sophistication.</p>
-
-    <div class="quick-answer">
-      <strong>The short version:</strong> SEO Guildford's service catalogue covers technical SEO, SEO audits, AI search optimisation (AEO/GEO), local SEO, content strategy, link building, and Google Business Profile management for businesses across Guildford and Surrey. <a href="/free-seo-audit-guildford/">A free SEO audit</a> is the recommended starting point for identifying the highest-impact opportunities before committing to a retainer.
-    </div>
-
-    <div class="not-prose my-8 flex flex-wrap items-center gap-4">
-      <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-      <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-    </div>
-    <p class="cta-note">Free and without obligation. A reply within one working day.</p>
+  <article class="doc">
+  <div class="prose">
 
     <h2>Core SEO Services</h2>
 
     <div class="grid md:grid-cols-2 gap-6 not-prose my-8 reveal">
       <a href="/technical-seo-guildford/" class="service-card block" style="--reveal-delay: 0.1s">
-        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold font-heading text-brand text-lg mb-2">Technical SEO</h3>
         <p class="text-text-muted text-sm mb-3">Site architecture, crawlability, Core Web Vitals, structured data, and indexation, which determines whether search engines can find, understand, and properly rank your content.</p>
         <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
       <a href="/seo-audit-guildford/" class="service-card block" style="--reveal-delay: 0.18s">
-        <Icon name="search" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold font-heading text-brand text-lg mb-2">SEO Audit</h3>
         <p class="text-text-muted text-sm mb-3">A thorough analysis of your site's technical health, content quality, backlink profile, and competitive positioning within the Guildford market. The essential starting point for every engagement.</p>
         <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
       <a href="/free-seo-audit-guildford/" class="service-card block" style="--reveal-delay: 0.26s">
-        <Icon name="check" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold font-heading text-brand text-lg mb-2">Free SEO Audit</h3>
         <p class="text-text-muted text-sm mb-3">A substantive review covering technical health, keyword opportunities, and competitor gaps, provided without obligation. Understand precisely where your Guildford business stands before committing to anything.</p>
         <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
       <a href="/seo-pricing-guildford/" class="service-card block" style="--reveal-delay: 0.34s">
-        <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold font-heading text-brand text-lg mb-2">SEO Pricing</h3>
         <p class="text-text-muted text-sm mb-3">Transparent pricing for fixed-fee projects and monthly retainers, structured to deliver measurable return for Guildford businesses at every level of investment.</p>
         <span class="cta-link text-sm">Learn more &rarr;</span>
       </a>
       <a href="/ai-search-optimisation-guildford/" class="service-card block md:col-span-2" style="--reveal-delay: 0.42s">
-        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
         <h3 class="font-bold font-heading text-brand text-lg mb-2">AI Search Optimisation</h3>
         <p class="text-text-muted text-sm mb-3">Ensure your business is cited by Google AI Overviews, ChatGPT, Perplexity, and Copilot. AI search is quietly reshaping discovery for high-consideration services, precisely the kind that Guildford's affluent market purchases.</p>
         <span class="cta-link text-sm">Learn more &rarr;</span>
@@ -254,7 +239,7 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
       </details>
     </div>
     </div>
-
+  </div>
   </article>
 
   <!-- CTA -->

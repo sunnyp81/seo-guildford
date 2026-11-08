@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
 
 const title = "Get in Touch: SEO Guildford";
 const description = "Contact SEO Guildford to start with an audit of your search performance. Serving Guildford, Surrey, and Hampshire. Email hello@seo-guildford.uk.";
@@ -86,25 +87,19 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
 ---
 
 <Base title={title} description={description} canonical="https://seo-guildford.uk/contact/" schema={schema}>
-  <section class="max-w-3xl mx-auto px-4 py-12">
-    <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-brand">Home</a>
-      <span class="mx-1">/</span>
-      <span class="text-text">Contact</span>
-    </nav>
+<PageHero
+    eyebrow="Contact"
+    crumbs={[{"label": "Contact"}]}
+    lead="Email me or use the form below. Tell me about your business and your website. I reply within one working day."
+    cta={{"href": "#enquire", "label": "Go to the form"}}
+    proof={[{"v": "1 working day", "l": "to reply to every enquiry. The reply comes from me.", "href": "/contact/"}, {"v": "Free first audit", "l": "a short PDF report by email. No payment details and no obligation.", "href": "/free-seo-audit-guildford/"}, {"v": "£400", "l": "for a one-off AI search audit. Monthly plans start at £500.", "href": "/seo-pricing-guildford/"}]}
+    tools={false}
+  >
+    <Fragment slot="title">Get in <span class="mark">touch</span></Fragment>
+  </PageHero>
 
-    <p class="eyebrow mb-3">Contact</p>
-    <h1 class="text-4xl font-bold text-brand mb-6">Get in <span class="mark">touch</span></h1>
-
+  <section class="doc">
     <div class="prose">
-      <div class="reveal">
-      <p>Email me or use the form below and tell me about your business and your website. We will talk about where your site stands and whether I can help. There is no sales pitch.</p>
-
-      <div class="quick-answer">
-        <strong>The short version:</strong> Email <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> or complete the form below. Most enquiries receive a response within one working day. Initial consultations are free.
-      </div>
-      </div>
-
       <div class="reveal">
       <h2>How to Reach Me</h2>
 

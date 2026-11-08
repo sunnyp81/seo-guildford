@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
-import AtAGlance from '../components/AtAGlance.astro';
+import PageHero from '../components/PageHero.astro';
 
 const url = "https://seo-guildford.uk/seo-cost-uk/";
 const title = "How Much Does SEO Cost in the UK? 2026 Prices";
@@ -74,35 +74,19 @@ const schema = [
 ];
 ---
 <Base title={title} description={description} canonical={url} ogType="article" schema={schema}>
-  <article class="max-w-3xl mx-auto px-4 py-12">
-    <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-brand">Home</a>
-      <span class="mx-1">/</span>
-      <span class="text-brand font-medium">SEO cost in the UK</span>
-    </nav>
+  <PageHero
+    eyebrow="Price guide, checked 7 November 2026"
+    crumbs={[{"label": "SEO cost in the UK"}]}
+    lead="Most small UK businesses pay between £500 and £3,000 a month for SEO. This page shows where that range comes from and what I charge."
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Get a free audit first"}}
+    glance={{"heading": "At a glance", "points": ["Most 2026 UK price guides put small-business SEO between about £500 and £3,000 a month.", "The middle of 45 published UK monthly prices, read in June 2026, was £799 (Whito).", "Freelancers are usually quoted at about £40 to £150 an hour and agencies at about £100 to £300.", "One guide puts early movement at three to six months; most put meaningful results at six to twelve.", "Treat every figure as a sellers' price list: I found no UK survey of what buyers actually paid."], "facts": [{"k": "Budget band (Whito, June 2026)", "v": "£99 to £300 a month"}, {"k": "Mainstream band (Whito)", "v": "£350 to £1,000 a month"}, {"k": "Established agencies (Whito)", "v": "£1,500 to £5,000+ a month"}, {"k": "My plans and audits", "v": "From £500 a month, audits from £400"}]}}
+    proof={[{"v": "£799", "l": "median of 45 published UK monthly prices, read in June 2026 (Whito).", "href": "#where-these-numbers-come-from"}, {"v": "From £500", "l": "my monthly plans. Audits from £400.", "href": "/seo-pricing-guildford/"}, {"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}]}
+  >
+    <Fragment slot="title">How much does SEO cost in the <span class="mark">UK</span>?</Fragment>
+  </PageHero>
 
+  <article class="doc">
     <div class="prose">
-      <p class="eyebrow mb-3">Price guide, checked 7 November 2026</p>
-      <h1>How much does SEO cost in the <span class="mark">UK</span>?</h1>
-
-      <p>Most small UK businesses pay somewhere between £500 and £3,000 a month for SEO. This page shows where that range comes from, what each source can and cannot prove, and what I charge.</p>
-
-      <AtAGlance
-        points={[
-          "Most 2026 UK price guides put small-business SEO between about £500 and £3,000 a month.",
-          "The middle of 45 published UK monthly prices, read in June 2026, was £799 (Whito).",
-          "Freelancers are usually quoted at about £40 to £150 an hour and agencies at about £100 to £300.",
-          "One guide puts early movement at three to six months; most put meaningful results at six to twelve.",
-          "Treat every figure as a sellers' price list: I found no UK survey of what buyers actually paid."
-        ]}
-        facts={[
-          { k: "Budget band (Whito, June 2026)", v: "£99 to £300 a month" },
-          { k: "Mainstream band (Whito)", v: "£350 to £1,000 a month" },
-          { k: "Established agencies (Whito)", v: "£1,500 to £5,000+ a month" },
-          { k: "My plans and audits", v: "From £500 a month, audits from £400" }
-        ]}
-        ctaLabel="Get a free audit first"
-      />
 
       <h2>What small businesses are quoted each month</h2>
       <p>I read eight UK price guides published between April and July 2026. Each gives a monthly range for a small business. They overlap more than they differ. The low end is mostly £300 to £500. Two agency tiers start at £1,000 to £1,500. Most tops sit between £1,000 and £2,500. Outrank gives £5,000 for most SMEs.</p>
@@ -172,7 +156,7 @@ const schema = [
         ))}
       </div>
 
-      <h2>Where these numbers come from</h2>
+      <h2 id="where-these-numbers-come-from">Where these numbers come from</h2>
       <p>All pages were read on 7 November 2026. Every source here sells SEO or sells research about it. I treat them as the market's own description. They are not an audited survey.</p>
       <div class="not-prose overflow-x-auto my-6">
         <table class="w-full text-sm border border-border bg-white">

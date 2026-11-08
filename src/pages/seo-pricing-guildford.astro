@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AtAGlance from '../components/AtAGlance.astro';
+import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 
@@ -214,28 +214,19 @@ const oneOffs = [
   canonical="https://seo-guildford.uk/seo-pricing-guildford/"
   schema={schema}
 >
-  <article class="max-w-4xl mx-auto px-4 py-12">
-    <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-brand">Home</a>
-      <span class="mx-1">/</span>
-      <a href="/services/" class="hover:text-brand">Services</a>
-      <span class="mx-1">/</span>
-      <span class="text-brand font-medium">Pricing</span>
-    </nav>
+  <PageHero
+    eyebrow="Pricing"
+    crumbs={[{"label": "Services", "href": "/services/"}, {"label": "Pricing"}]}
+    lead="Monthly SEO plans start at £500 and audits at £400. Each plan lists what you get, and you can start with a free audit."
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    glance={{"heading": "At a glance", "points": ["Monthly plans run from £500 (Starter) to £3,500 or more (Enterprise).", "One-off audits start at £400, with technical audits at £500 and comprehensive audits at £750.", "Monthly plans have a three-month initial term, then roll month to month with 30 days' notice.", "A free audit is available first, so you can see where you stand before choosing a plan."], "facts": [{"k": "Starter", "v": "£500 a month"}, {"k": "Growth", "v": "£1,000 a month"}, {"k": "Premium", "v": "£2,000 a month"}, {"k": "Enterprise", "v": "From £3,500 a month"}]}}
+    proof={[{"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}, {"v": "UK price guide", "l": "How my prices compare with eight published 2026 guides.", "href": "/seo-cost-uk/"}, {"v": "Free first audit", "l": "see where you stand before choosing a plan.", "href": "/free-seo-audit-guildford/"}]}
+  >
+    <Fragment slot="title">SEO <span class="mark">Pricing</span> for Guildford and Surrey Businesses</Fragment>
+  </PageHero>
 
-    <div class="prose">
-      <p class="eyebrow mb-3">Pricing</p>
-      <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">SEO <span class="mark">Pricing</span> for Guildford and Surrey Businesses</h1>
-
-      <p>SEO pricing in Guildford begins at £500 per month for a focused local campaign and scales to £3,500 or more for multi-location enterprise work, with one-off audits available from £400.</p>
-
-      <AtAGlance heading="At a glance" points={["Monthly plans run from £500 (Starter) to £3,500 or more (Enterprise).", "One-off audits start at £400, with technical audits at £500 and comprehensive audits at £750.", "Monthly plans have a three-month initial term, then roll month to month with 30 days' notice.", "A free audit is available first, so you can see where you stand before choosing a plan."]} facts={[{"k": "Starter", "v": "£500 a month"}, {"k": "Growth", "v": "£1,000 a month"}, {"k": "Premium", "v": "£2,000 a month"}, {"k": "Enterprise", "v": "From £3,500 a month"}]} />
-
-      <div class="not-prose my-8 flex flex-wrap items-center gap-4">
-        <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-        <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-      </div>
-      <p class="cta-note">Free and without obligation. A reply within one working day.</p>
+  <article class="doc">
+  <div class="prose">
 
       <div class="reveal">
       <h2>Transparent SEO Pricing for Surrey Businesses</h2>
@@ -270,7 +261,6 @@ const oneOffs = [
           <ul class="list-none space-y-2 mb-6 flex-1">
             {tier.features.map(f => (
               <li class="flex items-start gap-2 text-sm">
-                <Icon name="check" class="w-4 h-4 text-accent inline-block shrink-0" />
                 <span>{f}</span>
               </li>
             ))}
@@ -289,7 +279,6 @@ const oneOffs = [
     <div class="grid md:grid-cols-3 gap-5 my-8">
       {oneOffs.map((service, i) => (
         <div class="service-card reveal" style={`--reveal-delay: ${0.1 + i * 0.08}s`}>
-          <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
           <h3 class="text-lg font-bold text-brand mb-1">{service.name}</h3>
           <p class="text-2xl font-bold text-text font-mono mb-3">{service.price}</p>
           <p class="text-text-muted text-sm">{service.description}</p>

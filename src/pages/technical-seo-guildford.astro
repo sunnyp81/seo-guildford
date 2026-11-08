@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AtAGlance from '../components/AtAGlance.astro';
+import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
@@ -118,66 +118,33 @@ const schema = [
   ogType="website"
 >
 
-<article class="max-w-3xl mx-auto px-4 py-12">
-  <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
-    <ol class="flex items-center gap-1.5">
-      <li><a href="/" class="hover:text-brand transition-colors">Home</a></li>
-      <li class="before:content-['/'] before:mx-1.5"><a href="/services/" class="hover:text-brand transition-colors">Services</a></li>
-      <li class="before:content-['/'] before:mx-1.5" aria-current="page">Technical SEO</li>
-    </ol>
-  </nav>
+<PageHero
+    eyebrow="Technical SEO"
+    crumbs={[{"label": "Services", "href": "/services/"}, {"label": "Technical SEO"}]}
+    lead="Technical SEO fixes the parts of your site that stop Google crawling, indexing and ranking your pages. I audit it, rank the fixes by impact and carry them out."
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    glance={{"heading": "At a glance", "points": ["I crawl your site and list what stops Google finding, rendering and indexing your pages.", "Fixes are ranked by effort and likely impact, so the quick wins come first.", "Typical areas: speed and Core Web Vitals, indexation, redirects, structured data and mobile.", "Ranking changes usually show within four to eight weeks of the fixes going live."], "facts": [{"k": "One-off technical audit", "v": "£500"}, {"k": "Ongoing work", "v": "From £500 a month"}, {"k": "Free first look", "v": "Free SEO audit, 2 to 3 working days"}, {"k": "Who does the work", "v": "Me, directly"}]}}
+    proof={[{"v": "£500", "l": "one-off technical audit. Monthly plans start at £500.", "href": "/seo-pricing-guildford/"}, {"v": "2 to 3 working days", "l": "for the free first look at your site.", "href": "/free-seo-audit-guildford/"}, {"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}]}
+  >
+    <Fragment slot="title">Technical SEO for <span class="mark">Guildford</span> Businesses</Fragment>
+  </PageHero>
 
+  <article class="doc">
   <div class="prose">
-    <p class="eyebrow mb-3">Technical SEO</p>
-    <h1>Technical SEO for <span class="mark">Guildford</span> Businesses</h1>
-
-    <p>Technical SEO is fixing the parts of your website that stop search engines crawling, rendering, indexing, and ranking your pages. For Guildford businesses, these fixes decide whether your content appears in search results at all.</p>
-
-    <AtAGlance heading="At a glance" points={["I crawl your site and list what stops Google finding, rendering and indexing your pages.", "Fixes are ranked by effort and likely impact, so the quick wins come first.", "Typical areas: speed and Core Web Vitals, indexation, redirects, structured data and mobile.", "Ranking changes usually show within four to eight weeks of the fixes going live."]} facts={[{"k": "One-off technical audit", "v": "£500"}, {"k": "Ongoing work", "v": "From £500 a month"}, {"k": "Free first look", "v": "Free SEO audit, 2 to 3 working days"}, {"k": "Who does the work", "v": "Me, directly"}]} />
-
-    <div class="not-prose my-8 flex flex-wrap items-center gap-4">
-      <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-      <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-    </div>
-    <p class="cta-note">Free and without obligation. A reply within one working day.</p>
 
     <div class="reveal">
     <h2>What Is Technical SEO</h2>
 
     <p>Technical SEO encompasses every aspect of your website that influences how search engines crawl, render, index, and rank your pages. It breaks down into six core components:</p>
 
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 not-prose my-8">
-      <div class="service-card reveal">
-        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Site Speed</h3>
-        <p class="text-text-muted text-sm m-0">Server response times and page load speed, measured against Core Web Vitals thresholds.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.06s">
-        <Icon name="search" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Crawlability</h3>
-        <p class="text-text-muted text-sm m-0">Crawl directives and rendering behaviour, so Googlebot can find and access every page that matters.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.12s">
-        <Icon name="layers" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Indexation</h3>
-        <p class="text-text-muted text-sm m-0">Indexation controls that decide which pages Google actually adds to its index.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.18s">
-        <Icon name="tag" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Structured Data</h3>
-        <p class="text-text-muted text-sm m-0">Structured data markup that helps search engines understand exactly what each page offers.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.24s">
-        <Icon name="link" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Site Architecture</h3>
-        <p class="text-text-muted text-sm m-0">URL architecture and internal linking that guide crawlers and visitors to the right pages.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.3s">
-        <Icon name="compass" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Mobile Performance</h3>
-        <p class="text-text-muted text-sm m-0">Mobile performance, since Google indexes the mobile version of your site rather than desktop.</p>
-      </div>
-    </div>
+    <dl class="def-grid not-prose">
+  <div><dt>Site Speed</dt><dd>Server response times and page load speed, measured against Core Web Vitals thresholds.</dd></div>
+  <div><dt>Crawlability</dt><dd>Crawl directives and rendering behaviour, so Googlebot can find and access every page that matters.</dd></div>
+  <div><dt>Indexation</dt><dd>Indexation controls that decide which pages Google actually adds to its index.</dd></div>
+  <div><dt>Structured Data</dt><dd>Structured data markup that helps search engines understand exactly what each page offers.</dd></div>
+  <div><dt>Site Architecture</dt><dd>URL architecture and internal linking that guide crawlers and visitors to the right pages.</dd></div>
+  <div><dt>Mobile Performance</dt><dd>Mobile performance, since Google indexes the mobile version of your site rather than desktop.</dd></div>
+</dl>
 
     <p>It is distinct from content SEO and link building, though deeply intertwined with both. You can write brilliant copy and earn formidable backlinks, but if Googlebot cannot crawl a site efficiently or pages take five seconds to render, those efforts yield diminished returns, like pouring water into a bucket riddled with holes. Technical SEO is the foundation layer upon which every other form of optimisation rests.</p>
 

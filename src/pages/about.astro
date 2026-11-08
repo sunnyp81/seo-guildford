@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 
 const title = "About SEO Guildford: Guildford Search Consultancy";
@@ -90,25 +91,19 @@ const schema = [breadcrumbSchema, webPageSchema, orgSchema, faqSchema];
 ---
 
 <Base title={title} description={description} canonical="https://seo-guildford.uk/about/" schema={schema} ogType="website">
-  <section class="max-w-3xl mx-auto px-4 py-12">
-    <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-brand">Home</a>
-      <span class="mx-1">/</span>
-      <span class="text-text">About</span>
-    </nav>
+<PageHero
+    eyebrow="About"
+    crumbs={[{"label": "About"}]}
+    lead="SEO Guildford is my search consultancy for businesses in Guildford, Surrey and Hampshire. I work on visibility in Google, Bing and AI search tools. I work directly with business owners."
+    glance={{"heading": "At a glance", "points": ["Remote-first search consultancy for Guildford and Surrey.", "Built on first-party data from Google Search Console and Bing Webmaster Tools.", "No account-manager layer and no outsourced delivery.", "The person who diagnoses the problem implements the fix."], "facts": [{"k": "Registered office", "v": "Reading"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire"}, {"k": "Setup", "v": "Solo consultant, remote-first"}, {"k": "Free audit report", "v": "2 to 3 working days, PDF by email"}]}}
+    proof={[{"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}, {"v": "1 working day", "l": "to reply to every enquiry. The reply comes from me.", "href": "/contact/"}, {"v": "From £500", "l": "a month for ongoing SEO. Audits start at £400.", "href": "/seo-pricing-guildford/"}]}
+    tools={false}
+  >
+    <Fragment slot="title">About SEO <span class="mark">Guildford</span></Fragment>
+  </PageHero>
 
-    <p class="eyebrow mb-4">About</p>
-    <h1 class="text-4xl font-bold text-brand mb-6">About SEO <span class="mark">Guildford</span></h1>
-
+  <section class="doc">
     <div class="prose">
-      <div class="reveal">
-      <p>SEO Guildford is my search consultancy for businesses in Guildford, Surrey, and Hampshire. I work on organic visibility in Google, Bing, and AI search tools. Read on for how I work, or <a href="/contact/">get in touch</a>.</p>
-
-      <div class="quick-answer">
-        <strong>The short version:</strong> SEO Guildford is a remote-first search consultancy focused on Guildford and Surrey, built on data-driven methodology, technical rigour, and AI-search expertise. I work directly with business owners, with no account-manager layer and no outsourced delivery.
-      </div>
-      </div>
-
       <div class="reveal">
       <h2>My Philosophy</h2>
 

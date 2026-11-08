@@ -1,0 +1,76 @@
+---
+// Page opening for every page: answer on the left, the "sheet" (At a glance) on the right,
+// an evidence strip underneath. Built from the audit sheet, glance card and proof strip.
+import ProofStrip from './ProofStrip.astro';
+
+interface Crumb { label: string; href?: string; }
+interface Fact { k: string; v: string; }
+interface Props {
+  eyebrow?: string;
+  crumbs?: Crumb[];
+  lead?: string;
+  glance?: { heading?: string; points: string[]; facts?: Fact[] };
+  cta?: { href: string; label: string } | null;
+  secondary?: { href: string; label: string } | null;
+  proof?: { v: string; l: string; href?: string }[];
+  tools?: string[] | false;
+  note?: string;
+}
+const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Get my free audit" }, secondary = null, proof, tools = false, note } = Astro.props;
+const hasSheet = !!glance;
+---
+<section class="hero page-open">
+  <div class={`hero-inner ${hasSheet ? 'hero-split' : ''}`}>
+    <div class="page-open-main">
+      {crumbs.length > 0 && (
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          {crumbs.map((c) => (
+            <>
+              <span aria-hidden="true">/</span>
+              {c.href ? <a href={c.href}>{c.label}</a> : <span aria-current="page">{c.label}</span>}
+            </>
+          ))}
+        </nav>
+      )}
+      {eyebrow && <p class="eyebrow hero-eyebrow" set:html={eyebrow} />}
+      <h1 class="hero-title page-open-title"><slot name="title" /></h1>
+      {lead && <p class="hero-lead">{lead}</p>}
+      {(cta || secondary) && (
+        <div class="hero-actions">
+          {cta && <a href={cta.href} class="cta-button">{cta.label}</a>}
+          {secondary && <a href={secondary.href} class="cta-button-outline">{secondary.label}</a>}
+        </div>
+      )}
+      {note && <p class="cta-note">{note}</p>}
+      <slot name="after-actions" />
+    </div>
+    {hasSheet && (
+      <aside class="sheet" aria-label={glance!.heading ?? "At a glance"}>
+        <div class="sheet-head">
+          <span>{glance!.heading ?? "At a glance"}</span>
+          <span>Checked 7 November 2026</span>
+        </div>
+        <ol class="audit-rows sheet-points">
+          {glance!.points.map((p, i) => (
+            <li>
+              <span class="audit-n">{i + 1}</span>
+              <div><strong>{p}</strong></div>
+            </li>
+          ))}
+        </ol>
+        {glance!.facts && glance!.facts.length > 0 && (
+          <dl class="sheet-facts">
+            {glance!.facts.map((f) => (
+              <div>
+                <dt>{f.k}</dt>
+                <dd>{f.v}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+      </aside>
+    )}
+  </div>
+</section>
+{proof && proof.length > 0 && <ProofStrip stats={proof} tools={tools} />}

@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Icon from '../../components/Icon.astro';
 
@@ -73,22 +74,18 @@ const schema = [
 ---
 
 <Base title={title} description={description} schema={schema}>
-  <article class="max-w-3xl mx-auto px-4 py-12">
+<PageHero
+    eyebrow="Areas We Cover"
+    crumbs={[{"label": "Areas"}]}
+    lead="I provide local SEO for Guildford town centre and every major suburb. I also cover the wider Surrey commuter belt and Hampshire border towns including Aldershot and Farnham."
+    glance={{"heading": "At a glance", "points": ["Guildford town centre and the main suburbs.", "The wider Surrey commuter belt.", "Hampshire border towns including Aldershot and Farnham.", "Each area gets its own local search research, not a template with the town name swapped."], "facts": [{"k": "Service area", "v": "Guildford, Surrey and Hampshire"}, {"k": "Who does the work", "v": "Me, directly"}, {"k": "Free audit report", "v": "2 to 3 working days, PDF by email"}]}}
+    proof={[{"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}, {"v": "1 working day", "l": "to reply to every enquiry. The reply comes from me.", "href": "/contact/"}, {"v": "From £500", "l": "a month for ongoing SEO. Audits start at £400.", "href": "/seo-pricing-guildford/"}]}
+    tools={false}
+  >
+    <Fragment slot="title">SEO Services Across <span class="mark">Guildford</span>, Surrey, and Hampshire</Fragment>
+  </PageHero>
 
-    <p class="eyebrow mb-4">Areas We Cover</p>
-    <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">SEO Services Across <span class="mark">Guildford</span>, Surrey, and Hampshire</h1>
-
-    <p class="text-lg text-text-muted mb-6">I provide local SEO for Guildford town centre, every major suburb, the wider Surrey commuter belt, and Hampshire border towns including Aldershot and Farnham. Pick your area below to see what I cover there, or <a href="/contact/">get in touch</a>.</p>
-
-    <div class="quick-answer">
-      <p><strong>The short version:</strong> SEO Guildford provides area-specific local SEO across Guildford town centre, every borough suburb, the wider Surrey commuter belt, and Hampshire border towns such as Farnham and Aldershot. Search behaviour shifts significantly between neighbouring areas, a locksmith in Merrow faces different competition than one in Stoughton, so every campaign is built around genuine local knowledge of that specific area rather than templated content with the town name swapped in.</p>
-    </div>
-
-    <div class="not-prose my-8 flex flex-wrap items-center gap-4">
-      <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-      <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-    </div>
-    <p class="cta-note">Free and without obligation. A reply within one working day.</p>
+  <article class="doc">
 
     <p class="reveal text-text-muted mb-4">Areas covered on this page:</p>
     <div class="not-prose flex flex-wrap gap-2 mb-8 reveal">
@@ -186,18 +183,10 @@ const schema = [
 
       <p>Guildford has two major business hubs with distinct SEO requirements, and treating them identically would be like planting the same crop in two fundamentally different soils.</p>
 
-      <div class="grid sm:grid-cols-2 gap-5 not-prose my-6">
-        <div class="service-card">
-          <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
-          <h3 class="font-bold font-heading text-brand text-lg mb-2 mt-0">Surrey Research Park</h3>
-          <p class="text-text-muted text-sm m-0">Over 170 companies, predominantly B2B: tech, AI, satellite engineering, and biotech, needing thought leadership and technical documentation SEO.</p>
-        </div>
-        <div class="service-card">
-          <Icon name="building" class="w-6 h-6 text-accent mb-3" />
-          <h3 class="font-bold font-heading text-brand text-lg mb-2 mt-0">Slyfield Industrial Estate</h3>
-          <p class="text-text-muted text-sm m-0">Guildford's largest industrial zone: trade suppliers, logistics, and light manufacturing, driven by commercial intent and Google Business Profile.</p>
-        </div>
-      </div>
+      <dl class="def-grid not-prose">
+  <div><dt>Surrey Research Park</dt><dd>Over 170 companies, predominantly B2B: tech, AI, satellite engineering, and biotech, needing thought leadership and technical documentation SEO.</dd></div>
+  <div><dt>Slyfield Industrial Estate</dt><dd>Guildford's largest industrial zone: trade suppliers, logistics, and light manufacturing, driven by commercial intent and Google Business Profile.</dd></div>
+</dl>
 
       <h3>Surrey Research Park</h3>
 

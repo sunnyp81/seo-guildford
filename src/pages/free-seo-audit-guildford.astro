@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AtAGlance from '../components/AtAGlance.astro';
+import PageHero from '../components/PageHero.astro';
 
 const schema = [
   {
@@ -75,22 +75,19 @@ const schema = [
   canonical="https://seo-guildford.uk/free-seo-audit-guildford/"
   schema={schema}
 >
-  <article class="max-w-3xl mx-auto px-4 py-12">
-    <nav class="text-sm text-text-muted mb-6" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-brand">Home</a>
-      <span class="mx-1">/</span>
-      <a href="/services/" class="hover:text-brand">Services</a>
-      <span class="mx-1">/</span>
-      <span class="text-brand font-medium">Free SEO Audit</span>
-    </nav>
+  <PageHero
+    eyebrow="Free SEO Audit"
+    crumbs={[{"label": "Services", "href": "/services/"}, {"label": "Free SEO Audit"}]}
+    lead="Send your website address and I will review it by hand. You get a short PDF report by email within two to three working days."
+    cta={{"href": "#enquire", "label": "Go to the form"}}
+    glance={{"heading": "At a glance", "points": ["Send your website address through the form below.", "You receive a short PDF report by email within two to three working days.", "It covers technical health, local search visibility and your Google Business Profile.", "There is no contract, no payment details and no obligation to buy anything."], "facts": [{"k": "Price", "v": "Free"}, {"k": "Turnaround", "v": "2 to 3 working days"}, {"k": "Format", "v": "PDF by email"}, {"k": "Obligation", "v": "None"}]}}
+    proof={[{"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}, {"v": "1 working day", "l": "to reply to every enquiry. The reply comes from me.", "href": "/contact/"}, {"v": "£750", "l": "for the comprehensive audit if you want the full review.", "href": "/seo-audit-guildford/"}]}
+  >
+    <Fragment slot="title">Free <span class="mark">SEO Audit</span> for Guildford Businesses</Fragment>
+  </PageHero>
 
-    <div class="prose">
-      <p class="eyebrow mb-3">Free SEO Audit</p>
-      <h1 class="text-3xl md:text-4xl font-bold text-brand mb-6">Free <span class="mark">SEO Audit</span> for Guildford Businesses</h1>
-
-      <p>I offer Guildford business owners a free SEO audit: a short, evidence-based check of how your website performs in Google, which technical issues are holding it back, and how your local listings look. Fill in the form below and I will send the results.</p>
-
-      <AtAGlance heading="At a glance" points={["Send your website address through the form below.", "You receive a short PDF report by email within two to three working days.", "It covers technical health, local search visibility and your Google Business Profile.", "There is no contract, no payment details and no obligation to buy anything."]} facts={[{"k": "Price", "v": "Free"}, {"k": "Turnaround", "v": "2 to 3 working days"}, {"k": "Format", "v": "PDF by email"}, {"k": "Obligation", "v": "None"}]} ctaHref={null} />
+  <article class="doc">
+  <div class="prose">
 
     </div>
 

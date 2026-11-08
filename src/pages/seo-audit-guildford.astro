@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AtAGlance from '../components/AtAGlance.astro';
+import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
@@ -119,56 +119,31 @@ const schema = [
   ogType="website"
 >
 
-<article class="max-w-3xl mx-auto px-4 py-12">
-  <nav class="text-sm text-text-muted mb-8" aria-label="Breadcrumb">
-    <ol class="flex items-center gap-1.5">
-      <li><a href="/" class="hover:text-brand transition-colors">Home</a></li>
-      <li class="before:content-['/'] before:mx-1.5"><a href="/services/" class="hover:text-brand transition-colors">Services</a></li>
-      <li class="before:content-['/'] before:mx-1.5" aria-current="page">SEO Audit</li>
-    </ol>
-  </nav>
+<PageHero
+    eyebrow="Comprehensive Review"
+    crumbs={[{"label": "Services", "href": "/services/"}, {"label": "SEO Audit"}]}
+    lead="A comprehensive audit shows what holds your site back in search and what to fix first. You get a ranked 90-day plan, not a data dump."
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    glance={{"heading": "At a glance", "points": ["The audit covers four things: technical set-up, content quality, local search presence and AI search readiness.", "You get a prioritised 90-day action plan, with competitor benchmarking and a content gap analysis.", "It takes five to ten working days, depending on the size of your site.", "A free, shorter audit is available first if you want a look before paying."], "facts": [{"k": "Price", "v": "£750 fixed fee"}, {"k": "Turnaround", "v": "5 to 10 working days"}, {"k": "You receive", "v": "Report and 90-day action plan"}, {"k": "Free option", "v": "Free SEO audit, 2 to 3 working days"}]}}
+    proof={[{"v": "£750", "l": "fixed fee for the comprehensive audit and 90-day action plan.", "href": "/seo-pricing-guildford/"}, {"v": "5 to 10 working days", "l": "to deliver, depending on the size of your site.", "href": "/free-seo-audit-guildford/"}, {"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}]}
+  >
+    <Fragment slot="title">Comprehensive Website <span class="mark">Audit</span> for Guildford Businesses</Fragment>
+  </PageHero>
 
+  <article class="doc">
   <div class="prose">
-    <p class="eyebrow mb-3">Comprehensive Review</p>
-    <h1>Comprehensive Website <span class="mark">Audit</span> for Guildford Businesses</h1>
-
-    <p>An SEO audit is, at its core, an act of diagnosis, a systematic analysis of every factor that shapes your website's search engine performance, from server infrastructure and content quality through to local search presence and emerging AI visibility. For Guildford businesses competing within Surrey's high-value commercial landscape, an audit strips away assumptions and reveals, with forensic clarity, precisely why your site ranks where it does and what must change to shift those positions upward.</p>
-
-    <AtAGlance heading="At a glance" points={["The audit covers four things: technical set-up, content quality, local search presence and AI search readiness.", "You get a prioritised 90-day action plan, with competitor benchmarking and a content gap analysis.", "It takes five to ten working days, depending on the size of your site.", "A free, shorter audit is available first if you want a look before paying."]} facts={[{"k": "Price", "v": "£750 fixed fee"}, {"k": "Turnaround", "v": "5 to 10 working days"}, {"k": "You receive", "v": "Report and 90-day action plan"}, {"k": "Free option", "v": "Free SEO audit, 2 to 3 working days"}]} />
-
-    <div class="not-prose my-8 flex flex-wrap items-center gap-4">
-      <a href="/free-seo-audit-guildford/" class="cta-button">Request a free audit</a>
-      <a href="#enquire" class="cta-link">Ask a question &rarr;</a>
-    </div>
-    <p class="cta-note">Free and without obligation. A reply within one working day.</p>
 
     <div class="reveal">
     <h2>What My SEO Audit Covers</h2>
 
     <p>A comprehensive SEO audit is not a tool-generated PDF. It is an expert-led investigation that examines your site through three distinct lenses: the search engine's, the user's, and your competitors'. I assess over 200 ranking factors across four categories, each weighted and prioritised by its impact on your specific business objectives. The difference between this and an automated report is the difference between a blood test and a consultation with a specialist.</p>
 
-    <div class="grid sm:grid-cols-2 gap-5 not-prose my-8">
-      <div class="service-card reveal">
-        <Icon name="gauge" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Technical</h3>
-        <p class="text-text-muted text-sm m-0">Full technical crawl, Google Search Console data analysis, and Core Web Vitals assessment across mobile and desktop.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.06s">
-        <Icon name="file" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Content</h3>
-        <p class="text-text-muted text-sm m-0">Content quality evaluation against competitor benchmarks, plus a keyword gap analysis for your target terms.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.12s">
-        <Icon name="pin" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">Local</h3>
-        <p class="text-text-muted text-sm m-0">Local SEO profile review: Google Business Profile, citations, and local pack eligibility.</p>
-      </div>
-      <div class="service-card reveal" style="--reveal-delay: 0.18s">
-        <Icon name="cpu" class="w-6 h-6 text-accent mb-3" />
-        <h3 class="font-heading text-brand text-lg mb-1.5">AI Search</h3>
-        <p class="text-text-muted text-sm m-0">AI search readiness check covering ChatGPT, Perplexity, and Google AI Overview visibility.</p>
-      </div>
-    </div>
+    <dl class="def-grid not-prose">
+  <div><dt>Technical</dt><dd>Full technical crawl, Google Search Console data analysis, and Core Web Vitals assessment across mobile and desktop.</dd></div>
+  <div><dt>Content</dt><dd>Content quality evaluation against competitor benchmarks, plus a keyword gap analysis for your target terms.</dd></div>
+  <div><dt>Local</dt><dd>Local SEO profile review: Google Business Profile, citations, and local pack eligibility.</dd></div>
+  <div><dt>AI Search</dt><dd>AI search readiness check covering ChatGPT, Perplexity, and Google AI Overview visibility.</dd></div>
+</dl>
 
     <p>Every audit closes with a prioritised action plan, each recommendation ranked by estimated impact and implementation effort.</p>
     </div>
