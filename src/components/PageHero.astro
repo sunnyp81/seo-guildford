@@ -4,7 +4,7 @@
 import ProofStrip from './ProofStrip.astro';
 
 interface Crumb { label: string; href?: string; }
-interface Fact { k: string; v: string; }
+interface Fact { k: string; v: string; href?: string; }
 interface Props {
   eyebrow?: string;
   crumbs?: Crumb[];
@@ -15,13 +15,14 @@ interface Props {
   proof?: { v: string; l: string; href?: string }[];
   tools?: string[] | false;
   note?: string;
+  compact?: boolean;
   photo?: { src: string; alt: string; credit: string; creditHref: string };
 }
-const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo } = Astro.props;
+const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo, compact = false } = Astro.props;
 const hasSide = Astro.slots.has('side');
 const hasSheet = !!glance || hasSide;
 ---
-<section class="hero page-open">
+<section class={`hero page-open ${compact ? 'page-open-compact' : ''}`}>
   <div class={`hero-inner ${hasSheet ? 'hero-split' : ''}`}>
     <div class="page-open-main">
       {crumbs.length > 0 && (
@@ -73,7 +74,7 @@ const hasSheet = !!glance || hasSide;
             {glance!.facts.map((f) => (
               <div>
                 <dt>{f.k}</dt>
-                <dd>{f.v}</dd>
+                <dd>{f.href ? <a href={f.href} target="_blank" rel="noopener noreferrer">{f.v}</a> : f.v}</dd>
               </div>
             ))}
           </dl>

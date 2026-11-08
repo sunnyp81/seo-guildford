@@ -855,3 +855,7 @@ input, textarea, select { color: var(--color-brand); }
 .band-photo { margin: 0; }
 .band-photo img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--color-border); display: block; }
 .prose .not-prose table { display: table; overflow: visible; }
+.page-open-compact { padding-top: 1.5rem; }
+.page-open-compact .hero-inner { padding-bottom: 1.25rem; }
+.page-open-compact .hero-lead { margin-bottom: 0; font-size: 1.1rem; }
+.sheet-facts dd a { color: var(--color-accent-light); text-decoration: underline; text-underline-offset: 2px; }
