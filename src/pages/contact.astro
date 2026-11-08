@@ -61,7 +61,7 @@ const faqSchema = {
       "name": "What areas do you cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "My primary service area includes Guildford, Woking, Godalming, Farnham, Camberley, Cobham, and the wider Surrey and Hampshire corridor. Remote delivery means clients anywhere in the UK or internationally receive the same standard of work."
+        "text": "My primary service area includes Guildford, Woking, Godalming, Farnham, Camberley and Cobham. I also serve the wider Surrey and Hampshire corridor. Remote delivery means clients anywhere in the UK or internationally receive the same standard of work."
       }
     },
     {
@@ -77,7 +77,7 @@ const faqSchema = {
       "name": "Do you offer free consultations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. An initial discovery call is always free and carries no obligation. For a more detailed assessment, request a free SEO audit, this provides a technical and strategic overview of your site before any commitment."
+        "text": "Yes. An initial discovery call is always free and carries no obligation. For a more detailed assessment, request a free SEO audit. It provides a technical and strategic overview of your site before any commitment."
       }
     }
   ]
@@ -90,28 +90,16 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
 <PageHero
     eyebrow="Contact"
     crumbs={[{"label": "Contact"}]}
-    lead="Email me or use the form below. Tell me about your business and your website. I reply within one working day."
-    cta={{"href": "#enquire", "label": "Go to the form"}}
+    lead="Use the form. Tell me about your business and your website. I reply within one working day."
+    cta={null}
     tools={false}
   >
     <Fragment slot="title">Get in <span class="mark">touch</span></Fragment>
-  </PageHero>
-
-  <section class="doc">
-    <div class="prose">
-      <div class="reveal">
-      <h2>How to reach me</h2>
-
-      <p>The most effective way to begin is by email, it gives me the space to consider your situation properly before responding, rather than rushing through a cold call. Send your enquiry to <a href="mailto:hello@seo-guildford.uk">hello@seo-guildford.uk</a> with a brief description of your business, your website URL, and what you are looking to achieve. You will receive a considered, personal reply, not an automated response.</p>
-
-      <p>SEO Guildford serves businesses across the Guildford, Surrey, and Hampshire corridor. Whether your office is near Guildford High Street, based at Surrey Research Park, or operating remotely from anywhere in the UK, the service delivery model remains the same: direct access to me, the specialist who does the work.</p>
-      </div>
-    </div>
-
+    <div slot="side">
     <section id="enquire">
       <div id="enquire-done" hidden class="border border-accent bg-surface-alt rounded-md px-5 py-6 mb-6"><p class="font-heading text-xl text-brand m-0">Thank you, your enquiry is in. I reply personally, usually within one working day.</p></div>
       <div id="enquire-form">
-        <form action="https://emailit-worker.sunnypat81.workers.dev/" method="POST" class="reveal mt-8 space-y-5 bg-surface-alt rounded-[0.35rem] p-6 md:p-8">
+        <form action="https://emailit-worker.sunnypat81.workers.dev/" method="POST" class="sheet space-y-5 p-6 md:p-8">
           <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
           <input type="hidden" name="_site" value="seo-guildford.uk" />
           <input type="hidden" name="subject" value="SEO Guildford: New Enquiry (seo-guildford.uk)" />
@@ -137,10 +125,25 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
             <textarea id="message" name="message" rows="5" class="w-full rounded border border-border bg-glass px-4 py-2.5 text-text placeholder:text-text-muted/50 focus:border-accent outline-none transition resize-y" placeholder="Tell me about your business and what you are looking to achieve with search."></textarea>
           </div>
 
-          <button type="submit" class="cta-button w-full sm:w-auto">Start with an audit</button>
+          <button type="submit" class="cta-button w-full sm:w-auto">Send my enquiry</button>
         </form>
       </div>
     </section>
+    </div>
+  </PageHero>
+
+  <section class="doc">
+    <div class="prose">
+      <div class="reveal">
+      <h2>How I work with enquiries</h2>
+
+      <p>Use the form. Tell me about your business and your website address. I read every enquiry myself and reply within one working day. The first conversation is free and carries no obligation.</p>
+
+      <p>I work remotely with businesses across Guildford, Surrey and Hampshire. Your office can be anywhere in the UK.</p>
+      </div>
+    </div>
+
+
 
     <div class="prose mt-12 reveal">
       <h2>How I work with you</h2>
@@ -165,7 +168,7 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
       <div class="reveal">
       <h2>Areas we cover</h2>
 
-      <p>SEO Guildford provides search consultancy services across the Surrey and Hampshire corridor, including Guildford, Woking, Godalming, Farnham, Camberley, Cobham, Esher, and Weybridge. For a full breakdown of service areas with local information, visit the <a href="/areas/">areas page</a>.</p>
+      <p>SEO Guildford provides search consultancy services across the Surrey and Hampshire corridor, including Guildford, Woking, Godalming, Farnham, Camberley, Cobham, Esher, and Weybridge. The <a href="/areas/">areas page</a> lists local information for each service area.</p>
       </div>
 
       <div class="reveal">
@@ -178,7 +181,7 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
 
       <details class="faq-item">
         <summary>What areas do you cover?</summary>
-        <p>My primary service area includes Guildford, Woking, Godalming, Farnham, Camberley, Cobham, and the wider Surrey and Hampshire corridor. Remote delivery means clients anywhere in the UK or internationally receive the same standard of work.</p>
+        <p>My primary service area includes Guildford, Woking, Godalming, Farnham, Camberley and Cobham. I also serve the wider Surrey and Hampshire corridor. Remote delivery means clients anywhere in the UK or internationally receive the same standard of work.</p>
       </details>
 
       <details class="faq-item">
@@ -188,16 +191,11 @@ const schema = [breadcrumbSchema, webPageSchema, contactPageSchema, faqSchema];
 
       <details class="faq-item">
         <summary>Do you offer free consultations?</summary>
-        <p>Yes. An initial discovery call is always free and carries no obligation. For a more detailed assessment, request a <a href="/free-seo-audit-guildford/">free SEO audit</a>, this provides a technical and strategic overview of your site before any commitment.</p>
+        <p>Yes. An initial discovery call is always free and carries no obligation. For a more detailed assessment, request a <a href="/free-seo-audit-guildford/">free SEO audit</a>. It provides a technical and strategic overview of your site before any commitment.</p>
       </details>
       </div>
 
-      <div class="not-prose mt-12 bg-surface-alt p-8 reveal">
-        <p class="eyebrow mb-2">Get in Touch</p>
-        <h2 class="text-2xl font-bold text-brand mb-3">Prefer email?</h2>
-        <p class="text-text-muted mb-6 max-w-lg">Send your enquiry directly and receive a personal response from me within one working day.</p>
-        <a href="mailto:hello@seo-guildford.uk" class="cta-button">Email hello@seo-guildford.uk</a>
-      </div>
+
 
       <div class="mt-8 pt-6 border-t border-border text-sm text-text-muted">
         <p>Explore more: <a href="/">Home</a> · <a href="/services/">Services</a> · <a href="/free-seo-audit-guildford/">Free SEO Audit</a> · <a href="/areas/">Areas We Cover</a></p>

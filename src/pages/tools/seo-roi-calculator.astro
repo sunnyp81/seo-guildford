@@ -30,7 +30,7 @@ const schema = [
         "name": "How accurate is this SEO ROI calculator?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "This calculator provides a directional estimate based on the inputs you supply. Real-world SEO performance depends on competition, content quality, technical health, and search algorithm updates. Use the figures as a planning baseline rather than a guarantee, then validate with actual Google Search Console data once your campaign is running."
+          "text": "This calculator provides a directional estimate based on the inputs you supply. Real-world SEO performance depends on competition, content quality, technical health, and search algorithm updates. Use the figures as a planning baseline, not a guarantee. Then validate them with actual Google Search Console data once your campaign is running."
         }
       },
       {
@@ -46,7 +46,7 @@ const schema = [
         "name": "How long until I see ROI from SEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting \"near me\" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority, and the competitiveness of your target keywords."
+          "text": "Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting \"near me\" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority and the competitiveness of your target keywords."
         }
       }
     ]
@@ -81,17 +81,17 @@ const schema = [
 
           <div class="space-y-6">
             <div>
-              <label for="dealValue" class="block text-sm font-semibold text-brand mb-1">Average Deal / Order Value (£)</label>
+              <label for="dealValue" class="block text-sm font-semibold text-brand mb-1">Average deal or order value (£)</label>
               <input type="number" id="dealValue" value="800" placeholder="e.g. 800" min="1" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <div>
-              <label for="monthlyVisitors" class="block text-sm font-semibold text-brand mb-1">Monthly Organic Visitors</label>
+              <label for="monthlyVisitors" class="block text-sm font-semibold text-brand mb-1">Monthly organic visitors</label>
               <input type="number" id="monthlyVisitors" value="400" placeholder="e.g. 400" min="0" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <div>
-              <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current Conversion Rate: <span id="conversionDisplay" class="text-accent font-bold">1.5%</span></label>
+              <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current conversion rate: <span id="conversionDisplay" class="text-accent font-bold">1.5%</span></label>
               <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="1.5" class="w-full accent-[#4FD1C5]" />
               <div class="flex justify-between text-xs text-text-muted mt-1">
                 <span>0.5%</span>
@@ -100,12 +100,12 @@ const schema = [
             </div>
 
             <div>
-              <label for="seoInvestment" class="block text-sm font-semibold text-brand mb-1">Monthly SEO Investment (£)</label>
+              <label for="seoInvestment" class="block text-sm font-semibold text-brand mb-1">Monthly SEO investment (£)</label>
               <input type="number" id="seoInvestment" value="1000" placeholder="e.g. 1000" min="1" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <fieldset>
-              <legend class="block text-sm font-semibold text-brand mb-2">Expected Traffic Growth</legend>
+              <legend class="block text-sm font-semibold text-brand mb-2">Expected traffic growth</legend>
               <div class="flex flex-wrap gap-3">
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
                   <input type="radio" name="growth" value="50" checked class="accent-[#4FD1C5]" />
@@ -154,7 +154,7 @@ const schema = [
               <p id="roiPercent" class="font-mono text-4xl font-extrabold text-accent transition-colors duration-300">140%</p>
             </div>
           </div>
-          <p class="text-sm text-text-muted mt-4">This estimates revenue, not profit. The growth rates are assumptions you choose, not forecasts, and the result depends on your own numbers.</p>
+          <p class="text-sm text-text-muted mt-4">This estimates revenue, not profit. The growth rates are assumptions you choose, not forecasts. The result depends on your own numbers.</p>
         </div>
 
       </div>
@@ -172,13 +172,13 @@ const schema = [
   </section>
 
   <!-- FAQ -->
-  <section class="max-w-3xl mx-auto px-4 pb-16 reveal">
+  <section class="max-w-6xl mx-auto px-6 pb-16 reveal"><div style="max-width:46rem">
     <h2 class="text-2xl font-heading font-bold text-brand mb-6">Frequently asked questions</h2>
     <div class="space-y-3">
       <details class="faq-item">
         <summary class="font-heading font-semibold text-brand">How accurate is this SEO ROI calculator?</summary>
         <div class="pt-3 text-text-muted">
-          <p>This calculator provides a directional estimate based on the inputs you supply. Real-world SEO performance depends on competition, content quality, technical health, and search algorithm updates. Use the figures as a planning baseline rather than a guarantee, then validate with actual Google Search Console data once your campaign is running.</p>
+          <p>This calculator provides a directional estimate based on the inputs you supply. Real-world SEO performance depends on competition, content quality, technical health, and search algorithm updates. Use the figures as a planning baseline, not a guarantee. Then validate them with actual Google Search Console data once your campaign is running.</p>
         </div>
       </details>
       <details class="faq-item">
@@ -190,10 +190,11 @@ const schema = [
       <details class="faq-item">
         <summary class="font-heading font-semibold text-brand">How long until I see ROI from SEO?</summary>
         <div class="pt-3 text-text-muted">
-          <p>Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting "near me" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority, and the competitiveness of your target keywords.</p>
+          <p>Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting "near me" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority and the competitiveness of your target keywords.</p>
         </div>
       </details>
     </div>
+  </div>
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-16">

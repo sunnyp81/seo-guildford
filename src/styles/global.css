@@ -815,3 +815,13 @@ input, textarea, select { color: var(--color-brand); }
   box-shadow: 0 1.2rem 2.4rem -1.4rem rgba(0,0,0,0.9), 0 0 36px -18px rgba(79,209,197,0.45), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 .page-open .hero-inner { max-width: 72rem; }
+
+/* Round 3: quieter prose headings, larger small text, contact form in the hero */
+.doc .prose h2::before, .doc.prose h2::before { display: none; }
+.doc .prose h2, .doc.prose h2 { padding-top: 0; margin-top: 2.75rem; }
+.text-sm { font-size: 0.95rem !important; }
+.text-xs { font-size: 0.86rem !important; }
+.crumbs { font-size: 0.95rem; }
+.hero-side { min-width: 0; }
+.hero-side .sheet { padding: 1.5rem; }
+.hero-side label { font-size: 0.95rem; }

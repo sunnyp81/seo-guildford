@@ -17,7 +17,8 @@ interface Props {
   note?: string;
 }
 const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Get my free audit" }, secondary = null, proof, tools = false, note } = Astro.props;
-const hasSheet = !!glance;
+const hasSide = Astro.slots.has('side');
+const hasSheet = !!glance || hasSide;
 ---
 <section class="hero page-open">
   <div class={`hero-inner ${hasSheet ? 'hero-split' : ''}`}>
@@ -45,7 +46,8 @@ const hasSheet = !!glance;
       {note && <p class="cta-note">{note}</p>}
       <slot name="after-actions" />
     </div>
-    {hasSheet && (
+    {hasSide && !glance && <div class="hero-side"><slot name="side" /></div>}
+    {glance && (
       <aside class="sheet" aria-label={glance!.heading ?? "At a glance"}>
         <div class="sheet-head">
           <span>{glance!.heading ?? "At a glance"}</span>
