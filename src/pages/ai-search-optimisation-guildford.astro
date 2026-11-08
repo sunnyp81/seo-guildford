@@ -5,6 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
 import QuickForm from '../components/QuickForm.astro';
+import ChecklistFigure from '../components/ChecklistFigure.astro';
 
 const schema = [
   {
@@ -126,10 +127,10 @@ const schema = [
   ogType="website"
 >
   <PageHero
-    eyebrow="AI Search Optimisation"
+    eyebrow="AI Search Optimisation &middot; serving Guildford and Surrey"
     crumbs={[{"label": "Services", "href": "/services/"}, {"label": "AI Search Optimisation"}]}
     lead="I help Guildford and Surrey businesses get found and cited by ChatGPT, Google AI Overviews, Perplexity and Copilot. I start by checking how they describe you today."
-    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Book my free audit"}}
     glance={{"heading": "At a glance", "points": ["AI assistants name sources instead of ranking pages, so the aim is to be a source they can use and trust.", "The AI Search Audit checks how ChatGPT, Perplexity, Google AI Overviews and Copilot treat your business.", "Fixes cover consistent business details, structured data and answers that are easy to quote.", "First changes in citations and entity recognition usually show within 4 to 8 weeks. No one can guarantee a citation."], "facts": [{"k": "AI Search Audit", "v": "£400 one-off"}, {"k": "Ongoing AI search work", "v": "Included from the £2,000 a month Premium plan"}, {"k": "Platforms checked", "v": "ChatGPT, Perplexity, Google AI Overviews, Copilot"}, {"k": "Who does the work", "v": "Me, directly"}]}}
   >
     <Fragment slot="title">AI Search Optimisation for <span class="mark">Guildford</span> Businesses</Fragment>
@@ -229,6 +230,8 @@ const schema = [
     <p>Perplexity operates as a dedicated AI search engine. Every answer includes inline citations with numbered references linking to source pages. Perplexity uses real-time web search combined with retrieval-augmented generation (RAG), sending queries to multiple search engines, retrieving and ranking results, then using an LLM to synthesise an answer.</p>
 
     <p>Perplexity's citation-heavy format makes it one of the most transparent AI search platforms. Optimising for Perplexity shares significant overlap with traditional SEO: pages that rank well in organic search and have clear, well-structured content are more likely to be retrieved and cited.</p>
+
+    <ChecklistFigure title="AI platforms that matter" items={["ChatGPT and SearchGPT","Google AI Overviews","Perplexity","Claude","Microsoft Copilot","Apple Intelligence"]} caption="Each platform retrieves and cites sources in its own way." />
 
     <h3>Claude</h3>
 
@@ -421,6 +424,8 @@ const schema = [
 
     <p>AI search affects the entire customer journey. For B2B companies near the <strong>University of Surrey</strong>, AI assistants influence vendor shortlisting and procurement research. For consumer-facing businesses on the <strong>High Street</strong> and in <strong>Tunsgate Quarter</strong>, local AI queries drive foot traffic and calls. For professional services firms, AI citations build credibility and referral flows.</p>
 
+    <ChecklistFigure title="Where AI search affects the customer journey" items={["Vendor shortlisting for B2B companies","Procurement research","Local queries that drive foot traffic and calls","Credibility and referral flows for professional services"]} caption="Absence from AI answers means competitors get the recommendation." />
+
     <p>The businesses that remain invisible to AI search are not simply missing a channel, they are being quietly replaced in AI-generated recommendations by competitors who have done the work. Absence here is not neutral; it is a concession.</p>
 
     </div>
@@ -446,6 +451,8 @@ const schema = [
     <h3>Google Business Profile and AI</h3>
 
     <p>Google Business Profile data feeds into Google AI Overviews for local queries. A fully optimised GBP with complete business information, regular posts, photos, and reviews strengthens your presence in AI-generated local answers. Other AI platforms also access GBP data indirectly through web search results that surface GBP information.</p>
+
+    <ChecklistFigure title="A strong Google Business Profile has" items={["Complete business information","Regular posts","Photos","Reviews"]} caption="This strengthens your presence in AI-generated local answers." />
 
     <div class="not-prose my-12 py-8 border-y border-border">
       <p class="eyebrow mb-3">Quick enquiry</p>
@@ -623,6 +630,8 @@ const schema = [
     <h3>Professional services</h3>
 
     <p>Solicitors, accountants, financial advisers, and consultants in Guildford compete for high-value local queries. AI search changes the competitive dynamics: a smaller firm with excellent AI search optimisation can appear in AI citations alongside or instead of larger firms with bigger traditional advertising budgets. The key is topical authority in specific practice areas, supported by consistent entity data and structured content.</p>
+
+    <ChecklistFigure title="Surrey sectors covered" items={["Technology and SaaS","Gaming and creative","Professional services","Property and real estate","Healthcare"]} caption="Each sector faces different AI search challenges." />
 
     <h3>Property and real estate</h3>
 

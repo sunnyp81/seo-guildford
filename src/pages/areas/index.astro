@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Icon from '../../components/Icon.astro';
+import ChecklistFigure from '../../components/ChecklistFigure.astro';
 
 const title = 'SEO Surrey: Consultant for Guildford, Farnham, Woking';
 const description = 'Solo SEO consultant covering Guildford, Farnham, Woking, Godalming and Camberley across Surrey. Remote-first, with area-specific search work.';
@@ -80,6 +81,7 @@ const schema = [
     lead="I provide local SEO for Guildford town centre and every major suburb. I also cover the wider Surrey commuter belt and Hampshire border towns including Aldershot and Farnham."
     glance={{"heading": "At a glance", "points": ["Guildford town centre and the main suburbs.", "The wider Surrey commuter belt.", "Hampshire border towns including Aldershot and Farnham.", "Each area gets its own local search research, not a template with the town name swapped."], "facts": [{"k": "Service area", "v": "Guildford, Surrey and Hampshire"}, {"k": "Who does the work", "v": "Me, directly"}, {"k": "Free audit report", "v": "2 to 3 working days, PDF by email"}]}}
     tools={false}
+    photo={{"src": "/images/guildford-high-street.jpg", "alt": "Timber-framed buildings on Guildford High Street", "credit": "Photo: 46 High Street, Guildford by Tim Sheerman-Chase, CC BY 2.0, via Wikimedia Commons.", "creditHref": "https://commons.wikimedia.org/wiki/File:46_High_Street,_Guildford_(side).jpg"}}
   >
     <Fragment slot="title">SEO Services Across <span class="mark">Guildford</span>, Surrey, and Hampshire</Fragment>
   </PageHero>
@@ -123,6 +125,8 @@ const schema = [
       <p>The <strong>Tunsgate Quarter</strong>, redeveloped in 2018, attracts a more affluent demographic and a cluster of independent retailers. SEO for Tunsgate businesses gravitates toward lifestyle and premium service queries rather than generic category terms, a subtle but commercially significant distinction.</p>
 
       <p>The <strong>Cathedral business district</strong> surrounding Guildford Cathedral is home to legal firms, accountancy practices, and financial advisers. These businesses require authority-driven SEO strategies built on thought leadership content, professional directory citations, and schema markup for professional services. Competition here is particularly fierce; the Cathedral area concentrates some of Surrey's most established firms, and dislodging them from the top positions demands patience and precision in equal measure.</p>
+
+      <ChecklistFigure title="Town centre areas I work in" items={["The High Street", "Friary Centre", "Tunsgate Quarter", "Cathedral business district"]} caption="Each area has its own search demand and competition." />
       </div>
 
       <div class="reveal">
@@ -149,6 +153,8 @@ const schema = [
       <h3>Shalford and southern villages</h3>
 
       <p><strong>Shalford</strong>, just south of the town centre, retains a distinct village identity that colours the way its residents search. They type "Shalford" rather than "Guildford", making hyper-local keyword targeting not just useful but essential. The same pattern holds for <strong>Compton</strong>, <strong>Bramley</strong>, <strong>Wonersh</strong>, and <strong>Chilworth</strong>, each village a self-contained micro-search ecosystem with its own rhythms and vocabulary.</p>
+
+      <ChecklistFigure title="Guildford suburbs and villages" items={["Onslow Village", "Merrow and Burpham", "Stoughton, Park Barn and Bellfields", "Westborough, Pewley Hill and Charlotteville", "Shalford and southern villages"]} caption="Each suburb has a distinct demographic profile." />
       </div>
 
       <div class="reveal">
@@ -167,6 +173,8 @@ const schema = [
       <h3>Farnham, Camberley, and western Surrey</h3>
 
       <p><strong>Farnham</strong> straddles the Surrey-Hampshire border, creating dual-county search opportunities that most agencies overlook entirely. <strong>Camberley</strong> serves the M3 corridor and carries a different commercial profile, with more military-adjacent and logistics businesses shaping the query mix. <strong>Cobham</strong>, <strong>Esher</strong>, and <strong>Weybridge</strong> in the north-east of the county rank among the wealthiest towns in the UK, and SEO strategies here must mirror the premium positioning that their local consumers instinctively expect, anything that feels mass-market will be scrolled past.</p>
+
+      <ChecklistFigure title="Wider Surrey towns I cover" items={["Woking", "Godalming and Cranleigh", "Farnham", "Camberley", "Cobham, Esher and Weybridge"]} caption="Each town has different competitive dynamics." />
       </div>
 
       <div class="reveal">
@@ -202,6 +210,8 @@ const schema = [
       <p>A national SEO agency will treat Guildford as a single pin on a map, and that flattened perspective misses the reality entirely. A dentist in Merrow competes against different practices than a dentist in Stoughton. A solicitor in the Cathedral district targets different keywords than one in Woking. An estate agent covering Pewley Hill needs fundamentally different content than one focused on Park Barn. The local search landscape is not a monolith; it is a mosaic.</p>
 
       <p>Local knowledge directly shapes keyword selection. I know that Guildford residents search for "the Mount" rather than "Pewley Down", that "Guildford" and "GU1" produce meaningfully different search results, and which suburbs Google clusters together versus those it treats as distinct locations. This granular understanding, the kind you can only build by working in an area over time, not by scraping a postcode database, translates into more precise targeting and faster ranking improvements.</p>
+
+      <ChecklistFigure title="Where local knowledge shapes the work" items={["Residents search for the Mount rather than Pewley Down", "Guildford and GU1 produce different results", "Google clusters some suburbs together and treats others as distinct", "Area pages carry genuine local references"]} caption="Built from working in the area over time." />
 
       <p>Every area page I build for clients contains genuine local references, not templated copy with only the town name swapped. Google's helpful content system specifically penalises that approach, so my local pages are written from real area knowledge.</p>
 

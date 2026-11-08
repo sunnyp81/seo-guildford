@@ -5,6 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
 import QuickForm from '../components/QuickForm.astro';
+import ChecklistFigure from '../components/ChecklistFigure.astro';
 
 const schema = [
   {
@@ -120,10 +121,10 @@ const schema = [
 >
 
 <PageHero
-    eyebrow="Comprehensive Review"
+    eyebrow="Comprehensive Review &middot; serving Guildford and Surrey"
     crumbs={[{"label": "Services", "href": "/services/"}, {"label": "SEO Audit"}]}
     lead="A comprehensive audit shows what holds your site back in search and what to fix first. You get a ranked 90-day plan, not a data dump."
-    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Book my free audit"}}
     glance={{"heading": "At a glance", "points": ["The audit covers four things: technical set-up, content quality, local search presence and AI search readiness.", "You get a prioritised 90-day action plan, with competitor benchmarking and a content gap analysis.", "It takes five to ten working days, depending on the size of your site.", "A free, shorter audit is available first if you want a look before paying."], "facts": [{"k": "Price", "v": "£750 fixed fee"}, {"k": "Turnaround", "v": "5 to 10 working days"}, {"k": "You receive", "v": "Report and 90-day action plan"}, {"k": "Free option", "v": "Free SEO audit, 2 to 3 working days"}]}}
   >
     <Fragment slot="title">Comprehensive Website <span class="mark">Audit</span> for Guildford Businesses</Fragment>
@@ -155,7 +156,7 @@ const schema = [
     <p>Without an audit, you are guessing, and in a market this competitive guessing is not enough. These are the patterns I encounter repeatedly with Guildford businesses:</p>
 
     <ul>
-      <li>Websites where 30 to 60 per cent of pages are not indexed by Google, despite appearing entirely normal to visitors.</li>
+      <li>Websites where many pages are not indexed by Google, despite appearing entirely normal to visitors.</li>
       <li>Sites passing desktop speed tests but failing mobile Core Web Vitals, where Google actually measures performance.</li>
       <li>Local businesses with inconsistent Name, Address, Phone (NAP) data across directories, which suppresses local pack visibility.</li>
       <li>Content that targets keywords with negligible local search volume while ignoring terms that Guildford residents actually search.</li>
@@ -169,6 +170,8 @@ const schema = [
     <h2>Technical audit components</h2>
 
     <p>The technical audit examines your website's infrastructure, the foundation that determines whether search engines can access and understand your content. My <a href="/technical-seo-guildford/">technical SEO service</a> covers implementation, but the audit identifies every issue as a necessary first step.</p>
+
+    <ChecklistFigure title="Technical audit components" items={["Crawlability and indexation", "Site speed and Core Web Vitals", "URL architecture and internal linking", "Structured data validation", "Security and HTTPS"]} caption="Each is covered in detail below." />
 
     <h3>Crawlability and indexation</h3>
 
@@ -195,6 +198,8 @@ const schema = [
     <h2>Content audit components</h2>
 
     <p>Technical infrastructure ensures your pages are crawled and indexed; content quality determines where they rank. The content audit evaluates every page against Google's quality standards and your competitors' content.</p>
+
+    <ChecklistFigure title="Content audit components" items={["Thin and duplicate content analysis", "Keyword targeting and search intent", "Content depth and topical authority", "Title tags and meta descriptions"]} caption="Each is covered in detail below." />
 
     <h3>Thin and duplicate content analysis</h3>
 
@@ -223,6 +228,8 @@ const schema = [
     <h2>Local SEO audit components</h2>
 
     <p>For businesses serving Guildford and surrounding Surrey towns, local search visibility often drives the highest-value traffic. The local audit examines every factor that affects your visibility in Google's local pack and map results.</p>
+
+    <ChecklistFigure title="Local SEO audit components" items={["Google Business Profile", "Citation consistency", "Local content and landing pages", "Review profile"]} caption="Each is covered in detail below." />
 
     <h3>Google Business Profile</h3>
 

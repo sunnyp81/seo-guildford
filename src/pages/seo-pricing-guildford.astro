@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
+import ChecklistFigure from '../components/ChecklistFigure.astro';
 
 const schema = [
   {
@@ -215,10 +216,10 @@ const oneOffs = [
   schema={schema}
 >
   <PageHero
-    eyebrow="Pricing"
+    eyebrow="Pricing &middot; serving Guildford and Surrey"
     crumbs={[{"label": "Services", "href": "/services/"}, {"label": "Pricing"}]}
     lead="Monthly SEO plans start at £500 and audits at £400. Each plan lists what you get, and you can start with a free audit."
-    cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
+    cta={{"href": "/free-seo-audit-guildford/", "label": "Book my free audit"}}
     glance={{"heading": "At a glance", "points": ["Monthly plans run from £500 (Starter) to £3,500 or more (Enterprise).", "One-off audits start at £400, with technical audits at £500 and comprehensive audits at £750.", "Monthly plans have a three-month initial term, then roll month to month with 30 days' notice.", "A free audit is available first, so you can see where you stand before choosing a plan."], "facts": [{"k": "Starter", "v": "£500 a month"}, {"k": "Growth", "v": "£1,000 a month"}, {"k": "Premium", "v": "£2,000 a month"}, {"k": "Enterprise", "v": "From £3,500 a month"}]}}
     proof={[{"v": "UK price guide", "l": "How my prices compare with eight published 2026 guides.", "href": "/seo-cost-uk/"}, {"v": "Free first audit", "l": "see where you stand before choosing a plan.", "href": "/free-seo-audit-guildford/"}]}
   >
@@ -274,6 +275,8 @@ const oneOffs = [
       <h2>One-off services</h2>
 
       <p>Not every business requires an ongoing retainer. These standalone services are scoped, quoted, and delivered as one-off projects, each with a clear deliverable and defined timeline. See the full <a href="/seo-audit-guildford/">SEO audit service</a> page for what a comprehensive audit covers in detail.</p>
+
+      <div class="overflow-x-auto not-prose my-6" tabindex="0" role="region" aria-label="One-off audit prices"><table class="w-full text-sm border border-border"><thead><tr><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">One-off audit</th><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Price</th></tr></thead><tbody><tr><td class="p-3 border-b border-border align-top">AI search audit</td><td class="p-3 border-b border-border align-top">£400</td></tr><tr><td class="p-3 border-b border-border align-top">Technical audit</td><td class="p-3 border-b border-border align-top">£500</td></tr><tr><td class="p-3 border-b border-border align-top">Comprehensive audit</td><td class="p-3 border-b border-border align-top">£750</td></tr></tbody></table></div>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 my-8">
@@ -307,6 +310,8 @@ const oneOffs = [
       <h3>Healthcare practice near Royal Surrey Hospital</h3>
 
       <p>A private physiotherapy clinic on the Starter plan at £500 per month targets "physiotherapy Guildford" and related local terms. Within four months, the Google Business Profile optimisation alone increases inbound calls by 25%. Combined with on-page improvements, the practice adds 20 new patient bookings per month at an average of £65 per session, with most patients booking six-session courses, that amounts to £7,800 per month from a £500 investment.</p>
+
+      <div class="overflow-x-auto not-prose my-6" tabindex="0" role="region" aria-label="Illustrative ROI scenarios"><table class="w-full text-sm border border-border"><thead><tr><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Scenario</th><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Plan</th><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Monthly spend</th><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Stated outcome</th></tr></thead><tbody><tr><td class="p-3 border-b border-border align-top">Estate agent near Guildford High Street</td><td class="p-3 border-b border-border align-top">Growth</td><td class="p-3 border-b border-border align-top">£1,000</td><td class="p-3 border-b border-border align-top">40 extra organic leads a month and £18,000 commission from two conversions (18:1)</td></tr><tr><td class="p-3 border-b border-border align-top">B2B software firm near the University of Surrey</td><td class="p-3 border-b border-border align-top">Premium</td><td class="p-3 border-b border-border align-top">£2,000</td><td class="p-3 border-b border-border align-top">15 qualified demo requests a month and £37,500 new revenue at a 10% close rate</td></tr><tr><td class="p-3 border-b border-border align-top">Physiotherapy clinic near Royal Surrey Hospital</td><td class="p-3 border-b border-border align-top">Starter</td><td class="p-3 border-b border-border align-top">£500</td><td class="p-3 border-b border-border align-top">20 new patient bookings a month and £7,800 a month</td></tr></tbody></table></div>
       </div>
 
       <div class="reveal">
@@ -329,6 +334,8 @@ const oneOffs = [
       <h3>AI search is now table stakes</h3>
 
       <p>Guildford's technology-aware demographic adopts AI search tools faster than average, and businesses here need to be visible not merely in Google's traditional results but also in AI Overviews, ChatGPT, Perplexity, and Copilot. This additional layer of optimisation is included in the Premium and Enterprise plans because ignoring it means ceding visibility to competitors who have already taken action.</p>
+
+      <ChecklistFigure title="Why Surrey SEO costs what it does" items={["Higher customer lifetime values", "A competitive search landscape", "Specialist knowledge required", "AI search is now table stakes"]} caption="Each reason is explained above." />
       </div>
 
       <div class="reveal">
@@ -367,6 +374,8 @@ const oneOffs = [
       <h3>Choose Enterprise if</h3>
 
       <p>You manage multiple locations, have complex technical requirements (large e-commerce catalogues, custom CMS platforms, international considerations), or need a dedicated strategist embedded within your marketing team. Typical clients include multi-branch businesses across Surrey and Hampshire, franchise operations, and large employers near the University of Surrey.</p>
+
+      <div class="overflow-x-auto not-prose my-6" tabindex="0" role="region" aria-label="Which plan fits"><table class="w-full text-sm border border-border"><thead><tr><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Plan</th><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Price a month</th><th scope="col" class="text-left p-3 border-b-2 border-border font-mono uppercase tracking-wide text-xs font-medium">Choose it if</th></tr></thead><tbody><tr><td class="p-3 border-b border-border align-top">Starter</td><td class="p-3 border-b border-border align-top">£500</td><td class="p-3 border-b border-border align-top">You are a small local business with a single location and a modest budget</td></tr><tr><td class="p-3 border-b border-border align-top">Growth</td><td class="p-3 border-b border-border align-top">£1,000</td><td class="p-3 border-b border-border align-top">You are established and ready to invest in content and authority</td></tr><tr><td class="p-3 border-b border-border align-top">Premium</td><td class="p-3 border-b border-border align-top">£2,000</td><td class="p-3 border-b border-border align-top">You work in a competitive sector and want to be visible in AI search too</td></tr><tr><td class="p-3 border-b border-border align-top">Enterprise</td><td class="p-3 border-b border-border align-top">From £3,500</td><td class="p-3 border-b border-border align-top">You manage multiple locations or have complex technical needs</td></tr></tbody></table></div>
       </div>
 
       <div class="reveal">

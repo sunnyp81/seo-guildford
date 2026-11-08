@@ -15,8 +15,9 @@ interface Props {
   proof?: { v: string; l: string; href?: string }[];
   tools?: string[] | false;
   note?: string;
+  photo?: { src: string; alt: string; credit: string; creditHref: string };
 }
-const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Get my free audit" }, secondary = null, proof, tools = false, note } = Astro.props;
+const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo } = Astro.props;
 const hasSide = Astro.slots.has('side');
 const hasSheet = !!glance || hasSide;
 ---
@@ -49,6 +50,12 @@ const hasSheet = !!glance || hasSide;
     {hasSide && !glance && <div class="hero-side"><slot name="side" /></div>}
     {glance && (
       <aside class="sheet" aria-label={glance!.heading ?? "At a glance"}>
+        {photo && (
+          <figure class="sheet-photo">
+            <img src={photo.src} alt={photo.alt} width="1200" height="800" loading="eager" decoding="async" />
+            <figcaption>{photo.credit} <a href={photo.creditHref} target="_blank" rel="noopener noreferrer">Source and licence</a></figcaption>
+          </figure>
+        )}
         <div class="sheet-head">
           <span>{glance!.heading ?? "At a glance"}</span>
           <span>Checked 7 November 2026</span>

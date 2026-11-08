@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import ContactForm from '../components/ContactForm.astro';
+import FlowDiagram from '../components/FlowDiagram.astro';
+import ChecklistFigure from '../components/ChecklistFigure.astro';
 
 const title = "About SEO Guildford: Guildford Search Consultancy";
 const description = "SEO Guildford is a specialist search consultancy serving Guildford, Surrey and Hampshire. Data-driven methodology, technical precision, AI-search expertise.";
@@ -97,6 +99,7 @@ const schema = [breadcrumbSchema, webPageSchema, orgSchema, faqSchema];
     lead="SEO Guildford is my search consultancy for businesses in Guildford, Surrey and Hampshire. I work on visibility in Google, Bing and AI search tools. I work directly with business owners."
     glance={{"heading": "At a glance", "points": ["Remote-first search consultancy for Guildford and Surrey.", "Built on first-party data from Google Search Console and Bing Webmaster Tools.", "No account-manager layer and no outsourced delivery.", "The person who diagnoses the problem implements the fix."], "facts": [{"k": "Registered office", "v": "Reading"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire"}, {"k": "Setup", "v": "Solo consultant, remote-first"}, {"k": "Free audit report", "v": "2 to 3 working days, PDF by email"}]}}
     tools={false}
+    photo={{"src": "/images/guildford-high-street.jpg", "alt": "Timber-framed buildings on Guildford High Street", "credit": "Photo: 46 High Street, Guildford by Tim Sheerman-Chase, CC BY 2.0, via Wikimedia Commons.", "creditHref": "https://commons.wikimedia.org/wiki/File:46_High_Street,_Guildford_(side).jpg"}}
   >
     <Fragment slot="title">About SEO <span class="mark">Guildford</span></Fragment>
   </PageHero>
@@ -109,6 +112,8 @@ const schema = [breadcrumbSchema, webPageSchema, orgSchema, faqSchema];
       <p>I believe that effective search optimisation begins with honest assessment and ends with commercial impact. The work needs technical knowledge and patience, and I check my own assumptions as well as yours. SEO is ongoing work: results build over time, and shortcuts usually cost more than they save.</p>
 
       <p>My methodology is grounded in first-party data. Before any strategy takes shape, I conduct a thorough technical audit, analyse search console data across both Google and Bing, and map the competitors in your market. Recommendations emerge from evidence, not convention. Every action I take is calibrated against a single question: will this generate revenue, leads, or bookings that justify the investment?</p>
+
+      <FlowDiagram title="How I decide what to do" steps={[{"t": "Technical audit", "d": "Before any strategy takes shape"}, {"t": "Search console data", "d": "Across both Google and Bing"}, {"t": "Competitor map", "d": "The competitors in your market"}, {"t": "Revenue question", "d": "Will this generate revenue, leads or bookings?"}]} caption="Recommendations come from evidence, not convention." />
 
       <p>This approach reflects a broader conviction. Rankings and traffic are intermediate signals, necessary but insufficient. Impressions without clicks, rankings for terms that never convert, traffic that fails to translate into enquiries: these are vanity metrics, and I identify and deprioritise them early. What matters is the commercial outcome, and I structure every engagement around that principle.</p>
       </div>
@@ -124,6 +129,8 @@ const schema = [breadcrumbSchema, webPageSchema, orgSchema, faqSchema];
 
       <p>Beyond the town itself, the surrounding communities of Woking, Godalming, Farnham, Camberley, and Cobham extend my natural catchment. Each possesses its own commercial character, but they share proximity to the A3 and M25 corridors and a customer base that researches online before making purchasing decisions. For service businesses in this region, local search visibility is not an optional enhancement. It is the primary acquisition channel.</p>
 
+      <ChecklistFigure title="Towns around Guildford I cover" items={["Woking", "Godalming", "Farnham", "Camberley", "Cobham"]} caption="My natural catchment beyond the town. I also serve clients nationally." />
+
       <p>Guildford Cathedral, visible from much of the town as it sits on Stag Hill, overlooks a market that rewards those who invest properly in their online presence. The competition is real, and that is precisely why specialist search consultancy matters here.</p>
       </div>
 
@@ -138,11 +145,15 @@ const schema = [breadcrumbSchema, webPageSchema, orgSchema, faqSchema];
 
       <p>In practice, this means examining crawl budgets, indexation patterns, internal linking architecture, structured data validity, Core Web Vitals scores, and server response behaviour. These are not optional refinements to be considered once content strategy is in place. All later work depends on them.</p>
 
+      <ChecklistFigure title="What a technical review examines" items={["Crawl budgets", "Indexation patterns", "Internal linking architecture", "Structured data validity", "Core Web Vitals scores", "Server response behaviour"]} caption="Technical work comes first because all later work depends on it." />
+
       <h3>AI-search aware</h3>
 
       <p>The search landscape is undergoing a structural transformation. Google AI Overviews, ChatGPT with browsing capability, Perplexity, and Microsoft Copilot are reshaping how users discover and consume information. Businesses that optimise solely for traditional blue-link rankings are already losing ground.</p>
 
       <p>I build AI search readiness into every engagement. This encompasses entity optimisation, structured data that AI systems can parse reliably, content architecture designed for extraction and citation, and positioning strategies that establish my clients as trusted sources across AI platforms. Further detail is available on my <a href="/ai-search-optimisation-guildford/">AI search optimisation</a> page.</p>
+
+      <ChecklistFigure title="AI search readiness in every engagement" items={["Entity optimisation", "Structured data AI systems can parse", "Content built for extraction and citation", "Positioning as a trusted source"]} caption="Built into every engagement." />
 
       <h3>Transparent reporting</h3>
 
@@ -195,6 +206,8 @@ const schema = [breadcrumbSchema, webPageSchema, orgSchema, faqSchema];
       <h3>What my clients can expect</h3>
 
       <p>A clear plan of action within the first fortnight. Technical issues identified and prioritised by commercial impact. Content recommendations substantiated by search demand data. Monthly reporting that addresses the metrics you care about, rankings, traffic, conversions, and revenue. No lock-in contracts. My work either delivers results or it does not, and you are free to decide accordingly.</p>
+
+      <ChecklistFigure title="What my clients can expect" items={["A clear plan of action in the first fortnight", "Issues prioritised by commercial impact", "Content recommendations backed by search demand data", "Monthly reporting on rankings, traffic, conversions and revenue"]} caption="Reporting covers what was done, what changed and what comes next." />
 
       <p>Many engagements begin with a <a href="/free-seo-audit-guildford/">free SEO audit</a> that identifies the highest-impact opportunities before any commitment is made.</p>
       </div>

@@ -4,6 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Icon from '../../components/Icon.astro';
 import ProofStats from '../../components/ProofStats.astro';
+import ChecklistFigure from '../../components/ChecklistFigure.astro';
 
 const title = "SEO Services Guildford: Technical, Local & AI";
 const description = "SEO services for Guildford businesses covering technical SEO, local visibility, content strategy, AI search optimisation, and measured implementation.";
@@ -94,7 +95,7 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
 <Base title={title} description={description} schema={schema}>
 
 <PageHero
-    eyebrow="Guildford &amp; Surrey"
+    eyebrow="SEO services &middot; serving Guildford and Surrey"
     crumbs={[{"label": "Services"}]}
     lead="I offer technical SEO, content strategy, local SEO, link building and AI search optimisation. You can hire me for one service or all of them. I do the work myself."
     glance={{"heading": "At a glance", "points": ["Technical SEO, SEO audits and AI search optimisation.", "Local SEO and Google Business Profile management.", "Content strategy and link building.", "A free SEO audit is the recommended starting point before a retainer."], "facts": [{"k": "Audits and plans", "v": "Audits from £400. Plans from £500 a month"}, {"k": "Monthly plans", "v": "Three-month initial term. Then month to month with 30 days' notice"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire"}]}}
@@ -149,6 +150,8 @@ const schema = [breadcrumbSchema, webPageSchema, faqSchema];
     <p>Your Google Business Profile is often the first thing a customer sees. It appears before they reach your website.</p>
 
     <p>I handle optimisation, category selection, post scheduling, review strategy, Q&amp;A monitoring and photo guidelines. Regular updates show Google that the business is active.</p>
+
+    <ChecklistFigure title="What Google Business Profile management covers" items={["Optimisation","Category selection","Post scheduling","Review strategy","Q&A monitoring","Photo guidelines"]} caption="Regular updates show Google that the business is active." />
     </div>
 
     <div class="reveal">

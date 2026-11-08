@@ -1,0 +1,17 @@
+---
+// Own visual: a ticked checklist grid. Items restate what the adjacent copy already says.
+interface Props { title: string; items: string[]; caption?: string; }
+const { title, items, caption } = Astro.props;
+---
+<figure class="check glass-fig not-prose">
+  <figcaption class="flow-title">{title}</figcaption>
+  <ul class="check-grid">
+    {items.map((t) => (
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <span>{t}</span>
+      </li>
+    ))}
+  </ul>
+  {caption && <p class="flow-caption">{caption}</p>}
+</figure>

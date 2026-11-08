@@ -1,0 +1,22 @@
+---
+// Own diagram: a sequence of steps joined by arrows. Restates facts from the adjacent copy; never adds new claims.
+interface Step { t: string; d?: string; }
+interface Props { title: string; steps: Step[]; caption?: string; }
+const { title, steps, caption } = Astro.props;
+---
+<figure class="flow glass-fig not-prose">
+  <figcaption class="flow-title">{title}</figcaption>
+  <ol class="flow-steps" style={`--n:${steps.length}`}>
+    {steps.map((s, i) => (
+      <li>
+        <span class="flow-n" aria-hidden="true">{i + 1}</span>
+        <strong>{s.t}</strong>
+        {s.d && <span class="flow-d">{s.d}</span>}
+        {i < steps.length - 1 && (
+          <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        )}
+      </li>
+    ))}
+  </ol>
+  {caption && <p class="flow-caption">{caption}</p>}
+</figure>
