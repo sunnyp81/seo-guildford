@@ -77,22 +77,22 @@ const schema = [
 
         <!-- Inputs -->
         <div>
-          <h2 class="text-2xl font-heading font-bold text-brand mb-6">Your Business Metrics</h2>
+          <h2 class="text-2xl font-heading font-bold text-brand mb-6">Your business metrics</h2>
 
           <div class="space-y-6">
             <div>
               <label for="dealValue" class="block text-sm font-semibold text-brand mb-1">Average Deal / Order Value (£)</label>
-              <input type="number" id="dealValue" value="5000" placeholder="e.g. 5000" min="1" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
+              <input type="number" id="dealValue" value="800" placeholder="e.g. 800" min="1" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <div>
               <label for="monthlyVisitors" class="block text-sm font-semibold text-brand mb-1">Monthly Organic Visitors</label>
-              <input type="number" id="monthlyVisitors" value="500" placeholder="e.g. 500" min="0" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
+              <input type="number" id="monthlyVisitors" value="400" placeholder="e.g. 400" min="0" class="w-full rounded border border-border bg-surface-alt px-4 py-2.5 text-brand font-medium focus:outline-none focus:border-accent" />
             </div>
 
             <div>
-              <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current Conversion Rate: <span id="conversionDisplay" class="text-accent font-bold">2.0%</span></label>
-              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="2" class="w-full accent-[#0F5257]" />
+              <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current Conversion Rate: <span id="conversionDisplay" class="text-accent font-bold">1.5%</span></label>
+              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="1.5" class="w-full accent-[#0F5257]" />
               <div class="flex justify-between text-xs text-text-muted mt-1">
                 <span>0.5%</span>
                 <span>10%</span>
@@ -108,11 +108,11 @@ const schema = [
               <legend class="block text-sm font-semibold text-brand mb-2">Expected Traffic Growth</legend>
               <div class="flex flex-wrap gap-3">
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="50" class="accent-[#0F5257]" />
+                  <input type="radio" name="growth" value="50" checked class="accent-[#0F5257]" />
                   <span class="text-sm font-medium text-brand">Conservative (50%)</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="100" checked class="accent-[#0F5257]" />
+                  <input type="radio" name="growth" value="100" class="accent-[#0F5257]" />
                   <span class="text-sm font-medium text-brand">Moderate (100%)</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
@@ -126,34 +126,35 @@ const schema = [
 
         <!-- Outputs -->
         <div class="flex flex-col justify-center">
-          <h2 class="text-2xl font-heading font-bold text-brand mb-6">Projected Returns</h2>
+          <h2 class="text-2xl font-heading font-bold text-brand mb-6">Projected returns</h2>
 
           <div class="space-y-5">
             <div class="bg-surface-alt rounded p-4 border border-border">
-              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Current monthly revenue from organic</p>
-              <p id="currentRevenue" class="font-mono text-3xl font-bold text-brand transition-colors duration-300">£50,000</p>
+              <p class="text-sm font-semibold text-text-muted mb-1.5">Current monthly revenue from organic</p>
+              <p id="currentRevenue" class="font-mono text-3xl font-bold text-brand transition-colors duration-300">£4,800</p>
             </div>
 
             <div class="bg-surface-alt rounded p-4 border border-border">
-              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Projected monthly revenue</p>
-              <p id="projectedRevenue" class="font-mono text-3xl font-bold text-brand transition-colors duration-300">£100,000</p>
+              <p class="text-sm font-semibold text-text-muted mb-1.5">Projected monthly revenue</p>
+              <p id="projectedRevenue" class="font-mono text-3xl font-bold text-brand transition-colors duration-300">£7,200</p>
             </div>
 
             <div class="bg-surface-alt rounded p-4 border border-border">
-              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Monthly revenue uplift</p>
-              <p id="monthlyUplift" class="font-mono text-3xl font-bold text-accent transition-colors duration-300">+£50,000</p>
+              <p class="text-sm font-semibold text-text-muted mb-1.5">Monthly revenue uplift</p>
+              <p id="monthlyUplift" class="font-mono text-3xl font-bold text-accent transition-colors duration-300">+£2,400</p>
             </div>
 
             <div class="bg-surface-alt rounded p-4 border border-border">
-              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Annual revenue uplift</p>
-              <p id="annualUplift" class="font-mono text-3xl font-bold text-accent transition-colors duration-300">+£600,000</p>
+              <p class="text-sm font-semibold text-text-muted mb-1.5">Annual revenue uplift</p>
+              <p id="annualUplift" class="font-mono text-3xl font-bold text-accent transition-colors duration-300">+£28,800</p>
             </div>
 
             <div class="bg-surface-alt rounded p-5 border border-accent">
-              <p class="font-mono text-xs uppercase tracking-wide text-text-muted mb-1.5">Return on Investment</p>
-              <p id="roiPercent" class="font-mono text-4xl font-extrabold text-accent transition-colors duration-300">4,900%</p>
+              <p class="text-sm font-semibold text-text-muted mb-1.5">Return on Investment</p>
+              <p id="roiPercent" class="font-mono text-4xl font-extrabold text-accent transition-colors duration-300">140%</p>
             </div>
           </div>
+          <p class="text-sm text-text-muted mt-4">This estimates revenue, not profit. The growth rates are assumptions you choose, not forecasts, and the result depends on your own numbers.</p>
         </div>
 
       </div>
@@ -163,7 +164,7 @@ const schema = [
   <!-- Prose -->
   <section class="max-w-3xl mx-auto px-4 pb-16 reveal">
     <div class="prose max-w-none">
-      <h2 class="font-heading text-brand">Why SEO ROI Matters for Guildford Businesses</h2>
+      <h2 class="font-heading text-brand">Why SEO ROI matters for Guildford businesses</h2>
       <p>Guildford sits at the intersection of affluence and commercial density. Average property prices exceed £600,000, the Surrey Research Park houses over 140 companies generating more than £1 billion in annual revenue, and the professional services corridor along the A3 serves clients who expect, and can afford, premium solutions. In this environment, ranking on the first page of Google is not a vanity metric; it is a direct revenue channel.</p>
       <p>The businesses that thrive here, solicitors, architects, financial advisers, SaaS companies spinning out of the University of Surrey, share one characteristic: their customers research extensively before making high-value decisions. A single first-page ranking for a commercial keyword can bring in thousands of pounds in monthly revenue. The calculator above translates that principle into concrete numbers using your own business data.</p>
       <p>Unlike paid search, where traffic stops the moment you pause the budget, organic rankings compound. Content you publish today continues to attract visitors for years, which means the true ROI of SEO increases with every month of sustained effort. For Guildford businesses competing against London agencies for Surrey-based clients, local SEO offers a particularly efficient path: lower keyword difficulty, higher purchase intent, and conversion rates that frequently outperform national averages. The question is not whether SEO generates returns, the data is unambiguous on that, but how quickly you want those returns to start. See my <a href="/seo-pricing-guildford/">SEO pricing for Guildford businesses</a> to compare investment levels, or browse the full <a href="/services/">range of SEO services</a> to see what is included.</p>
@@ -172,7 +173,7 @@ const schema = [
 
   <!-- FAQ -->
   <section class="max-w-3xl mx-auto px-4 pb-16 reveal">
-    <h2 class="text-2xl font-heading font-bold text-brand mb-6">Frequently Asked Questions</h2>
+    <h2 class="text-2xl font-heading font-bold text-brand mb-6">Frequently asked questions</h2>
     <div class="space-y-3">
       <details class="faq-item">
         <summary class="font-heading font-semibold text-brand">How accurate is this SEO ROI calculator?</summary>
@@ -198,7 +199,7 @@ const schema = [
   <!-- CTA -->
   <section class="cta-section reveal">
     <div class="max-w-3xl mx-auto px-4 py-20 text-center">
-      <h2 class="text-3xl font-heading font-extrabold text-brand mb-4">Ready to Turn These Numbers into Reality?</h2>
+      <h2 class="text-3xl font-heading font-extrabold text-brand mb-4">Want these numbers checked against your own site?</h2>
       <p class="text-text-muted mb-8 text-lg">Get a free, no-obligation SEO audit for your Guildford business. I will show you exactly where the growth opportunities are.</p>
       <a href="/free-seo-audit-guildford/" class="cta-button">Get Your Free SEO Audit</a>
     </div>
@@ -220,7 +221,7 @@ const schema = [
       const conversion = parseFloat((document.getElementById('conversionRate') as HTMLInputElement).value) || 0;
       const investment = parseFloat((document.getElementById('seoInvestment') as HTMLInputElement).value) || 0;
       const growthRadio = document.querySelector('input[name="growth"]:checked') as HTMLInputElement;
-      const growth = growthRadio ? parseFloat(growthRadio.value) : 100;
+      const growth = growthRadio ? parseFloat(growthRadio.value) : 50;
 
       const currentRevenue = visitors * (conversion / 100) * dealValue;
       const projectedRevenue = (visitors * (1 + growth / 100)) * (conversion / 100) * dealValue;

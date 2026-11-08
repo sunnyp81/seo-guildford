@@ -88,7 +88,7 @@ const schema = [
       {
         "@type": "Question",
         "name": "Will technical SEO improvements affect my current rankings?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach: audit first, then prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity, and most sites see ranking improvements within four to eight weeks of implementation." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach. I audit first. Then I prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity. Most sites see ranking improvements within four to eight weeks of implementation." }
       },
       {
         "@type": "Question",
@@ -98,12 +98,12 @@ const schema = [
       {
         "@type": "Question",
         "name": "What is the difference between a 301 and 302 redirect, and why does it matter for SEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A 301 redirect signals a permanent move and passes ranking value to the new URL, while a 302 redirect signals a temporary move and tells search engines the original URL should stay indexed. Using a 302 for a permanent change can leave ranking signals stuck on the old URL, which is why redirect type matters during migrations, rebrands, or URL restructuring." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A 301 redirect signals a permanent move and passes ranking value to the new URL. A 302 redirect signals a temporary move and tells search engines the original URL should stay indexed. Using a 302 for a permanent change can leave ranking signals stuck on the old URL. Redirect type matters during migrations, rebrands and URL restructuring." }
       },
       {
         "@type": "Question",
         "name": "What does robots.txt do and can it accidentally block my site from Google?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A robots.txt file tells search engine crawlers which pages or directories they should and should not access. A single misconfigured line, such as a blanket Disallow rule left over from a staging environment, can block an entire site from crawling, which is why robots.txt should be checked after every migration or platform change." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A robots.txt file tells search engine crawlers which pages or directories they should and should not access. A single misconfigured line can block an entire site from crawling. An example is a blanket Disallow rule left over from a staging environment. Check robots.txt after every migration or platform change." }
       }
     ]
   }
@@ -123,7 +123,7 @@ const schema = [
     crumbs={[{"label": "Services", "href": "/services/"}, {"label": "Technical SEO"}]}
     lead="Technical SEO fixes the parts of your site that stop Google crawling, indexing and ranking your pages. I audit it, rank the fixes by impact and carry them out."
     cta={{"href": "/free-seo-audit-guildford/", "label": "Get my free audit"}}
-    glance={{"heading": "At a glance", "points": ["I crawl your site and list what stops Google finding, rendering and indexing your pages.", "Fixes are ranked by effort and likely impact, so the quick wins come first.", "Typical areas: speed and Core Web Vitals, indexation, redirects, structured data and mobile.", "Ranking changes usually show within four to eight weeks of the fixes going live."], "facts": [{"k": "One-off technical audit", "v": "£500"}, {"k": "Ongoing work", "v": "From £500 a month"}, {"k": "Free first look", "v": "Free SEO audit, 2 to 3 working days"}, {"k": "Who does the work", "v": "Me, directly"}]}}
+    glance={{"heading": "At a glance", "points": ["I crawl your site and list what stops Google finding, rendering and indexing your pages.", "Fixes are ranked by effort and likely impact. The quick wins come first.", "Typical areas: speed and Core Web Vitals, indexation, redirects, structured data and mobile.", "Ranking changes usually show within four to eight weeks of the fixes going live."], "facts": [{"k": "One-off technical audit", "v": "£500"}, {"k": "Ongoing work", "v": "From £500 a month"}, {"k": "Free first look", "v": "Free SEO audit, 2 to 3 working days"}, {"k": "Who does the work", "v": "Me, directly"}]}}
     proof={[{"v": "£500", "l": "one-off technical audit. Monthly plans start at £500.", "href": "/seo-pricing-guildford/"}, {"v": "2 to 3 working days", "l": "for the free first look at your site.", "href": "/free-seo-audit-guildford/"}, {"v": "3,510", "l": "Google clicks in October 2026 on my own EV charging site. May was 188.", "href": "/case-studies/"}]}
   >
     <Fragment slot="title">Technical SEO for <span class="mark">Guildford</span> Businesses</Fragment>
@@ -133,88 +133,74 @@ const schema = [
   <div class="prose">
 
     <div class="reveal">
-    <h2>What Is Technical SEO</h2>
+    <h2>What is technical SEO</h2>
 
-    <p>Technical SEO encompasses every aspect of your website that influences how search engines crawl, render, index, and rank your pages. It breaks down into six core components:</p>
+    <p>Technical SEO decides whether Google can crawl, render, index and rank your pages. It has six parts.</p>
 
     <dl class="def-grid not-prose">
-  <div><dt>Site Speed</dt><dd>Server response times and page load speed, measured against Core Web Vitals thresholds.</dd></div>
-  <div><dt>Crawlability</dt><dd>Crawl directives and rendering behaviour, so Googlebot can find and access every page that matters.</dd></div>
-  <div><dt>Indexation</dt><dd>Indexation controls that decide which pages Google actually adds to its index.</dd></div>
-  <div><dt>Structured Data</dt><dd>Structured data markup that helps search engines understand exactly what each page offers.</dd></div>
-  <div><dt>Site Architecture</dt><dd>URL architecture and internal linking that guide crawlers and visitors to the right pages.</dd></div>
-  <div><dt>Mobile Performance</dt><dd>Mobile performance, since Google indexes the mobile version of your site rather than desktop.</dd></div>
+  <div><dt>Site speed</dt><dd>Server response and page load speed, measured against Core Web Vitals thresholds.</dd></div>
+  <div><dt>Crawlability</dt><dd>Crawl directives and rendering, so Googlebot can reach every page that matters.</dd></div>
+  <div><dt>Indexation</dt><dd>Controls that decide which pages Google adds to its index.</dd></div>
+  <div><dt>Structured data</dt><dd>Markup that tells search engines what each page offers.</dd></div>
+  <div><dt>Site architecture</dt><dd>URL structure and internal links that guide crawlers and visitors.</dd></div>
+  <div><dt>Mobile performance</dt><dd>Google indexes the mobile version of your site rather than desktop.</dd></div>
 </dl>
 
-    <p>It is distinct from content SEO and link building, though deeply intertwined with both. You can write brilliant copy and earn formidable backlinks, but if Googlebot cannot crawl a site efficiently or pages take five seconds to render, those efforts yield diminished returns, like pouring water into a bucket riddled with holes. Technical SEO is the foundation layer upon which every other form of optimisation rests.</p>
-
-    <p>Google processes trillions of pages and allocates a finite crawl budget to each domain, a limited resource. Sites with clean architecture, fast responses, and unambiguous signals earn more frequent crawls and more complete indexation, while sites burdened by bloated code, broken links, and contradictory directives find themselves partially indexed at best, invisible at worst.</p>
+    <p>Good copy and strong links earn little on a site that Google cannot crawl or that loads slowly. I fix this layer first.</p>
     </div>
 
     <div class="reveal">
-    <h2>Why Guildford Businesses Need Technical SEO</h2>
+    <h2>Why Guildford businesses need technical SEO</h2>
 
-    <p>Guildford is not a typical market town. <strong>Surrey Research Park</strong> houses technology companies including satellite manufacturer <strong>SSTL</strong> and defence technology firms that spun out of <strong>BAE Systems</strong>. The <strong>University of Surrey</strong> produces a steady pipeline of technology startups, and gaming studios like <strong>Media Molecule</strong> and <strong>Hello Games</strong> have established their headquarters here. These organisations operate complex websites that demand technical precision.</p>
-
-    <p>This commercial landscape creates specific technical SEO challenges, each one a puzzle that rewards analytical thinking over brute-force fixes:</p>
+    <p>The technical problems depend on how the site is built and what it holds. These are the ones I see most.</p>
 
     <ul>
-      <li><strong>Technology companies on Surrey Research Park</strong> often run JavaScript-heavy web applications that search engines struggle to render. React, Angular, and Vue frontends require server-side rendering or pre-rendering strategies to ensure Google can index content reliably.</li>
-      <li><strong>Property agencies</strong> serving Guildford's market, where average property prices exceed £600,000, manage thousands of listing pages that create crawl budget pressure, duplicate content issues, and index bloat from expired listings.</li>
-      <li><strong>Professional services firms</strong> along Guildford High Street compete for high-value local searches where page speed and mobile performance directly affect conversion rates.</li>
-      <li><strong>Gaming studios</strong> publish media-rich sites with large image and video assets that compromise page speed scores without considered optimisation.</li>
-      <li><strong>Healthcare providers</strong> near <strong>Royal Surrey Hospital</strong> must maintain YMYL compliance where technical trust signals carry additional weight in rankings.</li>
+      <li><strong>JavaScript-heavy sites</strong> built on React, Angular or Vue need server-side rendering or pre-rendering so Google can index the content.</li>
+      <li><strong>Property sites</strong> have thousands of listing pages. That causes crawl budget pressure, duplicate content and index bloat from expired listings.</li>
+      <li><strong>Professional services sites</strong> compete for high-value local searches. Page speed and mobile performance affect conversion.</li>
+      <li><strong>Media-heavy sites</strong> carry large images and video that slow pages without optimisation.</li>
+      <li><strong>Healthcare sites</strong> are YMYL. Technical trust signals carry extra weight.</li>
     </ul>
-
-    <p>In every one of these cases, the technical layer is not optional: it is the boundary line between visibility and obscurity in a market that does not forgive complacency.</p>
     </div>
 
     <div class="reveal">
-    <h2>Core Web Vitals and Site Speed</h2>
+    <h2>Core Web Vitals and site speed</h2>
 
-    <p>Core Web Vitals are Google's measurable performance metrics that directly influence rankings, assessing three aspects of user experience: loading performance, interactivity, and visual stability.</p>
+    <p>Core Web Vitals are Google's three measures of loading, interactivity and visual stability.</p>
 
-    <h3>Largest Contentful Paint (LCP)</h3>
+    <h3>Loading speed (LCP)</h3>
 
-    <p>LCP measures how quickly the largest visible element loads, with Google requiring LCP under 2.5 seconds. Most underperforming sites I audit in Guildford fail this metric because of unoptimised hero images, render-blocking CSS, or slow server response from shared hosting environments.</p>
+    <p>Google wants Largest Contentful Paint under 2.5 seconds. Most failing sites I audit have unoptimised hero images, render-blocking CSS or slow shared hosting. I fix it with WebP and AVIF images, preloaded critical assets, fewer blocking resources and better hosting where needed.</p>
 
-    <p>I address LCP by implementing responsive image formats (WebP and AVIF with appropriate fallbacks), preloading critical assets, eliminating render-blocking resources, and upgrading hosting infrastructure where necessary.</p>
+    <h3>Responsiveness (INP)</h3>
 
-    <h3>Interaction to Next Paint (INP)</h3>
+    <p>Interaction to Next Paint replaced First Input Delay in March 2024. It measures every interaction and not just the first. Long scripts that block the main thread are the usual cause. I fix it with code splitting, deferred scripts, web worker offloading and fewer third-party scripts.</p>
 
-    <p>INP replaced First Input Delay in March 2024 and measures responsiveness across all user interactions, not merely the first. JavaScript-heavy sites common among Surrey Research Park technology companies frequently fail INP because of long-running scripts blocking the main thread.</p>
+    <h3>Visual stability (CLS)</h3>
 
-    <p>I address INP through code splitting, deferred script loading, web worker offloading, and reducing the footprint of third-party scripts.</p>
-
-    <h3>Cumulative Layout Shift (CLS)</h3>
-
-    <p>CLS measures visual stability, and elements that shift position during page load frustrate users while signalling poor quality to Google. Common causes include images without dimension attributes, dynamically injected advertising units, and web fonts that trigger layout reflow.</p>
-
-    <p>I eliminate CLS by setting explicit dimensions on all media, reserving space for dynamic content, and implementing font-display strategies that prevent layout shifts entirely.</p>
+    <p>Cumulative Layout Shift measures elements that jump during load. Common causes are images without dimensions, injected ad units and web fonts. I set explicit dimensions, reserve space for dynamic content and use font-display settings.</p>
     </div>
 
     <div class="reveal">
-    <h2>Crawlability and Indexation</h2>
+    <h2>Crawlability and indexation</h2>
 
-    <p>If Google cannot find your pages, nothing else matters. Crawlability is the most fundamental technical SEO requirement, and it is where most Guildford business websites harbour undiagnosed problems.</p>
+    <p>If Google cannot find your pages nothing else matters. I check four things.</p>
 
-    <h3>Robots.txt and Crawl Directives</h3>
+    <h3>Robots.txt and crawl directives</h3>
 
-    <p>Your robots.txt file controls which pages search engines can access, and misconfigured directives can inadvertently block entire sections of your site from indexing. I audit robots.txt alongside meta robots tags and X-Robots-Tag headers to ensure consistent, intentional crawl control throughout.</p>
+    <p>A bad directive can block whole sections of your site. I audit robots.txt, meta robots tags and X-Robots-Tag headers together.</p>
 
-    <h3>XML Sitemaps</h3>
+    <h3>XML sitemaps</h3>
 
-    <p>Sitemaps inform search engines which pages exist and when they were last updated. Effective sitemaps include only indexable, canonical URLs, and I build dynamic sitemaps that automatically exclude noindex pages, redirected URLs, and pagination parameters.</p>
+    <p>A sitemap should list only indexable canonical URLs. I build dynamic sitemaps that exclude noindex pages, redirects and pagination parameters.</p>
 
-    <h3>Crawl Budget Optimisation</h3>
+    <h3>Crawl budget</h3>
 
-    <p>Large sites consume crawl budget on low-value pages: faceted navigation, parameter variations, tag archives, and expired content. For Guildford property sites managing thousands of listings, crawl budget optimisation can represent the difference between 30% and 95% of pages being properly indexed.</p>
+    <p>Large sites waste crawl budget on faceted navigation, parameters, tag archives and expired content. I use noindex directives, canonical tags, Search Console parameter handling and internal links that favour your key pages.</p>
 
-    <p>I implement crawl budget controls through strategic noindex directives, canonical tags, parameter handling in Google Search Console, and internal link architecture that prioritises high-value pages appropriately.</p>
+    <h3>Indexation monitoring</h3>
 
-    <h3>Indexation Monitoring</h3>
-
-    <p>I establish ongoing monitoring through Google Search Console's Index Coverage report, cross-referenced with server log analysis, to identify pages that Google discovers but chooses not to index, the "Crawled - currently not indexed" problem that affects many sites following Core Updates.</p>
+    <p>I watch the Search Console Index Coverage report alongside server logs. This finds pages that Google discovers but will not index. The status is "Crawled - currently not indexed".</p>
     </div>
 
     <div class="not-prose my-12 py-8 border-y border-border">
@@ -224,104 +210,96 @@ const schema = [
     </div>
 
     <div class="reveal">
-    <h2>Structured Data and Schema Markup</h2>
+    <h2>Structured data and schema markup</h2>
 
-    <p>Structured data helps search engines understand what your pages convey. JSON-LD schema markup can generate rich results in search: star ratings, FAQ dropdowns, event listings, product prices, and business information panels.</p>
-
-    <p>For Guildford local businesses, I implement:</p>
+    <p>Structured data helps search engines understand your pages and can earn rich results. I add it as inline JSON-LD.</p>
 
     <ul>
-      <li><strong>LocalBusiness schema</strong> with accurate NAP (Name, Address, Phone), opening hours, geo-coordinates, and service area definitions covering Guildford and surrounding Surrey towns.</li>
-      <li><strong>Service schema</strong> linking your offerings to your business entity, enabling Google to understand precisely what you provide and where.</li>
-      <li><strong>FAQPage schema</strong> that can generate accordion-style results in search, increasing your SERP real estate meaningfully.</li>
-      <li><strong>BreadcrumbList schema</strong> that displays your site hierarchy directly within search results.</li>
-      <li><strong>Review and AggregateRating schema</strong> for businesses with legitimate customer reviews.</li>
-      <li><strong>Event schema</strong> for businesses hosting events at venues like <strong>Guildford Cathedral</strong>, G Live, or the University of Surrey campus.</li>
+      <li><strong>LocalBusiness schema</strong> with name, address, phone, opening hours, geo-coordinates and service areas.</li>
+      <li><strong>Service schema</strong> that links your offers to your business.</li>
+      <li><strong>FAQPage schema</strong> for accordion results in search.</li>
+      <li><strong>BreadcrumbList schema</strong> that shows your site hierarchy in results.</li>
+      <li><strong>Review and AggregateRating schema</strong> where you have genuine reviews.</li>
+      <li><strong>Event schema</strong> for businesses that host events.</li>
     </ul>
 
-    <p>All schema is implemented as inline JSON-LD, validated against Google's Rich Results Test, and monitored through Search Console's Enhancements reports on an ongoing basis.</p>
+    <p>I validate it in Google's Rich Results Test and monitor it in Search Console.</p>
     </div>
 
     <div class="reveal">
-    <h2>Mobile-First Optimisation</h2>
+    <h2>Mobile-first optimisation</h2>
 
-    <p>Google indexes the mobile version of your site rather than the desktop version, this has been the case since 2023. If your mobile experience is degraded, your rankings reflect that mobile version regardless of how polished your desktop site may appear.</p>
-
-    <p>Mobile-first optimisation for Guildford businesses encompasses:</p>
+    <p>Google has indexed the mobile version of your site since 2023. A weak mobile experience lowers your rankings however good the desktop site looks.</p>
 
     <ul>
-      <li><strong>Responsive design validation</strong> across breakpoints, not merely a cursory check on a single device.</li>
-      <li><strong>Touch target sizing</strong> so that buttons and links are comfortably usable on mobile screens without accidental taps.</li>
-      <li><strong>Viewport configuration</strong> preventing horizontal scroll and ensuring content fits properly within the screen width.</li>
-      <li><strong>Mobile page speed</strong>, which is typically slower than desktop owing to network constraints and less powerful processors.</li>
-      <li><strong>Content parity</strong> ensuring that mobile users see the same substantive content as desktop users, including text that may be presented behind accordions or tabs.</li>
+      <li><strong>Responsive design</strong> checked across breakpoints.</li>
+      <li><strong>Touch targets</strong> big enough to tap without errors.</li>
+      <li><strong>Viewport settings</strong> that stop horizontal scroll.</li>
+      <li><strong>Mobile page speed</strong>, which is usually slower than desktop.</li>
+      <li><strong>Content parity</strong> so mobile shows the same content as desktop. That includes text behind accordions or tabs.</li>
     </ul>
-
-    <p>Professionals commuting through Guildford station, residents browsing along the <strong>High Street</strong>, and students at the <strong>University of Surrey</strong> are all accessing your site on mobile devices. Your technical infrastructure must serve each of them without friction.</p>
     </div>
 
     <div class="reveal">
-    <h2>Technical SEO for Surrey Research Park Companies</h2>
+    <h2>Technical SEO for Surrey Research Park companies</h2>
 
-    <p>Companies on <strong>Surrey Research Park</strong> present distinct technical SEO challenges. Deep-tech, defence, space, and software websites often rely on JavaScript rendering, technical documentation, and international architecture that differ from a typical SME brochure site.</p>
+    <p>Technology sites on Surrey Research Park often need JavaScript rendering, international targeting and stricter security.</p>
 
-    <h3>JavaScript Application Rendering</h3>
+    <h3>JavaScript rendering</h3>
 
-    <p>Many Research Park companies build their web presence using the same frontend frameworks they employ in product development: React, Vue, Next.js, and Nuxt. These frameworks can produce sites that are effectively invisible to search engines without proper server-side rendering or static generation.</p>
+    <p>React, Vue, Next.js and Nuxt can leave pages invisible to search engines. I compare rendered and raw HTML in the URL Inspection tool. Then I set up server-side rendering or static generation.</p>
 
-    <p>I audit rendering behaviour using Google's URL Inspection tool, compare rendered versus raw HTML, and implement rendering strategies that ensure complete indexation without sacrificing the interactive functionality these companies require.</p>
+    <h3>International targeting</h3>
 
-    <h3>International Targeting</h3>
+    <p>Global audiences need hreflang, international URL structures and geo-targeting. One hreflang error can send the wrong language to the wrong market.</p>
 
-    <p>Satellite communications companies, defence contractors, and scientific instrument manufacturers on the park serve global markets. Hreflang implementation, international URL structures, and geo-targeting configuration require considerable precision, a single hreflang error can cause Google to serve the wrong language version to the wrong market entirely.</p>
+    <h3>Security headers</h3>
 
-    <h3>Security and Compliance</h3>
-
-    <p>Defence-adjacent and healthcare technology companies require HTTPS implementation that goes well beyond a basic SSL certificate. I audit TLS configuration, mixed content issues, and security headers (HSTS, CSP, X-Frame-Options), ensuring that technical SEO changes do not conflict with existing security requirements.</p>
+    <p>I audit TLS, mixed content and security headers (HSTS, CSP, X-Frame-Options). SEO changes must not conflict with your security rules.</p>
     </div>
 
     <div class="reveal">
-    <h2>Technical SEO for Gaming Studios</h2>
+    <h2>Technical SEO for gaming studios</h2>
 
-    <p>Guildford's gaming cluster, anchored by studios like <strong>Hello Games</strong> and <strong>Media Molecule</strong> alongside numerous independent studios across the town, faces technical SEO challenges driven principally by rich media content and global audiences.</p>
+    <p>Gaming sites are heavy on media and serve global audiences.</p>
 
-    <h3>Media Asset Optimisation</h3>
+    <h3>Media asset optimisation</h3>
 
-    <p>Game studio websites feature trailers, screenshots, concept art, and interactive elements that can push page weight past 10MB without considered intervention. I implement lazy loading, modern image formats, video facade patterns (loading YouTube or Vimeo players only upon interaction), and CDN configuration to deliver media assets from edge servers closest to each user.</p>
+    <p>Trailers and screenshots can push a page past 10MB. I use lazy loading, modern image formats, video facades and a CDN.</p>
 
-    <h3>Launch and Update Page Architecture</h3>
+    <h3>Launch traffic</h3>
 
-    <p>Game launches generate considerable traffic spikes, and the underlying technical infrastructure must handle sudden load increases without degrading Core Web Vitals. I configure caching strategies, CDN rules, and server scaling that maintain performance during launch windows, precisely when search visibility matters most.</p>
+    <p>Launches spike traffic. I set up caching, CDN rules and server scaling so Core Web Vitals hold.</p>
 
-    <h3>Community and Forum Indexation</h3>
+    <h3>Community and forum indexation</h3>
 
-    <p>Studios with community forums or user-generated content face index bloat from low-quality pages. I implement pagination controls, canonical strategies for duplicate discussion threads, and noindex rules for user profile pages and empty categories that otherwise dilute crawl budget.</p>
+    <p>Forums and user content cause index bloat. I use pagination controls, canonical tags for duplicate threads and noindex for profile pages and empty categories.</p>
     </div>
 
     <div class="reveal">
-    <h2>How I Deliver Technical SEO</h2>
+    <h2>How I deliver technical SEO</h2>
 
-    <p>My technical SEO process follows a structured, methodical approach that ensures nothing is overlooked and every change is properly measured.</p>
+    <p>I work in four phases and measure every change.</p>
 
-    <h3>Phase 1: Technical Audit</h3>
+    <h3>Phase 1: technical audit</h3>
 
-    <p>I crawl your entire site using professional tools, cross-reference findings with Google Search Console data, analyse server logs, and test Core Web Vitals across device types. The output is a prioritised list of issues ranked by their impact on rankings and traffic. My full <a href="/seo-audit-guildford/">SEO audit service</a> provides further detail.</p>
+    <p>I crawl the whole site and cross-check Search Console data. I analyse server logs and test Core Web Vitals on each device type. You get a list ranked by impact. See my <a href="/seo-audit-guildford/">SEO audit service</a>.</p>
 
-    <h3>Phase 2: Prioritisation and Roadmap</h3>
+    <h3>Phase 2: prioritisation and roadmap</h3>
 
-    <p>Not every technical issue carries equal weight. I categorise findings into critical (blocking indexation or causing ranking loss), high (degrading performance metrics), medium (limiting potential), and low (best practice refinements). You receive a clear roadmap with expected timelines for each phase of work.</p>
+    <p>I rank findings as critical, high, medium or low. You get a roadmap with timelines.</p>
 
-    <h3>Phase 3: Implementation</h3>
+    <h3>Phase 3: implementation</h3>
 
-    <p>I either implement changes directly, where CMS or server access permits, or provide precise specifications for your development team. Every change includes before-and-after validation, and URL changes include comprehensive redirect mapping.</p>
+    <p>I make changes directly where I have CMS or server access. Otherwise I write exact specifications for your developers. Every change is checked before and after. URL changes get full redirect mapping.</p>
 
-    <h3>Phase 4: Monitoring and Iteration</h3>
+    <h3>Phase 4: monitoring</h3>
 
-    <p>Technical SEO is not a project with a finish line. It needs regular attention. Google updates its algorithms regularly, CMS patches can introduce quiet regressions, and new content can create unforeseen technical conflicts. Ongoing monitoring catches these problems before they erode your rankings, so they stay small fixes.</p>
+    <p>Technical SEO has no finish line. Algorithm updates and CMS patches cause quiet regressions. Monitoring catches them while they are small.</p>
     </div>
 
     <div class="reveal">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Frequently asked questions</h2>
     </div>
 
     <div>
@@ -347,7 +325,7 @@ const schema = [
 
       <details class="faq-item">
         <summary>Will technical SEO improvements affect my current rankings?</summary>
-        <p>Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach: audit first, then prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity, and most sites see ranking improvements within four to eight weeks of implementation.</p>
+        <p>Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach. I audit first. Then I prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity. Most sites see ranking improvements within four to eight weeks of implementation.</p>
       </details>
 
       <details class="faq-item">
@@ -357,35 +335,35 @@ const schema = [
 
       <details class="faq-item">
         <summary>What is the difference between a 301 and 302 redirect, and why does it matter for SEO?</summary>
-        <p>A 301 redirect signals a permanent move and passes ranking value to the new URL, while a 302 redirect signals a temporary move and tells search engines the original URL should stay indexed. Using a 302 for a permanent change can leave ranking signals stuck on the old URL, which is why redirect type matters during migrations, rebrands, or URL restructuring.</p>
+        <p>A 301 redirect signals a permanent move and passes ranking value to the new URL. A 302 redirect signals a temporary move and tells search engines the original URL should stay indexed. Using a 302 for a permanent change can leave ranking signals stuck on the old URL. Redirect type matters during migrations, rebrands and URL restructuring.</p>
       </details>
 
       <details class="faq-item">
         <summary>What does robots.txt do and can it accidentally block my site from Google?</summary>
-        <p>A robots.txt file tells search engine crawlers which pages or directories they should and should not access. A single misconfigured line, such as a blanket Disallow rule left over from a staging environment, can block an entire site from crawling, which is why robots.txt should be checked after every migration or platform change.</p>
+        <p>A robots.txt file tells search engine crawlers which pages or directories they should and should not access. A single misconfigured line can block an entire site from crawling. An example is a blanket Disallow rule left over from a staging environment. Check robots.txt after every migration or platform change.</p>
       </details>
     </div>
 
     <div class="reveal">
-    <h2>Request a Technical SEO Audit for Your Guildford Business</h2>
+    <h2>Request a technical SEO audit for your Guildford business</h2>
 
-    <p>Every technical SEO engagement begins with a comprehensive audit, a diagnostic that maps what is broken, what is underperforming, and what has never been built in the first place. You receive a prioritised roadmap with clear actions and expected outcomes, so every pound spent addresses the most impactful problem first.</p>
+    <p>Every engagement starts with an audit. It maps what is broken and what is missing. You get a ranked roadmap so the first pound fixes the biggest problem.</p>
 
-    <p>If your website is not ranking where it ought to, the root cause is often technical rather than creative. Guildford businesses operating in competitive Surrey markets cannot afford to let technical debt accumulate unchecked. <a href="/free-seo-audit-guildford/">A free SEO audit</a> is a lower-commitment starting point, and full <a href="/seo-pricing-guildford/">technical SEO pricing</a> is set out separately for businesses ready to scope a project.</p>
+    <p>If rankings are weak the cause is often technical. <a href="/free-seo-audit-guildford/">A free SEO audit</a> is the lower-commitment start. Pricing is set out on the pricing page.</p>
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 mt-8 not-prose">
       <a href="/seo-audit-guildford/" class="cta-button">Request your audit</a>
-      <a href="/services/" class="cta-button-outline">View All Services</a>
+      <a href="/services/" class="cta-button-outline">View all services</a>
     </div>
 
-    <h2>Related Services</h2>
+    <h2>Related services</h2>
 
     <ul>
-      <li><a href="/seo-audit-guildford/">SEO Audit for Guildford Businesses</a>, comprehensive site review covering technical, content, and local SEO.</li>
-      <li><a href="/ai-search-optimisation-guildford/">AI Search Optimisation</a>, prepare your site for ChatGPT, Perplexity, and Google AI Overviews.</li>
-      <li><a href="/services/">All SEO Services</a>, full list of services available to Guildford and Surrey businesses.</li>
-      <li><a href="/">SEO consultancy for Guildford businesses</a>, return to the general search marketing overview.</li>
+      <li><a href="/seo-audit-guildford/">SEO audit for Guildford businesses</a>: a site review covering technical, content and local SEO.</li>
+      <li><a href="/ai-search-optimisation-guildford/">AI search optimisation</a>: prepare your site for ChatGPT, Perplexity and Google AI Overviews.</li>
+      <li><a href="/services/">All SEO services</a>: the full list for Guildford and Surrey businesses.</li>
+      <li><a href="/">SEO consultancy for Guildford businesses</a>: the general overview.</li>
     </ul>
   </div>
 </article>

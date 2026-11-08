@@ -16,3 +16,8 @@ v1	src/pages/generative-engine-optimisation-uk.astro	73	clause-comma compliance 
 final	src/pages/seo-cost-uk.astro	88	100 sentences, 100% start-with-answer, 100% clause-comma compliant, 0 fluff, no links in first paragraph of any section; deductions: no photo in card (own SVG chart used), sentence-type mix, 1 sentence over 30 words	pass
 final	src/pages/generative-engine-optimisation-uk.astro	88	100 sentences, 100% start-with-answer, 100% clause-comma compliant, 0 fluff, no links in first paragraph of any section; deductions: no photo in card (own SVG chart used), sentence-type mix, 3 sentences over 30 words	pass
 final	src/components/ProofStrip.astro + home hero lead	90	authored proof strip and hero copy rewritten into short sentences, 0 fluff, every figure sourced and dated	pass
+v1	src/pages/index.astro (rebuilt bands + PageHero copy)	84	clause-comma compliance 90% (target 95), hero fact line and sheet lines used clause commas	needs revision
+final	src/pages/index.astro	90	116 sentences, 100% start-with-answer, 99% clause-comma compliant, 0 fluff, no links in first paragraph of a section; 4 sentences over 30 words	pass
+final	src/pages/technical-seo-guildford.astro	89	158 sentences, 99% clause-comma compliant, 0 fluff; no photo in sheet, 1 long sentence	pass
+final	src/pages/services/index.astro	89	100 sentences, 99% clause-comma compliant, 0 fluff; no photo in sheet	pass
+final	src/components/PageHero.astro leads and glance copy (all pages)	90	leads two short sentences, glance points sourced from page facts, no fluff	pass

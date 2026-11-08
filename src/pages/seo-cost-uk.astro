@@ -92,25 +92,19 @@ const schema = [
       <p>I read eight UK price guides published between April and July 2026. Each gives a monthly range for a small business. They overlap more than they differ. The low end is mostly £300 to £500. Two agency tiers start at £1,000 to £1,500. Most tops sit between £1,000 and £2,500. Outrank gives £5,000 for most SMEs.</p>
 
       <figure class="not-prose my-8 bg-white border border-border rounded p-4 md:p-6">
-        <svg viewBox="0 0 720 330" role="img" aria-labelledby="bands-title bands-desc" class="w-full h-auto" style="max-width:720px">
-          <title id="bands-title">Monthly SEO price range for a small UK business, by source</title>
-          <desc id="bands-desc">Seven sources, each a bar from its low to its high monthly price, on a scale of £0 to £5,000.</desc>
-          {[0, 1000, 2000, 3000, 4000, 5000].map((v) => (
-            <g>
-              <line x1={x(v)} y1="14" x2={x(v)} y2="262" stroke="#CBD5DF" stroke-width="1" />
-              <text x={x(v)} y="284" text-anchor="middle" font-size="12" fill="#4F5B67">{v === 0 ? "£0" : "£" + (v / 1000) + "k"}</text>
-            </g>
+        <ul class="hbars" aria-label="Monthly SEO price range for a small UK business, by source">
+          {bands.map((b) => (
+            <li>
+              <span class="hb-label">{b.src}<em>{fmt(b.lo)} to {fmt(b.hi)}</em></span>
+              <span class="hb-track" role="img" aria-label={`${b.src}: ${fmt(b.lo)} to ${fmt(b.hi)} a month`}>
+                <span class="hb-fill" style={`left:${(b.lo / maxV) * 100}%;width:${((b.hi - b.lo) / maxV) * 100}%`}></span>
+                <span class="hb-marker" style={`left:${(500 / maxV) * 100}%`}></span>
+              </span>
+            </li>
           ))}
-          {bands.map((b, i) => (
-            <g>
-              <text x="240" y={42 + i * 34} text-anchor="end" font-size="12" fill="#26323E">{b.src}</text>
-              <rect x={x(b.lo)} y={28 + i * 34} width={x(b.hi) - x(b.lo)} height="20" rx="2" fill="#0F5257" />
-              <text x={b.hi > 3000 ? x(b.hi) - 8 : x(b.hi) + 6} y={43 + i * 34} text-anchor={b.hi > 3000 ? "end" : "start"} font-size="11" font-weight={b.hi > 3000 ? "700" : "400"} fill={b.hi > 3000 ? "#FFFFFF" : "#26323E"}>{fmt(b.lo)} to {fmt(b.hi)}</text>
-            </g>
-          ))}
-          <line x1={x(500)} y1="14" x2={x(500)} y2="262" stroke="#B83817" stroke-width="2" stroke-dasharray="5 4" />
-          <text x={x(500)} y="304" text-anchor="middle" font-size="12" font-weight="700" fill="#B83817">My Starter plan: £500</text>
-        </svg>
+        </ul>
+        <div class="hb-scale" aria-hidden="true"><span>£0</span><span>£1k</span><span>£2k</span><span>£3k</span><span>£4k</span><span>£5k</span></div>
+        <p class="text-sm font-bold mt-2" style="color:var(--color-signal)">Dashed line: my Starter plan at £500 a month.</p>
         <figcaption class="text-sm text-text-muted mt-3">Source: each publisher's own 2026 guide, read 7 November 2026. Sources are listed with dates and type at the bottom of this page. Each bar is the small-business range that source gives: Whito is the mainstream band of its 45 prices; Limelight, Whitehat and Lilo are their local or small tiers; Visionary is its small-agency tier; EpicEdits is its small-business tier; Outrank is its range for most SMEs.</figcaption>
       </figure>
 
