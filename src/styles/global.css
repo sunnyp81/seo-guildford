@@ -798,3 +798,20 @@ body { background:
 input, textarea, select { color: var(--color-brand); }
 .sticky-cta { border-top: 1px solid var(--color-border); }
 .chart-bar { background: linear-gradient(180deg, var(--color-accent), rgba(79,209,197,0.35)); box-shadow: 0 0 18px rgba(79,209,197,0.28); }
+
+/* Readability and ambient glow (critic round 3) */
+:root { --color-text-muted: #A9BBC1; }
+.sheet-link p, .def-grid dd, .doc-steps li span:not(.audit-n), .audit-rows div span { font-size: 1rem !important; }
+.proof-strip-stats span, .badge-row p, .audit-sheet-foot, .hero-facts span, .cta-note { font-size: 0.98rem; }
+.sheet-facts dt, .sheet-head, .audit-sheet-head, .sheet-tag, .proof-chip { font-size: 0.86rem; }
+.audit-rows strong, .sheet-points strong { font-size: 1.02rem; }
+.related { margin: 1.5rem 0 0; font-size: 1rem; color: var(--color-text-muted); }
+.related a { color: var(--color-accent-light); text-decoration: underline; text-underline-offset: 3px; }
+.badge-stack span { width: 2.9rem; height: 2.9rem; color: var(--color-accent-light); }
+.badge-stack svg { width: 1.25rem; height: 1.25rem; }
+/* Ambient glow that shows without a cursor (phones, touch, reduced motion) */
+.service-card, .sheet, .audit-sheet, .doc-steps, .glance, .def-grid {
+  background-image: linear-gradient(135deg, rgba(79,209,197,0.12), transparent 42%), linear-gradient(315deg, rgba(255,125,92,0.06), transparent 40%);
+  box-shadow: 0 1.2rem 2.4rem -1.4rem rgba(0,0,0,0.9), 0 0 36px -18px rgba(79,209,197,0.45), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.page-open .hero-inner { max-width: 72rem; }
