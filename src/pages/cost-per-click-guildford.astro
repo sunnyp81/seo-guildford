@@ -1,0 +1,270 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import PageHero from '../components/PageHero.astro';
+import data from '../data/guildford-cpc.json';
+
+const url = "https://seo-guildford.uk/cost-per-click-guildford/";
+const title = "Google Ads Cost per Click in Guildford: 78 Local Services";
+const description = "What a Google Ads click costs for 78 local services when people in Guildford search, from locksmiths to cafes, and what the same money buys in SEO.";
+const published = "2026-11-09";
+const csvHref = "/data/guildford-cost-per-click-2026-11.csv";
+
+type Row = (typeof data.rows)[number];
+const rows: Row[] = data.rows;
+const priced = rows.filter((r) => r.cpc !== null) as (Row & { cpc: number })[];
+const median = (xs: number[]) => {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+};
+const gbp = (n: number) => "£" + n.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const gbp0 = (n: number) => "£" + Math.round(n).toLocaleString("en-GB");
+const by = (s: string) => priced.find((r) => r.service === s)!;
+
+const overallMedian = median(priced.map((r) => r.cpc));
+const top = priced[0];
+const bottom = priced[priced.length - 1];
+const over10 = priced.filter((r) => r.cpc >= 10).length;
+const under2 = priced.filter((r) => r.cpc < 2).length;
+const belowLow = priced.filter((r) => r.low !== null && r.cpc < r.low).length;
+const topBid = Math.max(...priced.map((r) => r.high ?? 0));
+const topBidRow = priced.find((r) => r.high === topBid)!;
+
+// Chart 1: dearest clicks among services with at least 50 Guildford searches a month (thin data excluded).
+const busy = priced.filter((r) => r.searches >= 50);
+const dearest = busy.slice(0, 15);
+const maxCpc = Math.ceil(dearest[0].cpc / 5) * 5;
+
+// Chart 2: what a month of searches would cost at the average click price.
+const valued = busy.map((r) => ({ ...r, value: r.searches * r.cpc })).sort((a, b) => b.value - a.value).slice(0, 12);
+const maxVal = Math.ceil(valued[0].value / 1000) * 1000;
+
+const sectors = [...new Set(rows.map((r) => r.sector))].map((s) => {
+  const xs = priced.filter((r) => r.sector === s);
+  const c = xs.map((r) => r.cpc);
+  return { sector: s, n: xs.length, med: median(c), lo: Math.min(...c), hi: Math.max(...c), dear: xs[0].service };
+}).sort((a, b) => b.med - a.med);
+
+const starter = 500;
+const examples = ["locksmith", "roofer", "accountants", "solicitors", "plumber", "dentist", "physiotherapist", "hairdresser"].map(by);
+
+const faqs = [
+  {
+    q: "How much does a Google Ads click cost in Guildford?",
+    a: `I checked 78 local services and 71 had a click price. The middle average cost per click was ${gbp(overallMedian)} for searches from Guildford. Locksmiths paid the most at ${gbp(top.cpc)}. Cafes paid the least at ${gbp(bottom.cpc)}. The figures are Google's averages for October 2025 to September 2026.`
+  },
+  {
+    q: "Why do trades and solicitors pay more per click?",
+    a: "This is my reading, not something the data proves. A single job or client is worth a lot to them. Many searches are urgent, such as a lockout or a leaking roof. National lead-generation firms and large chains also bid on the same terms. All three push the price up."
+  },
+  {
+    q: "Is SEO cheaper than Google Ads for a local business?",
+    a: `It depends on the service. My Starter plan is ${gbp0(starter)} a month. At Guildford prices that buys about ${Math.floor(starter / by("locksmith").cpc)} locksmith clicks or about ${Math.floor(starter / by("hairdresser").cpc)} hairdresser clicks. SEO takes months to start working and does not charge per click. Ads work from day one and stop when the budget stops.`
+  },
+  {
+    q: "Are these the prices I would pay?",
+    a: "Not exactly. They are Google's own averages and bid estimates. Your price depends on your ad quality, match types, bidding strategy and the hours you run. Treat them as a guide to how competitive a search is."
+  },
+  {
+    q: "Can I use this data?",
+    a: "Yes. The full table is a free CSV download on this page. Please credit SEO Guildford and link to this page."
+  }
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What a Google Ads click costs in Guildford: 78 local services",
+    "description": description,
+    "datePublished": published,
+    "dateModified": published,
+    "mainEntityOfPage": url,
+    "image": "https://seo-guildford.uk/og.png",
+    "author": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk" },
+    "publisher": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk", "logo": { "@type": "ImageObject", "url": "https://seo-guildford.uk/og.png" } }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Google Ads cost per click for 78 local services in Guildford",
+    "description": "Average cost per click, top-of-page bid range, competition and monthly searches for '<service> guildford' searches made from Guildford. Google Ads keyword data via DataForSEO, October 2025 to September 2026, pulled 9 November 2026. Converted from US dollars to pounds at 1.3411.",
+    "url": url,
+    "creator": { "@type": "Organization", "name": "SEO Guildford", "url": "https://seo-guildford.uk" },
+    "datePublished": published,
+    "temporalCoverage": "2025-10/2026-09",
+    "spatialCoverage": { "@type": "Place", "name": "Guildford, Surrey, United Kingdom" },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isAccessibleForFree": true,
+    "distribution": [{ "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://seo-guildford.uk" + csvHref }]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seo-guildford.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Cost per click in Guildford", "item": url }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+  }
+];
+---
+<Base title={title} description={description} canonical={url} ogType="article" schema={schema}>
+  <PageHero
+    eyebrow="Local data for Guildford, pulled 9 November 2026"
+    crumbs={[{ label: "Cost per click in Guildford" }]}
+    lead={`The middle average cost per Google Ads click for a Guildford service is ${gbp(overallMedian)}. Locksmiths pay the most at ${gbp(top.cpc)} a click and cafes the least at ${gbp(bottom.cpc)}. Here is the full list of 78 services and what the same money buys in SEO.`}
+    cta={{ href: "/free-seo-audit-guildford/", label: "Book my free audit" }}
+    secondary={{ href: csvHref, label: "Download the data (CSV)" }}
+    checked="9 November 2026"
+    glance={{
+      heading: "At a glance",
+      points: [
+        `The middle average click across 71 Guildford services is ${gbp(overallMedian)}.`,
+        `${over10} services pay ${gbp0(10)} or more a click. ${under2} pay under ${gbp0(2)}.`,
+        `Locksmiths pay the most at ${gbp(top.cpc)}. Roofers pay ${gbp(by("roofer").cpc)} and emergency dentists ${gbp(by("emergency dentist").cpc)}.`,
+        `Legal, money and property is the dearest sector. Its middle click is ${gbp(sectors.find((s) => s.sector === "Legal, money and property")!.med)}.`,
+        `My ${gbp0(starter)} Starter plan equals about ${Math.floor(starter / by("plumber").cpc)} plumber clicks a month at these prices.`
+      ],
+      facts: [
+        { k: "Services checked", v: `${rows.length} (${priced.length} with a click price)` },
+        { k: "Searches counted", v: "People searching from Guildford" },
+        { k: "Data window", v: "October 2025 to September 2026" },
+        { k: "Source", v: "Google Ads data via DataForSEO" }
+      ]
+    }}
+  >
+    <Fragment slot="title">What a Google Ads click costs in <span class="mark">Guildford</span></Fragment>
+  </PageHero>
+
+  <article class="doc">
+    <div class="prose">
+
+      <h2>The dearest clicks in Guildford</h2>
+      <p>Urgent jobs and professional services top this list. A locksmith pays {gbp(top.cpc)} for one click. Storage pays {gbp(by("storage").cpc)} and roofers pay {gbp(by("roofer").cpc)}. The chart shows the 15 dearest services with at least 50 Guildford searches a month. Services with fewer searches are left out because their prices rest on very little data.</p>
+
+      <figure class="not-prose my-8 bg-glass border border-border rounded p-4 md:p-6">
+        <ul class="hbars" aria-label="Average Google Ads cost per click in Guildford, 15 dearest services with 50 or more searches a month">
+          {dearest.map((r) => (
+            <li>
+              <span class="hb-label">{r.service}<em>{gbp(r.cpc)} a click, {r.searches} searches a month</em></span>
+              <span class="hb-track" role="img" aria-label={`${r.service}: ${gbp(r.cpc)} a click`}>
+                <span class="hb-fill" style={`left:0;width:${(r.cpc / maxCpc) * 100}%`}></span>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div class="hb-scale" aria-hidden="true">{[0, 1, 2, 3, 4, 5].map((i) => <span>£{Math.round((maxCpc / 5) * i)}</span>)}</div>
+        <figcaption class="text-sm text-text-muted mt-3">Average cost per click for "[service] guildford" searches made from Guildford. Google Ads data via DataForSEO, October 2025 to September 2026, pulled 9 November 2026. Converted from US dollars at 1.3411 dollars to the pound.</figcaption>
+      </figure>
+
+      <h2>Cost per click by sector</h2>
+      <p>The sector a business is in sets most of its price. Legal, money and property firms pay the most for a typical click. Hospitality and events pay the least at {gbp(sectors.find((x) => x.sector === "Hospitality and events")!.med)}. Beauty, fitness and pets are close behind at {gbp(sectors.find((x) => x.sector === "Beauty, fitness and pets")!.med)}. Hospitality also has the most searches of any sector.</p>
+
+      <div class="not-prose overflow-x-auto my-6">
+        <table class="w-full text-sm border border-border bg-glass">
+          <caption class="text-left text-sm text-text-muted p-2">Middle and range of average click prices per sector, Guildford searchers, October 2025 to September 2026.</caption>
+          <thead><tr class="bg-surface text-left"><th class="p-2">Sector</th><th class="p-2 hidden sm:table-cell">Services priced</th><th class="p-2">Middle click</th><th class="p-2 hidden sm:table-cell">Range</th><th class="p-2">Dearest</th></tr></thead>
+          <tbody>
+            {sectors.map((s) => (
+              <tr class="border-t border-border"><td class="p-2">{s.sector}</td><td class="p-2 hidden sm:table-cell">{s.n}</td><td class="p-2"><strong>{gbp(s.med)}</strong></td><td class="p-2 hidden sm:table-cell">{gbp(s.lo)} to {gbp(s.hi)}</td><td class="p-2">{s.dear}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>What a month of searches is worth</h2>
+      <p>Price per click is only half the story. The other half is how many people search. I multiplied each service's monthly Guildford searches by its average click price. The result is what it would cost to buy one ad click for every search. Not every searcher clicks, so read it as the value of the search term, not a budget.</p>
+
+      <figure class="not-prose my-8 bg-glass border border-border rounded p-4 md:p-6">
+        <ul class="hbars" aria-label="Monthly searches multiplied by average click price, top 12 Guildford services">
+          {valued.map((r) => (
+            <li>
+              <span class="hb-label">{r.service}<em>{gbp0(r.value)} a month ({r.searches.toLocaleString("en-GB")} searches at {gbp(r.cpc)})</em></span>
+              <span class="hb-track" role="img" aria-label={`${r.service}: ${gbp0(r.value)} a month`}>
+                <span class="hb-fill" style={`left:0;width:${(r.value / maxVal) * 100}%`}></span>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div class="hb-scale" aria-hidden="true">{[0, 1, 2, 3, 4, 5].map((i) => <span>{gbp0((maxVal / 5) * i)}</span>)}</div>
+        <figcaption class="text-sm text-text-muted mt-3">Monthly searches from Guildford multiplied by average cost per click, services with 50 or more searches a month. Same source and window as above.</figcaption>
+      </figure>
+
+      <p>Orthodontists top this list. They have {by("orthodontist").searches} searches a month at {gbp(by("orthodontist").cpc)} a click. Barbers come fourth through search numbers alone. They have {by("barber").searches.toLocaleString("en-GB")} searches a month at {gbp(by("barber").cpc)} a click. Restaurants have the most searches of all at {by("restaurants").searches.toLocaleString("en-GB")} a month, but each click is cheap.</p>
+
+      <h2>What {gbp0(starter)} a month buys in ads or in SEO</h2>
+      <p>Ads and SEO buy different things. Ads buy a set number of clicks for as long as you pay. SEO buys work on your site and listings that keep bringing visits after it is done. The table shows how many clicks {gbp0(starter)} buys at Guildford prices. It is the price of my Starter plan.</p>
+
+      <div class="not-prose overflow-x-auto my-6">
+        <table class="w-full text-sm border border-border bg-glass">
+          <caption class="text-left text-sm text-text-muted p-2">Clicks bought by {gbp0(starter)} at each service's average Guildford click price.</caption>
+          <thead><tr class="bg-surface text-left"><th class="p-2">Service</th><th class="p-2">Average click</th><th class="p-2">Clicks for {gbp0(starter)}</th><th class="p-2">Guildford searches a month</th></tr></thead>
+          <tbody>
+            {examples.map((r) => (
+              <tr class="border-t border-border"><td class="p-2">{r.service}</td><td class="p-2">{gbp(r.cpc)}</td><td class="p-2"><strong>{Math.floor(starter / r.cpc)}</strong></td><td class="p-2">{r.searches}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>My rule of thumb follows from this. Where clicks cost more than about {gbp0(10)}, ranking on Google for free is worth a lot each month. Where clicks cost under {gbp0(2)}, ads can be the cheaper way to test demand. The <a href="/tools/seo-roi-calculator/">SEO ROI calculator</a> lets you put in your own numbers.</p>
+
+      <h2>Why some clicks cost so much</h2>
+      <p>These are my explanations from working with local businesses. The data shows the prices, not the reasons.</p>
+      <ul>
+        <li><strong>Value of a customer.</strong> One roof repair, conveyancing job or set of braces is worth hundreds or thousands of pounds. Advertisers can afford to pay more for each click.</li>
+        <li><strong>Urgency.</strong> Someone locked out or in dental pain calls the first business they see. Emergency searches attract high bids.</li>
+        <li><strong>National bidders.</strong> Lead-generation sites and national chains bid on local terms. I suspect this lifts storage and removals prices.</li>
+        <li><strong>Few searches.</strong> Prices on searches with 10 or 20 a month rest on few auctions. They can swing a lot from month to month.</li>
+      </ul>
+
+      <h2>What these numbers can and cannot tell you</h2>
+      <p>They come from Google's own keyword data. They show what advertisers paid on average and the bid range Google estimates for the top of the page. Your own price will differ. It depends on ad quality, match type, bidding and the hours you run. I asked for searches located in Guildford. Searches for a Guildford business made from Woking or London are probably not counted. A firm's real audience is likely larger than these numbers show.</p>
+      <p>The averages and the bid estimates do not always agree. {belowLow} services paid less on average than Google's low bid estimate. {topBidRow.service[0].toUpperCase() + topBidRow.service.slice(1)} shows a top bid of {gbp(topBid)}. Treat any single figure with care, especially where searches are low.</p>
+
+      <h2>The full list of 78 services</h2>
+      <p>Seven services had too little data for Google to give a click price. They are listed without one. Sort or filter the CSV to see your own sector.</p>
+
+      <div class="not-prose overflow-x-auto my-6">
+        <table class="w-full text-sm border border-border bg-glass">
+          <caption class="text-left text-sm text-text-muted p-2">Average cost per click, top-of-page bid range and monthly searches for "[service] guildford", searchers in Guildford, October 2025 to September 2026.</caption>
+          <thead><tr class="bg-surface text-left"><th class="p-2">Service</th><th class="p-2 hidden sm:table-cell">Sector</th><th class="p-2">Average click</th><th class="p-2 hidden sm:table-cell">Top-of-page bid</th><th class="p-2">Searches a month</th></tr></thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr class="border-t border-border">
+                <td class="p-2">{r.service}</td>
+                <td class="p-2 hidden sm:table-cell">{r.sector}</td>
+                <td class="p-2">{r.cpc !== null ? gbp(r.cpc) : "No data"}</td>
+                <td class="p-2 hidden sm:table-cell">{r.low !== null && r.high !== null ? `${gbp(r.low)} to ${gbp(r.high)}` : "No data"}</td>
+                <td class="p-2">{r.searches}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p><a href={csvHref} download>Download the full data as a CSV file</a>. It includes the original dollar figures and Google's competition rating.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="not-prose">
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-answer"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <h2 id="method">How I collected the data</h2>
+      <p>I asked for "[service] guildford" for 78 local services on 9 November 2026. The request went through the DataForSEO Google Ads search volume API, located to Guildford, English language, Google Search only. The search counts are a 12-month average for October 2025 to September 2026. DataForSEO documents the average click price in US dollars. I treated the bid estimates the same way. I converted all prices at 1.3411 dollars to the pound. That rate is the mean of 253 Bank of England daily rates over the same 12 months (series XUDLUSS). I chose the services myself to cover common local businesses. They are not a random sample.</p>
+      <p class="text-sm text-text-muted">Written by SEO Guildford, a trading name of ND Media Ltd. I sell SEO, so I have an interest in this comparison. The data and method are published so you can check them. I will refresh this page every three months.</p>
+    </div>
+
+    <ContactForm eyebrow="Your sector" heading="Ask what your clicks are worth" subject="SEO Guildford: cost per click page enquiry" />
+  </article>
+</Base>

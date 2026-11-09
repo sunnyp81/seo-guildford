@@ -17,8 +17,9 @@ interface Props {
   note?: string;
   compact?: boolean;
   photo?: { src: string; alt: string; credit: string; creditHref: string };
+  checked?: string;
 }
-const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo, compact = false } = Astro.props;
+const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit-guildford/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo, compact = false, checked = "7 November 2026" } = Astro.props;
 const hasSide = Astro.slots.has('side');
 const hasSheet = !!glance || hasSide;
 ---
@@ -59,7 +60,7 @@ const hasSheet = !!glance || hasSide;
         )}
         <div class="sheet-head">
           <span>{glance!.heading ?? "At a glance"}</span>
-          <span>Checked 7 November 2026</span>
+          <span>Checked {checked}</span>
         </div>
         <ol class="audit-rows sheet-points">
           {glance!.points.map((p, i) => (
