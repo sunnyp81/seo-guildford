@@ -38,7 +38,7 @@ const schema = [
         "name": "What is a good ROI from SEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most businesses should target a minimum 5:1 return, £5 of revenue for every £1 spent on SEO. High-performing campaigns in competitive sectors like professional services, legal, and property regularly achieve 10:1 or higher within 12-18 months. The compounding nature of organic traffic means ROI typically improves over time as rankings strengthen."
+          "text": "There is no published UK benchmark I trust. Compare the projected uplift with the fee, then with what the same money buys in Google Ads clicks in your sector on my cost per click page. If the uplift does not clear the fee within a year on your own numbers, SEO may not be the right spend."
         }
       },
       {
@@ -46,7 +46,7 @@ const schema = [
         "name": "How long until I see ROI from SEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting \"near me\" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority and the competitiveness of your target keywords."
+          "text": "Google has to recrawl the changed pages before anything moves. I plan on three months before judging a plan and six before deciding whether to continue. Local pack changes often show before organic rankings."
         }
       }
     ]
@@ -55,7 +55,7 @@ const schema = [
 ---
 
 <Base
-  title="SEO ROI Calculator: Estimate Your Return | SEO Guildford"
+  title="SEO ROI Calculator: Estimate Your Return from SEO"
   description="Free SEO ROI calculator for Guildford and Surrey businesses. Enter your metrics to estimate projected revenue uplift, annual returns, and ROI."
   canonical="https://seo-guildford.uk/tools/seo-roi-calculator/"
   schema={schema}
@@ -93,7 +93,7 @@ const schema = [
 
             <div>
               <label for="conversionRate" class="block text-sm font-semibold text-brand mb-1">Current conversion rate: <span id="conversionDisplay" class="text-accent font-bold">1.5%</span></label>
-              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="1.5" class="w-full accent-[#4FD1C5]" />
+              <input type="range" id="conversionRate" min="0.5" max="10" step="0.1" value="1.5" class="w-full accent-accent" />
               <div class="flex justify-between text-xs text-text-muted mt-1">
                 <span>0.5%</span>
                 <span>10%</span>
@@ -109,15 +109,15 @@ const schema = [
               <legend class="block text-sm font-semibold text-brand mb-2">Expected traffic growth</legend>
               <div class="flex flex-wrap gap-3">
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="50" checked class="accent-[#4FD1C5]" />
+                  <input type="radio" name="growth" value="50" checked class="accent-accent" />
                   <span class="text-sm font-medium text-brand">Conservative (50%)</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="100" class="accent-[#4FD1C5]" />
+                  <input type="radio" name="growth" value="100" class="accent-accent" />
                   <span class="text-sm font-medium text-brand">Moderate (100%)</span>
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer bg-surface-alt border border-border rounded px-4 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent/10 transition-colors">
-                  <input type="radio" name="growth" value="200" class="accent-[#4FD1C5]" />
+                  <input type="radio" name="growth" value="200" class="accent-accent" />
                   <span class="text-sm font-medium text-brand">Aggressive (200%)</span>
                 </label>
               </div>
@@ -167,7 +167,7 @@ const schema = [
     <div class="prose" style="max-width:46rem">
       <h2 class="font-heading text-brand">Why work out SEO return</h2>
       <p>SEO return is easier to judge when you start from your own numbers. Deal value, visitors and conversion rate decide what extra traffic is worth. The calculator above turns those into a revenue figure you can compare with a monthly budget.</p>
-      <p>Organic rankings build over time. Paid search stops when you stop paying. I list <a href="/cost-per-click-guildford/">what a Google Ads click costs in Guildford</a> for 71 local services. That is why I look at SEO over six to twelve months rather than one month.</p>
+      <p>Organic rankings build over time. Paid search stops when you stop paying. I list <a href="/cost-per-click-guildford/">what a Google Ads click costs in Guildford</a> for 78 local services (71 with a click price).</p>
       <p>The result is an estimate of revenue, not profit. Change the growth rate to see how sensitive the answer is.</p>
     </div>
   </section>
@@ -185,13 +185,13 @@ const schema = [
       <details class="faq-item">
         <summary class="font-heading font-semibold text-brand">What is a good ROI from SEO?</summary>
         <div class="pt-3 text-text-muted">
-          <p>Most businesses should target a minimum 5:1 return, £5 of revenue for every £1 spent on SEO. High-performing campaigns in competitive sectors like professional services, legal, and property regularly achieve 10:1 or higher within 12-18 months. The compounding nature of organic traffic means ROI typically improves over time as rankings strengthen.</p>
+          <p>There is no published UK benchmark I trust. Compare the projected uplift with the fee, then with what the same money buys in Google Ads clicks in your sector on my <a href="/cost-per-click-guildford/">cost per click page</a>. If the uplift does not clear the fee within a year on your own numbers, SEO may not be the right spend.</p>
         </div>
       </details>
       <details class="faq-item">
         <summary class="font-heading font-semibold text-brand">How long until I see ROI from SEO?</summary>
         <div class="pt-3 text-text-muted">
-          <p>Most Guildford businesses begin seeing measurable ranking improvements within 3-4 months and meaningful revenue impact by month 6. Local SEO campaigns targeting "near me" and geo-modified queries often deliver faster results than national campaigns. The timeline depends on your starting position, domain authority and the competitiveness of your target keywords.</p>
+          <p>Google has to recrawl the changed pages before anything moves. I plan on three months before judging a plan and six before deciding whether to continue. Local pack changes often show before organic rankings.</p>
         </div>
       </details>
     </div>

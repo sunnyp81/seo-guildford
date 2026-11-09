@@ -21,7 +21,7 @@ const schema = [
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "AI Search Optimisation Guildford, AEO & GEO",
-    "description": "Considered AI search optimisation services for Guildford businesses. AEO, GEO, LLM SEO, and llms.txt implementation by a methodical Surrey-based consultancy.",
+    "description": "AI search optimisation for Guildford businesses: AEO, GEO, LLM SEO and an AI search audit from a solo Surrey-based consultant.",
     "url": "https://seo-guildford.uk/ai-search-optimisation-guildford/",
     "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" }
   },
@@ -35,6 +35,7 @@ const schema = [
       "name": "SEO Guildford",
       "legalName": "ND Media Ltd",
       "url": "https://seo-guildford.uk",
+      "email": "hello@seo-guildford.uk",
       "sameAs": ["https://find-and-update.company-information.service.gov.uk/company/10784524"]
     },
     "areaServed": {
@@ -68,27 +69,27 @@ const schema = [
       {
         "@type": "Question",
         "name": "Will AI search replace Google?",
-        "acceptedAnswer": { "@type": "Answer", "text": "AI search will not replace Google entirely, but it is already diverting a significant share of informational queries. Google itself has integrated AI Overviews into its results, and a growing proportion of users begin research queries in AI assistants rather than traditional search. Businesses need to optimise for both channels. The shift is comparable to mobile search adoption: it did not replace desktop search, but businesses that failed to optimise for mobile lost significant traffic." }
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Google has put AI Overviews into its own results. Some people start research in ChatGPT or Perplexity. You need to be findable in both." }
       },
       {
         "@type": "Question",
         "name": "How do I get cited by ChatGPT?",
-        "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT cites sources through its browsing and retrieval-augmented generation capabilities. To increase citation likelihood: structure content with clear answers at the top of sections, implement comprehensive schema markup, build entity authority through consistent NAP and sameAs references across the web, publish an llms.txt file, and ensure your site is accessible to GPTBot in robots.txt. Topical authority in your specific niche is the strongest single factor." }
+        "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT search fetches live pages through OAI-SearchBot and names the ones it uses. What helped in the studies I list in my GEO guide: pages indexed in normal search, titles that match the question, a clear answer near the top, and consistent business facts across your site and listings. No one can guarantee a citation." }
       },
       {
         "@type": "Question",
         "name": "What is llms.txt?",
-        "acceptedAnswer": { "@type": "Answer", "text": "llms.txt is an emerging standard documented at llmstxt.org that provides AI crawlers with a structured summary of your website. Similar to how robots.txt guides traditional crawlers, llms.txt helps large language models understand your site's purpose, key content, and preferred citation format. It is placed at your domain root (e.g., yourdomain.co.uk/llms.txt) and includes your business description, service list, key pages, and contact information in a format optimised for LLM consumption." }
+        "acceptedAnswer": { "@type": "Answer", "text": "llms.txt is a plain-text summary of your site for AI tools, placed at your domain root. Google says Search does not use it and it neither helps nor hurts rankings. It is harmless to keep and not a way to get cited." }
       },
       {
         "@type": "Question",
         "name": "How long until AI SEO shows results?",
-        "acceptedAnswer": { "@type": "Answer", "text": "AI search optimisation typically shows initial results within 4 to 8 weeks for citation improvements and entity recognition. Full impact on AI-driven referral traffic usually takes 3 to 6 months, depending on your existing domain authority and content quality. The timeline is influenced by how quickly AI crawlers re-index your updated content, how competitive your niche is, and the strength of your existing entity presence." }
+        "acceptedAnswer": { "@type": "Answer", "text": "I cannot promise a date. I run a fixed set of prompts monthly from the start. You see citation and description changes as they happen. I count AI referral visits and enquiries separately." }
       },
       {
         "@type": "Question",
         "name": "Do I need different content for AI search?",
-        "acceptedAnswer": { "@type": "Answer", "text": "You do not need entirely separate content. Instead, you need to restructure existing content for extractability: lead with direct answers, use clear heading hierarchies, implement comprehensive schema markup, and ensure your entity information is consistent across the web. The same content serves both traditional and AI search when formatted correctly. The main adjustment is structural rather than substantive: how you present information matters as much as what you say." }
+        "acceptedAnswer": { "@type": "Answer", "text": "You do not need entirely separate content. Instead, you need to restructure existing content for extractability. Lead with direct answers, use clear heading hierarchies, implement comprehensive schema markup and ensure your entity information is consistent across the web. The same content serves both traditional and AI search when formatted correctly. The main adjustment is structural rather than substantive: how you present information matters as much as what you say." }
       },
       {
         "@type": "Question",
@@ -98,22 +99,22 @@ const schema = [
       {
         "@type": "Question",
         "name": "What is GEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "GEO stands for Generative Engine Optimisation. It is the discipline of optimising content to be selected and cited by generative AI platforms such as ChatGPT, Claude, and Perplexity. GEO focuses on how large language models decide which sources to reference, involving entity salience, source authority signals, and content structure that aligns with LLM retrieval patterns. Unlike AEO, which targets direct answer extraction, GEO targets the source selection process within generative models." }
+        "acceptedAnswer": { "@type": "Answer", "text": "GEO stands for Generative Engine Optimisation. It is the discipline of optimising content to be selected and cited by generative AI platforms such as ChatGPT, Claude, and Perplexity. GEO focuses on how large language models decide which sources to reference. This involves entity salience, source authority signals and content structure that aligns with LLM retrieval patterns. AEO targets direct answer extraction. GEO targets the source selection process within generative models." }
       },
       {
         "@type": "Question",
         "name": "How does Perplexity find sources?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Perplexity uses real-time web search combined with retrieval-augmented generation. When a user asks a question, Perplexity sends search queries to multiple search engines, retrieves the top results, and uses an LLM to synthesise an answer with inline citations. Every Perplexity answer includes numbered references linking to source pages. Sites that rank well in organic search and have clear, authoritative, well-structured content are most likely to be retrieved and cited by Perplexity." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Perplexity uses real-time web search combined with retrieval-augmented generation. Perplexity sends search queries to multiple search engines and retrieves the top results. It then uses an LLM to synthesise an answer with inline citations. Every Perplexity answer includes numbered references linking to source pages. Sites that rank well in organic search and have clear, authoritative, well-structured content are most likely to be retrieved and cited by Perplexity." }
       },
       {
         "@type": "Question",
         "name": "How do you measure success in AI search optimisation?",
-        "acceptedAnswer": { "@type": "Answer", "text": "AI search performance is measured through brand monitoring for citation frequency, referral traffic from AI platforms such as ChatGPT, Perplexity, and Copilot tracked via custom GA4 channel groupings, and manual AI query testing across target platforms. Indirect signals, including featured snippet capture rate and branded search volume, also tend to rise alongside effective AI search optimisation." }
+        "acceptedAnswer": { "@type": "Answer", "text": "AI search performance is measured through brand monitoring for citation frequency and manual AI query testing across target platforms. Referral traffic from AI platforms such as ChatGPT, Perplexity and Copilot is tracked via custom GA4 channel groupings. Indirect signals, including featured snippet capture rate and branded search volume, also tend to rise alongside effective AI search optimisation." }
       },
       {
         "@type": "Question",
         "name": "Is GEO the same thing as SEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "GEO and SEO overlap substantially rather than being entirely separate disciplines: both reward authoritative, well-structured, topically relevant content, and pages that rank well organically tend to be cited more often by AI platforms. The distinction is that SEO optimises for position on a results page, while GEO optimises for selection as a cited source within a synthesised AI answer." }
+        "acceptedAnswer": { "@type": "Answer", "text": "GEO and SEO overlap substantially rather than being entirely separate disciplines. Both reward authoritative, well-structured, topically relevant content. Pages that rank well organically tend to be cited more often by AI platforms. The distinction is that SEO optimises for position on a results page. GEO optimises for selection as a cited source within a synthesised AI answer." }
       }
     ]
   }
@@ -131,7 +132,7 @@ const schema = [
     crumbs={[{"label": "Services", "href": "/services/"}, {"label": "AI Search Optimisation"}]}
     lead="I help Guildford and Surrey businesses get found and cited by ChatGPT, Google AI Overviews, Perplexity and Copilot. I start by checking how they describe you today."
     cta={{"href": "/free-seo-audit-guildford/", "label": "Book my free audit"}}
-    glance={{"heading": "At a glance", "points": ["AI assistants name sources instead of ranking pages, so the aim is to be a source they can use and trust.", "The AI Search Audit checks how ChatGPT, Perplexity, Google AI Overviews and Copilot treat your business.", "Fixes cover consistent business details, structured data and answers that are easy to quote.", "First changes in citations and entity recognition usually show within 4 to 8 weeks. No one can guarantee a citation."], "facts": [{"k": "AI Search Audit", "v": "£400 one-off"}, {"k": "Ongoing AI search work", "v": "Included from the £2,000 a month Premium plan"}, {"k": "Platforms checked", "v": "ChatGPT, Perplexity, Google AI Overviews, Copilot"}, {"k": "Who does the work", "v": "Me, directly"}, {"k": "Reply time", "v": "Within one working day"}, {"k": "Company", "v": "ND Media Ltd, no. 10784524", "href": "https://find-and-update.company-information.service.gov.uk/company/10784524"}]}}
+    glance={{"heading": "At a glance", "points": ["AI assistants name sources instead of ranking pages. The aim is to be a source they can use and trust.", "The AI Search Audit checks how ChatGPT, Perplexity, Google AI Overviews and Copilot treat your business.", "Fixes cover consistent business details, structured data and answers that are easy to quote.", "I re-run the same set of test prompts monthly and report what changed. No one can guarantee a citation."], "facts": [{"k": "AI Search Audit", "v": "£400 one-off"}, {"k": "Ongoing AI search work", "v": "Included from the £2,000 a month Premium plan"}, {"k": "Platforms checked", "v": "ChatGPT, Perplexity, Google AI Overviews, Copilot"}, {"k": "Who does the work", "v": "Me, directly"}, {"k": "Reply time", "v": "Within one working day"}, {"k": "Company", "v": "ND Media Ltd, no. 10784524", "href": "https://find-and-update.company-information.service.gov.uk/company/10784524"}]}}
   >
     <Fragment slot="title">AI Search Optimisation for <span class="mark">Guildford</span> Businesses</Fragment>
   </PageHero>
@@ -182,17 +183,15 @@ const schema = [
       <p class="sm:hidden text-xs text-text-muted mt-2">Swipe horizontally to compare every column.</p>
     </div>
 
-    <p>What follows is a comprehensive guide to AI search optimisation for businesses in Guildford and Surrey, the core disciplines (AEO, GEO, LLM SEO), the platforms reshaping discovery in 2026, practical implementation steps, and the ways local businesses from the <strong>University of Surrey</strong> innovation ecosystem to <strong>High Street</strong> retailers can retool their digital presence for an era where the search results page is no longer the only stage that matters.</p>
-
     <div class="reveal">
     <p class="eyebrow mb-3">01 / Definition</p>
     <h2>What is AI search optimisation?</h2>
 
     <p>AI search optimisation is the process of making your website, content, and entity data discoverable and citable by the artificial intelligence systems that increasingly answer user queries. It is distinct from traditional SEO in ways that run deeper than most businesses realise.</p>
 
-    <p>Traditional SEO is positional, rank higher on Google's results page, earn the click. AI search optimisation is citational: when an AI system synthesises an answer, it should reference your business, your content, or your data as a trusted source. The difference is not merely semantic; it reshapes how you structure content, how you build authority, and what "visibility" even means.</p>
+    <p>Traditional SEO is positional: rank higher, earn the click. AI search optimisation is citational: when a tool writes an answer, your business should be one of the sources it names.</p>
 
-    <p>This matters because user behaviour is migrating. A growing share of searches, particularly informational and research queries, now begin in AI interfaces rather than traditional search engines. When a <strong>Guildford</strong> business owner asks Copilot "best project management tools for small teams", or a homebuyer asks ChatGPT "what to look for in a Surrey property survey", the AI does not present a list of ten links. It presents a synthesised answer, sometimes with citations, sometimes without. AI search optimisation is the craft of ensuring your business is among the sources the AI selects, and, just as importantly, that it attributes the information to you by name.</p>
+    <p>This matters because some research now starts in AI tools. A business owner might ask Copilot for software options. A homebuyer might ask ChatGPT what to look for in a survey. In each case the tool writes one answer and may name a few sources. AI search optimisation is the work of being one of them, named correctly.</p>
 
     <h3>The three pillars</h3>
 
@@ -204,48 +203,44 @@ const schema = [
   <div><dt>LLM SEO</dt><dd>Addresses how large language models index, retrieve, and surface information from your site.</dd></div>
 </dl>
 
-    <p>Each pillar demands its own tactics, yet they converge on the same bedrock: structured content, unambiguous entity identity, and technical accessibility for AI crawlers.</p>
+    <p>They share one base: clear structure, one consistent set of business facts, and pages crawlers can reach.</p>
     </div>
 
     <div class="reveal">
     <p class="eyebrow mb-3">02 / Landscape</p>
     <h2>The AI search landscape in 2026</h2>
 
-    <p>The AI search market in 2026 is fragmented, a constellation of platforms, each with its own retrieval mechanics, citation habits, and user demographics. Understanding how each one selects its sources is not academic curiosity; it is the foundation of any serious optimisation strategy.</p>
+    <p>Each platform retrieves and cites differently. The way each one picks sources decides what to do.</p>
 
     <h3>ChatGPT and SearchGPT</h3>
 
-    <p>OpenAI's ChatGPT, powered by GPT-4o and its successors, is the most widely used AI assistant globally. Its search capabilities operate through two mechanisms: the model's training data (a static knowledge base with a cutoff date) and real-time web browsing via SearchGPT. When ChatGPT browses the web, it sends queries to search engines, retrieves pages, and synthesises answers with inline citations linking back to source URLs.</p>
+    <p>OpenAI's ChatGPT answers from its training data and, when it searches, from live pages fetched by OAI-SearchBot. Cited pages are linked in the answer.</p>
 
-    <p>For Guildford businesses, ChatGPT is particularly relevant for research-stage queries. A potential client at <strong>Surrey Research Park</strong> evaluating software vendors, for example, might ask ChatGPT to compare options rather than running a traditional Google search.</p>
+    <p>ChatGPT is particularly relevant to Guildford businesses for research-stage queries. A potential client at <strong>Surrey Research Park</strong> evaluating software vendors, for example, might ask ChatGPT to compare options rather than running a traditional Google search.</p>
 
     <h3>Google AI Overviews</h3>
 
-    <p>Google AI Overviews (the evolution of Search Generative Experience, or SGE) are now integrated into the main Google search results page for a significant percentage of queries. When triggered, an AI-generated summary appears above the traditional organic results, pulling information from multiple sources and linking to them.</p>
+    <p>Google AI Overviews appear above the organic results for some queries, summarise several sources and link to them. They draw on Google's normal index. A page has to be indexed and eligible for Search.</p>
 
-    <p>AI Overviews use Google's own index as their source material, which means traditional SEO and AI search optimisation are closely linked on this platform. Pages that rank well organically are more likely to be cited in AI Overviews, but the selection criteria also favour content that directly answers the query, uses structured data, and demonstrates topical authority.</p>
+    <p>AI Overviews use Google's own index as their source material. This means traditional SEO and AI search optimisation are closely linked on this platform. Pages that rank well organically are more likely to be cited in AI Overviews. The selection criteria also favour content that directly answers the query, uses structured data and demonstrates topical authority.</p>
 
     <h3>Perplexity</h3>
 
-    <p>Perplexity operates as a dedicated AI search engine. Every answer includes inline citations with numbered references linking to source pages. Perplexity uses real-time web search combined with retrieval-augmented generation (RAG), sending queries to multiple search engines, retrieving and ranking results, then using an LLM to synthesise an answer.</p>
+    <p>Perplexity operates as a dedicated AI search engine. Every answer includes inline citations with numbered references linking to source pages. Perplexity uses real-time web search combined with retrieval-augmented generation (RAG). It sends queries to multiple search engines and retrieves and ranks results. It then uses an LLM to synthesise an answer.</p>
 
     <p>Perplexity's citation-heavy format makes it one of the most transparent AI search platforms. Optimising for Perplexity shares significant overlap with traditional SEO: pages that rank well in organic search and have clear, well-structured content are more likely to be retrieved and cited.</p>
 
-    <ChecklistFigure title="AI platforms that matter" items={["ChatGPT and SearchGPT","Google AI Overviews","Perplexity","Claude","Microsoft Copilot","Apple Intelligence"]} caption="Each platform retrieves and cites sources in its own way." />
+    <ChecklistFigure title="AI platforms that matter" items={["ChatGPT and SearchGPT","Google AI Overviews","Perplexity","Claude","Microsoft Copilot"]} caption="Each platform retrieves and cites sources in its own way." />
 
     <h3>Claude</h3>
 
-    <p>Anthropic's Claude is used extensively in professional and enterprise contexts. While Claude does not browse the web in all configurations, it does have access to web search in some deployments, and its training data includes a broad corpus of web content. Businesses with strong entity presence and authoritative content are more likely to be referenced in Claude's responses.</p>
+    <p>Anthropic's Claude is used extensively in professional and enterprise contexts. Claude does not browse the web in all configurations. It has access to web search in some deployments. Its training data includes a broad corpus of web content. Businesses with strong entity presence and authoritative content are more likely to be referenced in Claude's responses.</p>
 
     <h3>Microsoft Copilot</h3>
 
-    <p>Microsoft Copilot is integrated into Bing, Edge, Windows, and the Microsoft 365 suite. For B2B businesses in Guildford, Copilot is significant because of its integration into the tools that knowledge workers use daily. When an employee at a <strong>Surrey Research Park</strong> company asks Copilot a question within Microsoft Teams or Edge, the system retrieves information from Bing's index and synthesises an answer with citations.</p>
+    <p>Microsoft Copilot is integrated into Bing, Edge, Windows and the Microsoft 365 suite. Copilot is significant for B2B businesses in Guildford because of its integration into the tools that knowledge workers use daily. When an employee at a <strong>Surrey Research Park</strong> company asks Copilot a question within Microsoft Teams or Edge, the system retrieves information from Bing's index and synthesises an answer with citations.</p>
 
     <p>Copilot's reliance on Bing's index means that Bing SEO, often neglected by UK businesses, becomes directly relevant to AI search visibility. Submitting sitemaps to Bing Webmaster Tools and ensuring Bing can crawl your site are foundational steps.</p>
-
-    <h3>Apple Intelligence</h3>
-
-    <p>Apple Intelligence, integrated into iOS, iPadOS, and macOS, brings AI-powered search and summarisation to the Apple ecosystem. Given the high iPhone and Mac penetration in affluent areas like Guildford (average property values exceeding <strong>£600k</strong>), Apple Intelligence is a relevant channel for local businesses. Apple's system draws on multiple sources including its own web index and partnership agreements with AI providers.</p>
 
     <!-- SVG: Traditional SEO vs AI Search Flow -->
     <div class="my-8">
@@ -253,39 +248,39 @@ const schema = [
         <title>Traditional SEO vs AI Search Optimisation</title>
         <defs>
           <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-            <polygon points="0 0, 8 3, 0 6" fill="#CBD8DB"/>
+            <polygon points="0 0, 8 3, 0 6" fill="#0F5257"/>
           </marker>
         </defs>
         <!-- Traditional SEO row -->
-        <text x="360" y="24" text-anchor="middle" font-weight="700" font-size="14" fill="#CBD8DB">Traditional SEO</text>
-        <rect x="20" y="40" width="130" height="44" rx="3" fill="#14262B" stroke="#CBD8DB" stroke-width="1.5"/>
-        <text x="85" y="66" text-anchor="middle" font-size="12" fill="#CBD8DB">User Query</text>
-        <line x1="150" y1="62" x2="190" y2="62" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <rect x="190" y="40" width="130" height="44" rx="3" fill="#14262B" stroke="#CBD8DB" stroke-width="1.5"/>
-        <text x="255" y="66" text-anchor="middle" font-size="12" fill="#CBD8DB">Search Engine</text>
-        <line x1="320" y1="62" x2="360" y2="62" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <rect x="360" y="40" width="130" height="44" rx="3" fill="#14262B" stroke="#CBD8DB" stroke-width="1.5"/>
-        <text x="425" y="66" text-anchor="middle" font-size="12" fill="#CBD8DB">10 Blue Links</text>
-        <line x1="490" y1="62" x2="530" y2="62" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <rect x="530" y="40" width="170" height="44" rx="3" fill="#14262B" stroke="#CBD8DB" stroke-width="1.5"/>
-        <text x="615" y="66" text-anchor="middle" font-size="12" fill="#CBD8DB">User Clicks &amp; Reads</text>
+        <text x="360" y="24" text-anchor="middle" font-weight="700" font-size="14" fill="#17212B">Traditional SEO</text>
+        <rect x="20" y="40" width="130" height="44" rx="3" fill="#FFFFFF" stroke="#0F5257" stroke-width="1.5"/>
+        <text x="85" y="66" text-anchor="middle" font-size="12" fill="#17212B">User Query</text>
+        <line x1="150" y1="62" x2="190" y2="62" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <rect x="190" y="40" width="130" height="44" rx="3" fill="#FFFFFF" stroke="#0F5257" stroke-width="1.5"/>
+        <text x="255" y="66" text-anchor="middle" font-size="12" fill="#17212B">Search Engine</text>
+        <line x1="320" y1="62" x2="360" y2="62" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <rect x="360" y="40" width="130" height="44" rx="3" fill="#FFFFFF" stroke="#0F5257" stroke-width="1.5"/>
+        <text x="425" y="66" text-anchor="middle" font-size="12" fill="#17212B">10 Blue Links</text>
+        <line x1="490" y1="62" x2="530" y2="62" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <rect x="530" y="40" width="170" height="44" rx="3" fill="#FFFFFF" stroke="#0F5257" stroke-width="1.5"/>
+        <text x="615" y="66" text-anchor="middle" font-size="12" fill="#17212B">User Clicks &amp; Reads</text>
         <!-- AI Search row -->
-        <text x="360" y="134" text-anchor="middle" font-weight="700" font-size="14" fill="#4FD1C5">AI Search Optimisation</text>
-        <rect x="20" y="150" width="130" height="44" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="85" y="176" text-anchor="middle" font-size="12" fill="#CBD8DB">User Query</text>
-        <line x1="150" y1="172" x2="190" y2="172" stroke="#4FD1C5" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <rect x="190" y="150" width="130" height="44" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="255" y="176" text-anchor="middle" font-size="12" fill="#CBD8DB">AI Platform</text>
-        <line x1="320" y1="172" x2="360" y2="172" stroke="#4FD1C5" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <rect x="360" y="150" width="130" height="44" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="425" y="170" text-anchor="middle" font-size="12" fill="#CBD8DB">Synthesised</text>
-        <text x="425" y="184" text-anchor="middle" font-size="12" fill="#CBD8DB">Answer</text>
-        <line x1="490" y1="172" x2="530" y2="172" stroke="#4FD1C5" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <rect x="530" y="150" width="170" height="44" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="615" y="170" text-anchor="middle" font-size="12" fill="#CBD8DB">User Gets Answer</text>
-        <text x="615" y="184" text-anchor="middle" font-size="12" fill="#CBD8DB">+ Citations</text>
+        <text x="360" y="134" text-anchor="middle" font-weight="700" font-size="14" fill="#B83817">AI Search Optimisation</text>
+        <rect x="20" y="150" width="130" height="44" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="85" y="176" text-anchor="middle" font-size="12" fill="#17212B">User Query</text>
+        <line x1="150" y1="172" x2="190" y2="172" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <rect x="190" y="150" width="130" height="44" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="255" y="176" text-anchor="middle" font-size="12" fill="#17212B">AI Platform</text>
+        <line x1="320" y1="172" x2="360" y2="172" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <rect x="360" y="150" width="130" height="44" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="425" y="170" text-anchor="middle" font-size="12" fill="#17212B">Synthesised</text>
+        <text x="425" y="184" text-anchor="middle" font-size="12" fill="#17212B">Answer</text>
+        <line x1="490" y1="172" x2="530" y2="172" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <rect x="530" y="150" width="170" height="44" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="615" y="170" text-anchor="middle" font-size="12" fill="#17212B">User Gets Answer</text>
+        <text x="615" y="184" text-anchor="middle" font-size="12" fill="#17212B">+ Citations</text>
         <!-- Key difference callout -->
-        <rect x="180" y="214" width="360" height="36" rx="3" fill="#1D6B66"/>
+        <rect x="180" y="214" width="360" height="36" rx="3" fill="#0F5257"/>
         <text x="360" y="237" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">Goal shifts from RANKING to CITATION</text>
       </svg>
     </div>
@@ -300,7 +295,7 @@ const schema = [
 
     <h3>How AEO works</h3>
 
-    <p>When an answer engine receives a query, it follows a predictable pattern: identify the intent, retrieve candidate sources, extract the most relevant passage, and present it as a direct answer. AEO targets each step in this process.</p>
+    <p>An answer engine follows a predictable pattern when it receives a query. It identifies the intent, retrieves candidate sources, extracts the most relevant passage and presents it as a direct answer. AEO targets each step in this process.</p>
 
     <p>The critical difference between traditional SEO and AEO lies in content structure. Traditional SEO rewards comprehensive, long-form content that keeps users on the page. AEO rewards content that provides a clear, extractable answer within the first few sentences of each section, followed by supporting detail. The answer must be self-contained: a paragraph that can stand alone when extracted from its surrounding context.</p>
 
@@ -308,17 +303,11 @@ const schema = [
 
     <p>Local AEO is particularly relevant for service-based businesses in Guildford. When a user asks Google's AI Overview "how much does a loft conversion cost in Surrey" or asks ChatGPT "best accountants near Guildford", the AI needs a source that provides a clear, factual answer with local specificity.</p>
 
-    <p>Businesses near the <strong>University of Surrey</strong> campus, along <strong>Guildford High Street</strong>, and in the <strong>Tunsgate Quarter</strong> retail area can leverage their physical location as a trust signal. AI platforms increasingly factor geographic relevance into their source selection for local queries.</p>
+    <p>Businesses near the <strong>University of Surrey</strong> campus, along <strong>Guildford High Street</strong> and in the <strong>Tunsgate Quarter</strong> retail area can leverage their physical location as a trust signal. AI platforms increasingly factor geographic relevance into their source selection for local queries.</p>
 
     <h3>Key AEO tactics</h3>
 
-    <ul>
-      <li><strong>Lead with the answer.</strong> Place a direct, factual response in the first sentence of each content section. Follow with elaboration.</li>
-      <li><strong>Use question-based headings.</strong> Match the phrasing that users type into AI assistants.</li>
-      <li><strong>Implement FAQPage schema.</strong> Structured data gives AI platforms machine-readable question-answer pairs.</li>
-      <li><strong>Keep paragraphs under 50 words for key answers.</strong> AI systems prefer concise, extractable passages.</li>
-      <li><strong>Include specific data points.</strong> Numbers, percentages, and dates increase citation likelihood because they signal factual content.</li>
-    </ul>
+    <ChecklistFigure title="AEO in practice" items={["Answer in the first sentence","Question-based headings","Visible FAQ with matching schema","Self-contained paragraphs","Specific facts with source and date"]} caption="Each item is a change to pages you already have." />
 
     </div>
 
@@ -326,25 +315,27 @@ const schema = [
     <p class="eyebrow mb-3">04 / GEO</p>
     <h2>GEO: generative engine optimisation</h2>
 
-    <p>Generative Engine Optimisation is the newest discipline within AI search optimisation. GEO focuses specifically on how generative AI platforms (those that produce original text rather than retrieving existing text) decide which sources to cite in their synthesised responses.</p>
+    <p>Generative Engine Optimisation is the newest discipline within AI search optimisation. GEO focuses specifically on how generative AI platforms decide which sources to cite in their synthesised responses. These platforms produce original text rather than retrieving existing text.</p>
 
     <h3>How LLMs decide what to cite</h3>
 
-    <p>When a generative AI platform produces an answer, it does not simply copy text from a source. It synthesises information from multiple sources and decides which to reference. This decision is influenced by several factors:</p>
+    <p>These are my working assumptions from the studies listed in my <a href="/generative-engine-optimisation-uk/">GEO guide</a>, not published rules.</p>
+
+    <p>A generative AI platform does not simply copy text from a source when it produces an answer. It synthesises information from multiple sources and decides which to reference. This decision is influenced by several factors:</p>
 
     <ul>
       <li><strong>Entity salience.</strong> How clearly and consistently your business is defined as an entity across the web. A business with a consistent name, address, and description across its website, Google Business Profile, LinkedIn, and industry directories has higher entity salience than one with fragmented or inconsistent information.</li>
       <li><strong>Source authority.</strong> The AI platform's assessment of your site's trustworthiness, based on factors like domain age, backlink profile, content quality, and consistency with other authoritative sources.</li>
       <li><strong>Content extractability.</strong> How easily the AI can identify and extract relevant information from your pages. Well-structured content with clear headings, short paragraphs, and schema markup is more extractable than dense, unstructured text.</li>
       <li><strong>Topical relevance.</strong> How closely your content matches the specific query. A page that comprehensively covers a narrow topic is more likely to be cited than a page that briefly mentions it among many other topics.</li>
-      <li><strong>Corroboration.</strong> AI platforms give more weight to information that multiple independent sources confirm. If your business claims are supported by third-party reviews, industry publications, and directory listings, citation likelihood increases.</li>
+      <li><strong>Corroboration.</strong> AI platforms give more weight to information that multiple independent sources confirm. Your business claims may be supported by third-party reviews, industry publications and directory listings. Citation likelihood then increases.</li>
     </ul>
 
     <h3>GEO in practice</h3>
 
-    <p>Effective GEO requires a methodical approach to entity management. For a Guildford business, this means ensuring your entity information (business name, services, location, credentials) is consistent and detailed across every platform where your business appears: your website, Google Business Profile, Companies House listing, LinkedIn, industry associations, and local directories.</p>
+    <p>Effective GEO requires a methodical approach to entity management. This means keeping your Guildford business's entity information (business name, services, location, credentials) consistent and detailed. Do this across every platform where your business appears: your website, Google Business Profile, Companies House listing, LinkedIn, industry associations and local directories.</p>
 
-    <p>The <strong>Surrey Chambers of Commerce</strong>, <strong>Guildford Borough Council</strong> business directory, and sector-specific associations all contribute to your entity graph. Each consistent mention reinforces the AI's confidence in citing you as a source.</p>
+    <p>Chambers of commerce, local directories and sector-specific associations all contribute to your entity graph. Each consistent mention reinforces the AI's confidence in citing you as a source.</p>
 
     </div>
 
@@ -356,13 +347,13 @@ const schema = [
 
     <h3>Training data vs retrieval-augmented generation</h3>
 
-    <p>LLMs acquire information through two distinct channels. The first is training data: the massive corpus of web content, books, and other text that the model was trained on. Information in the training data is "baked in" to the model's weights and influences its responses even without real-time web access. The second channel is retrieval-augmented generation (RAG), where the model searches the web in real time, retrieves relevant pages, and incorporates that information into its response.</p>
+    <p>LLMs acquire information through two distinct channels. The first is training data: the massive corpus of web content, books, and other text that the model was trained on. Information in the training data is "baked in" to the model's weights and influences its responses even without real-time web access. The second channel is retrieval-augmented generation (RAG). The model searches the web in real time, retrieves relevant pages and incorporates that information into its response.</p>
 
-    <p>For training data influence, the key factors are: your site's historical presence in Common Crawl and other web archives, the consistency of your entity information over time, and the authority of pages that link to or mention your business. For RAG influence, the factors are closer to traditional SEO: current search rankings, page structure, content relevance, and technical accessibility.</p>
+    <p>Training data influence depends on three factors. These are your site's historical presence in Common Crawl and other web archives, the consistency of your entity information over time and the authority of pages that link to or mention your business. RAG influence depends on factors closer to traditional SEO: current search rankings, page structure, content relevance and technical accessibility.</p>
 
     <h3>How LLMs process web pages</h3>
 
-    <p>When an LLM retrieves a web page during RAG, it does not experience the page the way a human does. It processes the text content, largely ignoring visual design. This means that information conveyed only through images, JavaScript-rendered content, or complex CSS layouts may be invisible to the LLM. Content must be in the HTML text layer to be retrievable.</p>
+    <p>An LLM does not experience a retrieved web page the way a human does. It processes the text content, largely ignoring visual design. This means that information conveyed only through images, JavaScript-rendered content, or complex CSS layouts may be invisible to the LLM. Content must be in the HTML text layer to be retrievable.</p>
 
     <p>LLMs also have context window limitations. They can only process a certain amount of text at once. Pages that front-load the most important information and use clear hierarchical structure (H1, H2, H3, H4 in proper order) make it easier for the LLM to identify and extract relevant passages.</p>
 
@@ -380,29 +371,11 @@ const schema = [
 
     <div class="reveal">
     <p class="eyebrow mb-3">06 / llms.txt</p>
-    <h2>llms.txt: the emerging standard for AI crawlers</h2>
+    <h2>llms.txt: what it is and what Google says</h2>
 
-    <p>llms.txt is an emerging web standard (documented at <a href="https://llmstxt.org" rel="noopener">llmstxt.org</a>) that provides AI crawlers with a structured summary of your website's content and purpose.</p>
+    <p>llms.txt is a plain-text file at your domain root that describes your site for AI tools, documented at <a href="https://llmstxt.org" target="_blank" rel="noopener noreferrer">llmstxt.org</a>. Google says Search does not use it and that it neither helps nor hurts rankings. Other services may read it.</p>
 
-    <h3>What llms.txt does</h3>
-
-    <p>Similar to how robots.txt guides traditional web crawlers and sitemap.xml helps search engines discover pages, llms.txt is designed to help large language models understand your website. A good llms.txt file includes:</p>
-
-    <ul>
-      <li>A concise description of your business or organisation.</li>
-      <li>Your primary products, services, or content areas.</li>
-      <li>Key pages and their topics.</li>
-      <li>Your preferred citation format.</li>
-      <li>Contact and entity information.</li>
-    </ul>
-
-    <h3>How llms.txt helps AI crawlers</h3>
-
-    <p>When an AI crawler encounters your llms.txt file, it gains immediate context about your site's purpose and structure. This reduces the likelihood of misinterpretation and increases the probability that your content will be accurately cited. For a Guildford business, the llms.txt file might specify your service area, industry focus, and key differentiators, helping AI platforms match your business to relevant local queries.</p>
-
-    <h3>llms.txt implementation</h3>
-
-    <p>The file is placed at the root of your domain (e.g., yourdomain.co.uk/llms.txt). As part of my AI search optimisation service, I create and maintain your llms.txt file alongside your robots.txt and sitemap configurations. The standard is still evolving, and I monitor updates to ensure my clients' implementations remain current.</p>
+    <p>Keeping one is harmless and I will set one up if you want it. I do not sell it as a way to get cited.</p>
 
     </div>
 
@@ -410,25 +383,19 @@ const schema = [
     <p class="eyebrow mb-3">07 / Why It Matters</p>
     <h2>Why Guildford businesses should care</h2>
 
-    <p>Guildford's business landscape makes AI search optimisation particularly relevant. The concentration of technology companies at <strong>Surrey Research Park</strong>, including neighbours of <strong>EA</strong>, <strong>BAE Systems (Detica)</strong>, and <strong>SSTL</strong>, means that early adopters of AI tools are also your potential customers. These professionals use ChatGPT, Copilot, and Perplexity as daily research tools.</p>
+    <p>Guildford's business mix makes this relevant. The technology and games companies on and around <strong>Surrey Research Park</strong> employ people who use ChatGPT, Copilot and Perplexity as daily research tools. They are also potential customers.</p>
 
-    <p>The gaming industry presence in Guildford, with studios like <strong>Media Molecule</strong> and <strong>Hello Games</strong>, further reinforces the tech-forward demographic. When a producer at a Guildford gaming studio needs a service provider, they are increasingly likely to ask an AI assistant rather than type a query into Google.</p>
+    <h3>Why check now</h3>
 
-    <h3>The first-mover advantage</h3>
-
-    <p>AI search optimisation is still nascent, which is precisely what makes this moment so valuable. The vast majority of businesses in Guildford and Surrey have not begun optimising for AI citations. That gap is a window, and like all windows in search, it narrows with time. Businesses that invest now will accumulate entity authority and citation history that compounds with every crawl cycle, building a lead that grows progressively more expensive for latecomers to close.</p>
-
-    <p>The analogy to the early 2000s is instructive: businesses that invested in SEO a decade before their competitors built domain authority advantages that persist to this day. The difference now is velocity. The AI search transition is unfolding faster, and the window for establishing first-mover authority is correspondingly narrower.</p>
+    <p>Few local businesses have checked how AI tools describe them. The check is cheap. Most of the fixes are ordinary SEO that help in Google as well.</p>
 
     <h3>Revenue impact</h3>
 
-    <p>AI search affects the entire customer journey. For B2B companies near the <strong>University of Surrey</strong>, AI assistants influence vendor shortlisting and procurement research. For consumer-facing businesses on the <strong>High Street</strong> and in <strong>Tunsgate Quarter</strong>, local AI queries drive foot traffic and calls. For professional services firms, AI citations build credibility and referral flows.</p>
+    <p>AI search affects the entire customer journey. AI assistants influence vendor shortlisting and procurement research for B2B companies near the <strong>University of Surrey</strong>. Local AI queries drive foot traffic and calls for consumer-facing businesses on the <strong>High Street</strong> and in <strong>Tunsgate Quarter</strong>. AI citations build credibility and referral flows for professional services firms.</p>
 
-    <ChecklistFigure title="Where AI search affects the customer journey" items={["Vendor shortlisting for B2B companies","Procurement research","Local queries that drive foot traffic and calls","Credibility and referral flows for professional services"]} caption="Absence from AI answers means competitors get the recommendation." />
+    <ChecklistFigure title="Where AI search affects the customer journey" items={["Vendor shortlisting for B2B companies","Procurement research","Local queries that drive foot traffic and calls","Credibility and referral flows for professional services"]} caption="Where an AI answer names a competitor and not you." />
 
-    <p>The businesses that remain invisible to AI search are not simply missing a channel, they are being quietly replaced in AI-generated recommendations by competitors who have done the work. Absence here is not neutral; it is a concession.</p>
-
-    </div>
+        </div>
 
     <div class="reveal">
     <p class="eyebrow mb-3">08 / Local SEO</p>
@@ -466,41 +433,41 @@ const schema = [
         <title>AI Citation Pipeline</title>
         <defs>
           <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-            <polygon points="0 0, 8 3, 0 6" fill="#CBD8DB"/>
+            <polygon points="0 0, 8 3, 0 6" fill="#0F5257"/>
           </marker>
         </defs>
         <!-- Step 1: Query -->
-        <rect x="10" y="50" width="110" height="70" rx="3" fill="#14262B" stroke="#CBD8DB" stroke-width="1.5"/>
-        <text x="65" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD8DB">Query</text>
-        <text x="65" y="96" text-anchor="middle" font-size="10" fill="#94A7AD">"best SEO in</text>
-        <text x="65" y="108" text-anchor="middle" font-size="10" fill="#94A7AD">Guildford"</text>
-        <line x1="120" y1="85" x2="155" y2="85" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrow2)"/>
+        <rect x="10" y="50" width="110" height="70" rx="3" fill="#FFFFFF" stroke="#0F5257" stroke-width="1.5"/>
+        <text x="65" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#17212B">Query</text>
+        <text x="65" y="96" text-anchor="middle" font-size="10" fill="#4A5560">"best SEO in</text>
+        <text x="65" y="108" text-anchor="middle" font-size="10" fill="#4A5560">Guildford"</text>
+        <line x1="120" y1="85" x2="155" y2="85" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrow2)"/>
         <!-- Step 2: LLM -->
-        <rect x="155" y="50" width="110" height="70" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="210" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD8DB">LLM</text>
-        <text x="210" y="96" text-anchor="middle" font-size="10" fill="#CBD8DB">Retrieves &amp;</text>
-        <text x="210" y="108" text-anchor="middle" font-size="10" fill="#CBD8DB">Synthesises</text>
-        <line x1="265" y1="85" x2="300" y2="85" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrow2)"/>
+        <rect x="155" y="50" width="110" height="70" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="210" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#17212B">LLM</text>
+        <text x="210" y="96" text-anchor="middle" font-size="10" fill="#17212B">Retrieves &amp;</text>
+        <text x="210" y="108" text-anchor="middle" font-size="10" fill="#17212B">Synthesises</text>
+        <line x1="265" y1="85" x2="300" y2="85" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrow2)"/>
         <!-- Step 3: Source Selection -->
-        <rect x="300" y="50" width="110" height="70" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="355" y="76" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD8DB">Source</text>
-        <text x="355" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD8DB">Selection</text>
-        <text x="355" y="108" text-anchor="middle" font-size="10" fill="#94A7AD">Authority + Entity</text>
-        <line x1="410" y1="85" x2="445" y2="85" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrow2)"/>
+        <rect x="300" y="50" width="110" height="70" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="355" y="76" text-anchor="middle" font-size="12" font-weight="600" fill="#17212B">Source</text>
+        <text x="355" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#17212B">Selection</text>
+        <text x="355" y="108" text-anchor="middle" font-size="10" fill="#4A5560">Authority + Entity</text>
+        <line x1="410" y1="85" x2="445" y2="85" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrow2)"/>
         <!-- Step 4: Citation -->
-        <rect x="445" y="50" width="110" height="70" rx="3" fill="#14262B" stroke="#4FD1C5" stroke-width="1.5"/>
-        <text x="500" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD8DB">Citation</text>
-        <text x="500" y="96" text-anchor="middle" font-size="10" fill="#94A7AD">Your business</text>
-        <text x="500" y="108" text-anchor="middle" font-size="10" fill="#94A7AD">referenced</text>
-        <line x1="555" y1="85" x2="590" y2="85" stroke="#CBD8DB" stroke-width="1.5" marker-end="url(#arrow2)"/>
+        <rect x="445" y="50" width="110" height="70" rx="3" fill="#FFFFFF" stroke="#B83817" stroke-width="1.5"/>
+        <text x="500" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#17212B">Citation</text>
+        <text x="500" y="96" text-anchor="middle" font-size="10" fill="#4A5560">Your business</text>
+        <text x="500" y="108" text-anchor="middle" font-size="10" fill="#4A5560">referenced</text>
+        <line x1="555" y1="85" x2="590" y2="85" stroke="#0F5257" stroke-width="1.5" marker-end="url(#arrow2)"/>
         <!-- Step 5: User -->
-        <rect x="590" y="50" width="120" height="70" rx="3" fill="#14262B" stroke="#CBD8DB" stroke-width="1.5"/>
-        <text x="650" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD8DB">User</text>
-        <text x="650" y="96" text-anchor="middle" font-size="10" fill="#94A7AD">Sees answer +</text>
-        <text x="650" y="108" text-anchor="middle" font-size="10" fill="#94A7AD">clicks through</text>
+        <rect x="590" y="50" width="120" height="70" rx="3" fill="#FFFFFF" stroke="#0F5257" stroke-width="1.5"/>
+        <text x="650" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#17212B">User</text>
+        <text x="650" y="96" text-anchor="middle" font-size="10" fill="#4A5560">Sees answer +</text>
+        <text x="650" y="108" text-anchor="middle" font-size="10" fill="#4A5560">clicks through</text>
         <!-- Label -->
-        <text x="360" y="160" text-anchor="middle" font-size="12" fill="#CBD8DB" font-weight="600">The AI Citation Pipeline</text>
-        <text x="360" y="178" text-anchor="middle" font-size="11" fill="#94A7AD">Your goal: be the source the LLM selects at step 3</text>
+        <text x="360" y="160" text-anchor="middle" font-size="12" fill="#17212B" font-weight="600">The AI Citation Pipeline</text>
+        <text x="360" y="178" text-anchor="middle" font-size="11" fill="#4A5560">Your goal: be the source the LLM selects at step 3</text>
       </svg>
     </div>
 
@@ -510,11 +477,11 @@ const schema = [
     <p class="eyebrow mb-3">09 / Process</p>
     <h2>My AI search optimisation process</h2>
 
-    <p>My AI search optimisation service follows a structured process, methodical rather than rushed, that addresses every factor influencing AI citation likelihood. Each step builds on the previous one, creating a compounding effect much like interest on a well-placed investment.</p>
+    <p>My process has five steps. Each builds on the one before.</p>
 
     <h3>Step 1: entity audit and optimisation</h3>
 
-    <p>I begin by auditing your business's entity presence across the web, examining your website, Google Business Profile, LinkedIn, Companies House, industry directories, review platforms, and any other site that mentions your business. I identify inconsistencies in your business name, address, phone number, and services description, then resolve them to create a unified entity graph. This work often starts as part of a full <a href="/seo-audit-guildford/">SEO audit</a>, which includes a dedicated AI search readiness component.</p>
+    <p>I begin by auditing your business's entity presence across the web. I examine your website, Google Business Profile, LinkedIn, Companies House, industry directories, review platforms and any other site that mentions your business. I identify inconsistencies in your business name, address, phone number and services description. I then resolve them to create a unified entity graph. This work often starts as part of a full <a href="/seo-audit-guildford/">SEO audit</a>. The audit includes a dedicated AI search readiness component.</p>
 
     <h3>Step 2: structured data implementation</h3>
 
@@ -528,13 +495,9 @@ const schema = [
 
     <p>I build citations and mentions of your business across authoritative sources that AI platforms trust. This includes industry publications, local business directories, professional associations, and relevant content platforms. Each citation reinforces your entity authority and increases the probability of AI citation.</p>
 
-    <h3>Step 5: llms.txt and technical AI configuration</h3>
+    <h3>Step 5: crawler access</h3>
 
-    <p>I create and deploy your llms.txt file, configure your robots.txt to manage AI crawler access appropriately, and ensure your sitemap includes all pages that should be discoverable by AI platforms. I also review your server configuration to ensure AI crawlers receive proper responses.</p>
-
-    <h3>Step 6: AI crawler access rules</h3>
-
-    <p>Your robots.txt file needs deliberate rules for AI crawlers. Platforms like GPTBot (OpenAI), ClaudeBot (Anthropic), PerplexityBot, and Google-Extended each have distinct user agents. I configure access rules that balance visibility with content protection, ensuring your site is discoverable by the AI platforms that drive valuable traffic while managing access to proprietary content.</p>
+    <p>I check robots.txt and any host-level bot blocking so that Googlebot, OAI-SearchBot and PerplexityBot can reach the pages you want found. I record your decision on training crawlers separately. Google-Extended controls Gemini training only; AI Overviews use Googlebot.</p>
 
     </div>
 
@@ -552,7 +515,7 @@ const schema = [
       <li><strong>Organization schema</strong> with sameAs links to all official profiles, establishing your entity across platforms.</li>
       <li><strong>LocalBusiness schema</strong> with geographic coordinates, service area, and opening hours for local relevance.</li>
       <li><strong>Service schema</strong> with detailed descriptions of each service offering, linked to the provider entity.</li>
-      <li><strong>FAQPage schema</strong> on every page with question-answer content, making Q&A pairs machine-readable.</li>
+      <li><strong>FAQPage schema</strong> where the FAQ is visible on the page. Google shows FAQ rich results for very few sites now. Treat it as structure and not as a lever.</li>
       <li><strong>Article schema</strong> on blog posts and thought leadership content, with author, date, and topic information.</li>
       <li><strong>BreadcrumbList schema</strong> on every page to communicate site hierarchy.</li>
     </ul>
@@ -564,13 +527,13 @@ const schema = [
     <ul>
       <li><strong>Inverted pyramid.</strong> Place the most important information first. Every section should open with a direct statement of fact or answer.</li>
       <li><strong>One topic per heading.</strong> Each H2 or H3 section should address a single, clearly defined topic. This allows AI systems to extract relevant passages without pulling in unrelated information.</li>
-      <li><strong>Tables for comparative data.</strong> When presenting comparisons, pricing, or specifications, use HTML tables. AI platforms parse tables more accurately than prose descriptions of the same data.</li>
-      <li><strong>Definition patterns.</strong> When defining terms or concepts, use a consistent pattern: "X is Y" in the opening sentence. This matches the extraction pattern most AI platforms use for definitional queries.</li>
+      <li><strong>Tables for comparative data.</strong> Use HTML tables to present comparisons, pricing or specifications. AI platforms parse tables more accurately than prose descriptions of the same data.</li>
+      <li><strong>Definition patterns.</strong> Define terms and concepts with a consistent pattern: "X is Y" in the opening sentence. This matches the extraction pattern most AI platforms use for definitional queries.</li>
     </ul>
 
     <h3>FAQ formatting for AI</h3>
 
-    <p>FAQ sections serve dual purposes in AI search optimisation. For users, they provide quick answers to common questions. For AI platforms, they provide clearly structured question-answer pairs that can be directly cited. Each FAQ should use:</p>
+    <p>FAQ sections serve dual purposes in AI search optimisation. Users get quick answers to common questions. AI platforms get clearly structured question-answer pairs that can be directly cited. Each FAQ should use:</p>
 
     <ul>
       <li>The exact question phrasing a user would type into an AI assistant.</li>
@@ -584,7 +547,7 @@ const schema = [
     <p class="eyebrow mb-3">11 / Measurement</p>
     <h2>Measuring AI search performance</h2>
 
-    <p>Measuring the impact of AI search optimisation is harder than measuring traditional SEO, and honesty about that difficulty is itself a signal of competence. AI platforms do not yet offer analytics dashboards equivalent to Google Search Console. But meaningful measurement is possible, provided you know where to look.</p>
+    <p>Measuring AI search is harder than measuring Google. There is no Search Console for ChatGPT. Measurement is still possible.</p>
 
     <h3>Brand monitoring</h3>
 
@@ -592,13 +555,13 @@ const schema = [
 
     <h3>Referral traffic from AI platforms</h3>
 
-    <p>When AI platforms cite your business with a link, click-throughs appear in your analytics as referral traffic. Key referral sources to monitor include:</p>
+    <p>Click-throughs appear in your analytics as referral traffic when AI platforms cite your business with a link. Key referral sources to monitor include:</p>
 
     <ul>
-      <li><strong>chat.openai.com</strong> (ChatGPT citations)</li>
-      <li><strong>perplexity.ai</strong> (Perplexity citations)</li>
-      <li><strong>bing.com/chat</strong> (Copilot citations)</li>
-      <li><strong>google.com with AI Overview parameters</strong></li>
+      <li><strong>chatgpt.com</strong> (ChatGPT)</li>
+      <li><strong>perplexity.ai</strong> (Perplexity)</li>
+      <li><strong>copilot.microsoft.com</strong> (Copilot)</li>
+      <li><strong>gemini.google.com</strong> (Gemini)</li>
     </ul>
 
     <p>GA4 can be configured with custom channel groupings to aggregate these sources into an "AI Search" channel for reporting.</p>
@@ -609,7 +572,7 @@ const schema = [
 
     <h3>Indirect metrics</h3>
 
-    <p>AI search optimisation also improves traditional SEO metrics. Featured snippet capture rates, knowledge panel appearances, and branded search volume all tend to increase alongside AI search optimisation efforts. Monitor these as proxy indicators.</p>
+    <p>Watch branded search volume and knowledge panel changes alongside. Do not read them as proof of AI work.</p>
 
     </div>
 
@@ -617,15 +580,15 @@ const schema = [
     <p class="eyebrow mb-3">12 / Industries</p>
     <h2>AI search for Surrey's key industries</h2>
 
-    <p>Different industries in Surrey face distinct AI search challenges and opportunities, what works for a SaaS company at Surrey Research Park bears little resemblance to the playbook for an estate agency on the High Street. Understanding how AI search reshapes your specific sector is essential for effective optimisation.</p>
+    <p>Different industries in Surrey face distinct AI search challenges and opportunities. What works for a SaaS company at Surrey Research Park bears little resemblance to the playbook for an estate agency on the High Street. Understanding how AI search reshapes your specific sector is essential for effective optimisation.</p>
 
     <h3>Technology and SaaS</h3>
 
-    <p>Surrey Research Park's technology companies face an immediate AI-search impact. Their prospective customers include CTOs, IT directors, and procurement managers who use AI assistants during research. For B2B SaaS companies, AI search optimisation means making product comparisons, use cases, and technical documentation clear enough to cite. The <a href="/case-studies/">measured results page</a> shows how AI-assistant referrals are tracked without presenting a hypothetical startup as client proof.</p>
+    <p>Surrey Research Park's technology companies face an immediate AI-search impact. Their prospective customers include CTOs, IT directors, and procurement managers who use AI assistants during research. AI search optimisation for B2B SaaS companies means making product comparisons, use cases and technical documentation clear enough to cite.</p>
 
     <h3>Gaming and creative</h3>
 
-    <p>Guildford's gaming studios, including <strong>Media Molecule</strong> and <strong>Hello Games</strong>, employ professionals who recruit talent, commission services, and research tools through AI assistants. Service providers targeting the gaming industry need entity presence in gaming-specific contexts: industry publications, conference listings, and portfolio platforms that AI platforms weight highly for gaming-related queries.</p>
+    <p>Guildford's games studios employ people who recruit, commission services and research tools through AI assistants. Service providers to that sector need a presence in gaming publications, conference listings and portfolio sites.</p>
 
     <h3>Professional services</h3>
 
@@ -635,7 +598,7 @@ const schema = [
 
     <h3>Property and real estate</h3>
 
-    <p>With average property values in Guildford exceeding <strong>£600k</strong>, the property market represents high-value AI search territory. Homebuyers increasingly ask AI assistants about neighbourhoods, property types, and market conditions before contacting agents. Estate agents who publish detailed area guides for <strong>Onslow Village</strong>, <strong>Merrow</strong>, <strong>Burpham</strong>, and other Guildford areas with proper schema markup can capture AI citations for these high-intent queries.</p>
+    <p>Homebuyers ask AI assistants about neighbourhoods, property types and market conditions before contacting agents. Agents who publish detailed area guides for <strong>Onslow Village</strong>, <strong>Merrow</strong>, <strong>Burpham</strong> and other areas, with matching schema, give those tools something to cite.</p>
 
     <h3>Healthcare</h3>
 
@@ -650,35 +613,35 @@ const schema = [
     <details class="faq-item">
       <summary>Will AI search replace Google?</summary>
       <div class="faq-answer">
-        <p>AI search will not replace Google entirely, but it is already diverting a significant share of informational queries. Google itself has integrated AI Overviews into its results, and a growing proportion of users begin research queries in AI assistants rather than traditional search. Businesses need to optimise for both channels. The shift is comparable to mobile search adoption: it did not replace desktop search, but businesses that failed to optimise for mobile lost significant traffic.</p>
+        <p>No. Google has put AI Overviews into its own results. Some people start research in ChatGPT or Perplexity. You need to be findable in both.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>How do I get cited by ChatGPT?</summary>
       <div class="faq-answer">
-        <p>ChatGPT cites sources through its browsing and retrieval-augmented generation capabilities. To increase citation likelihood: structure content with clear answers at the top of sections, implement comprehensive schema markup, build entity authority through consistent NAP and sameAs references across the web, publish an llms.txt file, and ensure your site is accessible to GPTBot in robots.txt. Topical authority in your specific niche is the strongest single factor.</p>
+        <p>ChatGPT search fetches live pages through OAI-SearchBot and names the ones it uses. What helped in the studies I list in my GEO guide: pages indexed in normal search, titles that match the question, a clear answer near the top, and consistent business facts across your site and listings. No one can guarantee a citation.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>What is llms.txt?</summary>
       <div class="faq-answer">
-        <p>llms.txt is an emerging standard documented at llmstxt.org that provides AI crawlers with a structured summary of your website. Similar to how robots.txt guides traditional crawlers, llms.txt helps large language models understand your site's purpose, key content, and preferred citation format. It is placed at your domain root (e.g., yourdomain.co.uk/llms.txt) and includes your business description, service list, key pages, and contact information in a format optimised for LLM consumption.</p>
+        <p>llms.txt is a plain-text summary of your site for AI tools, placed at your domain root. Google says Search does not use it and it neither helps nor hurts rankings. It is harmless to keep and not a way to get cited.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>How long until AI SEO shows results?</summary>
       <div class="faq-answer">
-        <p>AI search optimisation typically shows initial results within 4 to 8 weeks for citation improvements and entity recognition. Full impact on AI-driven referral traffic usually takes 3 to 6 months, depending on your existing domain authority and content quality. The timeline is influenced by how quickly AI crawlers re-index your updated content, how competitive your niche is, and the strength of your existing entity presence.</p>
+        <p>I cannot promise a date. I run a fixed set of prompts monthly from the start. You see citation and description changes as they happen. I count AI referral visits and enquiries separately.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>Do I need different content for AI search?</summary>
       <div class="faq-answer">
-        <p>You do not need entirely separate content. Instead, you need to restructure existing content for extractability: lead with direct answers, use clear heading hierarchies, implement comprehensive schema markup, and ensure your entity information is consistent across the web. The same content serves both traditional and AI search when formatted correctly. The main adjustment is structural rather than substantive: how you present information matters as much as what you say.</p>
+        <p>You do not need entirely separate content. Instead, you need to restructure existing content for extractability. Lead with direct answers, use clear heading hierarchies, implement comprehensive schema markup and ensure your entity information is consistent across the web. The same content serves both traditional and AI search when formatted correctly. The main adjustment is structural rather than substantive: how you present information matters as much as what you say.</p>
       </div>
     </details>
 
@@ -692,28 +655,28 @@ const schema = [
     <details class="faq-item">
       <summary>What is GEO?</summary>
       <div class="faq-answer">
-        <p>GEO stands for Generative Engine Optimisation. It is the discipline of optimising content to be selected and cited by generative AI platforms such as ChatGPT, Claude, and Perplexity. GEO focuses on how large language models decide which sources to reference, involving entity salience, source authority signals, and content structure that aligns with LLM retrieval patterns. Unlike AEO, which targets direct answer extraction, GEO targets the source selection process within generative models.</p>
+        <p>GEO stands for Generative Engine Optimisation. It is the discipline of optimising content to be selected and cited by generative AI platforms such as ChatGPT, Claude, and Perplexity. GEO focuses on how large language models decide which sources to reference. This involves entity salience, source authority signals and content structure that aligns with LLM retrieval patterns. AEO targets direct answer extraction. GEO targets the source selection process within generative models.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>How does Perplexity find sources?</summary>
       <div class="faq-answer">
-        <p>Perplexity uses real-time web search combined with retrieval-augmented generation. When a user asks a question, Perplexity sends search queries to multiple search engines, retrieves the top results, and uses an LLM to synthesise an answer with inline citations. Every Perplexity answer includes numbered references linking to source pages. Sites that rank well in organic search and have clear, authoritative, well-structured content are most likely to be retrieved and cited by Perplexity.</p>
+        <p>Perplexity uses real-time web search combined with retrieval-augmented generation. Perplexity sends search queries to multiple search engines and retrieves the top results. It then uses an LLM to synthesise an answer with inline citations. Every Perplexity answer includes numbered references linking to source pages. Sites that rank well in organic search and have clear, authoritative, well-structured content are most likely to be retrieved and cited by Perplexity.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>How do you measure success in AI search optimisation?</summary>
       <div class="faq-answer">
-        <p>AI search performance is measured through brand monitoring for citation frequency, referral traffic from AI platforms such as ChatGPT, Perplexity, and Copilot tracked via custom GA4 channel groupings, and manual AI query testing across target platforms. Indirect signals, including featured snippet capture rate and branded search volume, also tend to rise alongside effective AI search optimisation.</p>
+        <p>AI search performance is measured through brand monitoring for citation frequency and manual AI query testing across target platforms. Referral traffic from AI platforms such as ChatGPT, Perplexity and Copilot is tracked via custom GA4 channel groupings. Indirect signals, including featured snippet capture rate and branded search volume, also tend to rise alongside effective AI search optimisation.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>Is GEO the same thing as SEO?</summary>
       <div class="faq-answer">
-        <p>GEO and SEO overlap substantially rather than being entirely separate disciplines: both reward authoritative, well-structured, topically relevant content, and pages that rank well organically tend to be cited more often by AI platforms. The distinction is that SEO optimises for position on a results page, while GEO optimises for selection as a cited source within a synthesised AI answer.</p>
+        <p>GEO and SEO overlap substantially rather than being entirely separate disciplines. Both reward authoritative, well-structured, topically relevant content. Pages that rank well organically tend to be cited more often by AI platforms. The distinction is that SEO optimises for position on a results page. GEO optimises for selection as a cited source within a synthesised AI answer.</p>
       </div>
     </details>
 
@@ -721,7 +684,7 @@ const schema = [
 
     <div class="cta-section p-8 mt-12">
       <h2 class="text-2xl font-bold text-brand mb-3">Ready to strengthen your AI search presence?</h2>
-      <p class="text-text-muted mb-6 max-w-xl mx-auto">Request your audit and I will assess your current AI citation visibility across ChatGPT, Perplexity, Google AI Overviews, and Copilot, then map a clear path to securing your citations.</p>
+      <p class="text-text-muted mb-6 max-w-xl mx-auto">Request your audit and I will assess your current AI citation visibility across ChatGPT, Perplexity, Google AI Overviews and Copilot. I will then map a clear path to improving how they describe you.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/free-seo-audit-guildford/" class="cta-button">Start with an audit</a>
         <a href="/services/" class="cta-button-outline">View All Services</a>
@@ -729,7 +692,7 @@ const schema = [
     </div>
 
     <div class="mt-10 pt-6 border-t border-border text-sm text-text-muted">
-      <p>Related: <a href="/">SEO Guildford Home</a> | <a href="/services/">All SEO Services</a> | <a href="/technical-seo-guildford/">Technical SEO Guildford</a> | <a href="/seo-pricing-guildford/">SEO Pricing</a> | <a href="/case-studies/">Measured Results</a></p>
+      <p>Related: <a href="/">SEO Guildford</a> | <a href="/services/">All SEO Services</a> | <a href="/technical-seo-guildford/">Technical SEO Guildford</a> | <a href="/seo-pricing-guildford/">SEO Pricing</a> | <a href="/case-studies/">Measured Results</a></p>
     </div>
 
     <ProofStats variant="ai" />

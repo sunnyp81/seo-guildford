@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Icon from '../../components/Icon.astro';
+import ChecklistFigure from '../../components/ChecklistFigure.astro';
 
 const title = 'SEO for Guildford Industries: Surrey Sectors';
 const description = 'Industry-specific SEO strategies for Guildford businesses across gaming, tech, professional services, property, healthcare, finance, retail, and education.';
@@ -36,22 +37,22 @@ const schema = [
       {
         "@type": "Question",
         "name": "Why does my industry need a specialised SEO approach?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Each industry has different search intent patterns, buyer journeys, and competitive landscapes. A gaming studio at Surrey Research Park needs developer recruitment SEO and publisher visibility, while an estate agent on Guildford High Street needs local pack dominance and property listing schema. Generic SEO misses these nuances and wastes budget on irrelevant traffic." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Each industry has different search intent patterns, buyer journeys, and competitive landscapes. A gaming studio at Surrey Research Park needs developer recruitment SEO and publisher visibility. An estate agent on Guildford High Street needs local pack dominance and property listing schema. Generic SEO misses these nuances and wastes budget on irrelevant traffic." }
       },
       {
         "@type": "Question",
         "name": "Which Guildford industries are most competitive for SEO?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Property and estate agency is the most competitive local SEO sector in Guildford, followed by legal services and healthcare. These industries have high customer lifetime values, which means established firms invest heavily in search visibility. Newer sectors like gaming and AI are less competitive locally but require different strategies focused on talent acquisition and B2B visibility." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Advertisers pay the highest click prices in Guildford for legal, money and property searches. That is a fair proxy for competition (see my cost per click data). Property, legal and healthcare firms have high customer values. Established ones invest in search. Games and AI companies compete nationally for talent and partners rather than locally." }
       },
       {
         "@type": "Question",
         "name": "Do you have experience with gaming and tech companies?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Guildford is the UK's gaming capital, home to studios like Media Molecule, Hello Games, and Bossa Studios. I understand the technical content requirements, developer audience targeting, and recruitment SEO that gaming and tech companies need. My proximity to Surrey Research Park means I work regularly with technology businesses." }
+        "acceptedAnswer": { "@type": "Answer", "text": "My technical work covers what games and technology sites need: JavaScript rendering, large media, recruitment pages and international targeting." }
       },
       {
         "@type": "Question",
         "name": "Can SEO help healthcare providers in Guildford?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Healthcare SEO requires EEAT compliance because Google applies stricter quality standards to health-related content. For practices near Royal Surrey County Hospital or BMI Mount Alvernia, I build content strategies that demonstrate clinical expertise while targeting local patient search queries." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Healthcare SEO requires EEAT compliance because Google applies stricter quality standards to health-related content. I build content strategies for practices near Royal Surrey County Hospital. They demonstrate clinical expertise while targeting local patient search queries." }
       },
       {
         "@type": "Question",
@@ -61,7 +62,7 @@ const schema = [
       {
         "@type": "Question",
         "name": "What SEO metrics matter most for Guildford retail businesses?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For Guildford retail, the most important metrics are local pack visibility, Google Business Profile actions (calls, directions, website clicks), and foot traffic attribution. Organic ranking matters, but for shops in the Friary Centre or Tunsgate Quarter, the map pack drives most in-store visits. I track conversion actions, not just rankings." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The most important metrics for Guildford retail are local pack visibility, Google Business Profile actions (calls, directions, website clicks), and foot traffic attribution. Organic ranking matters. For shops in the Friary Centre or Tunsgate Quarter, the map pack drives most in-store visits. I track conversion actions, not just rankings." }
       },
       {
         "@type": "Question",
@@ -71,7 +72,7 @@ const schema = [
       {
         "@type": "Question",
         "name": "What is YMYL content and which Guildford industries does it affect?",
-        "acceptedAnswer": { "@type": "Answer", "text": "YMYL stands for Your Money or Your Life, Google's classification for content that can affect a person's health, financial stability, or safety. Guildford industries in this category, including healthcare, finance, and legal services, face stricter EEAT (Experience, Expertise, Authoritativeness, Trust) requirements, meaning content must demonstrate genuine credentials and professional expertise to rank well." }
+        "acceptedAnswer": { "@type": "Answer", "text": "YMYL stands for Your Money or Your Life, Google's classification for content that can affect a person's health, financial stability, or safety. Guildford industries in this category, including healthcare, finance, and legal services, face stricter EEAT (Experience, Expertise, Authoritativeness, Trust) requirements. Content must demonstrate genuine credentials and professional expertise to rank well." }
       }
     ]
   }
@@ -80,7 +81,7 @@ const schema = [
 
 <Base title={title} description={description} schema={schema}>
 <PageHero
-    eyebrow="Industries We Serve"
+    eyebrow="Industries I serve"
     crumbs={[{"label": "Industries"}]}
     lead="I provide SEO for the main sectors in Guildford. Each sector searches differently. I set up the SEO to match."
     glance={{"heading": "At a glance", "points": ["Eight sectors covered, from gaming and technology to healthcare and education.", "Each sector has its own search intent and buyer journey.", "A gaming studio, an estate agent and a solicitor each need a different plan.", "Find your sector below."], "facts": [{"k": "Audits and plans", "v": "Audits from £400. Plans from £500 a month"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire"}, {"k": "Free audit report", "v": "2 to 3 working days, PDF by email"}]}}
@@ -93,48 +94,50 @@ const schema = [
   <article class="doc">
 
     <h2 class="sr-only">Industries served</h2>
-    <dl class="def-grid not-prose">
-  <div><dt>Gaming & Interactive Entertainment</dt><dd>01 / Gaming</dd></div>
-  <div><dt>Technology & AI</dt><dd>02 / Technology</dd></div>
-  <div><dt>Professional Services</dt><dd>03 / Professional Services</dd></div>
-  <div><dt>Property & Estate Agents</dt><dd>04 / Property</dd></div>
-  <div><dt>Healthcare</dt><dd>05 / Healthcare</dd></div>
-  <div><dt>Finance & Wealth Management</dt><dd>06 / Finance</dd></div>
-  <div><dt>Retail & Hospitality</dt><dd>07 / Retail &amp; Hospitality</dd></div>
-  <div><dt>Education</dt><dd>08 / Education</dd></div>
-</dl>
+    <div class="not-prose overflow-x-auto my-6">
+      <table class="w-full text-sm border border-border bg-glass">
+        <caption class="text-left text-sm text-text-muted p-2">What people search and what counts as a result, by sector.</caption>
+        <thead><tr class="bg-surface text-left"><th class="p-2">Sector</th><th class="p-2">What people search</th><th class="p-2">What counts as a result</th></tr></thead>
+        <tbody>
+          <tr class="border-t border-border"><td class="p-2"><a href="#gaming" class="text-brand hover:underline">Gaming and interactive</a></td><td class="p-2">Studio names, "game developer jobs guildford"</td><td class="p-2">Applications, publisher and partner enquiries</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#technology" class="text-brand hover:underline">Technology and AI</a></td><td class="p-2">Problem-solving queries in your niche, product comparisons</td><td class="p-2">Demo requests, qualified B2B enquiries</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#professional-services" class="text-brand hover:underline">Professional services</a></td><td class="p-2">"[practice area] solicitor guildford", "accountant surrey"</td><td class="p-2">Consultations booked</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#property" class="text-brand hover:underline">Property</a></td><td class="p-2">"estate agents guildford", "house prices [area]"</td><td class="p-2">Valuation requests</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#healthcare" class="text-brand hover:underline">Healthcare</a></td><td class="p-2">"[specialty] guildford", "private physio near me"</td><td class="p-2">Appointments booked</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#finance" class="text-brand hover:underline">Finance</a></td><td class="p-2">"financial adviser guildford", "inheritance tax planning surrey"</td><td class="p-2">First meetings</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#retail-hospitality" class="text-brand hover:underline">Retail and hospitality</a></td><td class="p-2">"[category] guildford", "near me"</td><td class="p-2">Calls, directions, footfall</td></tr>
+          <tr class="border-t border-border"><td class="p-2"><a href="#education" class="text-brand hover:underline">Education</a></td><td class="p-2">Course and open day searches, "tutors guildford"</td><td class="p-2">Enquiries, applications</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="prose">
 
       <div class="reveal">
       <p class="eyebrow mb-3">01 / Gaming</p>
-      <h2>Gaming and interactive entertainment</h2>
+      <h2 id="gaming">Gaming and interactive entertainment</h2>
 
-      <p>Guildford is the UK's gaming capital, a distinction that is not merely civic boasting but a measurable fact. The town hosts more game development studios per square mile than anywhere else in Britain, a concentration that grew from the Lionhead Studios legacy Peter Molyneux established in the late 1990s and has since developed its own gravitational pull.</p>
+      <p>Guildford has an unusual concentration of games studios for a town of its size, plus the support businesses that serve them.</p>
 
-      <p><strong>Media Molecule</strong>, creators of LittleBigPlanet and Dreams, operates from Guildford. <strong>Hello Games</strong>, the studio behind No Man's Sky, is headquartered here. <strong>Bossa Studios</strong> maintains a significant presence. Dozens of smaller indie studios and support companies fill the surrounding ecosystem, many rooted at or near Surrey Research Park, a creative cluster as dense and interconnected as any in Europe.</p>
-
-      <p>SEO for gaming companies differs fundamentally from local service businesses, in the same way that a blueprint for a concert hall differs from one for a house. The priorities are:</p>
+      <p>SEO for games companies differs from local service SEO. The priorities are:</p>
 
       <ul>
-        <li><strong>Talent acquisition SEO</strong> - ranking for "game developer jobs Guildford" and related recruitment queries. The University of Surrey's games design courses create a local pipeline, but studios compete nationally for senior talent.</li>
+        <li><strong>Talent acquisition SEO</strong> - ranking for "game developer jobs Guildford" and related recruitment queries. The University of Surrey's games design courses create a local pipeline. Studios compete nationally for senior talent.</li>
         <li><strong>Publisher and investor visibility</strong> - ensuring studio websites rank for branded searches and demonstrate credibility to potential partners.</li>
         <li><strong>Community and content SEO</strong> - dev blogs, patch notes, and community updates that drive organic traffic and keep player communities engaged.</li>
         <li><strong>Technical SEO for interactive content</strong> - game trailers, embedded media, and JavaScript-heavy portfolio pages require careful technical optimisation for crawlability.</li>
       </ul>
 
-      <p>The gaming industry also sustains a strong B2B element in Guildford that is easy to overlook. QA houses, localisation firms, audio studios, and middleware providers all serve the local cluster, and they benefit from SEO that speaks directly to game development decision-makers rather than end consumers, a different audience entirely, with different search vocabulary and different conversion paths.</p>
+      <p>The gaming industry also sustains a strong B2B element in Guildford that is easy to overlook. QA houses, localisation firms, audio studios, and middleware providers all serve the local cluster. They benefit from SEO that speaks directly to game development decision-makers rather than end consumers. This is a different audience entirely. It has different search vocabulary and different conversion paths.</p>
       </div>
 
       <div class="reveal">
       <p class="eyebrow mb-3">02 / Technology</p>
-      <h2>Technology and AI</h2>
+      <h2 id="technology">Technology and AI</h2>
 
-      <p><strong>Surrey Research Park</strong> houses over 170 technology companies, making it one of the most significant tech clusters in southern England outside London. The park's connection to the University of Surrey provides access to research talent and collaborative opportunities that shape the local tech ecosystem.</p>
+      <p><strong>Surrey Research Park</strong>, next to the University of Surrey, is a technology cluster of research-led companies in satellites, software, biotech and AI.</p>
 
-      <p><strong>Surrey Satellite Technology Ltd (SSTL)</strong>, a pioneer in small satellite manufacturing, exemplifies the high-tech specialisms present in Guildford. <strong>BAE Systems</strong> (formerly Detica) runs data intelligence operations here. Biotech startups, AI companies, and cleantech firms add further layers of diversity to an already rich landscape.</p>
-
-      <p>Tech company SEO in Guildford gravitates toward B2B content marketing, and for good reason: the audience is technical, the sales cycles stretch across months, and thought leadership content drives the majority of organic lead generation. My approach focuses on:</p>
+      <p>Tech company SEO in Guildford gravitates toward B2B content marketing. The audience is technical, the sales cycles stretch across months, and thought leadership content drives the majority of organic lead generation. My approach focuses on:</p>
 
       <ul>
         <li>Technical blog content that ranks for problem-solving queries in your niche</li>
@@ -143,16 +146,16 @@ const schema = [
         <li>Schema markup for software products, organisations, and research outputs</li>
       </ul>
 
-      <p>For AI companies specifically, visibility now extends beyond traditional rankings into how tools like ChatGPT and Google AI Overviews cite your business, which is where <a href="/ai-search-optimisation-guildford/">AI search optimisation</a> becomes part of the strategy rather than an afterthought.</p>
+      <p>AI companies need visibility beyond traditional rankings. Tools like ChatGPT and Google AI Overviews now cite your business. This is where <a href="/ai-search-optimisation-guildford/">AI search optimisation</a> becomes part of the strategy rather than an afterthought.</p>
       </div>
 
       <div class="reveal">
       <p class="eyebrow mb-3">03 / Professional Services</p>
-      <h2>Professional services</h2>
+      <h2 id="professional-services">Professional services</h2>
 
-      <p>Guildford's <strong>Cathedral district</strong> and <strong>High Street</strong> concentrate a significant number of legal, accountancy, and consultancy firms, a professional services corridor that serves both the local affluent population and the broader Surrey corporate market.</p>
+      <p>Guildford's <strong>Cathedral district</strong> and <strong>High Street</strong> concentrate a significant number of legal, accountancy, and consultancy firms. This professional services corridor serves both the local affluent population and the broader Surrey corporate market.</p>
 
-      <p>Professional services SEO in Guildford is intensely competitive, and the reasons are structural rather than superficial. Established firms have decades-old domain authority and deeply rooted local citation profiles. Breaking into the top positions takes a sustained, methodical strategy built on:</p>
+      <p>Professional services SEO in Guildford is intensely competitive. The reasons are structural rather than superficial. Established firms have decades-old domain authority and deeply rooted local citation profiles. Breaking into the top positions takes a sustained, methodical strategy built on:</p>
 
       <ul>
         <li><strong>Practice area content</strong> - detailed service pages targeting specific queries like "commercial property solicitor Guildford" or "R&D tax credits accountant Surrey"</li>
@@ -161,16 +164,16 @@ const schema = [
         <li><strong>Google Business Profile</strong> - review generation and category optimisation specific to each practice area</li>
       </ul>
 
-      <p>Many professional firms in Guildford serve clients across Surrey without dedicated location pages, a missed opportunity that amounts to leaving an entire wing of the building unlit. A family law firm in Guildford that also serves Woking, Godalming, and Farnham should have optimised pages for each area, each one grounded in genuine local detail rather than templated content with the town name swapped.</p>
+      <p>Many professional firms in Guildford serve clients across Surrey without area pages. A family law firm that also serves Woking, Godalming and Farnham should have a page for each, written from real local detail, not a template with the town name swapped.</p>
       </div>
 
       <div class="reveal">
       <p class="eyebrow mb-3">04 / Property</p>
-      <h2>Property and estate agents</h2>
+      <h2 id="property">Property and estate agents</h2>
 
-      <p>Guildford's property market is one of the most valuable outside London, with average prices consistently exceeding 600,000 pounds, a figure that concentrates commercial stakes and, by extension, search competition among estate agents vying for local visibility.</p>
+      <p>Guildford's property market is one of the most valuable outside London. This concentrates competition among estate agents for local visibility.</p>
 
-      <p>The search landscape for Guildford property is dominated by portal sites like Rightmove, Zoopla, and OnTheMarket. Independent and regional agents cannot outrank these portals for generic property queries; trying is like building a cottage and hoping it blocks the view of a skyscraper. The real SEO opportunity lies in the terrain the portals cannot cover:</p>
+      <p>Rightmove, Zoopla and OnTheMarket dominate generic property searches. Independent agents cannot outrank them for those terms. The opportunity is what the portals do not cover:</p>
 
       <ul>
         <li><strong>Area guide content</strong> - detailed neighbourhood pages for Pewley Hill, Merrow, Onslow Village, and other desirable areas that portals cannot replicate with local depth</li>
@@ -180,6 +183,8 @@ const schema = [
       </ul>
 
       <p>Schema markup is particularly valuable for estate agents: it helps search engines read your listings. PropertyListing schema, LocalBusiness markup with geo-coordinates, and FAQ schema for common buyer questions all improve search visibility and click-through rates in measurable ways.</p>
+
+      <ChecklistFigure title="Where independent agents can win" items={["Area guides for Pewley Hill, Merrow and Onslow Village","Valuation and house price queries","Landlord and lettings services","Named new developments"]} caption="Content the portals do not cover with local depth." />
       </div>
 
       <div class="not-prose my-12 border-y border-border py-6 flex flex-wrap items-center justify-between gap-4">
@@ -189,11 +194,11 @@ const schema = [
 
       <div class="reveal">
       <p class="eyebrow mb-3">05 / Healthcare</p>
-      <h2>Healthcare</h2>
+      <h2 id="healthcare">Healthcare</h2>
 
-      <p><strong>Royal Surrey County Hospital</strong> is the primary NHS facility, and it shapes healthcare search patterns across the borough. <strong>BMI Mount Alvernia Hospital</strong> serves the private healthcare market. Dozens of dental practices, physiotherapy clinics, opticians, and specialist consultancies compete for local search visibility in a sector where trust matters.</p>
+      <p><strong>Royal Surrey County Hospital</strong> shapes healthcare searches across the borough, and private hospitals, dental practices, physiotherapists, opticians and specialist clinics compete for local visibility in a sector where trust matters.</p>
 
-      <p>Healthcare SEO carries the highest EEAT requirements of any sector. Google explicitly classifies health content as YMYL, meaning content quality directly and measurably affects rankings. For Guildford healthcare providers, this means:</p>
+      <p>Healthcare SEO carries the highest EEAT requirements of any sector. Google explicitly classifies health content as YMYL, meaning content quality directly and measurably affects rankings. This means the following for Guildford healthcare providers:</p>
 
       <ul>
         <li>Content must be written or reviewed by qualified practitioners with verifiable credentials</li>
@@ -202,27 +207,27 @@ const schema = [
         <li>Patient review management across Google, NHS Choices, and Doctify</li>
       </ul>
 
-      <p>Private practices near Royal Surrey County Hospital benefit from proximity-based search patterns in ways that are both predictable and commercially powerful. Patients searching for specialists instinctively look within the hospital's catchment area, and ranking for "private [specialty] near Royal Surrey" captures high-value referral traffic that converts at rates most other industries would envy.</p>
+      <p>Private practices near Royal Surrey County Hospital benefit from proximity-based search patterns in ways that are both predictable and commercially powerful. Patients searching for specialists instinctively look within the hospital's catchment area. Ranking for "private [specialty] near Royal Surrey" captures high-value referral traffic that converts at rates most other industries would envy.</p>
       </div>
 
       <div class="reveal">
       <p class="eyebrow mb-3">06 / Finance</p>
-      <h2>Finance and wealth management</h2>
+      <h2 id="finance">Finance and wealth management</h2>
 
-      <p>Guildford's affluent population drives sustained demand for financial advisory, wealth management, and private banking services. The borough's demographics, high household incomes layered over significant property wealth, mean that financial services firms compete for clients with substantial assets under management, and the search landscape reflects those stakes.</p>
+      <p>Guildford's affluent population drives sustained demand for financial advisory, wealth management, and private banking services. The borough's demographics combine high household incomes with significant property wealth. Financial services firms therefore compete for clients with substantial assets under management. The search landscape reflects those stakes.</p>
 
-      <p>SEO for financial services falls under YMYL classification, requiring the same rigorous EEAT standards as healthcare. FCA registration, professional qualifications (Chartered Financial Planner, CFA), and published thought leadership all contribute to search authority in ways that no amount of technical optimisation can substitute. I help finance firms in Guildford build content strategies that demonstrate expertise while targeting commercially valuable queries like "financial adviser Guildford" and "inheritance tax planning Surrey".</p>
+      <p>SEO for financial services falls under YMYL classification, requiring the same rigorous EEAT standards as healthcare. FCA registration, professional qualifications (Chartered Financial Planner, CFA) and published thought leadership all contribute to search authority. No amount of technical optimisation can substitute for them. I help finance firms in Guildford build content strategies that demonstrate expertise while targeting commercially valuable queries like "financial adviser Guildford" and "inheritance tax planning Surrey".</p>
 
       <p>The local competitive set includes national firms with Guildford offices, regional independents, and sole practitioners, each facing a different SEO challenge that needs a different approach. National firms need local relevance signals to prove they are not just parachuting in. Independents need domain authority to compete with recognised brands. Sole practitioners need visibility despite limited content resources.</p>
       </div>
 
       <div class="reveal">
       <p class="eyebrow mb-3">07 / Retail &amp; Hospitality</p>
-      <h2>Retail and hospitality</h2>
+      <h2 id="retail-hospitality">Retail and hospitality</h2>
 
-      <p>Guildford's retail landscape is anchored by three distinct zones: the <strong>Friary Centre</strong> (mainstream retail), <strong>Tunsgate Quarter</strong> (premium and independent), and the <strong>High Street</strong> (mixed, with increasing hospitality presence).</p>
+      <p>Guildford's retail landscape is anchored by three distinct zones. The <strong>Friary Centre</strong> is mainstream retail. <strong>Tunsgate Quarter</strong> is premium and independent. The <strong>High Street</strong> is mixed and has an increasing hospitality presence.</p>
 
-      <p>Retail SEO in Guildford has shifted decisively toward Google Business Profile and local pack visibility, a tectonic change that many businesses have been slow to absorb. For shops and restaurants, the map pack now drives more footfall than position one in organic results. My retail SEO approach prioritises:</p>
+      <p>Retail SEO in Guildford now runs through Google Business Profile and the local pack. For shops and restaurants the map pack brings more visits than the organic listings below it. My retail work prioritises:</p>
 
       <ul>
         <li>Google Business Profile completeness, including products, menu items, and regular posts</li>
@@ -231,24 +236,26 @@ const schema = [
         <li>Category-specific structured data (Restaurant, Store, LocalBusiness subtypes)</li>
       </ul>
 
-      <p>Hospitality businesses face additional complexity that is worth understanding in full. Guildford's proximity to the North Downs Way, the Surrey Hills AONB, and the River Wey Navigation creates tourism-related search demand that overlaps with local dining and accommodation queries. Capturing both audiences requires content that speaks to visitors and residents alike, two readerships with different needs, reading the same page, and your content must serve both without diluting either.</p>
+      <p>Hospitality has a second audience. Guildford's proximity to the North Downs Way, the Surrey Hills and the River Wey brings visitor searches that overlap with local dining and accommodation queries. The pages have to serve visitors and residents without diluting either.</p>
+
+      <ChecklistFigure title="Retail and hospitality priorities" items={["Complete Google Business Profile with products or menu","Reviews asked for and answered","Seasonal and event content","Restaurant, Store or LocalBusiness schema"]} caption="The map pack comes first for shops and restaurants." />
       </div>
 
       <div class="reveal">
       <p class="eyebrow mb-3">08 / Education</p>
-      <h2>Education</h2>
+      <h2 id="education">Education</h2>
 
-      <p>The <strong>University of Surrey</strong> is the dominant educational institution, with over 16,000 students and a strong reputation in engineering, veterinary science, and hospitality management. The university's presence creates SEO opportunities for businesses in the student services, accommodation, and graduate recruitment sectors.</p>
+      <p>The <strong>University of Surrey</strong> is the dominant institution. It is strong in engineering, veterinary science and hospitality management. It creates demand for student services, accommodation and graduate recruitment.</p>
 
       <p>Independent schools, tutoring services, and professional training providers also compete for education-related search traffic in Guildford. SEO for education businesses requires content that speaks to two audiences simultaneously: the decision-maker (parents, employers) and the end user (students, trainees). Often this means building separate content strategies for each.</p>
 
-      <p>Course comparison queries, open day information, and "best schools in Guildford" listicle-format content perform well in this sector. Schema markup for EducationalOrganization and Course types helps search engines understand programme offerings and improves visibility in education-specific search features, structural work that, like good foundations, remains invisible to the visitor but holds everything else up.</p>
+      <p>Course comparison, open day and "best schools in Guildford" searches perform well here. EducationalOrganization and Course schema help search engines read programme details.</p>
       </div>
 
       <div class="reveal">
       <h2>Why industry-specific SEO matters</h2>
 
-      <p>Generic SEO treats every business as though it occupies the same search landscape, and that assumption leads inevitably to the wrong keywords, the wrong content, and the wrong metrics. Consider the differences:</p>
+      <p>Generic SEO treats every business as the same. That leads to the wrong keywords, the wrong content and the wrong metrics. Consider the differences:</p>
 
       <ul>
         <li>A gaming studio measures success by developer applications received through organic search. An estate agent measures it by valuation request leads.</li>
@@ -257,7 +264,7 @@ const schema = [
         <li>Healthcare content is subject to YMYL scrutiny. Hospitality content is not.</li>
       </ul>
 
-      <p>I invest considerable time understanding your industry's search landscape before writing a single line of content or adjusting a single meta tag. This upfront research aligns each SEO action with observed demand rather than a generic template. The full range of <a href="/services/">SEO services</a> is shaped around these sector differences, while the <a href="/case-studies/">results page</a> shows dated portfolio data without presenting illustrative scenarios as client proof.</p>
+      <p>I research your sector's search demand before writing anything. The <a href="/services/">services page</a> lists what I do. The <a href="/case-studies/">results page</a> shows dated portfolio data without dressing scenarios up as client proof.</p>
       </div>
 
       <div class="reveal">
@@ -266,28 +273,28 @@ const schema = [
       <div class="faq-item" style="--reveal-delay: 0.1s">
         <details>
           <summary>Why does my industry need a specialised SEO approach?</summary>
-          <p>Each industry has different search intent patterns, buyer journeys, and competitive landscapes. A gaming studio at Surrey Research Park needs developer recruitment SEO and publisher visibility, while an estate agent on Guildford High Street needs local pack dominance and property listing schema. Generic SEO misses these nuances and wastes budget on irrelevant traffic.</p>
+          <p>Each industry has different search intent patterns, buyer journeys, and competitive landscapes. A gaming studio at Surrey Research Park needs developer recruitment SEO and publisher visibility. An estate agent on Guildford High Street needs local pack dominance and property listing schema. Generic SEO misses these nuances and wastes budget on irrelevant traffic.</p>
         </details>
       </div>
 
       <div class="faq-item" style="--reveal-delay: 0.18s">
         <details>
           <summary>Which Guildford industries are most competitive for SEO?</summary>
-          <p>Property and estate agency is the most competitive local SEO sector in Guildford, followed by legal services and healthcare. These industries have high customer lifetime values, which means established firms invest heavily in search visibility. Newer sectors like gaming and AI are less competitive locally but require different strategies focused on talent acquisition and B2B visibility.</p>
+          <p>Advertisers pay the highest click prices in Guildford for legal, money and property searches. That is a fair proxy for competition (see my <a href="/cost-per-click-guildford/">cost per click data</a>). Property, legal and healthcare firms have high customer values. Established ones invest in search. Games and AI companies compete nationally for talent and partners rather than locally.</p>
         </details>
       </div>
 
       <div class="faq-item" style="--reveal-delay: 0.26s">
         <details>
           <summary>Do you have experience with gaming and tech companies?</summary>
-          <p>Yes. Guildford is the UK's gaming capital, home to studios like Media Molecule, Hello Games, and Bossa Studios. I understand the technical content requirements, developer audience targeting, and recruitment SEO that gaming and tech companies need. My proximity to Surrey Research Park means I work regularly with technology businesses.</p>
+          <p>My technical work covers what games and technology sites need: JavaScript rendering, large media, recruitment pages and international targeting.</p>
         </details>
       </div>
 
       <div class="faq-item" style="--reveal-delay: 0.34s">
         <details>
           <summary>Can SEO help healthcare providers in Guildford?</summary>
-          <p>Healthcare SEO requires EEAT compliance because Google applies stricter quality standards to health-related content. For practices near Royal Surrey County Hospital or BMI Mount Alvernia, I build content strategies that demonstrate clinical expertise while targeting local patient search queries.</p>
+          <p>Healthcare SEO requires EEAT compliance because Google applies stricter quality standards to health-related content. I build content strategies for practices near Royal Surrey County Hospital. They demonstrate clinical expertise while targeting local patient search queries.</p>
         </details>
       </div>
 
@@ -301,7 +308,7 @@ const schema = [
       <div class="faq-item" style="--reveal-delay: 0.5s">
         <details>
           <summary>What SEO metrics matter most for Guildford retail businesses?</summary>
-          <p>For Guildford retail, the most important metrics are local pack visibility, Google Business Profile actions (calls, directions, website clicks), and foot traffic attribution. Organic ranking matters, but for shops in the Friary Centre or Tunsgate Quarter, the map pack drives most in-store visits. I track conversion actions, not just rankings.</p>
+          <p>The most important metrics for Guildford retail are local pack visibility, Google Business Profile actions (calls, directions, website clicks), and foot traffic attribution. Organic ranking matters. For shops in the Friary Centre or Tunsgate Quarter, the map pack drives most in-store visits. I track conversion actions, not just rankings.</p>
         </details>
       </div>
 
@@ -315,7 +322,7 @@ const schema = [
       <div class="faq-item" style="--reveal-delay: 0.66s">
         <details>
           <summary>What is YMYL content and which Guildford industries does it affect?</summary>
-          <p>YMYL stands for Your Money or Your Life, Google's classification for content that can affect a person's health, financial stability, or safety. Guildford industries in this category, including healthcare, finance, and legal services, face stricter EEAT (Experience, Expertise, Authoritativeness, Trust) requirements, meaning content must demonstrate genuine credentials and professional expertise to rank well.</p>
+          <p>YMYL stands for Your Money or Your Life, Google's classification for content that can affect a person's health, financial stability, or safety. Guildford industries in this category, including healthcare, finance, and legal services, face stricter EEAT (Experience, Expertise, Authoritativeness, Trust) requirements. Content must demonstrate genuine credentials and professional expertise to rank well.</p>
         </details>
       </div>
       </div>

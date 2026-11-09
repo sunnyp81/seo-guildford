@@ -5,6 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 import Icon from '../components/Icon.astro';
 import ProofStats from '../components/ProofStats.astro';
 import QuickForm from '../components/QuickForm.astro';
+import FlowDiagram from '../components/FlowDiagram.astro';
 
 const schema = [
   {
@@ -19,8 +20,8 @@ const schema = [
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Technical SEO Guildford: Audits, Speed & Crawl",
-    "description": "Technical SEO audits and implementation for Guildford businesses, covering site speed, crawlability, Core Web Vitals, structured data, and mobile performance.",
+    "name": "Technical SEO Guildford & Surrey: £500 Fixed-Fee Audit",
+    "description": "Technical SEO for Guildford and Surrey businesses. I crawl your site, list what stops Google indexing and ranking it, and fix it. Audit £500, ongoing work from £500 a month.",
     "url": "https://seo-guildford.uk/technical-seo-guildford/",
     "isPartOf": { "@type": "WebSite", "name": "SEO Guildford", "url": "https://seo-guildford.uk/" },
     "breadcrumb": { "@id": "https://seo-guildford.uk/technical-seo-guildford/#breadcrumb" }
@@ -68,7 +69,7 @@ const schema = [
       {
         "@type": "Question",
         "name": "How long does a technical SEO project take for a Guildford business?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most technical SEO projects run four to twelve weeks depending on site size. A 50-page brochure site for a Guildford professional services firm typically takes four to six weeks, whereas larger sites with thousands of pages, such as property listings or e-commerce catalogues, require eight to twelve weeks for thorough implementation." }
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on the size of the site and who makes the changes. A small brochure site has far fewer pages to crawl and fix than a property listings site or an online shop with thousands of pages. I give you a timeline with the audit, once I have seen the site." }
       },
       {
         "@type": "Question",
@@ -78,17 +79,17 @@ const schema = [
       {
         "@type": "Question",
         "name": "Do you work with technology companies on Surrey Research Park?",
-        "acceptedAnswer": { "@type": "Answer", "text": "I do. I have deep experience with the specific technical requirements of gaming and technology companies on Surrey Research Park, including JavaScript-heavy single-page applications, large media assets, and international audience targeting." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Technology sites built on React, Vue, Next.js or Nuxt need rendering checks so Google sees the content, and international sites need hreflang. Both are standard technical SEO and within my scope." }
       },
       {
         "@type": "Question",
         "name": "How much does technical SEO cost in Guildford?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO pricing depends on your site's complexity and current state. A standalone technical SEO audit is a fixed £500, and ongoing technical SEO retainers for Guildford businesses are structured on a monthly basis, with plans starting at £500 per month. I would be pleased to discuss a specific quote based on your requirements." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A technical SEO audit is £500. Ongoing technical work starts at £500 a month. The monthly figure depends on how complex the site is. Ask me for a quote with your site address." }
       },
       {
         "@type": "Question",
         "name": "Will technical SEO improvements affect my current rankings?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach. I audit first. Then I prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity. Most sites see ranking improvements within four to eight weeks of implementation." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach. I audit first. Then I prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity. Google has to recrawl the fixed pages before anything changes. I check Search Console weekly and report what moved." }
       },
       {
         "@type": "Question",
@@ -111,8 +112,8 @@ const schema = [
 ---
 
 <Base
-  title="Technical SEO Guildford: Audits, Speed & Crawl"
-  description="Technical SEO audits and implementation for Guildford businesses. Fix crawlability, site speed, Core Web Vitals, indexation, and structured data."
+  title="Technical SEO Guildford & Surrey: £500 Fixed-Fee Audit"
+  description="Technical SEO for Guildford and Surrey businesses. I crawl your site, list what stops Google indexing and ranking it, and fix it. Audit £500, ongoing work from £500 a month."
   canonical="https://seo-guildford.uk/technical-seo-guildford/"
   schema={schema}
   ogType="website"
@@ -123,9 +124,9 @@ const schema = [
     crumbs={[{"label": "Services", "href": "/services/"}, {"label": "Technical SEO"}]}
     lead="Technical SEO fixes the parts of your site that stop Google crawling, indexing and ranking your pages. I audit it, rank the fixes by impact and carry them out."
     cta={{"href": "/free-seo-audit-guildford/", "label": "Book my free audit"}}
-    glance={{"heading": "At a glance", "points": ["I crawl your site and list what stops Google finding, rendering and indexing your pages.", "Fixes are ranked by effort and likely impact. The quick wins come first.", "Typical areas: speed and Core Web Vitals, indexation, redirects, structured data and mobile.", "Ranking changes usually show within four to eight weeks of the fixes going live."], "facts": [{"k": "One-off technical audit", "v": "£500"}, {"k": "Ongoing work", "v": "From £500 a month"}, {"k": "Free first look", "v": "Free SEO audit, 2 to 3 working days"}, {"k": "Who does the work", "v": "Me, directly"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire, remote-first"}, {"k": "Reply time", "v": "Within one working day"}, {"k": "Company", "v": "ND Media Ltd, no. 10784524", "href": "https://find-and-update.company-information.service.gov.uk/company/10784524"}]}}
+    glance={{"heading": "At a glance", "points": ["I crawl your site and list what stops Google finding, rendering and indexing your pages.", "Fixes are ranked by effort and likely impact. The quick wins come first.", "Typical areas: speed and Core Web Vitals, indexation, redirects, structured data and mobile.", "Fixes are made by me, or written as exact specifications for your developer."], "facts": [{"k": "One-off technical audit", "v": "£500"}, {"k": "Ongoing work", "v": "From £500 a month"}, {"k": "Free first look", "v": "Free SEO audit, 2 to 3 working days"}, {"k": "Who does the work", "v": "Me, directly"}, {"k": "Service area", "v": "Guildford, Surrey and Hampshire, remote-first"}, {"k": "Reply time", "v": "Within one working day"}, {"k": "Company", "v": "ND Media Ltd, no. 10784524", "href": "https://find-and-update.company-information.service.gov.uk/company/10784524"}]}}
   >
-    <Fragment slot="title">Technical SEO for <span class="mark">Guildford</span> Businesses</Fragment>
+    <Fragment slot="title">Technical SEO for <span class="mark">Guildford</span> and Surrey Businesses</Fragment>
   </PageHero>
 
   <article class="doc">
@@ -149,7 +150,7 @@ const schema = [
     </div>
 
     <div class="reveal">
-    <h2>Why Guildford businesses need technical SEO</h2>
+    <h2>The technical problems I see most often</h2>
 
     <p>The technical problems depend on how the site is built and what it holds. These are the ones I see most.</p>
 
@@ -158,7 +159,7 @@ const schema = [
       <li><strong>Property sites</strong> have thousands of listing pages. That causes crawl budget pressure, duplicate content and index bloat from expired listings.</li>
       <li><strong>Professional services sites</strong> compete for high-value local searches. Page speed and mobile performance affect conversion.</li>
       <li><strong>Media-heavy sites</strong> carry large images and video that slow pages without optimisation.</li>
-      <li><strong>Healthcare sites</strong> carry health information where accuracy matters. Technical trust signals carry extra weight.</li>
+      <li><strong>Healthcare sites</strong> carry health information, so broken pages, slow loads and inconsistent facts do more damage than they would elsewhere.</li>
     </ul>
     </div>
 
@@ -228,7 +229,7 @@ const schema = [
     <div class="reveal">
     <h2>Mobile-first optimisation</h2>
 
-    <p>Google has indexed the mobile version of your site since 2023. A weak mobile experience lowers your rankings however good the desktop site looks.</p>
+    <p>Google indexes the mobile version of your site. A weak mobile experience lowers your rankings however good the desktop site looks.</p>
 
     <ul>
       <li><strong>Responsive design</strong> checked across breakpoints.</li>
@@ -240,9 +241,9 @@ const schema = [
     </div>
 
     <div class="reveal">
-    <h2>Technical SEO for Surrey Research Park companies</h2>
+    <h2>Technical SEO for technology and gaming sites</h2>
 
-    <p>Technology sites on Surrey Research Park often need JavaScript rendering, international targeting and stricter security.</p>
+    <p>Technology and gaming sites need JavaScript rendering checks, international targeting, large media handling and traffic spikes handled without Core Web Vitals failing.</p>
 
     <h3>JavaScript rendering</h3>
 
@@ -255,12 +256,6 @@ const schema = [
     <h3>Security headers</h3>
 
     <p>I audit TLS, mixed content and security headers (HSTS, CSP, X-Frame-Options). SEO changes must not conflict with your security rules.</p>
-    </div>
-
-    <div class="reveal">
-    <h2>Technical SEO for gaming studios</h2>
-
-    <p>Gaming sites are heavy on media and serve global audiences.</p>
 
     <h3>Media asset optimisation</h3>
 
@@ -279,6 +274,8 @@ const schema = [
     <h2>How I deliver technical SEO</h2>
 
     <p>I work in four phases and measure every change.</p>
+
+    <FlowDiagram title="How I deliver technical SEO" steps={[{"t": "Audit", "d": "Crawl, Search Console, logs, Core Web Vitals"}, {"t": "Prioritise", "d": "Critical, high, medium, low"}, {"t": "Implement", "d": "Direct, or exact specs for your developer"}, {"t": "Monitor", "d": "Catch regressions while they are small"}]} caption="Every change is checked before and after." />
 
     <h3>Phase 1: technical audit</h3>
 
@@ -304,7 +301,7 @@ const schema = [
     <div>
       <details class="faq-item">
         <summary>How long does a technical SEO project take for a Guildford business?</summary>
-        <p>Most technical SEO projects run four to twelve weeks depending on site size. A 50-page brochure site for a Guildford professional services firm typically takes four to six weeks, whereas larger sites with thousands of pages, such as property listings or e-commerce catalogues, require eight to twelve weeks for thorough implementation.</p>
+        <p>It depends on the size of the site and who makes the changes. A small brochure site has far fewer pages to crawl and fix than a property listings site or an online shop with thousands of pages. I give you a timeline with the audit, once I have seen the site.</p>
       </details>
 
       <details class="faq-item">
@@ -314,17 +311,17 @@ const schema = [
 
       <details class="faq-item">
         <summary>Do you work with technology companies on Surrey Research Park?</summary>
-        <p>I do. I have deep experience with the specific technical requirements of gaming and technology companies on Surrey Research Park, including JavaScript-heavy single-page applications, large media assets, and international audience targeting.</p>
+        <p>Yes. Technology sites built on React, Vue, Next.js or Nuxt need rendering checks so Google sees the content, and international sites need hreflang. Both are standard technical SEO and within my scope.</p>
       </details>
 
       <details class="faq-item">
         <summary>How much does technical SEO cost in Guildford?</summary>
-        <p>Technical SEO pricing depends on your site's complexity and current state. A standalone technical SEO audit is a fixed £500, and ongoing technical SEO retainers for Guildford businesses are structured on a monthly basis, with plans starting at £500 per month. I would be pleased to discuss a specific quote based on your requirements.</p>
+        <p>A technical SEO audit is £500. Ongoing technical work starts at £500 a month. The monthly figure depends on how complex the site is. Ask me for a quote with your site address.</p>
       </details>
 
       <details class="faq-item">
         <summary>Will technical SEO improvements affect my current rankings?</summary>
-        <p>Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach. I audit first. Then I prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity. Most sites see ranking improvements within four to eight weeks of implementation.</p>
+        <p>Technical SEO changes are implemented with considerable care to protect existing rankings. I follow a staged approach. I audit first. Then I prioritise fixes by impact and risk. URL changes and redirects are handled with 301 mappings to preserve link equity. Google has to recrawl the fixed pages before anything changes. I check Search Console weekly and report what moved.</p>
       </details>
 
       <details class="faq-item">
@@ -344,11 +341,11 @@ const schema = [
     </div>
 
     <div class="reveal">
-    <h2>Request a technical SEO audit for your Guildford business</h2>
+    <h2>Request a technical SEO audit</h2>
 
     <p>Every engagement starts with an audit. It maps what is broken and what is missing. You get a ranked roadmap so the first pound fixes the biggest problem.</p>
 
-    <p>If rankings are weak the cause is often technical. <a href="/free-seo-audit-guildford/">A free SEO audit</a> is the lower-commitment start. Pricing is set out on the pricing page.</p>
+    <p>If rankings are weak the cause is often technical. <a href="/free-seo-audit-guildford/">A free SEO audit</a> is the lower-commitment start. Prices are on the <a href="/seo-pricing-guildford/">pricing page</a>.</p>
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 mt-8 not-prose">
@@ -362,7 +359,7 @@ const schema = [
       <li><a href="/seo-audit-guildford/">SEO audit for Guildford businesses</a>: a site review covering technical, content and local SEO.</li>
       <li><a href="/ai-search-optimisation-guildford/">AI search optimisation</a>: prepare your site for ChatGPT, Perplexity and Google AI Overviews.</li>
       <li><a href="/services/">All SEO services</a>: the full list for Guildford and Surrey businesses.</li>
-      <li><a href="/">SEO consultancy for Guildford businesses</a>: the general overview.</li>
+      <li><a href="/">SEO Guildford</a>: the general overview.</li>
     </ul>
   </div>
 </article>
