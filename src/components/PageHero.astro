@@ -19,7 +19,7 @@ interface Props {
   photo?: { src: string; alt: string; credit: string; creditHref: string };
   checked?: string;
 }
-const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-seo-audit/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo, compact = false, checked = "7 November 2026" } = Astro.props;
+const { eyebrow, crumbs = [], lead, glance, cta = { href: "/free-audit/", label: "Book my free audit" }, secondary = null, proof, tools = false, note, photo, compact = false, checked = "7 November 2026" } = Astro.props;
 const hasSide = Astro.slots.has('side');
 const hasSheet = !!glance || hasSide;
 ---
